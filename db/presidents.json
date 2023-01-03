@@ -1,0 +1,74 @@
+[
+  {
+    "id": "iker-casillas",
+    "name": "Iker Casillas",
+    "image": "iker-casillas.png",
+    "teamId": 0
+  },
+  {
+    "id": "juan-guarnizo",
+    "name": "Juan Guarnizo",
+    "image": "juan-guarnizo.png",
+    "teamId": 0
+  },
+  {
+    "id": "adri-contreras",
+    "name": "Adri Contreras",
+    "image": "adri-contreras.png",
+    "teamId": 0
+  },
+  {
+    "id": "gerard-romero",
+    "name": "Gerard Romero",
+    "image": "gerard-romero.png",
+    "teamId": 0
+  },
+  {
+    "id": "kun-aguero",
+    "name": "Kun Agüero",
+    "image": "kun-aguero.png",
+    "teamId": 0
+  },
+  {
+    "id": "perxitaa",
+    "name": "Perxitaa",
+    "image": "perxitaa.png",
+    "teamId": 0
+  },
+  {
+    "id": "rivers",
+    "name": "Rivers",
+    "image": "rivers.png",
+    "teamId": 0
+  },
+  {
+    "id": "ibai-llanos",
+    "name": "Ibai Llanos",
+    "image": "ibai-llanos.png",
+    "teamId": 0
+  },
+  {
+    "id": "spursito",
+    "name": "Spursito",
+    "image": "spursito.png",
+    "teamId": 0
+  },
+  {
+    "id": "thegrefg",
+    "name": "TheGrefg",
+    "image": "thegrefg.png",
+    "teamId": 0
+  },
+  {
+    "id": "djmariio",
+    "name": "DjMaRiiO",
+    "image": "djmariio.png",
+    "teamId": 0
+  },
+  {
+    "id": "hnos-buyer",
+    "name": "Hnos. Buyer",
+    "image": "hnos-buyer.png",
+    "teamId": 0
+  }
+]
