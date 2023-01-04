@@ -17,11 +17,15 @@
     "hono": "2.7.1"
   },
   "devDependencies": {
+    "prettier": "^2.8.1",
     "standard": "17.0.0",
     "vitest": "0.26.3",
     "wrangler": "2.6.2"
   },
   "eslintConfig": {
-    "extends": "standard"
+    "extends": "standard",
+    "rules": {
+      "space-before-function-paren": "off"
+    }
   }
 }
