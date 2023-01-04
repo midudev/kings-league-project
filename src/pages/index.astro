@@ -11,7 +11,7 @@ const teams = await response.json()
 
 			{teams.map(({ id, image, name }) => (
 				<a href={`/team/${id}`}>
-					<img class="aspect-square w-12" src={image} alt={`Escudeo del equipo ${name}`} />
+					<img class="aspect-square w-12" src={image} alt={`Escudo del equipo ${name}`} />
 				</a>
 			))}
 
