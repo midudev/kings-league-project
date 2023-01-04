@@ -27,4 +27,23 @@ describe('Worker', () => {
       })
     }
   })
+
+  it('should return 404 for unknown route', async () => {
+    const resp = await worker.fetch('/unknown')
+    expect(resp.status).toBe(404)
+  })
+
+  it('should return 404 for unknown president', async () => {
+    const resp = await worker.fetch('/presidents/unknown')
+    const respJson = await resp.json()
+    expect(respJson.message).toBe('President not found')
+    expect(resp.status).toBe(404)
+  })
+
+  it('should return 404 for unknown team', async () => {
+    const resp = await worker.fetch('/teams/unknown')
+    const respJson = await resp.json()
+    expect(respJson.message).toBe('Team not found')
+    expect(resp.status).toBe(404)
+  })
 })
