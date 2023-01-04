@@ -6,9 +6,26 @@ on:
       - main
 
 jobs:
+
+  test:
+    runs-on: ubuntu-22.04
+    name: Execute tests
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.18.2
+          run_install: true
+      - run: pnpm test
+
   deploy:
+    needs: test
     runs-on: ubuntu-22.04
     name: Deploy API to Cloudflare Workers
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }} # Only deploy if the push is from the main repo
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
