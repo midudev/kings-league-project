@@ -49,7 +49,7 @@ app.get("/teams:id", (ctx) => {
   const foundTeam = teams.find((team) => team.id === id);
   return foundTeam
     ? ctx.json(foundTeam)
-    : ctx.json({ message: "Team not found" }, 404);
+    : ctx.json({ message: "Team not found in db" }, 404);
 });
 
 app.get("/static/*", serveStatic({ root: "./" }));
