@@ -1,12 +1,12 @@
 import { unstable_dev as unstableDev } from 'wrangler'
 import { describe, expect, it, beforeAll, afterAll } from 'vitest'
 
-describe('Worker', () => {
+describe('Testing / route', () => {
   let worker
 
   beforeAll(async () => {
     worker = await unstableDev(
-      'src/index.js',
+      'api/index.js',
       {},
       { disableExperimentalWarning: true }
     )
@@ -16,11 +16,32 @@ describe('Worker', () => {
     await worker.stop()
   })
 
-  it('should return Hello World', async () => {
+  it('Get / should return endpoints', async () => {
     const resp = await worker.fetch()
     if (resp) {
       const text = await resp.text()
-      expect(text).toMatchInlineSnapshot('"Hello World!"')
+      const endpoints = [
+        {
+          endpoint: '/leaderboard',
+          description: 'Returns Kings League leaderboard'
+        },
+        { endpoint: '/teams', description: 'Returns Kings League teams' },
+        {
+          endpoint: '/presidents',
+          description: 'Returns Kings League presidents'
+        }
+      ]
+
+      expect(text).toStrictEqual(JSON.stringify(endpoints))
+    }
+  })
+
+  it('The lenght should be greater than 0', async () => {
+    const resp = await worker.fetch()
+    if (resp) {
+      const text = await resp.text()
+      const lengthEndpoint = Object.entries(text).length
+      expect(lengthEndpoint).toBeGreaterThan(0)
     }
   })
 })
