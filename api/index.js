@@ -6,20 +6,22 @@ import presidents from '../db/presidents.json'
 
 const app = new Hono()
 
-app.get('/', (ctx) => ctx.json([
-  {
-    endpoint: '/leaderboard',
-    description: 'Returns Kings League leaderboard'
-  },
-  {
-    endpoint: '/teams',
-    description: 'Returns Kings League teams'
-  },
-  {
-    endpoint: '/presidents',
-    description: 'Returns Kings League presidents'
-  }
-]))
+app.get('/', (ctx) =>
+  ctx.json([
+    {
+      endpoint: '/leaderboard',
+      description: 'Returns Kings League leaderboard'
+    },
+    {
+      endpoint: '/teams',
+      description: 'Returns Kings League teams'
+    },
+    {
+      endpoint: '/presidents',
+      description: 'Returns Kings League presidents'
+    }
+  ])
+)
 
 app.get('/leaderboard', (ctx) => {
   return ctx.json(leaderboard)
@@ -31,7 +33,7 @@ app.get('/presidents', (ctx) => {
 
 app.get('/presidents/:id', (ctx) => {
   const id = ctx.req.param('id')
-  const foundPresident = presidents.find(president => president.id === id)
+  const foundPresident = presidents.find((president) => president.id === id)
 
   return foundPresident
     ? ctx.json(foundPresident)
