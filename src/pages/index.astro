@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const response = await fetch('https://kings-league-api.midudev.workers.dev/teams')
+const teams = await response.json()
+---
+
+<Layout title="Kings League Infojobs">
+	<div class="container m-auto">
+		<header class="flex">
+
+			{teams.map(({ id, image, name }) => (
+				<a href={`/team/${id}`}>
+					<img class="aspect-square w-12" src={image} alt={`Escudeo del equipo ${name}`} />
+				</a>
+			))}
+
+			<nav>
+				<ul>
+					<li>
+						<a href="/equipos">Equipos</a>
+					</li>
+					<li>
+						<a href="/calendario">Calendario</a>
+					</li>
+					<li>
+						<a href="/estadisticas">Estadísticas</a>
+					</li>
+					<li>
+						<a href="/contacto">Contacto</a>
+					</li>
+					<li>
+						<a href="/reglamento">Reglamento</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+
+		</main>
+	</div>
+</Layout>
