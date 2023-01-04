@@ -5,7 +5,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/1k.svg",
     "url": "",
     "presidentId": "iker-casillas",
-    "channel": "https://twitch.tv/1k",
+    "channel": null,
     "coach": "???",
     "socialNetworks": [
       "https://www.instagram.com/1kfutbolclub/?hl=es",
@@ -37,7 +37,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/ultimate-mostoles.svg",
     "url": "",
     "presidentId": "djmariio",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://youtube.com/DjMaRiiO",
     "coach": "???",
     "socialNetworks": [
       "https://m.youtube.com/user/DjMaRiiO/videos"
@@ -50,7 +50,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/los-troncos.svg",
     "url": "",
     "presidentId": "perxitaa",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://twitch.tv/perxitaa",
     "coach": "???",
     "socialNetworks": [
       "https://www.twitch.tv/perxitaa",
@@ -66,7 +66,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg",
     "url": "",
     "presidentId": "thegrefg",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://twitch.tv/thegrefg",
     "coach": "???",
     "socialNetworks": [
       "https://www.twitch.tv/thegrefg"
@@ -79,7 +79,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/kunisports.svg",
     "url": "",
     "presidentId": "kun-aguero",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://twitch.tv/slakun10",
     "coach": "???",
     "socialNetworks": [
       "https://www.twitch.tv/slakun10"
@@ -92,7 +92,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/jijantes.svg",
     "url": "",
     "presidentId": "gerard-romero",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://twitch.tv/gerardromero",
     "coach": "???",
     "socialNetworks": [
       "https://www.twitch.tv/gerardromero",
@@ -108,7 +108,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg",
     "url": "",
     "presidentId": "ibai-llanos",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://twitch.tv/ibai",
     "coach": "???",
     "socialNetworks": [
       "https://www.twitch.tv/ibai",
@@ -122,7 +122,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/rayo-barcelona.svg",
     "url": "",
     "presidentId": "spursito",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://twitch.tv/spursito",
     "coach": "???",
     "socialNetworks": [
       "https://www.twitch.tv/spursito",
@@ -138,7 +138,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/xbuyer.svg",
     "url": "",
     "presidentId": "hnos-buyer",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://www.youtube.com/xbuyer",
     "coach": "???",
     "socialNetworks": [
       "https://www.youtube.com/xbuyer"
@@ -151,7 +151,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg",
     "url": "",
     "presidentId": "juan-guarnizo",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://twitch.tv/juansguarnizo",
     "coach": "???",
     "socialNetworks": [
       "https://www.twitch.tv/juansguarnizo"
@@ -164,7 +164,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/pio.svg",
     "url": "",
     "presidentId": "rivers",
-    "channel": "https://twitch.tv/1k",
+    "channel": "https://twitch.tv/rivers_gg",
     "coach": "???",
     "socialNetworks": [
       "https://www.twitch.tv/rivers_gg",
