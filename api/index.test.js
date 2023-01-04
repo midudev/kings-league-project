@@ -44,10 +44,11 @@ describe('Testing /teams route', () => {
     await worker.stop()
   })
 
-  it('The teams should have all props', async () => {
+  it('The teams should have all teams', async () => {
     const resp = await worker.fetch('/teams')
     if (resp) {
       const teams = await resp.json()
+      const numberTeams = Object.entries(teams).length
 
       // verify the team have all props
       teams.forEach((team) => {
@@ -61,6 +62,8 @@ describe('Testing /teams route', () => {
         expect(team).toHaveProperty('socialNetworks')
         expect(team).toHaveProperty('players')
       })
+
+      expect(numberTeams).toBe(12)
     }
   })
 
