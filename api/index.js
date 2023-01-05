@@ -3,6 +3,8 @@ import { serveStatic } from 'hono/serve-static.module'
 import leaderboard from '../db/leaderboard.json'
 import teams from '../db/teams.json'
 import presidents from '../db/presidents.json'
+import coachs from '../db/coachs.json'
+import mvp from '../db/mvp.json'
 
 const app = new Hono()
 
@@ -21,6 +23,10 @@ router.get('/', (ctx) =>
     {
       endpoint: '/presidents',
       description: 'Returns Kings League presidents'
+    },
+    {
+      endpoint: '/coachs',
+      description: 'Returns Kings League coachs'
     }
   ])
 )
@@ -33,21 +39,21 @@ router.get('/presidents\\/?', async (ctx) => {
   return ctx.json(await presidents)
 })
 
-router.get('/presidents/:id', async (ctx) => {
-  try {
-    const id = ctx.req.param('id')
-    const foundPresident = presidents.find((president) => president.id === id)
-
-    return foundPresident
-      ? ctx.json(foundPresident)
-      : ctx.json({ message: 'President not found' }, 404)
-  } catch (error) {
-    return ctx.json({ message: 'An error occurred' }, 500)
-  }
+app.get('/teams/', (ctx) => {
+  return ctx.json(teams)
 })
 
-router.get('/teams\\/?', async (ctx) => {
-  return ctx.json(await teams)
+app.get('/presidents/:id', (ctx) => {
+	const id = ctx.req.param('id')
+	const foundPresident = presidents.find((president) => president.id === id)
+
+	return foundPresident
+		? ctx.json(foundPresident)
+		: ctx.json({ message: 'President not found' }, 404)
+})
+
+app.get('/teams', (ctx) => {
+  return ctx.json(teams)
 })
 
 router.get('/teams/:id', async (ctx) => {
