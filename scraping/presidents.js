@@ -1,5 +1,6 @@
 import { writeFile, readFile } from 'node:fs/promises'
 import path from 'node:path'
+import { logInfo, logSuccess } from './log'
 
 const STATICS_PATH = path.join(process.cwd(), './assets/static/presidents')
 const DB_PATH = path.join(process.cwd(), './db/')
@@ -16,7 +17,7 @@ const presidents = await Promise.all(
     const { 'wp:attachment': attachment } = links
     const { href: imageApiEndpoint } = attachment[0]
 
-    console.log(`> Fetching attachment for president: ${name}`)
+    logInfo(`> Fetching attachment for president: ${name}`)
 
     const responseImageEndpoint = await fetch(imageApiEndpoint)
     const data = await responseImageEndpoint.json()
@@ -27,22 +28,22 @@ const presidents = await Promise.all(
 
     const fileExtension = imageUrl.split('.').at(-1)
 
-    console.log(`> Fetching image for president: ${name}`)
+    logInfo(`> Fetching image for president: ${name}`)
 
     const responseImage = await fetch(imageUrl)
     const arrayBuffer = await responseImage.arrayBuffer()
     const buffer = Buffer.from(arrayBuffer)
 
-    console.log(`> Writing image to disk ${name}`)
+    logInfo(`> Writing image to disk ${name}`)
     const imageFileName = `${id}.${fileExtension}`
     await writeFile(`${STATICS_PATH}/${imageFileName}`, buffer)
 
-    console.log(`> Everything is done! ${name}`)
+    logInfo(`> Everything is done! ${name}`)
     return { id, name, image: imageFileName, teamId: 0 }
   })
 )
 
-console.log('> All presidents are done!')
+logSuccess('> All presidents are done!')
 await writeFile(
   `${DB_PATH}/presidents.json`,
   JSON.stringify(presidents, null, 2)
