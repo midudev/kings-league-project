@@ -31,7 +31,7 @@ app.get('/presidents', (ctx) => {
   return ctx.json(presidents)
 })
 
-app.get('/teams/', (ctx) => {
+app.get('/teams', (ctx) => {
   return ctx.json(teams)
 })
 
@@ -42,10 +42,6 @@ app.get('/presidents/:id', (ctx) => {
   return foundPresident
     ? ctx.json(foundPresident)
     : ctx.json({ message: 'President not found' }, 404)
-})
-
-app.get('/teams', (ctx) => {
-  return ctx.json(teams)
 })
 
 app.get('/teams/:id', (ctx) => {
@@ -63,7 +59,7 @@ app.notFound((c) => {
   const { pathname } = new URL(c.req.url)
 
   if (c.req.url.at(-1) === '/') {
-	return c.redirect(pathname.slice(0, -1))
+    return c.redirect(pathname.slice(0, -1))
   }
 
   return c.json({ message: 'Not Found' }, 404)
