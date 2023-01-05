@@ -68,7 +68,8 @@ async function getCoachsOfTeams() {
     }
   })
 }
-
+const coachsInfo = await getInfoCoachs()
 const teamsInfoWithCoach = await getCoachsOfTeams()
 
+writeDBFile('coachs', coachsInfo)
 writeDBFile('teams', teamsInfoWithCoach)
