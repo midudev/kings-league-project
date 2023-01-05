@@ -6,43 +6,11 @@ import presidents from '../db/presidents.json'
 import coaches from '../db/coaches.json'
 import top_scorer from '../db/top_scorer.json'
 import mvp from '../db/mvp.json'
+import infoRoutes from '../db/info_routes.json'
 
 const app = new Hono()
 
-app.get('/', (ctx) =>
-	ctx.json([
-		{
-			endpoint: '/leaderboard',
-			description: 'Returns Kings League leaderboard'
-		},
-		{
-			endpoint: '/teams',
-			description: 'Returns Kings League teams',
-			parameters: [
-				{
-					name: 'id',
-					route: '/teams/{id}',
-					description: 'Returns Kings League team per param id'
-				}
-			]
-		},
-		{
-			endpoint: '/presidents',
-			description: 'Returns Kings League presidents',
-			parameters: [
-				{
-					name: 'id',
-					route: '/presidents/{id}',
-					description: 'Returns Kings League president of team per param id'
-				}
-			]
-		},
-		{
-			endpoint: '/coachs',
-			description: 'Returns Kings League coachs'
-		}
-	])
-)
+app.get('/', (ctx) => ctx.json(infoRoutes))
 
 app.get('/leaderboard', (ctx) => {
 	return ctx.json(leaderboard)
