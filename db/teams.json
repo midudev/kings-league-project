@@ -1,7 +1,7 @@
 [
   {
     "id": "1k",
-    "name": "1K",
+    "name": "1K FC",
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/1k.svg",
     "url": "",
     "presidentId": "iker-casillas",
@@ -49,7 +49,7 @@
   },
   {
     "id": "los-troncos-fc",
-    "name": "Los Troncos",
+    "name": "Los Troncos FC",
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/los-troncos.svg",
     "url": "",
     "presidentId": "perxitaa",
@@ -66,7 +66,7 @@
   },
   {
     "id": "saiyans-fc",
-    "name": "Saiyans",
+    "name": "Saiyans FC",
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg",
     "url": "",
     "presidentId": "thegrefg",
@@ -94,7 +94,7 @@
   },
   {
     "id": "jijantes-fc",
-    "name": "Jijantes",
+    "name": "Jijantes FC",
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/jijantes.svg",
     "url": "",
     "presidentId": "gerard-romero",
@@ -111,7 +111,7 @@
   },
   {
     "id": "porcinos-fc",
-    "name": "Porcinos",
+    "name": "Porcinos FC",
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg",
     "url": "",
     "presidentId": "ibai-llanos",
@@ -157,7 +157,7 @@
   },
   {
     "id": "aniquiladores-fc",
-    "name": "Aniquiladores",
+    "name": "Aniquiladores FC",
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg",
     "url": "",
     "presidentId": "juan-guarnizo",
@@ -171,7 +171,7 @@
   },
   {
     "id": "pio-fc",
-    "name": "PIO",
+    "name": "PIO FC",
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/pio.svg",
     "url": "",
     "presidentId": "rivers",
