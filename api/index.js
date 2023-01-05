@@ -1,13 +1,12 @@
 import { Hono } from 'hono'
 import { serveStatic } from 'hono/serve-static.module'
 import leaderboard from '../db/leaderboard.json'
+import { coachesApi } from './coaches.routes'
+import { mvpApi } from './mvp.routes'
 
 import { presidentApi } from './presidents.routes'
 import { teamsApi } from './teams.routes'
-
-import coachs from '../db/coachs.json'
-import top_scorer from '../db/top_scorer.json'
-import mvp from '../db/mvp.json'
+import { topScorerApi } from './top-scorer.routes'
 
 const app = new Hono()
 
@@ -38,18 +37,9 @@ app.get('/leaderboard', (ctx) => {
 
 app.route('/presidents', presidentApi)
 app.route('/teams', teamsApi)
-
-app.get('/coachs\\/?', (ctx) => {
-  return ctx.json(coachs)
-})
-
-app.get('/top-scorer', (ctx) => {
-	return ctx.json(top_scorer)
-})
-
-app.get('/mvp', (ctx) => {
-	return ctx.json(mvp)
-})
+app.route('/top-scorer', topScorerApi)
+app.route('/mvp', mvpApi)
+app.route('/coachs', coachesApi)
 
 app.get('/static/*', serveStatic({ root: './' }))
 
