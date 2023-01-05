@@ -31,6 +31,10 @@ app.get('/presidents\\/?', (ctx) => {
   return ctx.json(presidents)
 })
 
+app.get('/teams/', (ctx) => {
+  return ctx.json(teams)
+})
+
 app.get('/presidents/:id', (ctx) => {
   const id = ctx.req.param('id')
   const foundPresident = presidents.find((president) => president.id === id)
