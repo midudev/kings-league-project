@@ -1,13 +1,12 @@
 import * as cheerio from 'cheerio'
-const URLS = {
+
+export const URLS = {
   leaderboard: 'https://kingsleague.pro/estadisticas/clasificacion/',
-	mvp: 'https://kingsleague.pro/estadisticas/mvp/'
+  mvp: 'https://kingsleague.pro/estadisticas/mvp/'
 }
 
-async function scrape(url) {
+export async function scrape(url) {
   const res = await fetch(url)
   const html = await res.text()
   return cheerio.load(html)
 }
-
-export {URLS, scrape}
