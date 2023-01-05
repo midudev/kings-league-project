@@ -18,10 +18,10 @@ export async function getTopScoresList($) {
 	}
 
 	const scoresSelectorEntries = Object.entries(SCORES_SELECTORS)
-	const mvpList = []
+	const topScorerList = []
 
 	$rows.each((index, el) => {
-		const mvpEntries = scoresSelectorEntries.map(([key, { selector, typeOf }]) => {
+		const topScorerEntries = scoresSelectorEntries.map(([key, { selector, typeOf }]) => {
 			const rawValue = $(el).find(selector).text()
 			const cleanedValue = cleanText(rawValue)
 
@@ -30,16 +30,16 @@ export async function getTopScoresList($) {
 			return [key, value]
 		})
 
-		const { team: teamName, ...mvpData } = Object.fromEntries(mvpEntries)
+		const { team: teamName, ...scorerData } = Object.fromEntries(topScorerEntries)
 		const image = getImageFromTeam({ name: teamName })
 
-		mvpList.push({
-			...mvpData,
+		topScorerList.push({
+			...scorerData,
 			rank: index + 1,
 			team: teamName,
 			image
 		})
 	})
 
-	return mvpList
+	return topScorerList
 }
