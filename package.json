@@ -11,6 +11,7 @@
     "dev": "astro dev",
     "preview": "astro preview",
     "publish:api": "wrangler publish api/index.js",
+    "scrape": "node --no-warnings scraping/index.js",
     "test": "vitest",
     "test:cov": "vitest run --coverage",
     "start": "astro dev",
@@ -25,6 +26,7 @@
     "astro": "1.9.0",
     "cheerio": "1.0.0-rc.12",
     "hono": "2.7.1",
+    "picocolors": "1.0.0",
     "tailwindcss": "3.0.24"
   },
   "devDependencies": {
@@ -44,7 +46,7 @@
     ],
     "rules": {
       "no-tabs": "off",
-			"indent": "off",
+      "indent": "off",
       "no-unused-vars": "off",
       "space-before-function-paren": "off"
     },
