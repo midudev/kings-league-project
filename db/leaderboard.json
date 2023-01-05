@@ -11,7 +11,7 @@
       "name": "El Barrio",
       "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg",
       "url": "",
-      "channel": "https://twitch.tv/1k",
+      "channel": null,
       "coach": "???",
       "socialNetworks": [
         "https://www.instagram.com/elbarrioklk/?hl=es",
@@ -95,7 +95,7 @@
       "name": "1K FC",
       "image": "https://kings-league-api.midudev.workers.dev/static/logos/1k.svg",
       "url": "",
-      "channel": "https://www.youtube.com/@IkerCasillas",
+      "channel": "https://www.youtube.com/ikercasillas",
       "coach": "???",
       "socialNetworks": [
         "https://www.instagram.com/1kfutbolclub/?hl=es",
