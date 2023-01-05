@@ -1,4 +1,4 @@
-import { TEAMS } from '../db/index.js'
+import { getImageFromTeam } from '../db/index.js'
 import { cleanText } from './utils.js'
 
 const SCORES_SELECTORS = {
@@ -11,11 +11,6 @@ const SCORES_SELECTORS = {
 
 export async function getTopScoresList($) {
 	const $rows = $('table tbody tr')
-
-	const getImageFromTeam = ({ name }) => {
-		const { image } = TEAMS.find((team) => team.name === name)
-		return image
-	}
 
 	const scoresSelectorEntries = Object.entries(SCORES_SELECTORS)
 	const topScorerList = []
