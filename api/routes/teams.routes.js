@@ -24,10 +24,9 @@ teamsApi.get('/', (ctx) => {
 })
 
 /**
-	@api {GET} /teams Get all teams
+	@api {GET} /teams/id Get team by ID
 	@apiName GetTeams
 	@APIGroup Teams
-	@apiSuccess {Object[]} team list.
 	@apiSuccess {Number} teams.id Team ID.
 	@apiSuccess {String} teams.name Team name.
 	@apiSuccess {String} teams.image Team image.
