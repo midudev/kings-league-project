@@ -42,6 +42,7 @@
     ],
     "rules": {
       "no-tabs": "off",
+			"indent": "off",
       "no-unused-vars": "off",
       "space-before-function-paren": "off"
     },
