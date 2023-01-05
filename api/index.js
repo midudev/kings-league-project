@@ -11,7 +11,16 @@ const router = new Router()
 router.get('/', (ctx) =>
   ctx.json([
     {
-      endpoint: '/leaderboard'
+      endpoint: '/leaderboard',
+      description: 'Returns Kings League leaderboard'
+    },
+    {
+      endpoint: '/teams',
+      description: 'Returns Kings League teams'
+    },
+    {
+      endpoint: '/presidents',
+      description: 'Returns Kings League presidents'
     }
   ])
 )
