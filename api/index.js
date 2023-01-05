@@ -3,7 +3,7 @@ import { serveStatic } from 'hono/serve-static.module'
 import leaderboard from '../db/leaderboard.json'
 import teams from '../db/teams.json'
 import presidents from '../db/presidents.json'
-import coachs from '../db/coachs.json'
+import coaches from '../db/coaches.json'
 import top_scorer from '../db/top_scorer.json'
 import mvp from '../db/mvp.json'
 
@@ -24,8 +24,8 @@ app.get('/', (ctx) =>
       description: 'Returns Kings League presidents'
     },
     {
-      endpoint: '/coachs',
-      description: 'Returns Kings League coachs'
+      endpoint: '/coaches',
+      description: 'Returns Kings League coaches'
     }
   ])
 )
@@ -38,8 +38,8 @@ app.get('/presidents', (ctx) => {
   return ctx.json(presidents)
 })
 
-app.get('/coachs\\/?', (ctx) => {
-  return ctx.json(coachs)
+app.get('/coaches\\/?', (ctx) => {
+  return ctx.json(coaches)
 })
 
 app.get('/top-scorer', (ctx) => {
