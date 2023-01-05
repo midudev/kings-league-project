@@ -1,0 +1,27 @@
+---
+import Layout from '@layouts/Layout.astro'
+
+export async function getStaticPaths() {
+  const response = await fetch('https://kings-league-api.midudev.workers.dev/teams')
+	const teams = await response.json()
+
+  return teams.map(({id, image, name}) => ({
+    params: { teamId: id },
+    props: {
+			id,
+      name,
+      image
+    }
+  }))
+}
+
+const {id, name, image} = Astro.props
+---
+
+<Layout title={name}>
+	<div class="container mx-auto px-4">
+		<h1 class="font-bold text-2xl">{name}</h1>
+		<img src={image} alt={`Escudeo del equipo ${name}`} width="200"  height="200" />
+		<a class="text-blue-500 underline" href="/">Regresar al Inicio</a>
+	</div>
+</Layout>
