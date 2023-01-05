@@ -1,12 +1,12 @@
 import { Hono } from 'hono'
 import { serveStatic } from 'hono/serve-static.module'
 import leaderboard from '../db/leaderboard.json'
-import { coachesApi } from './coaches.routes'
-import { mvpApi } from './mvp.routes'
 
-import { presidentApi } from './presidents.routes'
-import { teamsApi } from './teams.routes'
-import { topScorerApi } from './top-scorer.routes'
+import { coachesApi } from './routes/coaches.routes'
+import { mvpApi } from './routes/mvp.routes'
+import { presidentApi } from './routes/presidents.routes'
+import { teamsApi } from './routes/teams.routes'
+import { topScorerApi } from './routes/top-scorer.routes'
 
 const app = new Hono()
 

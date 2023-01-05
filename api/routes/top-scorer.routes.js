@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 
-import top_scorer from '../db/top_scorer.json'
+import top_scorer from '../../db/top_scorer.json'
 
 const topScorerApi = new Hono()
 

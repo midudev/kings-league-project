@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 
-import mvp from '../db/mvp.json'
+import mvp from '../../db/mvp.json'
 
 const mvpApi = new Hono()
 
