@@ -1,19 +1,18 @@
-import { writeDBFile, TEAMS, PRESIDENTS } from '../db/index.js'
-import { URLS, scrape, cleanText } from './utils.js'
+import { TEAMS, PRESIDENTS } from '../db/index.js'
+import { cleanText } from './utils.js'
 
-async function getLeaderBoard() {
-	const $ = await scrape(URLS.leaderboard)
+const LEADERBOARD_SELECTORS = {
+	team: { selector: '.fs-table-text_3', typeOf: 'string' },
+	wins: { selector: '.fs-table-text_4', typeOf: 'number' },
+	losses: { selector: '.fs-table-text_5', typeOf: 'number' },
+	scoredGoals: { selector: '.fs-table-text_6', typeOf: 'number' },
+	concededGoals: { selector: '.fs-table-text_7', typeOf: 'number' },
+	yellowCards: { selector: '.fs-table-text_8', typeOf: 'number' },
+	redCards: { selector: '.fs-table-text_9', typeOf: 'number' }
+}
+
+export async function getLeaderBoard($) {
 	const $rows = $('table tbody tr')
-
-	const LEADERBOARD_SELECTORS = {
-		team: { selector: '.fs-table-text_3', typeOf: 'string' },
-		wins: { selector: '.fs-table-text_4', typeOf: 'number' },
-		losses: { selector: '.fs-table-text_5', typeOf: 'number' },
-		scoredGoals: { selector: '.fs-table-text_6', typeOf: 'number' },
-		concededGoals: { selector: '.fs-table-text_7', typeOf: 'number' },
-		yellowCards: { selector: '.fs-table-text_8', typeOf: 'number' },
-		redCards: { selector: '.fs-table-text_9', typeOf: 'number' }
-	}
 
 	const getTeamFrom = ({ name }) => {
 		const { presidentId, ...restOfTeam } = TEAMS.find((team) => team.name === name)
@@ -45,7 +44,3 @@ async function getLeaderBoard() {
 
 	return leaderboard
 }
-
-const leaderboard = await getLeaderBoard()
-
-await writeDBFile('leaderboard', leaderboard)
