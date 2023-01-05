@@ -1,352 +1,402 @@
 [
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "Feliu",
     "gamesPlayed": 1,
-    "mvps": 1
+    "mvps": 1,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Jacobo",
     "gamesPlayed": 1,
-    "mvps": 1
+    "mvps": 1,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "Los Troncos FC",
     "playerName": "J. Verdú “Gingko”",
     "gamesPlayed": 1,
-    "mvps": 1
+    "mvps": 1,
+    "team": "Los Troncos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/los-troncos.svg"
   },
   {
     "rank": 1,
-    "team": "Ultimate Móstoles",
     "playerName": "Juanma Glez",
     "gamesPlayed": 1,
-    "mvps": 1
+    "mvps": 1,
+    "team": "Ultimate Móstoles",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/ultimate-mostoles.svg"
   },
   {
     "rank": 1,
-    "team": "Kunisports",
     "playerName": "Víctor",
     "gamesPlayed": 1,
-    "mvps": 1
+    "mvps": 1,
+    "team": "Kunisports",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/kunisports.svg"
   },
   {
     "rank": 1,
-    "team": "1K FC",
     "playerName": "Sorroche",
     "gamesPlayed": 1,
-    "mvps": 1
+    "mvps": 1,
+    "team": "1K FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/1k.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "J. Segovia",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "G.Cichero",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "David L.L.",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "Toti",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "A.Ripol",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "Kilian",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "J. Blanco",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "Lil Pizza",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "Lao",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "Sergi",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "Tamudo",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Porcinos FC",
     "playerName": "Chicharito",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Porcinos FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "Briones",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "Gio Ferinu",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "Campu",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "Temo",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "C. Valle",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "V. Torres",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "David Alba",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "R. Carbó",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "Fajardo",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "Alfaya Jr.",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Saiyans FC",
     "playerName": "Capdevila",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Saiyans FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Dani P.",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Galvany",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Andrés",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Bernat",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Pau Mañé",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Jorquera",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Gilles V.",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Jadir",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "Roger",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "Aniquiladores FC",
     "playerName": "X.Morales",
     "gamesPlayed": 0,
-    "mvps": 0
+    "mvps": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Mase",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Beguer",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Ros",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Ubón",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Pau ZZ",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Olae",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "O. Boada",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Baranera",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Capilla",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "José Juan",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
     "rank": 1,
-    "team": "El Barrio",
     "playerName": "Gómez",
     "gamesPlayed": 1,
-    "mvps": 0
+    "mvps": 0,
+    "team": "El Barrio",
+    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   }
 ]

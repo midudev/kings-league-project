@@ -1,4 +1,4 @@
-import { writeDBFile } from '../db/index.js'
+import { writeDBFile, TEAMS } from '../db/index.js'
 import { URLS, scrape } from './utils.js'
 
 
@@ -12,6 +12,13 @@ async function getMvpList() {
     playerName: { selector: '.fs-table-text_4', typeOf: 'string' },
     gamesPlayed: { selector: '.fs-table-text_5', typeOf: 'number' },
     mvps: { selector: '.fs-table-text_6', typeOf: 'number' },
+  }
+
+	const getImageFromTeam = ({ name }) => {
+    const { image } = TEAMS.find(
+      (team) => team.name === name
+    )
+    return image
   }
 
   const cleanText = (text) =>
@@ -33,7 +40,16 @@ async function getMvpList() {
         return [key, value]
       }
     )
-		mvpList.push(Object.fromEntries(mvpEntries))
+	const { team: teamName, ...mvpData } =
+		Object.fromEntries(mvpEntries)
+	const image = getImageFromTeam({ name: teamName })
+
+	mvpList.push({
+		...mvpData,
+		team: teamName,
+		image
+	})
+		//mvpList.push(Object.fromEntries(mvpEntries))
 })
   return mvpList
 }
