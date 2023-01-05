@@ -21,7 +21,8 @@ app.get('/', (ctx) =>
 			parameters: [
 				{
 					name: 'id',
-					route: '/teams/{id}'
+					route: '/teams/{id}',
+					description: 'Returns Kings League team per param id'
 				}
 			]
 		},
@@ -31,7 +32,8 @@ app.get('/', (ctx) =>
 			parameters: [
 				{
 					name: 'id',
-					route: '/presidents/{id}'
+					route: '/presidents/{id}',
+					description: 'Returns Kings League president of team per param id'
 				}
 			]
 		},
