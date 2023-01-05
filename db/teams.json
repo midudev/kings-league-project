@@ -14,10 +14,7 @@
     ],
     "players": [],
     "coach": "Julio García Mera",
-    "coachInfo": {
-      "name": "Julio García Mera",
-      "image": "https://cdn.resfu.com/img_data/people/original/56313.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "el-barrio",
@@ -34,10 +31,7 @@
     ],
     "players": [],
     "coach": "Juan Arroita",
-    "coachInfo": {
-      "name": "Juan Arroita",
-      "image": "https://cdn.resfu.com/img_data/people/original/56270.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "ultimate-mostoles",
@@ -51,10 +45,7 @@
     ],
     "players": [],
     "coach": "Nacho Castro",
-    "coachInfo": {
-      "name": "Nacho Castro",
-      "image": "https://cdn.resfu.com/img_data/people/original/18487.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "los-troncos-fc",
@@ -71,10 +62,7 @@
     ],
     "players": [],
     "coach": "Pol Font",
-    "coachInfo": {
-      "name": "Pol Font",
-      "image": "https://cdn.resfu.com/img_data/people/original/56277.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "saiyans-fc",
@@ -88,10 +76,7 @@
     ],
     "players": [],
     "coach": "Daniel Romo",
-    "coachInfo": {
-      "name": "Daniel Romo",
-      "image": "https://cdn.resfu.com/img_data/people/original/47816.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "kunisports",
@@ -105,10 +90,7 @@
     ],
     "players": [],
     "coach": "Martín Posse",
-    "coachInfo": {
-      "name": "Martín Posse",
-      "image": "https://cdn.resfu.com/img_data/people/original/11432.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "jijantes-fc",
@@ -125,10 +107,7 @@
     ],
     "players": [],
     "coach": "Marc Carmona",
-    "coachInfo": {
-      "name": "Marc Carmona",
-      "image": "https://cdn.resfu.com/img_data/people/original/56274.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "porcinos-fc",
@@ -143,10 +122,7 @@
     ],
     "players": [],
     "coach": "Juvenal Edjogo",
-    "coachInfo": {
-      "name": "Juvenal Edjogo",
-      "image": "https://cdn.resfu.com/img_data/people/original/56312.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "rayo-barcelona",
@@ -163,10 +139,7 @@
     ],
     "players": [],
     "coach": "JuanluDBZ",
-    "coachInfo": {
-      "name": "JuanluDBZ",
-      "image": "https://cdn.resfu.com/img_data/people/original/56266.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "xbuyer-team",
@@ -180,10 +153,7 @@
     ],
     "players": [],
     "coach": "Víctor González",
-    "coachInfo": {
-      "name": "Víctor González",
-      "image": "https://cdn.resfu.com/img_data/people/original/56320.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "aniquiladores-fc",
@@ -197,10 +167,7 @@
     ],
     "players": [],
     "coach": "Sergio Verdirame",
-    "coachInfo": {
-      "name": "Sergio Verdirame",
-      "image": "https://cdn.resfu.com/img_data/people/original/56314.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   },
   {
     "id": "pio-fc",
@@ -215,9 +182,6 @@
     ],
     "players": [],
     "coach": "Gerardo Torrado",
-    "coachInfo": {
-      "name": "Gerardo Torrado",
-      "image": "https://cdn.resfu.com/img_data/people/original/56295.jpg?size=120x&lossy=1"
-    }
+    "coachInfo": {}
   }
 ]
