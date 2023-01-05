@@ -7,7 +7,8 @@ const URLS = {
 
 const INFO_COACHS_SELECTORS = {
   teamName: { selector: '.name.mt10', typeOf: 'string' },
-  coach: { selector: '.name.mt20', typeOf: 'string' }
+  coach: { selector: '.name.mt20', typeOf: 'string' },
+  coachImg: { selector: '.player-circle-box', typeOf: 'string' }
 }
 
 async function scrape(url) {
@@ -25,11 +26,22 @@ async function getCoachsOfTeams() {
   const coachsTeam = $(INFO_COACHS_SELECTORS.coach.selector)
     .toArray()
     .map((coachName) => coachName.children[0].data)
+  const coachsImgTeam = $(INFO_COACHS_SELECTORS.coachImg.selector)
+    .toArray()
+    .map((coachImg) => {
+      const { attribs } = coachImg
+      const { src } = attribs
+      return src
+    })
   const teamsName = $(INFO_COACHS_SELECTORS.teamName.selector)
     .toArray()
     .map((teamName) => teamName.children[0].data)
   const teamsWithCoach = coachsTeam.map((coach, i) => {
-    return { coach, teamName: replaceFCOfTeamName(teamsName[i]) }
+    return {
+      coach,
+      teamName: replaceFCOfTeamName(teamsName[i]),
+      coachImg: coachsImgTeam[i]
+    }
   })
   return TEAMS.map((team) => {
     const coachInfoTeam = teamsWithCoach.filter((teamWithCoach, i) => {
@@ -44,7 +56,10 @@ async function getCoachsOfTeams() {
 
     return {
       ...team,
-      coach: coachInfoTeam.coach
+      coachInfo: {
+        name: coachInfoTeam.coach,
+        image: coachInfoTeam.coachImg
+      }
     }
   })
 }
