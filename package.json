@@ -15,9 +15,9 @@
     "test": "vitest",
     "test:cov": "vitest run --coverage",
     "start": "astro dev",
-		"lint": "eslint . --ext .js,.astro,.ts,.tsx",
-		"lint:fix": "eslint . --ext .js,.astro,.ts,.tsx --fix",
-		"format": "prettier --write ."
+    "lint": "eslint . --ext .js,.astro,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.astro,.ts,.tsx --fix",
+    "format": "prettier -w . --cache --plugin-search-dir=."
   },
   "keywords": [],
   "author": "",
