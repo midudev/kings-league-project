@@ -4,6 +4,8 @@ import leaderboard from '../db/leaderboard.json'
 import teams from '../db/teams.json'
 import presidents from '../db/presidents.json'
 import coachs from '../db/coachs.json'
+import top_scorer from '../db/top_scorer.json'
+import mvp from '../db/mvp.json'
 
 const app = new Hono()
 
@@ -38,6 +40,14 @@ app.get('/presidents', (ctx) => {
 
 app.get('/coachs\\/?', (ctx) => {
   return ctx.json(coachs)
+})
+
+app.get('/top-scorer', (ctx) => {
+	return ctx.json(top_scorer)
+})
+
+app.get('/mvp', (ctx) => {
+	return ctx.json(mvp)
 })
 
 app.get('/presidents/:id', (ctx) => {
