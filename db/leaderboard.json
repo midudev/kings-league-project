@@ -1,7 +1,7 @@
 [
   {
     "wins": 1,
-    "loses": 0,
+    "losses": 0,
     "scoredGoals": 5,
     "concededGoals": 0,
     "yellowCards": 0,
@@ -11,7 +11,7 @@
       "name": "El Barrio",
       "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg",
       "url": "",
-      "channel": null,
+      "channel": "https://twitch.tv/1k",
       "coach": "???",
       "socialNetworks": [
         "https://www.instagram.com/elbarrioklk/?hl=es",
@@ -30,7 +30,7 @@
   },
   {
     "wins": 1,
-    "loses": 0,
+    "losses": 0,
     "scoredGoals": 5,
     "concededGoals": 1,
     "yellowCards": 0,
@@ -56,7 +56,7 @@
   },
   {
     "wins": 1,
-    "loses": 0,
+    "losses": 0,
     "scoredGoals": 5,
     "concededGoals": 3,
     "yellowCards": 1,
@@ -85,7 +85,7 @@
   },
   {
     "wins": 1,
-    "loses": 0,
+    "losses": 0,
     "scoredGoals": 4,
     "concededGoals": 2,
     "yellowCards": 0,
@@ -95,7 +95,7 @@
       "name": "1K FC",
       "image": "https://kings-league-api.midudev.workers.dev/static/logos/1k.svg",
       "url": "",
-      "channel": "https://www.youtube.com/ikercasillas",
+      "channel": "https://www.twitch.tv/ikercasillas",
       "coach": "???",
       "socialNetworks": [
         "https://www.instagram.com/1kfutbolclub/?hl=es",
@@ -114,7 +114,7 @@
   },
   {
     "wins": 1,
-    "loses": 0,
+    "losses": 0,
     "scoredGoals": 4,
     "concededGoals": 2,
     "yellowCards": 1,
@@ -140,7 +140,7 @@
   },
   {
     "wins": 1,
-    "loses": 0,
+    "losses": 0,
     "scoredGoals": 2,
     "concededGoals": 1,
     "yellowCards": 1,
@@ -166,7 +166,7 @@
   },
   {
     "wins": 0,
-    "loses": 1,
+    "losses": 1,
     "scoredGoals": 1,
     "concededGoals": 2,
     "yellowCards": 0,
@@ -195,7 +195,7 @@
   },
   {
     "wins": 0,
-    "loses": 1,
+    "losses": 1,
     "scoredGoals": 2,
     "concededGoals": 4,
     "yellowCards": 1,
@@ -222,7 +222,7 @@
   },
   {
     "wins": 0,
-    "loses": 1,
+    "losses": 1,
     "scoredGoals": 2,
     "concededGoals": 4,
     "yellowCards": 0,
@@ -251,7 +251,7 @@
   },
   {
     "wins": 0,
-    "loses": 1,
+    "losses": 1,
     "scoredGoals": 2,
     "concededGoals": 5,
     "yellowCards": 1,
@@ -277,7 +277,7 @@
   },
   {
     "wins": 0,
-    "loses": 1,
+    "losses": 1,
     "scoredGoals": 1,
     "concededGoals": 5,
     "yellowCards": 0,
@@ -303,7 +303,7 @@
   },
   {
     "wins": 0,
-    "loses": 1,
+    "losses": 1,
     "scoredGoals": 0,
     "concededGoals": 5,
     "yellowCards": 1,
