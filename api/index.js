@@ -17,11 +17,23 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/teams',
-			description: 'Returns Kings League teams'
+			description: 'Returns Kings League teams',
+			parameters: [
+				{
+					name: 'id',
+					route: '/teams/{id}'
+				}
+			]
 		},
 		{
 			endpoint: '/presidents',
-			description: 'Returns Kings League presidents'
+			description: 'Returns Kings League presidents',
+			parameters: [
+				{
+					name: 'id',
+					route: '/presidents/{id}'
+				}
+			]
 		},
 		{
 			endpoint: '/coachs',
