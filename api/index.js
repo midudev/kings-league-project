@@ -1,4 +1,4 @@
-import { Hono } from 'hono'
+import { Hono, Router } from 'hono'
 import { serveStatic } from 'hono/serve-static.module'
 import leaderboard from '../db/leaderboard.json'
 import teams from '../db/teams.json'
@@ -6,67 +6,56 @@ import presidents from '../db/presidents.json'
 
 const app = new Hono()
 
-app.get('/', (ctx) =>
+const router = new Router()
+
+router.get('/', (ctx) =>
   ctx.json([
     {
-      endpoint: '/leaderboard',
-      description: 'Returns Kings League leaderboard'
-    },
-    {
-      endpoint: '/teams',
-      description: 'Returns Kings League teams'
-    },
-    {
-      endpoint: '/presidents',
-      description: 'Returns Kings League presidents'
+      endpoint: '/leaderboard'
     }
   ])
 )
 
-app.get('/leaderboard', (ctx) => {
-  return ctx.json(leaderboard)
+router.get('/leaderboard\\/?', async (ctx) => {
+  return ctx.json(await leaderboard)
 })
 
-app.get('/presidents', (ctx) => {
-  return ctx.json(presidents)
+router.get('/presidents\\/?', async (ctx) => {
+  return ctx.json(await presidents)
 })
 
-app.get('/teams/', (ctx) => {
-  return ctx.json(teams)
+router.get('/presidents/:id', async (ctx) => {
+  try {
+    const id = ctx.req.param('id')
+    const foundPresident = presidents.find((president) => president.id === id)
+
+    return foundPresident
+      ? ctx.json(foundPresident)
+      : ctx.json({ message: 'President not found' }, 404)
+  } catch (error) {
+    return ctx.json({ message: 'An error occurred' }, 500)
+  }
 })
 
-app.get('/presidents/:id', (ctx) => {
-  const id = ctx.req.param('id')
-  const foundPresident = presidents.find((president) => president.id === id)
-
-  return foundPresident
-    ? ctx.json(foundPresident)
-    : ctx.json({ message: 'President not found' }, 404)
+router.get('/teams\\/?', async (ctx) => {
+  return ctx.json(await teams)
 })
 
-app.get('/teams', (ctx) => {
-  return ctx.json(teams)
+router.get('/teams/:id', async (ctx) => {
+  try {
+    const id = ctx.req.param('id')
+    const foundTeam = teams.find((team) => team.id === id)
+
+    return foundTeam
+      ? ctx.json(foundTeam)
+      : ctx.json({ message: 'Team not found' }, 404)
+  } catch (error) {
+    return ctx.json({ message: 'An error occurred' }, 500)
+  }
 })
 
-app.get('/teams/:id', (ctx) => {
-  const id = ctx.req.param('id')
-  const foundTeam = teams.find((team) => team.id === id)
-
-  return foundTeam
-    ? ctx.json(foundTeam)
-    : ctx.json({ message: 'Team not found' }, 404)
-})
+app.use(router)
 
 app.get('/static/*', serveStatic({ root: './' }))
-
-app.notFound((c) => {
-  const { pathname } = new URL(c.req.url)
-
-  if (c.req.url.at(-1) === '/') {
-	return c.redirect(pathname.slice(0, -1))
-  }
-
-  return c.json({ message: 'Not Found' }, 404)
-})
 
 export default app
