@@ -21,7 +21,7 @@ function replaceFCOfTeamName(teamName) {
   return teamName.replace(' FC', '')
 }
 
-async function getCoachsOfTeams() {
+async function getInfoCoachs() {
   const $ = await scrape(URLS.coachs)
   const coachsTeam = $(INFO_COACHS_SELECTORS.coach.selector)
     .toArray()
@@ -38,11 +38,16 @@ async function getCoachsOfTeams() {
     .map((teamName) => teamName.children[0].data)
   const teamsWithCoach = coachsTeam.map((coach, i) => {
     return {
-      coach,
+      name: coach,
       teamName: replaceFCOfTeamName(teamsName[i]),
-      coachImg: coachsImgTeam[i]
+      image: coachsImgTeam[i]
     }
   })
+  return teamsWithCoach
+}
+
+async function getCoachsOfTeams() {
+  const teamsWithCoach = await getInfoCoachs()
   return TEAMS.map((team) => {
     const coachInfoTeam = teamsWithCoach.filter((teamWithCoach, i) => {
       const teamWithCoachFormatted = replaceFCOfTeamName(
