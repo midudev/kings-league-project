@@ -13,7 +13,11 @@
       "https://www.tiktok.com/@1kfutbolclub"
     ],
     "players": [],
-    "coach": "Julio García Mera"
+    "coach": "Julio García Mera",
+    "coachInfo": {
+      "name": "Julio García Mera",
+      "image": "https://cdn.resfu.com/img_data/people/original/56313.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "el-barrio",
@@ -29,7 +33,11 @@
       "https://www.tiktok.com/@elbarrioklk"
     ],
     "players": [],
-    "coach": "Juan Arroita"
+    "coach": "Juan Arroita",
+    "coachInfo": {
+      "name": "Juan Arroita",
+      "image": "https://cdn.resfu.com/img_data/people/original/56270.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "ultimate-mostoles",
@@ -42,7 +50,11 @@
       "https://m.youtube.com/user/DjMaRiiO/videos"
     ],
     "players": [],
-    "coach": "Nacho Castro"
+    "coach": "Nacho Castro",
+    "coachInfo": {
+      "name": "Nacho Castro",
+      "image": "https://cdn.resfu.com/img_data/people/original/18487.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "los-troncos-fc",
@@ -58,7 +70,11 @@
       "https://www.tiktok.com/@lostroncosfc_"
     ],
     "players": [],
-    "coach": "Pol Font"
+    "coach": "Pol Font",
+    "coachInfo": {
+      "name": "Pol Font",
+      "image": "https://cdn.resfu.com/img_data/people/original/56277.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "saiyans-fc",
@@ -71,7 +87,11 @@
       "https://www.twitch.tv/thegrefg"
     ],
     "players": [],
-    "coach": "Daniel Romo"
+    "coach": "Daniel Romo",
+    "coachInfo": {
+      "name": "Daniel Romo",
+      "image": "https://cdn.resfu.com/img_data/people/original/47816.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "kunisports",
@@ -84,7 +104,11 @@
       "https://www.twitch.tv/slakun10"
     ],
     "players": [],
-    "coach": "Martín Posse"
+    "coach": "Martín Posse",
+    "coachInfo": {
+      "name": "Martín Posse",
+      "image": "https://cdn.resfu.com/img_data/people/original/11432.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "jijantes-fc",
@@ -100,7 +124,11 @@
       "https://www.tiktok.com/@jijantesfutbolclub"
     ],
     "players": [],
-    "coach": "Marc Carmona"
+    "coach": "Marc Carmona",
+    "coachInfo": {
+      "name": "Marc Carmona",
+      "image": "https://cdn.resfu.com/img_data/people/original/56274.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "porcinos-fc",
@@ -114,7 +142,11 @@
       "https://twitter.com/FCPorcinos"
     ],
     "players": [],
-    "coach": "Juvenal Edjogo"
+    "coach": "Juvenal Edjogo",
+    "coachInfo": {
+      "name": "Juvenal Edjogo",
+      "image": "https://cdn.resfu.com/img_data/people/original/56312.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "rayo-barcelona",
@@ -130,7 +162,11 @@
       "https://www.tiktok.com/@rayodebarcelona"
     ],
     "players": [],
-    "coach": "JuanluDBZ"
+    "coach": "JuanluDBZ",
+    "coachInfo": {
+      "name": "JuanluDBZ",
+      "image": "https://cdn.resfu.com/img_data/people/original/56266.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "xbuyer-team",
@@ -143,7 +179,11 @@
       "https://www.youtube.com/xbuyer"
     ],
     "players": [],
-    "coach": "Víctor González"
+    "coach": "Víctor González",
+    "coachInfo": {
+      "name": "Víctor González",
+      "image": "https://cdn.resfu.com/img_data/people/original/56320.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "aniquiladores-fc",
@@ -156,7 +196,11 @@
       "https://www.twitch.tv/juansguarnizo"
     ],
     "players": [],
-    "coach": "Sergio Verdirame"
+    "coach": "Sergio Verdirame",
+    "coachInfo": {
+      "name": "Sergio Verdirame",
+      "image": "https://cdn.resfu.com/img_data/people/original/56314.jpg?size=120x&lossy=1"
+    }
   },
   {
     "id": "pio-fc",
@@ -170,6 +214,10 @@
       "https://twitter.com/PIO_FC"
     ],
     "players": [],
-    "coach": "Gerardo Torrado"
+    "coach": "Gerardo Torrado",
+    "coachInfo": {
+      "name": "Gerardo Torrado",
+      "image": "https://cdn.resfu.com/img_data/people/original/56295.jpg?size=120x&lossy=1"
+    }
   }
 ]
