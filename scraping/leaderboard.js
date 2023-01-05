@@ -1,63 +1,49 @@
-import * as cheerio from 'cheerio'
 import { writeDBFile, TEAMS, PRESIDENTS } from '../db/index.js'
-import { URLS, scrape } from './utils.js'
+import { URLS, scrape, cleanText } from './utils.js'
 
 async function getLeaderBoard() {
-  const $ = await scrape(URLS.leaderboard)
-  const $rows = $('table tbody tr')
+	const $ = await scrape(URLS.leaderboard)
+	const $rows = $('table tbody tr')
 
-  const LEADERBOARD_SELECTORS = {
-    team: { selector: '.fs-table-text_3', typeOf: 'string' },
-    wins: { selector: '.fs-table-text_4', typeOf: 'number' },
-    losses: { selector: '.fs-table-text_5', typeOf: 'number' },
-    scoredGoals: { selector: '.fs-table-text_6', typeOf: 'number' },
-    concededGoals: { selector: '.fs-table-text_7', typeOf: 'number' },
-    yellowCards: { selector: '.fs-table-text_8', typeOf: 'number' },
-    redCards: { selector: '.fs-table-text_9', typeOf: 'number' }
-  }
+	const LEADERBOARD_SELECTORS = {
+		team: { selector: '.fs-table-text_3', typeOf: 'string' },
+		wins: { selector: '.fs-table-text_4', typeOf: 'number' },
+		losses: { selector: '.fs-table-text_5', typeOf: 'number' },
+		scoredGoals: { selector: '.fs-table-text_6', typeOf: 'number' },
+		concededGoals: { selector: '.fs-table-text_7', typeOf: 'number' },
+		yellowCards: { selector: '.fs-table-text_8', typeOf: 'number' },
+		redCards: { selector: '.fs-table-text_9', typeOf: 'number' }
+	}
 
-  const getTeamFrom = ({ name }) => {
-    const { presidentId, ...restOfTeam } = TEAMS.find(
-      (team) => team.name === name
-    )
-    const president = PRESIDENTS.find(
-      (president) => president.id === presidentId
-    )
-    return { ...restOfTeam, president }
-  }
+	const getTeamFrom = ({ name }) => {
+		const { presidentId, ...restOfTeam } = TEAMS.find((team) => team.name === name)
+		const president = PRESIDENTS.find((president) => president.id === presidentId)
+		return { ...restOfTeam, president }
+	}
 
-  const cleanText = (text) =>
-    text
-      .replace(/\t|\n|\s:/g, '')
-      .replace(/.*:/g, ' ')
-      .trim()
+	const leaderBoardSelectorEntries = Object.entries(LEADERBOARD_SELECTORS)
 
-  const leaderBoardSelectorEntries = Object.entries(LEADERBOARD_SELECTORS)
+	const leaderboard = []
+	$rows.each((_, el) => {
+		const leaderBoardEntries = leaderBoardSelectorEntries.map(([key, { selector, typeOf }]) => {
+			const rawValue = $(el).find(selector).text()
+			const cleanedValue = cleanText(rawValue)
 
-  const leaderboard = []
-  $rows.each((_, el) => {
-    const leaderBoardEntries = leaderBoardSelectorEntries.map(
-      ([key, { selector, typeOf }]) => {
-        const rawValue = $(el).find(selector).text()
-        const cleanedValue = cleanText(rawValue)
+			const value = typeOf === 'number' ? Number(cleanedValue) : cleanedValue
 
-        const value = typeOf === 'number' ? Number(cleanedValue) : cleanedValue
+			return [key, value]
+		})
 
-        return [key, value]
-      }
-    )
+		const { team: teamName, ...leaderboardForTeam } = Object.fromEntries(leaderBoardEntries)
+		const team = getTeamFrom({ name: teamName })
 
-    const { team: teamName, ...leaderboardForTeam } =
-      Object.fromEntries(leaderBoardEntries)
-    const team = getTeamFrom({ name: teamName })
+		leaderboard.push({
+			...leaderboardForTeam,
+			team
+		})
+	})
 
-    leaderboard.push({
-      ...leaderboardForTeam,
-      team
-    })
-  })
-
-  return leaderboard
+	return leaderboard
 }
 
 const leaderboard = await getLeaderBoard()
