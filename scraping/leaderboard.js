@@ -18,7 +18,7 @@ async function getLeaderBoard() {
   const LEADERBOARD_SELECTORS = {
     team: { selector: '.fs-table-text_3', typeOf: 'string' },
     wins: { selector: '.fs-table-text_4', typeOf: 'number' },
-    loses: { selector: '.fs-table-text_5', typeOf: 'number' },
+    losses: { selector: '.fs-table-text_5', typeOf: 'number' },
     scoredGoals: { selector: '.fs-table-text_6', typeOf: 'number' },
     concededGoals: { selector: '.fs-table-text_7', typeOf: 'number' },
     yellowCards: { selector: '.fs-table-text_8', typeOf: 'number' },
