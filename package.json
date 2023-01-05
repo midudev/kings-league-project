@@ -1,58 +1,60 @@
 {
-  "name": "kings-league",
-  "version": "1.0.1",
-  "description": "Kings League Infojobs Project with API & Web",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "astro": "astro",
-    "build": "astro build",
-    "dev:api": "wrangler dev api/index.js",
-    "dev": "astro dev",
-    "preview": "astro preview",
-    "publish:api": "wrangler publish api/index.js",
-    "test": "vitest",
-    "test:cov": "vitest run --coverage",
-    "start": "astro dev"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@astrojs/tailwind": "2.1.3",
-    "astro": "1.9.0",
-    "cheerio": "1.0.0-rc.12",
-    "hono": "2.7.1",
-    "tailwindcss": "3.0.24"
-  },
-  "devDependencies": {
-    "@vitest/coverage-c8": "0.26.3",
-    "eslint-plugin-astro": "0.21.1",
-    "prettier": "2.8.1",
-    "prettier-plugin-astro": "0.7.2",
-    "standard": "17.0.0",
-    "vite": "4.0.4",
-    "vitest": "0.26.3",
-    "wrangler": "2.6.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "standard",
-      "plugin:astro/recommended"
-    ],
-    "rules": {
-      "no-tabs": "off",
+	"name": "kings-league",
+	"version": "1.0.1",
+	"description": "Kings League Infojobs Project with API & Web",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"astro": "astro",
+		"build": "astro build",
+		"dev:api": "wrangler dev api/index.js",
+		"dev": "astro dev",
+		"preview": "astro preview",
+		"publish:api": "wrangler publish api/index.js",
+		"test": "vitest",
+		"test:cov": "vitest run --coverage",
+		"start": "astro dev",
+		"lint": "eslint . --ext .js,.astro,.ts,.tsx",
+		"format": "prettier --write ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@astrojs/tailwind": "2.1.3",
+		"astro": "1.9.0",
+		"cheerio": "1.0.0-rc.12",
+		"hono": "2.7.1",
+		"tailwindcss": "3.0.24"
+	},
+	"devDependencies": {
+		"@vitest/coverage-c8": "0.26.3",
+		"eslint-plugin-astro": "0.21.1",
+		"prettier": "2.8.1",
+		"prettier-plugin-astro": "0.7.2",
+		"standard": "17.0.0",
+		"vite": "4.0.4",
+		"vitest": "0.26.3",
+		"wrangler": "2.6.2"
+	},
+	"eslintConfig": {
+		"extends": [
+			"standard",
+			"plugin:astro/recommended"
+		],
+		"rules": {
+			"no-tabs": "off",
 			"indent": "off",
-      "no-unused-vars": "off",
-      "space-before-function-paren": "off"
-    },
-    "overrides": [
-      {
-        "files": [
-          "*.astro"
-        ],
-        "parser": "astro-eslint-parser"
-      }
-    ]
-  }
+			"no-unused-vars": "off",
+			"space-before-function-paren": "off"
+		},
+		"overrides": [
+			{
+				"files": [
+					"*.astro"
+				],
+				"parser": "astro-eslint-parser"
+			}
+		]
+	}
 }
