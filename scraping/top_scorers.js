@@ -29,7 +29,7 @@ export async function getTopScoresList($) {
 		const image = getImageFromTeam({ name: teamName })
 
 		topScorerList.push({
-			ranking: index + 1,
+			rank: index + 1,
 			...scorerData,
 			team: teamName,
 			image
