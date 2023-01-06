@@ -1,9 +1,8 @@
-## Contributing to the Kings League API 🎮
+# Contributing to the Kings League 🎮
 
-**Introduction**
+## Introduction
 
 Thank you for considering contributing to the Kings League API! We appreciate any help, big or small, and are grateful for your time and effort. This document outlines the guidelines for contributing to the project, as well as the process for submitting pull requests.
-
 
 ## How Can I Contribute? 😊
 
@@ -14,8 +13,7 @@ There are many ways you can contribute to the Kings League API, including:
 - Improving the test coverage of the codebase
 - Submitting code changes and bug fixes
 
-
-##  Submitting Changes 🛠 
+## Submitting Changes 🛠
 
 Before you submit a pull request, please make sure to do the following:
 
@@ -24,40 +22,36 @@ Before you submit a pull request, please make sure to do the following:
 - Make sure that all tests pass.
 - Update the documentation to reflect any changes. (recommendable)
 
-
 ## Pull Request Process 🚀
 
- - Fork the repository and create a new branch for your changes.
- - Make the necessary changes, and commit your code with a clear commit message.
- - Push your changes to your fork.
- - Submit a pull request to the main repository.
- - The repository maintainers will review your pull request and may request changes or improvements.
- - Once the changes have been made and the pull request has been approved, it will be merged into the main branch.
+- Fork the repository and create a new branch for your changes.
+- Make the necessary changes, and commit your code with a clear commit message.
+- Push your changes to your fork.
+- Submit a pull request to the main repository.
+- The repository maintainers will review your pull request and may request changes or improvements.
+- Once the changes have been made and the pull request has been approved, it will be merged into the main branch.
 
+## Git Commit Conduct 📝
 
- ## Git Commit Conduct 📝
+When writing commit messages, please follow these best practices:
 
-  When writing commit messages, please follow these best practices:
+- Use the imperative mood in your commit message. For example, "Fix bug" instead of "Fixed bug" or "Fixes bug."
+- Avoid using exclamation points or question marks in your commit message.
+- Keep your commit message short and concise, ideally no more than 50 characters.
+- Use the commit message body to provide any necessary context or details about the commit.
+- Use prefixes in your commit messages to make them more semantic. Some common prefixes include:
 
-  - Use the imperative mood in your commit message. For example, "Fix bug" instead of "Fixed bug" or "Fixes bug."
-  - Avoid using exclamation points or question marks in your commit message.
-  - Keep your commit message short and concise, ideally no more than 50 characters.
-  - Use the commit message body to provide any necessary context or details about the commit.
-  - Use prefixes in your commit messages to make them more semantic.
-     Some common prefixes include:
-	     "feat" for new features,
-		 "fix" for bug fixes,
-		 "perf" for performance improvements, 
-		 "build" for changes to the build system, 
-		 "ci" for continuous integration - changes,
-		 "docs" for documentation changes, 
-		 "refactor" for refactoring changes, 
-		 "style" for formatting changes,
-		 "test" for changes to tests.
+"feat" for new features,
+"fix" for bug fixes,
+"perf" for performance improvements,
+"build" for changes to the build system,
+"ci" for continuous integration - changes,
+"docs" for documentation changes,
+"refactor" for refactoring changes,
+"style" for formatting changes,
+"test" for changes to tests.
 
-  For more information about writing good commit messages, 
-  you can refer to this link: https://midu.dev/buenas-practicas-escribir-commits-git/
-
+For more information about writing good commit messages, you can refer to this link: https://midu.dev/buenas-practicas-escribir-commits-git/
 
 ## Reporting Bugs 🐛
 
