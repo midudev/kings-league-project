@@ -16,7 +16,7 @@
     "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
   },
   {
-    "playerName": "J. Verdú “Gingko”",
+    "playerName": "J. Verdú «Gingko»",
     "gamesPlayed": 1,
     "mvps": 1,
     "rank": 3,
@@ -49,7 +49,7 @@
   },
   {
     "playerName": "J. Segovia",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 7,
     "team": "Porcinos FC",
@@ -65,7 +65,7 @@
   },
   {
     "playerName": "David L.L.",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 9,
     "team": "Porcinos FC",
@@ -73,7 +73,7 @@
   },
   {
     "playerName": "Toti",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 10,
     "team": "Porcinos FC",
@@ -81,7 +81,7 @@
   },
   {
     "playerName": "A.Ripol",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 11,
     "team": "Porcinos FC",
@@ -97,7 +97,7 @@
   },
   {
     "playerName": "J. Blanco",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 13,
     "team": "Porcinos FC",
@@ -105,7 +105,7 @@
   },
   {
     "playerName": "Lil Pizza",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 14,
     "team": "Porcinos FC",
@@ -113,7 +113,7 @@
   },
   {
     "playerName": "Lao",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 15,
     "team": "Porcinos FC",
@@ -145,7 +145,7 @@
   },
   {
     "playerName": "Briones",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 19,
     "team": "Saiyans FC",
@@ -161,7 +161,7 @@
   },
   {
     "playerName": "Campu",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 21,
     "team": "Saiyans FC",
@@ -169,7 +169,7 @@
   },
   {
     "playerName": "Temo",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 22,
     "team": "Saiyans FC",
@@ -177,7 +177,7 @@
   },
   {
     "playerName": "C. Valle",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 23,
     "team": "Saiyans FC",
@@ -185,7 +185,7 @@
   },
   {
     "playerName": "V. Torres",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 24,
     "team": "Saiyans FC",
@@ -217,7 +217,7 @@
   },
   {
     "playerName": "Alfaya Jr.",
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "mvps": 0,
     "rank": 28,
     "team": "Saiyans FC",
