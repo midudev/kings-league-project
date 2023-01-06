@@ -1,0 +1,48 @@
+name: Generate Lighthouse Badges
+on: 
+  deployment:
+  workflow_dispatch:
+jobs:
+  lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.18.2
+          run_install: false
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+      - uses: browser-actions/setup-chrome@latest
+      - run: chrome --version
+      - name: Install lighthouse-badges
+        run: pnpm add -g lighthouse-badges
+      - name: Generate Badges
+        run: lighthouse-badges --urls https://kingsleague.dev/ https://kingsleague.dev/equipos/ -o test_results
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: kings-league-bot
+          author_email: bot@kingsleague.dev
+          message: 'Update Lighthouse badges [skip ci]'
+          add: 'test_results'
+          push: true
+          branch: main
+          token: ${{ secrets.GITHUB_TOKEN }}
