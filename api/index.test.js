@@ -22,11 +22,11 @@ describe('Testing / route', () => {
 	})
 
 	it('routes should have endpoint and description', async () => {
-		const resp = await worker.fetch()
-		expect(resp).toBeDefined()
-		if (!resp) return
+		const res = await worker.fetch()
+		expect(res).toBeDefined()
+		if (!res) return
 
-		const apiRoutes = await resp.json()
+		const apiRoutes = await res.json()
 		// verify the response to have the expected format
 		apiRoutes.forEach((endpoint) => {
 			expect(endpoint).toHaveProperty('endpoint')
