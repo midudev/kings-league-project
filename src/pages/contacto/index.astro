@@ -5,7 +5,8 @@ import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout title='Contacto'>
-	<SectionTitle title='Contacto' /><Container>
+	<SectionTitle title='Contacto' />
+	<Container>
 		<h2 class='font-bold mb-2 text-lg'>Horario de apertura</h2>
 		<p>
 			<strong>Sólo se podrá acceder al recinto con acreditación o invitación</strong> El horario de apertura
@@ -15,7 +16,7 @@ import Layout from '@layouts/Layout.astro'
 			<section>
 				<h2 class='font-bold mb-2 text-xl'>Accesos</h2>
 				<!--This should be replaced with the map -->
-				<div class='border-2 w-full h-80'></div>
+				<div class='border-2 w-full h-80 my-2'></div>
 				<p class='mb-2 text-justify'>
 					La entrada al pabellón de la Zona Deportiva Port de Barcelona será a través del Carrer de
 					la Mar Roja, s/n, 08040 Barcelona, que da a la entrada principal del recinto.
@@ -32,9 +33,9 @@ import Layout from '@layouts/Layout.astro'
 			<section>
 				<h2 class='font-bold mb-2 text-xl'>Cómo llegar al pabellón</h2>
 				<!--This should be replaced with the map -->
-				<div class='border-2 w-full h-80'></div>
+				<div class='border-2 w-full h-80 my-2'></div>
 
-				<h3 class='text-lg font-bold my-2'>Transporte Público</h3>
+				<h3 class='text-lg font-bold mb-2'>Transporte Público</h3>
 				<p><strong>Metro:</strong> L10S ZAL | Riu Vell / Collblanc, parada ZAL | Riu Vell.</p>
 				<p>
 					<strong>Desde Plaça Catalunya:</strong> L1 (Catalunya) – L1 (Torrassa) – L10S (ZAL | Riu Vell.
@@ -60,5 +61,23 @@ import Layout from '@layouts/Layout.astro'
 				</p>
 			</section>
 		</div>
+		<p class='my-2'>
+			Para más información, escríbenos a: <a
+				class='block text-orange-500'
+				href='mailto:info@kingsleague.pro'
+				target='_blank'
+				rel='noopener norefferer'
+			>
+				info@kingsleague.pro
+			</a>
+		</p>
+		<p class='my-2'>
+			Para contacto con el departamento de prensa: <a
+				class='block text-orange-500'
+				href='mailto:media@kingsleague.pro'
+				target='_blank'
+				rel='noopener norefferer'>media@kingsleague.pro</a
+			>
+		</p>
 	</Container>
 </Layout>
