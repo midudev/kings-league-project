@@ -7,7 +7,7 @@
 
 Thank you for considering contributing to the Kings League API! We appreciate any help, big or small, and are grateful for your time and effort. This document outlines the guidelines for contributing to the project, as well as the process for submitting pull requests.
 
-
+git checkout 
 ## How Can I Contribute? 😊
 
 There are many ways you can contribute to the Kings League API, including:

@@ -15,9 +15,9 @@
     "test": "vitest",
     "test:cov": "vitest run --coverage",
     "start": "astro dev",
-		"lint": "eslint . --ext .js,.astro,.ts,.tsx",
-		"lint:fix": "eslint . --ext .js,.astro,.ts,.tsx --fix",
-		"format": "prettier --write ."
+    "lint": "eslint . --ext .js,.astro,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.astro,.ts,.tsx --fix",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@vitest/coverage-c8": "0.26.3",
     "eslint-plugin-astro": "0.21.1",
+    "husky": "^8.0.3",
     "prettier": "2.8.1",
     "prettier-plugin-astro": "0.7.2",
     "standard": "17.0.0",
@@ -45,6 +46,11 @@
       "standard",
       "plugin:astro/recommended"
     ],
+   "husky": {
+     "hooks": {
+       "pre-push": "npm test"
+    }
+} ,
     "rules": {
       "no-tabs": "off",
       "indent": "off",
