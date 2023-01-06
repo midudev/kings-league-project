@@ -5,6 +5,34 @@ import tiktok from '../../assets/static/logos/social/tiktok.svg'
 import twitch from '../../assets/static/logos/social/twitch.svg'
 import twitter from '../../assets/static/logos/social/twitter.svg'
 import youtube from '../../assets/static/logos/social/youtube.svg'
+
+const SOCIAL_NETWORKS = [
+	{
+		name: 'twitch',
+		icon: twitch,
+		href: '#',
+	},
+	{
+		name: 'twitter',
+		icon: twitter,
+		href: '#',
+	},
+	{
+		name: 'tiktok',
+		icon: tiktok,
+		href: '#',
+	},
+	{
+		name: 'instagram',
+		icon: instagram,
+		href: '#',
+	},
+	{
+		name: 'youtube',
+		icon: youtube,
+		href: '#',
+	}
+]
 ---
 
 <footer class='text-white w-full p-8 bg-black'>
@@ -31,45 +59,17 @@ import youtube from '../../assets/static/logos/social/youtube.svg'
 
 	<section class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'>
 		<nav class='flex gap-4 align-middle items-center'>
-			<a href='#' class='rounded-full p-2 bg-white'>
-				<img
-					class='w-6 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
-					src={twitch}
-					alt='Twitch Logo'
-				/>
-			</a>
-
-			<a href='#' class='rounded-full p-2 bg-white'>
-				<img
-					class='w-6 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
-					src={twitter}
-					alt='Twitter Logo'
-				/>
-			</a>
-
-			<a href='#' class='rounded-full p-2 bg-white'>
-				<img
-					class='w-6 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
-					src={tiktok}
-					alt='TikTok Logo'
-				/>
-			</a>
-
-			<a href='#' class='rounded-full p-2 bg-white'>
-				<img
-					class='w-6 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
-					src={instagram}
-					alt='Instagram Logo'
-				/>
-			</a>
-
-			<a href='#' class='rounded-full p-2 bg-white'>
-				<img
-					class='w-8 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
-					src={youtube}
-					alt='YouTube Logo'
-				/>
-			</a>
+			{
+				SOCIAL_NETWORKS.map(network => (
+					<a href={network.href} class='w-10 h-10 flex items-center rounded-full p-2 bg-white group'>
+						<img
+							class='w-6 transition-brightness duration-300 brightness-0 group-hover:brightness-100'
+							src={network.icon}
+							alt={`${network.name} Logo`}
+						/>
+					</a>
+				))
+			}
 
 			<nav class='flex gap-5 justify-center lg:justify-around'>
 				<span>Contacto</span>
