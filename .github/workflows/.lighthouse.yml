@@ -1,6 +1,7 @@
 name: Generate Lighthouse Badges
 on: 
-  deployment:
+  deployment_status:
+    types: [completed]
   workflow_dispatch:
 jobs:
   lighthouseci:
