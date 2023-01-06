@@ -62,9 +62,7 @@ const teams = await response.json()
 					menu.map(({ name, href }) => (
 						<li>
 							<a
-								class={`transition ${
-									Astro.url.pathname === href ? 'opacity-100 underline pointer-events-none' : ''
-								}`}
+								class={`transition ${Astro.url.pathname === href ? 'opacity-100 underline pointer-events-none' : ''}`}
 								href={href}
 							>
 								{name}
