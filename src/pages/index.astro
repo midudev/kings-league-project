@@ -2,12 +2,14 @@
 import Table from '@components/Table.astro'
 import Layout from '@layouts/Layout.astro'
 import Container from '@components/Container.astro'
+import Sponsors from '@components/Sponsors.astro';
 ---
 
 <Layout title='Kings League Infojobs'>
 	<main>
 		<section class='bg-[#cd5500] py-20'>
 			<Container>
+
 				<div class='grid grid-cols-3 gap-10 w-full px-10'>
 					<div>
 						<Table />
@@ -75,6 +77,7 @@ import Container from '@components/Container.astro'
 					</div>
 				</div>
 			</Container>
+			<Sponsors />
 		</section>
 	</main>
 </Layout>
