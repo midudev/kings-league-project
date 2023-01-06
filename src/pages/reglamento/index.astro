@@ -1,48 +1,125 @@
 ---
+import Container from '@components/Container.astro'
+import SectionTitle from '@components/SectionTitle.astro'
 import Layout from '@layouts/Layout.astro'
+
+const REGULATION = [
+	{
+		number: '#01',
+		ruler:
+			'En caso de empate, el ganador de cada partido se decide con una tanda de penaltis desde medio campo.',
+		weapons: []
+	},
+	{
+		number: '#02',
+		ruler: 'En la Kings League jugamos con fuera de juego.',
+		weapons: []
+	},
+	{
+		number: '#03',
+		ruler: 'Los saques de banda se realizan con la mano.',
+		weapons: []
+	},
+	{
+		number: '#04',
+		ruler: 'Las sustituciones de jugadores durante el partido son ilimitadas.',
+		weapons: []
+	},
+	{
+		number: '#05',
+		ruler:
+			'La tarjeta amarilla supone 2’ de exclusión. Las rojas, 5’ hasta que entre un sustituto.',
+		weapons: []
+	},
+	{
+		number: '#06',
+		ruler:
+			'Para el saque inicial, el balón se sitúa en el centro del campo y los jugadores arrancan desde la línea de fondo.',
+		weapons: []
+	},
+	{
+		number: '#07',
+		ruler: 'Los dorsales van del 0 al 99.',
+		weapons: []
+	},
+	{
+		number: '#08',
+		ruler: 'Los partidos son de dos partes de 20’.',
+		weapons: []
+	},
+	{
+		number: '#09',
+		ruler:
+			'Armas secretas: cada equipo dispone de una carta, escogida al azar, que le otorga una ventaja una sola vez por partido:',
+		weapons: [
+			{
+				title: '#Arma 1',
+				description: 'Penalti a favor'
+			},
+			{
+				title: '#Arma 2',
+				description: 'Exclusión de un rival durante 2’'
+			},
+			{
+				title: '#Arma 3',
+				description: 'Gol doble durante 2’'
+			},
+			{
+				title: '#Arma 4',
+				description: 'Comodín'
+			},
+			{
+				title: '#Arma 5',
+				description: 'Robo de carta'
+			}
+		]
+	}
+]
 ---
 
 <Layout title='reglamento'>
-	<a href='/'>Inicio</a>
-	<div>
-		<p>
-			La Kings League InfoJobs la creamos entre todos. Y eso incluye la forma de jugar y el
-			reglamento. Estas son las normas que los aficionados han decidido por votación popular a
-			través de redes sociales:
-		</p>
-		<ul>
-			<li>
-				<span>#01</span> En caso de empate, el ganador de cada partido se decide con una tanda de penaltis
-				desde medio campo.
-			</li>
-			<li><span>#02</span> En la Kings League jugamos con fuera de juego.</li>
-			<li><span>#03</span> Los saques de banda se realizan con la mano.</li>
-			<li><span>#04</span> Las sustituciones de jugadores durante el partido son ilimitadas.</li>
-			<li>
-				<span>#05</span> La tarjeta amarilla supone 2’ de exclusión. Las rojas, 5’ hasta que entre un
-				sustituto.
-			</li>
-			<li>
-				<span>#06</span> Para el saque inicial, el balón se sitúa en el centro del campo y los jugadores
-				arrancan desde la línea de fondo.
-			</li>
-			<li><span>#07</span> Los dorsales van del 0 al 99.</li>
-			<li><span>#08</span> Los partidos son de dos partes de 20’.</li>
-			<li>
-				<span>#09</span> Armas secretas: cada equipo dispone de una carta, escogida al azar, que le otorga
-				una ventaja una sola vez por partido:
-				<ul>
-					<li><span>#Arma 1</span> Penalti a favor</li>
-					<li><span>#Arma 2</span> Exclusión de un rival durante 2’</li>
-					<li><span>#Arma 3</span> Gol doble durante 2’</li>
-					<li><span>#Arma 4</span> Comodín</li>
-					<li><span>#Arma 5</span> Robo de carta</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+	<SectionTitle title='Reglamento' />
 
-	<a class="uppercase bg-black rounded" href='https://kingsleague.pro/pdf/KINGS-League-Reglamento.pdf' target='_blank' rel='noopener noreferrer'>
-		Ver todo el reglamento
-	</a>
+	<Container>
+		<div class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'>
+			<div class='w-3/4 m-auto'>
+				<p class='pb-20 text-center text-[20px]'>
+					La Kings League InfoJobs la creamos entre todos. Y eso incluye la forma de jugar y el
+					reglamento. Estas son las normas que los aficionados han decidido por votación popular a
+					través de redes sociales:
+				</p>
+				<ul class='w-3/4'>
+					{
+						REGULATION.map((regulation) => (
+							<li class='text-[20px]'>
+								<div class='flex items-center mb-3'>
+									<span class='text-[#f7ab35] text-[32px] font-title mr-3'>
+										{regulation.number}
+									</span>
+									{regulation.ruler}
+								</div>
+								<div class='block'>
+									{regulation.weapons.map((weapon) => (
+										<p class='text-[18px] ml-20'>
+											<span class='text-[#f7ab35] text-[20px] font-title mr-3'>{weapon.title}</span>
+											{weapon.description}
+										</p>
+									))}
+								</div>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+
+			<a
+				class='uppercase bg-black text-white px-10 py-3 rounded w-58 m-auto mt-10'
+				href='https://kingsleague.pro/pdf/KINGS-League-Reglamento.pdf'
+				target='_blank'
+				rel='noopener noreferrer'
+			>
+				Ver todo el reglamento
+			</a>
+		</div>
+	</Container>
 </Layout>
