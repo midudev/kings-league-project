@@ -18,11 +18,25 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/teams',
-			description: 'Returns Kings League teams'
+			description: 'Returns Kings League teams',
+			parameters: [
+				{
+					name: 'id',
+					endpoint: '/teams/:id',
+					description: 'Return Kings League team by id'
+				}
+			]
 		},
 		{
 			endpoint: '/presidents',
-			description: 'Returns Kings League presidents'
+			description: 'Returns Kings League presidents',
+			parameters: [
+				{
+					name: 'id',
+					endpoint: '/presidents/:id',
+					description: 'Return Kings League president by id'
+				}
+			]
 		},
 		{
 			endpoint: '/coaches',
@@ -30,11 +44,25 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/top-assists',
-			description: 'Returns Kings League Top Assists'
+			description: 'Returns Kings League Top Assists',
+			parameters: [
+				{
+					name: 'rank',
+					endpoint: '/top-assists/:rank',
+					description: 'Return Kings League top assister by rank'
+				}
+			]
 		},
 		{
 			endpoint: '/top-scorers',
-			description: 'Returns Kings League Top Scorers'
+			description: 'Returns Kings League Top Scorers',
+			parameters: [
+				{
+					name: 'rank',
+					endpoint: '/top-scorers/:rank',
+					description: 'Return Kings League top scorer by rank'
+				}
+			]
 		},
 		{
 			endpoint: '/mvp',
@@ -59,8 +87,24 @@ app.get('/top-scorers', (ctx) => {
 	return ctx.json(topScorers)
 })
 
+app.get('/top-scorers/:rank', (ctx) => {
+	const ranking = ctx.req.param('rank')
+	const foundScorer = topScorers.find((scorer) => scorer.ranking === ranking)
+
+	return foundScorer ? ctx.json(foundScorer) : ctx.json({ message: 'Top scorer not found' }, 404)
+})
+
 app.get('/top-assists', (ctx) => {
 	return ctx.json(topAssists)
+})
+
+app.get('/top-assists/:rank', (ctx) => {
+	const ranking = ctx.req.param('rank')
+	const foundAssister = topAssists.find((assister) => assister.rank === ranking)
+
+	return foundAssister
+		? ctx.json(foundAssister)
+		: ctx.json({ message: 'Top assister not found' }, 404)
 })
 
 app.get('/mvp', (ctx) => {
