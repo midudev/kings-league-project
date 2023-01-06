@@ -1,6 +1,7 @@
 import { Hono } from 'hono'
 
 import coaches from '../../db/coaches.json'
+import teams from '../../db/teams.json'
 
 const coachesApi = new Hono()
 
@@ -15,6 +16,14 @@ const coachesApi = new Hono()
 */
 coachesApi.get('/', (ctx) => {
   return ctx.json(coaches)
+})
+
+coachesApi.get('/:teamId', (ctx) => {
+	const teamId = ctx.req.param('teamId')
+	const teamName = teams.find((team) => team.id === teamId)
+	const foundedCoach = coaches.find((coach) => coach.teamName === teamName)
+
+	return foundedCoach ? ctx.json(foundedCoach) : ctx.json({ message: 'Coach not found' }, 404)
 })
 
 export { coachesApi }

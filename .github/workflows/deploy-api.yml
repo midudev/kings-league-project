@@ -2,14 +2,14 @@ name: Deploy API
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-
   test:
     runs-on: ubuntu-22.04
-    name: Execute tests
+    name: Testing
+    if: github.ref_name == 'main'
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -18,14 +18,33 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 7.18.2
-          run_install: true
-      # - run: pnpm test
+          run_install: false
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+      - name: Execute Tests
+        run: pnpm test:cov
 
   deploy:
     needs: test
     runs-on: ubuntu-22.04
-    name: Deploy API to Cloudflare Workers
-    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }} # Only deploy if the push is from the main repo
+    timeout-minutes: 5
+    name: Deploy API
+    if: github.repository_owner == 'midudev'
+    environment: Production
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -39,3 +58,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: api
+          command: publish --env production

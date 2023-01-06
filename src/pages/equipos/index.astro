@@ -1,3 +1,16 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import Container from '@components/Container.astro'
+import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
+---
+
 <!-- Página de equipos -->
-<a href="/">Inicio</a>
-<h1>Equipos</h1>
+<Layout title='Equipos'>
+	<SectionTitle title='Equipos' />
+	<Container>
+		<div class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40'>
+			<TeamsSelectorCards />
+		</div>
+	</Container>
+</Layout>

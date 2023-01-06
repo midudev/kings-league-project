@@ -14,5 +14,10 @@ module.exports = {
 			}
 		}
 	],
-	endOfLine: 'lf'
+	endOfLine: 'lf',
+	bracketSpacing: true,
+	quoteProps: 'as-needed',
+	arrowParens: 'always',
+	htmlWhitespaceSensitivity: 'css',
+	jsxBracketSameLine: false
 }

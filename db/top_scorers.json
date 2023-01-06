@@ -1,0 +1,402 @@
+[
+  {
+    "rank": 1,
+    "playerName": "R. Carbó",
+    "gamesPlayed": 1,
+    "goals": 3,
+    "team": "Saiyans FC",
+    "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg"
+  },
+  {
+    "rank": 2,
+    "playerName": "Juanma Glez",
+    "gamesPlayed": 1,
+    "goals": 3,
+    "team": "Ultimate Móstoles",
+    "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg"
+  },
+  {
+    "rank": 3,
+    "playerName": "Jacobo",
+    "gamesPlayed": 1,
+    "goals": 2,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 4,
+    "playerName": "S. Sánchez «Drago»",
+    "gamesPlayed": 1,
+    "goals": 2,
+    "team": "Los Troncos FC",
+    "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg"
+  },
+  {
+    "rank": 5,
+    "playerName": "J. Verdú «Gingko»",
+    "gamesPlayed": 1,
+    "goals": 2,
+    "team": "Los Troncos FC",
+    "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg"
+  },
+  {
+    "rank": 6,
+    "playerName": "C. Castro",
+    "gamesPlayed": 1,
+    "goals": 2,
+    "team": "XBUYER TEAM",
+    "image": "https://api.kingsleague.dev/static/logos/xbuyer.svg"
+  },
+  {
+    "rank": 7,
+    "playerName": "Sorroche",
+    "gamesPlayed": 1,
+    "goals": 2,
+    "team": "1K FC",
+    "image": "https://api.kingsleague.dev/static/logos/1k.svg"
+  },
+  {
+    "rank": 8,
+    "playerName": "Kilian",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 9,
+    "playerName": "Tamudo",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 10,
+    "playerName": "Capdevila",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Saiyans FC",
+    "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg"
+  },
+  {
+    "rank": 11,
+    "playerName": "Bernat",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Aniquiladores FC",
+    "image": "https://api.kingsleague.dev/static/logos/aniquiladores.svg"
+  },
+  {
+    "rank": 12,
+    "playerName": "Ubón",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 13,
+    "playerName": "O. Boada",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 14,
+    "playerName": "X. Molas «Mimosa»",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Los Troncos FC",
+    "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg"
+  },
+  {
+    "rank": 15,
+    "playerName": "Pelaz",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Rayo de Barcelona",
+    "image": "https://api.kingsleague.dev/static/logos/rayo-barcelona.svg"
+  },
+  {
+    "rank": 16,
+    "playerName": "Guillem ZZ",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Rayo de Barcelona",
+    "image": "https://api.kingsleague.dev/static/logos/rayo-barcelona.svg"
+  },
+  {
+    "rank": 17,
+    "playerName": "Arché",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Ultimate Móstoles",
+    "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg"
+  },
+  {
+    "rank": 18,
+    "playerName": "Ian",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Ultimate Móstoles",
+    "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg"
+  },
+  {
+    "rank": 19,
+    "playerName": "Torrentbó",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Kunisports",
+    "image": "https://api.kingsleague.dev/static/logos/kunisports.svg"
+  },
+  {
+    "rank": 20,
+    "playerName": "Coro",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Kunisports",
+    "image": "https://api.kingsleague.dev/static/logos/kunisports.svg"
+  },
+  {
+    "rank": 21,
+    "playerName": "Rivero",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "1K FC",
+    "image": "https://api.kingsleague.dev/static/logos/1k.svg"
+  },
+  {
+    "rank": 22,
+    "playerName": "Nando",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "Jijantes FC",
+    "image": "https://api.kingsleague.dev/static/logos/jijantes.svg"
+  },
+  {
+    "rank": 23,
+    "playerName": "A. Bueno",
+    "gamesPlayed": 1,
+    "goals": 1,
+    "team": "1K FC",
+    "image": "https://api.kingsleague.dev/static/logos/1k.svg"
+  },
+  {
+    "rank": 24,
+    "playerName": "G.Cichero",
+    "gamesPlayed": 0,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 25,
+    "playerName": "Dani P.",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Aniquiladores FC",
+    "image": "https://api.kingsleague.dev/static/logos/aniquiladores.svg"
+  },
+  {
+    "rank": 26,
+    "playerName": "Mase",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 27,
+    "playerName": "Beguer",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 28,
+    "playerName": "Ros",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 29,
+    "playerName": "Pau ZZ",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 30,
+    "playerName": "Olae",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 31,
+    "playerName": "Baranera",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 32,
+    "playerName": "Capilla",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 33,
+    "playerName": "José Juan",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 34,
+    "playerName": "Gómez",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "El Barrio",
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
+  },
+  {
+    "rank": 35,
+    "playerName": "Lechuga",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Los Troncos FC",
+    "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg"
+  },
+  {
+    "rank": 36,
+    "playerName": "Jorge",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "PIO FC",
+    "image": "https://api.kingsleague.dev/static/logos/pio.svg"
+  },
+  {
+    "rank": 37,
+    "playerName": "Dani P.",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Rayo de Barcelona",
+    "image": "https://api.kingsleague.dev/static/logos/rayo-barcelona.svg"
+  },
+  {
+    "rank": 38,
+    "playerName": "Nacho",
+    "gamesPlayed": 0,
+    "goals": 0,
+    "team": "Kunisports",
+    "image": "https://api.kingsleague.dev/static/logos/kunisports.svg"
+  },
+  {
+    "rank": 39,
+    "playerName": "Enigma",
+    "gamesPlayed": 0,
+    "goals": 0,
+    "team": "XBUYER TEAM",
+    "image": "https://api.kingsleague.dev/static/logos/xbuyer.svg"
+  },
+  {
+    "rank": 40,
+    "playerName": "J. Segovia",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 41,
+    "playerName": "David L.L.",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 42,
+    "playerName": "Toti",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 43,
+    "playerName": "A.Ripol",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 44,
+    "playerName": "J. Blanco",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 45,
+    "playerName": "Lil Pizza",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 46,
+    "playerName": "Lao",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 47,
+    "playerName": "Sergi",
+    "gamesPlayed": 0,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 48,
+    "playerName": "Chicharito",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Porcinos FC",
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
+  },
+  {
+    "rank": 49,
+    "playerName": "Briones",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Saiyans FC",
+    "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg"
+  },
+  {
+    "rank": 50,
+    "playerName": "Gio Ferinu",
+    "gamesPlayed": 1,
+    "goals": 0,
+    "team": "Saiyans FC",
+    "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg"
+  }
+]

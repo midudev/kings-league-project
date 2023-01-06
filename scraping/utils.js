@@ -1,8 +1,9 @@
 import * as cheerio from 'cheerio'
 
+import { getAssists } from './top_assists.js'
 import { getLeaderBoard } from './leaderboard.js'
 import { getMvpList } from './mvp.js'
-import { getTopScoresList } from './top_scorer.js'
+import { getTopScoresList } from './top_scorers.js'
 import { logError, logInfo, logSuccess } from './log.js'
 import { writeDBFile } from '../db/index.js'
 
@@ -15,9 +16,13 @@ export const SCRAPINGS = {
 		url: 'https://kingsleague.pro/estadisticas/mvp/',
 		scraper: getMvpList
 	},
-	top_scorer: {
+	top_scorers: {
 		url: 'https://kingsleague.pro/estadisticas/goles/',
 		scraper: getTopScoresList
+	},
+	top_assists: {
+		url: 'https://kingsleague.pro/estadisticas/asistencias/',
+		scraper: getAssists
 	}
 	// coaches: {
 	// 	url: 'https://es.besoccer.com/competicion/info/kings-league/2023',

@@ -1,42 +1,49 @@
 ---
+import Table from '@components/Table.astro'
 import Layout from '@layouts/Layout.astro'
-
-const response = await fetch('https://kings-league-api.midudev.workers.dev/teams')
-const teams = await response.json()
+import Container from '@components/Container.astro'
+import Sponsors from '@components/Sponsors.astro'
+import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
+import UneteButton from '@components/Unete.astro'
 ---
 
-<Layout title="Kings League Infojobs">
-	<div class="container m-auto">
-		<header class="flex">
+<Layout title='Kings League Infojobs'>
+	<main>
+		<section class='bg-[#cd5500] py-20'>
+			<Container>
+				<div class='grid grid-cols-3 gap-10 w-full px-10'>
+					<div>
+						<Table />
+					</div>
+					<div class='col-span-2'>
+						<div class='grid grid-cols-6 gap-y-10 gap-x-5 w-full'>
+							<!-- MVP -->
 
-			{teams.map(({ id, image, name }) => (
-				<a href={`/team/${id}`}>
-					<img class="aspect-square w-12" src={image} alt={`Escudo del equipo ${name}`} />
-				</a>
-			))}
+							<div class='col-span-6 bg-white 500 h-80 rounded-'>
+								<!-- Card component here -->
+							</div>
 
-			<nav>
-				<ul>
-					<li>
-						<a href="/equipos">Equipos</a>
-					</li>
-					<li>
-						<a href="/calendario">Calendario</a>
-					</li>
-					<li>
-						<a href="/estadisticas">Estadísticas</a>
-					</li>
-					<li>
-						<a href="/contacto">Contacto</a>
-					</li>
-					<li>
-						<a href="/reglamento">Reglamento</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
+							<!-- Goal Scorer -->
 
-		</main>
-	</div>
+							<div class='col-span-3 bg-white 500 h-80 rounded-'>
+								<!-- Card component here -->
+							</div>
+
+							<!-- Assistant -->
+
+							<div class='col-span-3 bg-white 500 h-80 rounded-'>
+								<!-- Card component here -->
+							</div>
+
+						</div>
+						<div class="my-5">
+							<TeamsSelectorCards />
+						</div>
+					</div>
+				</div>
+			</Container>
+			<UneteButton />
+		</section>
+	</main>
+	<Sponsors />
 </Layout>
