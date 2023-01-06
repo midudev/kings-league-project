@@ -32,10 +32,10 @@
     "tailwindcss": "3.2.4"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^5.48.0",
+    "@typescript-eslint/parser": "5.48.0",
     "@vitest/coverage-c8": "0.26.3",
     "eslint": "8.31.0",
-    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard": "17.0.0",
     "eslint-plugin-astro": "0.21.1",
     "prettier": "2.8.1",
     "prettier-plugin-astro": "0.7.2",
@@ -45,8 +45,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test && npx prettier --write && npx eslint ."
+      "pre-commit": "npm run format && npm run lint:fix",
+      "pre-push": "npm test"
     }
   }
 }
