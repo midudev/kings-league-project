@@ -1,7 +1,6 @@
 name: Checks for pushs and pull requests
 
 on:
-  push:
   pull_request:
     branches:
       - main
