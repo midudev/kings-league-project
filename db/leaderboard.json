@@ -76,6 +76,7 @@
         }
       ],
       "coach": "Juan Arroita",
+      "shortName": "RDB",
       "coachInfo": {
         "name": "Juan Arroita",
         "image": "juan-arroita.png"
@@ -86,7 +87,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/adri-contreras.png",
         "teamId": "el-barrio"
       }
-    }
+    },
+    "rank": 1
   },
   {
     "wins": 1,
@@ -162,6 +164,7 @@
         }
       ],
       "coach": "Nacho Castro",
+      "shortName": "ULT",
       "coachInfo": {
         "name": "Nacho Castro",
         "image": "nacho-castro.png"
@@ -172,7 +175,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/djmariio.png",
         "teamId": "ultimate-mostoles"
       }
-    }
+    },
+    "rank": 2
   },
   {
     "wins": 1,
@@ -251,6 +255,7 @@
         }
       ],
       "coach": "Pol Font",
+      "shortName": "TFC",
       "coachInfo": {
         "name": "Pol Font",
         "image": "pol-font.png"
@@ -261,7 +266,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/perxitaa.png",
         "teamId": "los-troncos-fc"
       }
-    }
+    },
+    "rank": 3
   },
   {
     "wins": 1,
@@ -274,6 +280,7 @@
       "id": "1k",
       "name": "1K FC",
       "image": "https://api.kingsleague.dev/static/logos/1k.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/1k-inverse.svg",
       "url": "https://kingsleague.pro/team/1k/",
       "channel": "https://www.youtube.com/@IkerCasillas",
       "socialNetworks": [
@@ -340,6 +347,7 @@
         }
       ],
       "coach": "Julio García Mera",
+      "shortName": "1K",
       "coachInfo": {
         "name": "Julio García Mera",
         "image": "julio-garca-mera.png"
@@ -350,7 +358,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/iker-casillas.png",
         "teamId": "1k"
       }
-    }
+    },
+    "rank": 4
   },
   {
     "wins": 1,
@@ -426,6 +435,7 @@
         }
       ],
       "coach": "Daniel Romo",
+      "shortName": "SAI",
       "coachInfo": {
         "name": "Daniel Romo",
         "image": "daniel-romo.png"
@@ -436,7 +446,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/thegrefg.png",
         "teamId": "saiyans-fc"
       }
-    }
+    },
+    "rank": 5
   },
   {
     "wins": 1,
@@ -512,6 +523,7 @@
         }
       ],
       "coach": "Martín Posse",
+      "shortName": "KNS",
       "coachInfo": {
         "name": "Martín Posse",
         "image": "martn-posse.png"
@@ -522,7 +534,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/kun-aguero.png",
         "teamId": "kunisports"
       }
-    }
+    },
+    "rank": 6
   },
   {
     "wins": 0,
@@ -601,6 +614,7 @@
         }
       ],
       "coach": "Marc Carmona",
+      "shortName": "JFC",
       "coachInfo": {
         "name": "Marc Carmona",
         "image": "marc-carmona.png"
@@ -611,7 +625,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/gerard-romero.png",
         "teamId": "jijantes-fc"
       }
-    }
+    },
+    "rank": 7
   },
   {
     "wins": 0,
@@ -688,6 +703,7 @@
         }
       ],
       "coach": "Juvenal Edjogo",
+      "shortName": "POR",
       "coachInfo": {
         "name": "Juvenal Edjogo-Owono",
         "image": "juvenal-edjogoowono.png"
@@ -698,7 +714,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/ibai-llanos.png",
         "teamId": "porcinos-fc"
       }
-    }
+    },
+    "rank": 8
   },
   {
     "wins": 0,
@@ -777,6 +794,7 @@
         }
       ],
       "coach": "JuanluDBZ",
+      "shortName": "RDB",
       "coachInfo": {
         "name": "JuanluDBZ",
         "image": "juanludbz.png"
@@ -787,7 +805,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/spursito.png",
         "teamId": "rayo-barcelona"
       }
-    }
+    },
+    "rank": 9
   },
   {
     "wins": 0,
@@ -863,6 +882,7 @@
         }
       ],
       "coach": "Víctor González",
+      "shortName": "XBU",
       "coachInfo": {
         "name": "Victor González",
         "image": "victor-gonzlez.png"
@@ -873,7 +893,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/hnos-buyer.png",
         "teamId": "xbuyer-team"
       }
-    }
+    },
+    "rank": 10
   },
   {
     "wins": 0,
@@ -949,6 +970,7 @@
         }
       ],
       "coach": "Sergio Verdirame",
+      "shortName": "ANI",
       "coachInfo": {
         "name": "Sergio Verdirame",
         "image": "sergio-verdirame.png"
@@ -959,7 +981,8 @@
         "image": "https://api.kingsleague.dev/static/presidents/juan-guarnizo.png",
         "teamId": "aniquiladores-fc"
       }
-    }
+    },
+    "rank": 11
   },
   {
     "wins": 0,
@@ -1036,6 +1059,7 @@
         }
       ],
       "coach": "Gerardo Torrado",
+      "shortName": "PIO",
       "coachInfo": {
         "name": "Gerardo Torrado",
         "image": "gerardo-torrado.png"
@@ -1046,6 +1070,7 @@
         "image": "https://api.kingsleague.dev/static/presidents/rivers.png",
         "teamId": "pio-fc"
       }
-    }
+    },
+    "rank": 12
   }
 ]

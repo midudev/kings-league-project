@@ -3,7 +3,7 @@
     "id": "1k",
     "name": "1K FC",
     "image": "https://api.kingsleague.dev/static/logos/1k.svg",
-		"imageWhite": "https://api.kingsleague.dev/static/logos/1k-inverse.svg",
+    "imageWhite": "https://api.kingsleague.dev/static/logos/1k-inverse.svg",
     "url": "https://kingsleague.pro/team/1k/",
     "presidentId": "iker-casillas",
     "channel": "https://www.youtube.com/@IkerCasillas",
