@@ -25,12 +25,12 @@ Before you submit a pull request, please make sure to do the following:
 - Ensure that your code follows the style guide for the project.
 - Write tests for any new code you have added.
 - Make sure that all tests pass.
-- Update the documentation to reflect any changes. (recommendable)
+- Update the documentation to reflect any changes (recommended).
 
 
 ## Pull Request Process 🚀
 
- -  Fork the repository and create a new branch for your changes.
+ - Fork the repository and create a new branch for your changes.
  - Make the necessary changes, and commit your code with a clear commit message.
  - Push your changes to your fork.
  - Submit a pull request to the main repository.
