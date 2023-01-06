@@ -4,6 +4,7 @@
 		"esbenp.prettier-vscode",
 		"usernamehw.errorlens",
 		"wix.vscode-import-cost",
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint",
+		"bradlc.vscode-tailwindcss"
 	]
 }
