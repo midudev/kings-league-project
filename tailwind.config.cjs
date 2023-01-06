@@ -8,7 +8,7 @@ module.exports = {
 			},
 			fontFamily: {
 				body: ['Archivo', 'system-ui', 'sans-serif'],
-				black: ['Archivo Black', 'system-ui', 'sans-serif']
+				title: ['Archivo Black', 'system-ui', 'sans-serif']
 			}
 		}
 	},
