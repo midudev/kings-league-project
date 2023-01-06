@@ -115,6 +115,14 @@ app.get('/coaches', (ctx) => {
 	return ctx.json(coaches)
 })
 
+app.get('/coaches/:teamId', (ctx) => {
+	const teamId = ctx.req.param('teamId')
+	const teamName = teams.find((team) => team.id === teamId)
+	const foundedCoach = coaches.find((coach) => coach.teamName === teamName)
+
+	return foundedCoach ? ctx.json(foundedCoach) : ctx.json({ message: 'Coach not found' }, 404)
+})
+
 app.get('/presidents/:id', (ctx) => {
 	const id = ctx.req.param('id')
 	const foundPresident = presidents.find((president) => president.id === id)
