@@ -3,8 +3,7 @@ import { serveStatic } from 'hono/serve-static.module'
 import leaderboard from '../db/leaderboard.json'
 import teams from '../db/teams.json'
 import presidents from '../db/presidents.json'
-
-import coachs from '../db/coachs.json'
+import coaches from '../db/coaches.json'
 import top_scorer from '../db/top_scorer.json'
 import mvp from '../db/mvp.json'
 import assists from '../db/assists.json'
@@ -12,28 +11,28 @@ import assists from '../db/assists.json'
 const app = new Hono()
 
 app.get('/', (ctx) =>
-	ctx.json([
-		{
-			endpoint: '/leaderboard',
-			description: 'Returns Kings League leaderboard'
-		},
-		{
-			endpoint: '/teams',
-			description: 'Returns Kings League teams'
-		},
-		{
-			endpoint: '/presidents',
-			description: 'Returns Kings League presidents'
-		},
-		{
-			endpoint: '/coachs',
-			description: 'Returns Kings League coachs'
-		},
-		{
+  ctx.json([
+    {
+      endpoint: '/leaderboard',
+      description: 'Returns Kings League leaderboard'
+    },
+    {
+      endpoint: '/teams',
+      description: 'Returns Kings League teams'
+    },
+    {
+      endpoint: '/presidents',
+      description: 'Returns Kings League presidents'
+    },
+    {
+      endpoint: '/coaches',
+      description: 'Returns Kings League coaches'
+    },
+    {
 			endpoint: '/assists',
 			description: 'Returns Kings League assists'
 		}
-	])
+  ])
 )
 
 app.get('/leaderboard', (ctx) => {
@@ -41,12 +40,12 @@ app.get('/leaderboard', (ctx) => {
 })
 
 app.get('/presidents', (ctx) => {
-	return ctx.json(presidents)
+  return ctx.json(presidents)
 })
 
-// app.get('/coachs\\/?', (ctx) => {
-//   return ctx.json(coachs)
-// })
+app.get('/coaches', (ctx) => {
+  return ctx.json(coaches)
+})
 
 app.get('/presidents/:id', (ctx) => {
 	const id = ctx.req.param('id')
