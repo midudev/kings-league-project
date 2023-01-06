@@ -18,28 +18,27 @@ const leaderboard = await response.json()
 				leaderboard.map((info, index) => {
 					const { wins, losses, team, rank } = info
 					const { image, name, id } = team
-				
+
 					return (
-					<tr class='bg-white border-b'>
-						<th
-							scope='row'
-							class='text-center px-6 py-4 font-black text-black whitespace-nowrap'
-						>
-							{rank}
-						</th>
-						<td class='px-6 py-4 font-black'>
-							<a class="flex items-center gap-x-4 transition hover:opacity-75" href={`/team/${id}`}>
-								<img src={image} alt={'Logo de ' + name} class='w-6 h-6' />
-								{name}
-							</a>
-						</td>
-						<td class='px-6 py-4'>{wins}</td>
-						<td class='px-6 py-4'>{losses}</td>
-					</tr>
+						<tr class='bg-white border-b text-base hover:bg-slate-100'>
+							<th scope='row' class='text-center px-6 py-4 font-black text-black whitespace-nowrap'>
+								{rank}
+							</th>
+							<td class='px-6 py-4 font-black'>
+								<a
+									class='flex items-center gap-x-4 transition hover:opacity-75'
+									href={`/team/${id}`}
+								>
+									<img src={image} alt={'Logo de ' + name} class='w-6 h-6' />
+									{name}
+								</a>
+							</td>
+							<td class='px-6 py-4'>{wins}</td>
+							<td class='px-6 py-4'>{losses}</td>
+						</tr>
 					)
 				})
 			}
-			
 		</tbody>
 	</table>
 </div>
