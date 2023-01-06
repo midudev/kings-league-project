@@ -20,8 +20,9 @@ export async function getMvpList($) {
 	const mvpList = []
 
 	$rows.each((index, el) => {
+		const $el = $(el)
 		const mvpEntries = mvpSelectorEntries.map(([key, { selector, typeOf }]) => {
-			const rawValue = $(el).find(selector).text()
+			const rawValue = $el.find(selector).text()
 			const cleanedValue = cleanText(rawValue)
 
 			const value = typeOf === 'number' ? Number(cleanedValue) : cleanedValue

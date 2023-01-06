@@ -21,8 +21,9 @@ export async function getTopScoresList($) {
 	const topScorerList = []
 
 	$rows.each((index, el) => {
+		const $el = $(el)
 		const topScorerEntries = scoresSelectorEntries.map(([key, { selector, typeOf }]) => {
-			const rawValue = $(el).find(selector).text()
+			const rawValue = $el.find(selector).text()
 			const cleanedValue = cleanText(rawValue)
 
 			const value = typeOf === 'number' ? Number(cleanedValue) : cleanedValue
