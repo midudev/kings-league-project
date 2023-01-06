@@ -24,8 +24,9 @@ export async function getLeaderBoard($) {
 
 	const leaderboard = []
 	$rows.each((_, el) => {
+		const $el = $(el)
 		const leaderBoardEntries = leaderBoardSelectorEntries.map(([key, { selector, typeOf }]) => {
-			const rawValue = $(el).find(selector).text()
+			const rawValue = $el.find(selector).text()
 			const cleanedValue = cleanText(rawValue)
 
 			const value = typeOf === 'number' ? Number(cleanedValue) : cleanedValue
