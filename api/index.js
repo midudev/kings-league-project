@@ -6,7 +6,7 @@ import { mvpApi } from './routes/mvp.routes'
 import { presidentApi } from './routes/presidents.routes'
 import { teamsApi } from './routes/teams.routes'
 import { topScorersApi } from './routes/top-scorers.routes'
-import { topAssistApi } from './routes/top-assists.routes'
+import { topAssistsApi } from './routes/top-assists.routes'
 import { leaderboardApi } from './routes/leaderboard.routes'
 
 
@@ -92,7 +92,7 @@ app.route('/leaderboard', leaderboardApi)
 app.route('/mvp', mvpApi)
 app.route('/presidents', presidentApi)
 app.route('/teams', teamsApi)
-app.route('/top-assists', topAssistApi)
+app.route('/top-assists', topAssistsApi)
 app.route('/top-scorers', topScorersApi)
 
 app.get('/static/*', serveStatic({ root: './' }))
