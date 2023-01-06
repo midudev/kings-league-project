@@ -5,7 +5,7 @@
     "gamesPlayed": 1,
     "goals": 3,
     "team": "Saiyans FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg"
   },
   {
     "ranking": 2,
@@ -13,7 +13,7 @@
     "gamesPlayed": 1,
     "goals": 3,
     "team": "Ultimate Móstoles",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/ultimate-mostoles.svg"
+    "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg"
   },
   {
     "ranking": 3,
@@ -21,7 +21,7 @@
     "gamesPlayed": 1,
     "goals": 2,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 4,
@@ -29,7 +29,7 @@
     "gamesPlayed": 1,
     "goals": 2,
     "team": "Los Troncos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/los-troncos.svg"
+    "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg"
   },
   {
     "ranking": 5,
@@ -37,7 +37,7 @@
     "gamesPlayed": 1,
     "goals": 2,
     "team": "Los Troncos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/los-troncos.svg"
+    "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg"
   },
   {
     "ranking": 6,
@@ -45,7 +45,7 @@
     "gamesPlayed": 1,
     "goals": 2,
     "team": "XBUYER TEAM",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/xbuyer.svg"
+    "image": "https://api.kingsleague.dev/static/logos/xbuyer.svg"
   },
   {
     "ranking": 7,
@@ -53,7 +53,7 @@
     "gamesPlayed": 1,
     "goals": 2,
     "team": "1K FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/1k.svg"
+    "image": "https://api.kingsleague.dev/static/logos/1k.svg"
   },
   {
     "ranking": 8,
@@ -61,7 +61,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 9,
@@ -69,7 +69,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 10,
@@ -77,7 +77,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Saiyans FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg"
   },
   {
     "ranking": 11,
@@ -85,7 +85,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Aniquiladores FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
+    "image": "https://api.kingsleague.dev/static/logos/aniquiladores.svg"
   },
   {
     "ranking": 12,
@@ -93,7 +93,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 13,
@@ -101,7 +101,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 14,
@@ -109,7 +109,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Los Troncos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/los-troncos.svg"
+    "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg"
   },
   {
     "ranking": 15,
@@ -117,7 +117,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Rayo de Barcelona",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/rayo-barcelona.svg"
+    "image": "https://api.kingsleague.dev/static/logos/rayo-barcelona.svg"
   },
   {
     "ranking": 16,
@@ -125,7 +125,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Rayo de Barcelona",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/rayo-barcelona.svg"
+    "image": "https://api.kingsleague.dev/static/logos/rayo-barcelona.svg"
   },
   {
     "ranking": 17,
@@ -133,7 +133,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Ultimate Móstoles",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/ultimate-mostoles.svg"
+    "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg"
   },
   {
     "ranking": 18,
@@ -141,7 +141,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Ultimate Móstoles",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/ultimate-mostoles.svg"
+    "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg"
   },
   {
     "ranking": 19,
@@ -149,7 +149,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Kunisports",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/kunisports.svg"
+    "image": "https://api.kingsleague.dev/static/logos/kunisports.svg"
   },
   {
     "ranking": 20,
@@ -157,7 +157,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Kunisports",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/kunisports.svg"
+    "image": "https://api.kingsleague.dev/static/logos/kunisports.svg"
   },
   {
     "ranking": 21,
@@ -165,7 +165,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "1K FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/1k.svg"
+    "image": "https://api.kingsleague.dev/static/logos/1k.svg"
   },
   {
     "ranking": 22,
@@ -173,7 +173,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "Jijantes FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/jijantes.svg"
+    "image": "https://api.kingsleague.dev/static/logos/jijantes.svg"
   },
   {
     "ranking": 23,
@@ -181,7 +181,7 @@
     "gamesPlayed": 1,
     "goals": 1,
     "team": "1K FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/1k.svg"
+    "image": "https://api.kingsleague.dev/static/logos/1k.svg"
   },
   {
     "ranking": 24,
@@ -189,7 +189,7 @@
     "gamesPlayed": 0,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 25,
@@ -197,7 +197,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Aniquiladores FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/aniquiladores.svg"
+    "image": "https://api.kingsleague.dev/static/logos/aniquiladores.svg"
   },
   {
     "ranking": 26,
@@ -205,7 +205,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 27,
@@ -213,7 +213,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 28,
@@ -221,7 +221,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 29,
@@ -229,7 +229,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 30,
@@ -237,7 +237,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 31,
@@ -245,7 +245,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 32,
@@ -253,7 +253,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 33,
@@ -261,7 +261,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 34,
@@ -269,7 +269,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "El Barrio",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/el-barrio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg"
   },
   {
     "ranking": 35,
@@ -277,7 +277,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Los Troncos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/los-troncos.svg"
+    "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg"
   },
   {
     "ranking": 36,
@@ -285,7 +285,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "PIO FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/pio.svg"
+    "image": "https://api.kingsleague.dev/static/logos/pio.svg"
   },
   {
     "ranking": 37,
@@ -293,7 +293,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Rayo de Barcelona",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/rayo-barcelona.svg"
+    "image": "https://api.kingsleague.dev/static/logos/rayo-barcelona.svg"
   },
   {
     "ranking": 38,
@@ -301,7 +301,7 @@
     "gamesPlayed": 0,
     "goals": 0,
     "team": "Kunisports",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/kunisports.svg"
+    "image": "https://api.kingsleague.dev/static/logos/kunisports.svg"
   },
   {
     "ranking": 39,
@@ -309,7 +309,7 @@
     "gamesPlayed": 0,
     "goals": 0,
     "team": "XBUYER TEAM",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/xbuyer.svg"
+    "image": "https://api.kingsleague.dev/static/logos/xbuyer.svg"
   },
   {
     "ranking": 40,
@@ -317,7 +317,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 41,
@@ -325,7 +325,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 42,
@@ -333,7 +333,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 43,
@@ -341,7 +341,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 44,
@@ -349,7 +349,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 45,
@@ -357,7 +357,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 46,
@@ -365,7 +365,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 47,
@@ -373,7 +373,7 @@
     "gamesPlayed": 0,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 48,
@@ -381,7 +381,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Porcinos FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/porcinos-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg"
   },
   {
     "ranking": 49,
@@ -389,7 +389,7 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Saiyans FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg"
   },
   {
     "ranking": 50,
@@ -397,6 +397,6 @@
     "gamesPlayed": 1,
     "goals": 0,
     "team": "Saiyans FC",
-    "image": "https://kings-league-api.midudev.workers.dev/static/logos/saiyans-fc.svg"
+    "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg"
   }
 ]
