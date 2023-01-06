@@ -13,6 +13,7 @@
     "publish:api": "wrangler publish api/index.js",
     "scrape": "node --no-warnings scraping/index.js",
     "test": "vitest",
+    "test:ui": "vitest --ui",
     "test:cov": "vitest run --coverage",
     "start": "astro dev",
     "lint": "eslint . --ext .js,.astro,.ts,.tsx",
@@ -34,6 +35,7 @@
   "devDependencies": {
     "@typescript-eslint/parser": "5.48.0",
     "@vitest/coverage-c8": "0.26.3",
+    "@vitest/ui": "0.26.3",
     "eslint": "8.31.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-astro": "0.21.1",
