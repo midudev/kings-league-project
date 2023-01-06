@@ -1,0 +1,43 @@
+---
+const response = await fetch('https://api.kingsleague.dev/leaderboard')
+const leaderboard = await response.json()
+---
+
+<div class='relative overflow-x-auto shadow-md sm:rounded-lg'>
+	<table class='w-full text-xs text-left text-black'>
+		<thead class='font-black text-white uppercase bg-black'>
+			<tr>
+				<th scope='col' class='px-6 py-3'> Pos.</th>
+				<th scope='col' class='px-6 py-3'> Equipo</th>
+				<th scope='col' class='px-6 py-3'> V</th>
+				<th scope='col' class='px-6 py-3'> D</th>
+			</tr>
+		</thead>
+		<tbody>
+			{
+				leaderboard.map((info, index) => {
+					const { wins, losses, team } = info
+					const { image, name } = team
+				
+					return (
+					<tr class='bg-white border-b'>
+						<th
+							scope='row'
+							class='px-6 py-4 font-black text-black whitespace-nowrap'
+						>
+							1
+						</th>
+						<td class='px-6 py-4 font-black flex gap-x-4'>
+							<img src={image} alt={'Logo de ' + name} class='w-6 h-6' />
+							{name}
+						</td>
+						<td class='px-6 py-4'> 1</td>
+						<td class='px-6 py-4'> 0</td>
+					</tr>
+					)
+				})
+			}
+			
+		</tbody>
+	</table>
+</div>
