@@ -112,7 +112,7 @@ describe('Testing /presidents route', () => {
 		await teardown(worker)
 	})
 
-	it('The teams should have all teams', async () => {
+	it('should return presidents', async () => {
 		const resp = await worker.fetch('/presidents')
 		expect(resp).toBeDefined()
 		if (!resp) return
@@ -131,7 +131,7 @@ describe('Testing /presidents route', () => {
 		expect(numberPresidents).toBe(12)
 	})
 
-	it('Get /teams/1k should return team props', async () => {
+	it('should return presidente details by id', async () => {
 		const resp = await worker.fetch('/presidents/iker-casillas')
 		expect(resp).toBeDefined()
 		if (!resp) return
@@ -151,7 +151,7 @@ describe('Testing /presidents route', () => {
 		expect(president).toEqual(iker)
 	})
 
-	it('Get /presidents/noexist should return 404 message missing team', async () => {
+	it('should return 404 and message missing team with no exist president', async () => {
 		const resp = await worker.fetch('/presidents/noexist')
 		expect(resp).toBeDefined()
 		if (!resp) return
