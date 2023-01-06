@@ -6,6 +6,7 @@ import presidents from '../db/presidents.json'
 import coaches from '../db/coaches.json'
 import top_scorer from '../db/top_scorer.json'
 import mvp from '../db/mvp.json'
+import assists from '../db/assists.json'
 
 const app = new Hono()
 
@@ -26,58 +27,52 @@ app.get('/', (ctx) =>
     {
       endpoint: '/coaches',
       description: 'Returns Kings League coaches'
-    }
+    },
+    {
+			endpoint: '/assists',
+			description: 'Returns Kings League assists'
+		}
   ])
 )
 
 app.get('/leaderboard', (ctx) => {
-  return ctx.json(leaderboard)
+	return ctx.json(leaderboard)
 })
 
 app.get('/presidents', (ctx) => {
   return ctx.json(presidents)
 })
 
-app.get('/coaches\\/?', (ctx) => {
+app.get('/coaches', (ctx) => {
   return ctx.json(coaches)
 })
 
-app.get('/top-scorer', (ctx) => {
-	return ctx.json(top_scorer)
-})
-
-app.get('/mvp', (ctx) => {
-	return ctx.json(mvp)
-})
-
 app.get('/presidents/:id', (ctx) => {
-  const id = ctx.req.param('id')
-  const foundPresident = presidents.find((president) => president.id === id)
+	const id = ctx.req.param('id')
+	const foundPresident = presidents.find((president) => president.id === id)
 
-  return foundPresident
-    ? ctx.json(foundPresident)
-    : ctx.json({ message: 'President not found' }, 404)
+	return foundPresident
+		? ctx.json(foundPresident)
+		: ctx.json({ message: 'President not found' }, 404)
 })
 
 app.get('/teams/:id', (ctx) => {
-  const id = ctx.req.param('id')
-  const foundTeam = teams.find((team) => team.id === id)
+	const id = ctx.req.param('id')
+	const foundTeam = teams.find((team) => team.id === id)
 
-  return foundTeam
-    ? ctx.json(foundTeam)
-    : ctx.json({ message: 'Team not found' }, 404)
+	return foundTeam ? ctx.json(foundTeam) : ctx.json({ message: 'Team not found' }, 404)
 })
 
 app.get('/static/*', serveStatic({ root: './' }))
 
 app.notFound((c) => {
-  const { pathname } = new URL(c.req.url)
+	const { pathname } = new URL(c.req.url)
 
-  if (c.req.url.at(-1) === '/') {
-    return c.redirect(pathname.slice(0, -1))
-  }
+	if (c.req.url.at(-1) === '/') {
+		return c.redirect(pathname.slice(0, -1))
+	}
 
-  return c.json({ message: 'Not Found' }, 404)
+	return c.json({ message: 'Not Found' }, 404)
 })
 
 export default app
