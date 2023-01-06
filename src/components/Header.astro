@@ -1,6 +1,5 @@
 ---
 import Logo from './Logo.astro'
-import twitch from '../../assets/static/logos/social/twitch.svg'
 
 const menu = [
 	{
@@ -30,13 +29,11 @@ const teams = await response.json()
 ---
 
 <header
-	class='flex items-center w-full bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] p-8 gap-x-8'
+	class='flex items-center w-screen bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] p-8 gap-x-8'
 >
 	<div class='flex flex-col h-full gap-4 w-full'>
 		<nav>
-			<ul
-				class='flex flex-wrap items-center justify-center rounded-xl gap-x-4 [&>li>a:hover]:scale-150 w-full'
-			>
+			<ul class='flex flex-wrap items-center justify-center rounded-xl gap-x-4 [&>li>a:hover]:scale-150 w-full'>
 				{
 					teams.map(({ id, image, name }, index) => (
 						<>
@@ -64,9 +61,7 @@ const teams = await response.json()
 					menu.map(({ name, href }) => (
 						<li>
 							<a
-								class={`transition ${
-									Astro.url.pathname === href ? 'opacity-100 underline pointer-events-none' : ''
-								}`}
+								class={`transition ${Astro.url.pathname === href ? 'opacity-100 underline pointer-events-none' : ''}`}
 								href={href}
 							>
 								{name}
@@ -75,13 +70,6 @@ const teams = await response.json()
 					))
 				}
 			</ul>
-			<div class="flex justify-center mt-5">
-				<a class="flex justify-center items-center gap-x-2 py-1 px-4 font-bold bg-purple-600 hover:bg-purple-500 transition-all duration-300 hover:scale-110 rounded-lg text-white" href='https://www.twitch.tv/kingsleague' target="_blank" rel="noopener norefferer">
-					<img class='w-6 invert' src={twitch} alt='Twitch Logo' />
-					KINGSLEAGUE
-					<span class="font-bold text-xl text-[#ff6900] rounded-xl">TV</span>
-				</a>
-			</div>
 		</nav>
 	</div>
 </header>
