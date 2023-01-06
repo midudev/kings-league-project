@@ -2,10 +2,9 @@ name: Deploy API
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-
   test:
     runs-on: ubuntu-22.04
     name: Testing
@@ -18,8 +17,25 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 7.18.2
-          run_install: true
-      # - run: pnpm test
+          run_install: false
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+      - name: Execute Tests
+        run: pnpm test:cov
 
   deploy:
     needs: test
