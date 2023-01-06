@@ -16,7 +16,7 @@ const teams = await getAllTeams()
 			<section class='grid grid-cols-3 gap-8'>
 				{
 					teams.map((team) => {
-						const { id, name, image } = team
+						const { id, name, imageWhite } = team
 						return (
 							<article class='overflow-hidden col-span-1 rounded aspect-video bg-blue-400'>
 								<a
@@ -27,10 +27,10 @@ const teams = await getAllTeams()
 									<img
 										alt={`Logo del equipo ${name}`}
 										class='brightness-[100] transition-all group-hover:scale-110 group-hover:brightness-200 z-10 w-28 h-28 [backface-visibility:hidden]'
-										src={image}
+										src={imageWhite}
 									/>
 									<h3 class='z-10 font-title text-white text-3xl'>{name}</h3>
-									<div class={`z-0 absolute inset-0 opacity-50 bg-[url('${image}')] bg-center bg-[size:150%] group-hover:bg-[size:200%] transition`} />
+									<div class={`z-0 absolute inset-0 opacity-50 bg-[url('${imageWhite}')] bg-center bg-[size:150%] group-hover:bg-[size:200%] transition`} />
 								</a>
 							</article>
 						)
