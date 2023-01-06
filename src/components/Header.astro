@@ -16,7 +16,7 @@ const teams = await response.json()
 					teams.map(({ id, image, name }) => (
 						<li>
 							<a class="group transition block" href={`/team/${id}`}>
-								<img class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] aspect-square w-12' src={image} alt={`Escudo del equipo ${name}`} />
+								<img class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-12 w-12' src={image} alt={`Escudo del equipo ${name}`} />
 							</a>
 						</li>
 					))
