@@ -42,11 +42,23 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/top-assists',
-			description: 'Returns Kings League Top Assists'
+			description: 'Returns Kings League Top Assists',
+			parameters: [
+				{
+					name: 'rank',
+					endpoint: '/top-assists/:rank'
+				}
+			]
 		},
 		{
 			endpoint: '/top-scorers',
-			description: 'Returns Kings League Top Scorers'
+			description: 'Returns Kings League Top Scorers',
+			parameters: [
+				{
+					name: 'rank',
+					endpoint: '/top-scorers/:rank'
+				}
+			]
 		},
 		{
 			endpoint: '/mvp',
