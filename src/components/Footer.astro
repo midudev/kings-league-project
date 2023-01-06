@@ -11,27 +11,27 @@ const SOCIAL_NETWORKS = [
 	{
 		name: 'twitch',
 		icon: twitch,
-		href: '#'
+		href: 'https://www.twitch.tv/kingsleague'
 	},
 	{
 		name: 'twitter',
 		icon: twitter,
-		href: '#'
+		href: 'https://twitter.com/kingsleague'
 	},
 	{
 		name: 'tiktok',
 		icon: tiktok,
-		href: '#'
+		href: 'https://www.tiktok.com/@kingsleague'
 	},
 	{
 		name: 'instagram',
 		icon: instagram,
-		href: '#'
+		href: 'https://www.instagram.com/kingsleague/'
 	},
 	{
 		name: 'youtube',
 		icon: youtube,
-		href: '#'
+		href: 'https://www.youtube.com/@KingsLeagueOfficial'
 	}
 ]
 ---
@@ -69,6 +69,8 @@ const SOCIAL_NETWORKS = [
 					SOCIAL_NETWORKS.map((network) => (
 						<a
 							href={network.href}
+							target='_blank'
+							rel='noopener norefferer'
 							class='w-10 h-10 flex items-center rounded-full p-2 bg-white group'
 						>
 							<img
