@@ -1,3 +1,15 @@
-<!-- Página de contacto -->
-<a href="/">Inicio</a>
-<h1>Contacto</h1>
+---
+import Container from '@components/Container.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import Layout from '@layouts/Layout.astro'
+---
+
+<Layout title='Contacto'>
+	<SectionTitle title='Contacto' /><Container>
+		<h2 class='font-bold mb-2 text-lg'>Horario de apertura</h2>
+		<p>
+			<strong>Sólo se podrá acceder al recinto con acreditación o invitación</strong> El horario de apertura
+			al público a la Zona Deportiva Port de Barcelona será en los días de partido de 15h a 22h.
+		</p>
+	</Container>
+</Layout>
