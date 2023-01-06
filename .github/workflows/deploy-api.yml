@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-22.04
     name: Testing
     if: github.ref_name == 'main'
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -40,6 +41,7 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-22.04
+    timeout-minutes: 5
     name: Deploy API
     if: github.repository_owner == 'midudev'
     environment: Production
