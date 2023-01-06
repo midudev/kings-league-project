@@ -3,7 +3,7 @@ import path from 'node:path'
 
 const DB_PATH = path.join(process.cwd(), './db/')
 
-function readDBFile (dbName) {
+function readDBFile(dbName) {
 	return readFile(`${DB_PATH}/${dbName}.json`, 'utf-8').then(JSON.parse)
 }
 
@@ -18,7 +18,7 @@ export function writeDBFile (dbName, data) {
 	)
 }
 
-export const getImageFromTeam = ({ name }) => {
+export function getImageFromTeam({ name }) {
 	const { image } = TEAMS.find((team) => team.name === name)
 	return image
 }
