@@ -42,6 +42,7 @@ jobs:
     runs-on: ubuntu-22.04
     name: Deploy API
     if: github.repository_owner == 'midudev'
+    environment: Production
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
