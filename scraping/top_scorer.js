@@ -1,7 +1,7 @@
 import { TEAMS } from '../db/index.js'
 import { cleanText } from './utils.js'
 
-const SCORES_SELECTORS = {
+const SCORERS_SELECTORS = {
 	ranking: { selector: '.fs-table-text_1', typeOf: 'string' },
 	team: { selector: '.fs-table-text_3', typeOf: 'string' },
 	playerName: { selector: '.fs-table-text_4', typeOf: 'string' },
@@ -9,7 +9,7 @@ const SCORES_SELECTORS = {
 	goals: { selector: '.fs-table-text_6', typeOf: 'number' }
 }
 
-export async function getTopScoresList($) {
+export async function getTopScorersList($) {
 	const $rows = $('table tbody tr')
 
 	const getImageFromTeam = ({ name }) => {
@@ -17,11 +17,11 @@ export async function getTopScoresList($) {
 		return image
 	}
 
-	const scoresSelectorEntries = Object.entries(SCORES_SELECTORS)
-	const topScorerList = []
+	const scorersSelectorEntries = Object.entries(SCORERS_SELECTORS)
+	const topScorersList = []
 
 	$rows.each((index, el) => {
-		const topScorerEntries = scoresSelectorEntries.map(([key, { selector, typeOf }]) => {
+		const topScorersEntries = scorersSelectorEntries.map(([key, { selector, typeOf }]) => {
 			const rawValue = $(el).find(selector).text()
 			const cleanedValue = cleanText(rawValue)
 
@@ -30,16 +30,16 @@ export async function getTopScoresList($) {
 			return [key, value]
 		})
 
-		const { team: teamName, ...scorerData } = Object.fromEntries(topScorerEntries)
+		const { team: teamName, ...scorersData } = Object.fromEntries(topScorersEntries)
 		const image = getImageFromTeam({ name: teamName })
 
-		topScorerList.push({
-			...scorerData,
+		topScorersList.push({
+			...scorersData,
 			rank: index + 1,
 			team: teamName,
 			image
 		})
 	})
 
-	return topScorerList
+	return topScorersList
 }
