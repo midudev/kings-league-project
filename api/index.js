@@ -7,76 +7,11 @@ import topScorers from '../db/top_scorers.json'
 import coaches from '../db/coaches.json'
 import mvp from '../db/mvp.json'
 import topAssists from '../db/top_assists.json'
+import infoRoutes from '../db/info_routes.json'
 
 const app = new Hono()
 
-app.get('/', (ctx) =>
-	ctx.json([
-		{
-			endpoint: '/leaderboard',
-			description: 'Returns Kings League leaderboard'
-		},
-		{
-			endpoint: '/teams',
-			description: 'Returns Kings League teams',
-			parameters: [
-				{
-					name: 'id',
-					endpoint: '/teams/:id',
-					description: 'Return Kings League team by id'
-				}
-			]
-		},
-		{
-			endpoint: '/presidents',
-			description: 'Returns Kings League presidents',
-			parameters: [
-				{
-					name: 'id',
-					endpoint: '/presidents/:id',
-					description: 'Return Kings League president by id'
-				}
-			]
-		},
-		{
-			endpoint: '/coaches',
-			description: 'Returns Kings League coaches',
-			parameters: [
-				{
-					name: 'teamId',
-					endpoint: '/top-assists/:teamId',
-					description: 'Return Kings League coach of team by id of some'
-				}
-			]
-		},
-		{
-			endpoint: '/top-assists',
-			description: 'Returns Kings League Top Assists',
-			parameters: [
-				{
-					name: 'rank',
-					endpoint: '/top-assists/:rank',
-					description: 'Return Kings League top assister by rank'
-				}
-			]
-		},
-		{
-			endpoint: '/top-scorers',
-			description: 'Returns Kings League Top Scorers',
-			parameters: [
-				{
-					name: 'rank',
-					endpoint: '/top-scorers/:rank',
-					description: 'Return Kings League top scorer by rank'
-				}
-			]
-		},
-		{
-			endpoint: '/mvp',
-			description: 'Returns Kings League Most Valuable Players'
-		}
-	])
-)
+app.get('/', (ctx) => ctx.json(infoRoutes))
 
 app.get('/leaderboard', (ctx) => {
 	return ctx.json(leaderboard)
