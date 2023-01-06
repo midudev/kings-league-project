@@ -2,15 +2,14 @@ name: Deploy API
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
 
   test:
     runs-on: ubuntu-22.04
     name: Testing
-    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }} # Only execute if the push is from the main repo
+    if: github.ref_name == 'main'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
