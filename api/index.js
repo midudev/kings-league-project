@@ -3,7 +3,7 @@ import { serveStatic } from 'hono/serve-static.module'
 import leaderboard from '../db/leaderboard.json'
 import teams from '../db/teams.json'
 import presidents from '../db/presidents.json'
-import coachs from '../db/coachs.json'
+import coachs from '../db/coaches.json'
 import top_scorer from '../db/top_scorer.json'
 import mvp from '../db/mvp.json'
 
@@ -32,6 +32,10 @@ app.get('/', (ctx) =>
 
 app.get('/leaderboard', (ctx) => {
   return ctx.json(leaderboard)
+})
+
+app.get('/teams', (ctx) => {
+  return ctx.json(teams)
 })
 
 app.get('/presidents', (ctx) => {
