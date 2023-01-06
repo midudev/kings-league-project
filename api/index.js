@@ -47,7 +47,14 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/coaches',
-			description: 'Returns Kings League coaches'
+			description: 'Returns Kings League coaches',
+			parameters: [
+				{
+					name: 'teamId',
+					endpoint: '/top-assists/:teamId',
+					description: 'Return Kings League coach of team by id of some'
+				}
+			]
 		},
 		{
 			endpoint: '/top-assists',
