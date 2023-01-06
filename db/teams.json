@@ -14,7 +14,8 @@
     ],
     "players": [],
     "coach": "Julio García Mera",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "1K"
   },
   {
     "id": "el-barrio",
@@ -31,7 +32,8 @@
     ],
     "players": [],
     "coach": "Juan Arroita",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "RDB"
   },
   {
     "id": "ultimate-mostoles",
@@ -45,7 +47,8 @@
     ],
     "players": [],
     "coach": "Nacho Castro",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "ULT"
   },
   {
     "id": "los-troncos-fc",
@@ -62,7 +65,8 @@
     ],
     "players": [],
     "coach": "Pol Font",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "TFC"
   },
   {
     "id": "saiyans-fc",
@@ -76,7 +80,8 @@
     ],
     "players": [],
     "coach": "Daniel Romo",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "SAI"
   },
   {
     "id": "kunisports",
@@ -90,7 +95,8 @@
     ],
     "players": [],
     "coach": "Martín Posse",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "KNS"
   },
   {
     "id": "jijantes-fc",
@@ -107,7 +113,8 @@
     ],
     "players": [],
     "coach": "Marc Carmona",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "JFC"
   },
   {
     "id": "porcinos-fc",
@@ -122,7 +129,8 @@
     ],
     "players": [],
     "coach": "Juvenal Edjogo",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "POR"
   },
   {
     "id": "rayo-barcelona",
@@ -139,7 +147,8 @@
     ],
     "players": [],
     "coach": "JuanluDBZ",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "RDB"
   },
   {
     "id": "xbuyer-team",
@@ -153,7 +162,8 @@
     ],
     "players": [],
     "coach": "Víctor González",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "XBU"
   },
   {
     "id": "aniquiladores-fc",
@@ -167,7 +177,8 @@
     ],
     "players": [],
     "coach": "Sergio Verdirame",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "ANI"
   },
   {
     "id": "pio-fc",
@@ -182,6 +193,7 @@
     ],
     "players": [],
     "coach": "Gerardo Torrado",
-    "coachInfo": {}
+    "coachInfo": {},
+    "shortName": "PIO"
   }
 ]
