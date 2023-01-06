@@ -41,7 +41,7 @@ const SOCIAL_NETWORKS = [
 		<section
 			class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'
 		>
-			<img class='block w-52' src={kingsLeagueInfojobs} alt='logo de Kings League y Infojobs' />
+			<img class='block w-52' src={kingsLeagueInfojobs} alt='logo de Kings League y Infojobs' loading="lazy" decoding="async" fetchpriority="low" />
 
 			<nav class='flex gap-24'>
 				<div class='flex flex-col gap-3'>
@@ -77,6 +77,9 @@ const SOCIAL_NETWORKS = [
 								class='w-6 transition-brightness duration-300 brightness-0 group-hover:brightness-100'
 								src={network.icon}
 								alt={`${network.name} Logo`}
+								loading="lazy"
+								decoding="async"
+								fetchpriority="low"
 							/>
 						</a>
 					))
