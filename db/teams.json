@@ -2,6 +2,7 @@
   {
     "id": "1k",
     "name": "1K FC",
+		"color": {"colorOne": "#6C57F2", "colorTwo": "#30B1BF"},
     "image": "https://api.kingsleague.dev/static/logos/1k.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/1k-inverse.svg",
     "url": "https://kingsleague.pro/team/1k/",
@@ -80,6 +81,7 @@
   {
     "id": "el-barrio",
     "name": "El Barrio",
+		"color": {"colorOne": "#102624", "colorTwo": "#50BFB4"},
     "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/el-barrio-inverse.svg",
     "url": "https://kingsleague.pro/team/el-barrio/",
@@ -158,6 +160,7 @@
   {
     "id": "ultimate-mostoles",
     "name": "Ultimate Móstoles",
+		"color": {"colorOne": "#0D0D0D", "colorTwo": "#8C8C8C"},
     "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/ultimate-mostoles-inverse.svg",
     "url": "https://kingsleague.pro/team/ultimate-mostoles/",
@@ -233,6 +236,7 @@
   {
     "id": "los-troncos-fc",
     "name": "Los Troncos FC",
+		"color": {"colorOne": "#1C2625", "colorTwo": "#315959"},
     "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/los-troncos-inverse.svg",
     "url": "https://kingsleague.pro/team/los-troncos-fc/",
@@ -311,6 +315,7 @@
   {
     "id": "saiyans-fc",
     "name": "Saiyans FC",
+		"color": {"colorOne": "#182240", "colorTwo": "#073BD9"},
     "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/saiyans-fc-inverse.svg",
     "url": "https://kingsleague.pro/team/saiyans-fc/",
@@ -386,6 +391,7 @@
   {
     "id": "kunisports",
     "name": "Kunisports",
+		"color": {"colorOne": "#141F26", "colorTwo": "#D98299"},
     "image": "https://api.kingsleague.dev/static/logos/kunisports.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/kunisports-inverse.svg",
     "url": "https://kingsleague.pro/team/kunisports/",
@@ -461,6 +467,7 @@
   {
     "id": "jijantes-fc",
     "name": "Jijantes FC",
+		"color": {"colorOne": "#363E59", "colorTwo": "#D92B4B"},
     "image": "https://api.kingsleague.dev/static/logos/jijantes.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/jijantes-inverse.svg",
     "url": "https://kingsleague.pro/team/jijantes-fc/",
@@ -539,6 +546,7 @@
   {
     "id": "porcinos-fc",
     "name": "Porcinos FC",
+		"color": {"colorOne": "#D92365", "colorTwo": "#F280B6"},
     "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/porcinos-fc-inverse.svg",
     "url": "https://kingsleague.pro/team/porcinos-fc/",
@@ -615,6 +623,7 @@
   {
     "id": "rayo-barcelona",
     "name": "Rayo de Barcelona",
+		"color": {"colorOne": "#A6691F", "colorTwo": "#F2A74B"},
     "image": "https://api.kingsleague.dev/static/logos/rayo-barcelona.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/rayo-barcelona-inverse.svg",
     "url": "https://kingsleague.pro/team/rayo-barcelona/",
@@ -693,6 +702,7 @@
   {
     "id": "xbuyer-team",
     "name": "XBUYER TEAM",
+		"color": {"colorOne": "#0D0D0D", "colorTwo": "#8C8C8C"},
     "image": "https://api.kingsleague.dev/static/logos/xbuyer.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/xbuyer-inverse.svg",
     "url": "https://kingsleague.pro/team/xbuyer-team/",
@@ -768,6 +778,7 @@
   {
     "id": "aniquiladores-fc",
     "name": "Aniquiladores FC",
+		"color": {"colorOne": "#730321", "colorTwo": "#F27999"},
     "image": "https://api.kingsleague.dev/static/logos/aniquiladores.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/aniquiladores-inverse.svg",
     "url": "https://kingsleague.pro/team/aniquiladores-fc/",
@@ -843,6 +854,7 @@
   {
     "id": "pio-fc",
     "name": "PIO FC",
+		"color": {"colorOne": "#8C7503", "colorTwo": "#F2E088"},
     "image": "https://api.kingsleague.dev/static/logos/pio.svg",
     "imageWhite": "https://api.kingsleague.dev/static/logos/pio-inverse.svg",
     "url": "https://kingsleague.pro/team/pio-fc/",
