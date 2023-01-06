@@ -1,4 +1,6 @@
 ---
+import Container from '@components/Container.astro'
+import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
 import Layout from '@layouts/Layout.astro'
 
 export async function getStaticPaths() {
@@ -22,7 +24,7 @@ const {
 ---
 
 <Layout title={name}>
-	<div class="container m-auto my-8">
+	<Container>
 
 		<section class="flex items-center justify-between">
 			<div class="flex items-center gap-x-12">
@@ -46,6 +48,6 @@ const {
 			Estadísticas
 		</section>
 
-		<a class="text-blue-500 underline" href="/">Volver</a>
-	</div>
+		<TeamsSelectorCards />
+	</Container>
 </Layout>
