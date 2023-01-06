@@ -3,7 +3,6 @@ import { describe, expect, it, beforeAll, afterAll } from 'vitest'
 
 const setup = async () => {
 	const worker = await unstableDev('api/index.js', {}, { disableExperimentalWarning: true })
-
 	return worker
 }
 
@@ -98,6 +97,69 @@ describe('Testing /teams route', () => {
 
 		expect(errorMessage).toEqual({
 			message: 'Team not found'
+		})
+	})
+})
+
+describe('Testing /presidents route', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('The teams should have all teams', async () => {
+		const resp = await worker.fetch('/presidents')
+		expect(resp).toBeDefined()
+		if (!resp) return
+
+		const presidents = await resp.json()
+		const numberPresidents = Object.entries(presidents).length
+
+		// verify the team have all props
+		presidents.forEach((president) => {
+			expect(president).toHaveProperty('id')
+			expect(president).toHaveProperty('name')
+			expect(president).toHaveProperty('image')
+			expect(president).toHaveProperty('teamId')
+		})
+
+		expect(numberPresidents).toBe(12)
+	})
+
+	it('Get /teams/1k should return team props', async () => {
+		const resp = await worker.fetch('/presidents/iker-casillas')
+		expect(resp).toBeDefined()
+		if (!resp) return
+
+		const president = await resp.json()
+		const iker = {
+			id: 'iker-casillas',
+			name: 'Iker Casillas',
+			image: 'https://kings-league-api.midudev.workers.dev/static/presidents/iker-casillas.png',
+			teamId: '1k'
+		}
+
+		expect(president).toHaveProperty('id')
+		expect(president).toHaveProperty('name')
+		expect(president).toHaveProperty('image')
+		expect(president).toHaveProperty('teamId')
+		expect(president).toEqual(iker)
+	})
+
+	it('Get /presidents/noexist should return 404 message missing team', async () => {
+		const resp = await worker.fetch('/presidents/noexist')
+		expect(resp).toBeDefined()
+		if (!resp) return
+
+		const errorMessage = await resp.json()
+
+		expect(errorMessage).toEqual({
+			message: 'President not found'
 		})
 	})
 })
