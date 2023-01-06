@@ -5,78 +5,88 @@ import tiktok from '../../assets/static/logos/social/tiktok.svg'
 import twitch from '../../assets/static/logos/social/twitch.svg'
 import twitter from '../../assets/static/logos/social/twitter.svg'
 import youtube from '../../assets/static/logos/social/youtube.svg'
+import Container from './Container.astro'
 
 const SOCIAL_NETWORKS = [
 	{
 		name: 'twitch',
 		icon: twitch,
-		href: '#',
+		href: '#'
 	},
 	{
 		name: 'twitter',
 		icon: twitter,
-		href: '#',
+		href: '#'
 	},
 	{
 		name: 'tiktok',
 		icon: tiktok,
-		href: '#',
+		href: '#'
 	},
 	{
 		name: 'instagram',
 		icon: instagram,
-		href: '#',
+		href: '#'
 	},
 	{
 		name: 'youtube',
 		icon: youtube,
-		href: '#',
+		href: '#'
 	}
 ]
 ---
 
 <footer class='text-white w-full p-8 bg-black'>
-	<section class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'>
-		<img class='block w-52' src={kingsLeagueInfojobs} alt='logo de Kings League y Infojobs' />
+	<Container>
+		<section
+			class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'
+		>
+			<img class='block w-52' src={kingsLeagueInfojobs} alt='logo de Kings League y Infojobs' />
 
-		<nav class='flex gap-24 mr-36'>
-			<div class='flex flex-col gap-3'>
-				<span>Equipos</span>
-				<span>Jugador 12</span>
-				<span>Calendario</span>
-			</div>
-			<div class='flex flex-col gap-3'>
-				<span>Estadisticas</span>
-				<span>Reglamento</span>
-			</div>
+			<nav class='flex gap-24'>
+				<div class='flex flex-col gap-3'>
+					<span>Equipos</span>
+					<span>Jugador 12</span>
+					<span>Calendario</span>
+				</div>
+				<div class='flex flex-col gap-3'>
+					<span>Estadisticas</span>
+					<span>Reglamento</span>
+				</div>
 
-			<div class='flex flex-col gap-3'>
-				<span>Faqs</span>
-				<span>Draft</span>
-			</div>
-		</nav>
-	</section>
-
-	<section class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'>
-		<nav class='flex gap-4 align-middle items-center'>
-			{
-				SOCIAL_NETWORKS.map(network => (
-					<a href={network.href} class='w-10 h-10 flex items-center rounded-full p-2 bg-white group'>
-						<img
-							class='w-6 transition-brightness duration-300 brightness-0 group-hover:brightness-100'
-							src={network.icon}
-							alt={`${network.name} Logo`}
-						/>
-					</a>
-				))
-			}
-
-			<nav class='flex gap-5 justify-center lg:justify-around'>
-				<span>Contacto</span>
-				<span>Política de Privacidad</span>
-				<span>Aviso Legal</span>
-				<span>Política de Cookies</span>
+				<div class='flex flex-col gap-3'>
+					<span>Faqs</span>
+					<span>Draft</span>
+				</div>
 			</nav>
-		</nav>
-	</section>
+		</section>
+
+		<section
+			class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'
+		>
+			<nav class='flex gap-4 align-middle items-center'>
+				{
+					SOCIAL_NETWORKS.map((network) => (
+						<a
+							href={network.href}
+							class='w-10 h-10 flex items-center rounded-full p-2 bg-white group'
+						>
+							<img
+								class='w-6 transition-brightness duration-300 brightness-0 group-hover:brightness-100'
+								src={network.icon}
+								alt={`${network.name} Logo`}
+							/>
+						</a>
+					))
+				}
+
+				<nav class='flex gap-5 justify-center lg:justify-around'>
+					<span>Contacto</span>
+					<span>Política de Privacidad</span>
+					<span>Aviso Legal</span>
+					<span>Política de Cookies</span>
+				</nav>
+			</nav>
+		</section>
+	</Container>
 </footer>
