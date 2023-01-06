@@ -70,6 +70,8 @@
       }
     ],
     "coach": "Julio García Mera",
+    "coachInfo": {},
+    "shortName": "1K"
     "coachInfo": {
       "name": "Julio García Mera",
       "image": "julio-garca-mera.png"
@@ -146,6 +148,8 @@
       }
     ],
     "coach": "Juan Arroita",
+    "coachInfo": {},
+    "shortName": "RDB"
     "coachInfo": {
       "name": "Juan Arroita",
       "image": "juan-arroita.png"
@@ -219,6 +223,8 @@
       }
     ],
     "coach": "Nacho Castro",
+    "coachInfo": {},
+    "shortName": "ULT"
     "coachInfo": {
       "name": "Nacho Castro",
       "image": "nacho-castro.png"
@@ -295,6 +301,8 @@
       }
     ],
     "coach": "Pol Font",
+    "coachInfo": {},
+    "shortName": "TFC"
     "coachInfo": {
       "name": "Pol Font",
       "image": "pol-font.png"
@@ -368,6 +376,8 @@
       }
     ],
     "coach": "Daniel Romo",
+    "coachInfo": {},
+    "shortName": "SAI"
     "coachInfo": {
       "name": "Daniel Romo",
       "image": "daniel-romo.png"
@@ -441,6 +451,8 @@
       }
     ],
     "coach": "Martín Posse",
+    "coachInfo": {},
+    "shortName": "KNS"
     "coachInfo": {
       "name": "Martín Posse",
       "image": "martn-posse.png"
@@ -517,6 +529,8 @@
       }
     ],
     "coach": "Marc Carmona",
+    "coachInfo": {},
+    "shortName": "JFC"
     "coachInfo": {
       "name": "Marc Carmona",
       "image": "marc-carmona.png"
@@ -591,6 +605,8 @@
       }
     ],
     "coach": "Juvenal Edjogo",
+    "coachInfo": {},
+    "shortName": "POR"
     "coachInfo": {
       "name": "Juvenal Edjogo-Owono",
       "image": "juvenal-edjogoowono.png"
@@ -667,6 +683,8 @@
       }
     ],
     "coach": "JuanluDBZ",
+    "coachInfo": {},
+    "shortName": "RDB"
     "coachInfo": {
       "name": "JuanluDBZ",
       "image": "juanludbz.png"
@@ -740,6 +758,8 @@
       }
     ],
     "coach": "Víctor González",
+    "coachInfo": {},
+    "shortName": "XBU"
     "coachInfo": {
       "name": "Victor González",
       "image": "victor-gonzlez.png"
@@ -813,6 +833,8 @@
       }
     ],
     "coach": "Sergio Verdirame",
+    "coachInfo": {},
+    "shortName": "ANI"
     "coachInfo": {
       "name": "Sergio Verdirame",
       "image": "sergio-verdirame.png"
@@ -887,6 +909,8 @@
       }
     ],
     "coach": "Gerardo Torrado",
+    "coachInfo": {},
+    "shortName": "PIO"
     "coachInfo": {
       "name": "Gerardo Torrado",
       "image": "gerardo-torrado.png"
