@@ -5,11 +5,11 @@ const INFO_COACHES_SELECTORS = {
 }
 
 async function getCoaches($) {
-	const coachsTeam = $(INFO_COACHES_SELECTORS.coach.selector)
+	const coachesTeam = $(INFO_COACHES_SELECTORS.coach.selector)
 		.toArray()
 		.map((coachName) => coachName.children[0].data)
 
-	const coachsImgTeam = $(INFO_COACHES_SELECTORS.coachImg.selector)
+	const coachesImgTeam = $(INFO_COACHES_SELECTORS.coachImg.selector)
 		.toArray()
 		.map((coachImg) => {
 			const { attribs } = coachImg
@@ -21,11 +21,11 @@ async function getCoaches($) {
 		.toArray()
 		.map((teamName) => teamName.children[0].data)
 
-	const teamsWithCoach = coachsTeam.map((coach, i) => {
+	const teamsWithCoach = coachesTeam.map((coach, i) => {
 		return {
 			name: coach,
 			teamName: teamsName[i],
-			image: coachsImgTeam[i]
+			image: coachesImgTeam[i]
 		}
 	})
 	return teamsWithCoach
