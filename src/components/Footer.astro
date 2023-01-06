@@ -7,7 +7,7 @@ import twitter from '../../assets/static/logos/social/twitter.svg'
 import youtube from '../../assets/static/logos/social/youtube.svg'
 ---
 
-<footer class='text-white w-screen p-8 bg-black'>
+<footer class='text-white w-full p-8 bg-black'>
 	<section class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'>
 		<img class='block w-52' src={kingsLeagueInfojobs} alt='logo de Kings League y Infojobs' />
 
@@ -31,33 +31,52 @@ import youtube from '../../assets/static/logos/social/youtube.svg'
 
 	<section class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'>
 		<nav class='flex gap-4 align-middle items-center'>
-			<a href='#'>
-				<img class='w-6 invert' src={twitch} alt='Twitch Logo' />
+			<a href='#' class='rounded-full p-2 bg-white'>
+				<img
+					class='w-6 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
+					src={twitch}
+					alt='Twitch Logo'
+				/>
 			</a>
 
-			<a href='#'>
-				<img class='w-6 invert' src={twitter} alt='Twitter Logo' />
+			<a href='#' class='rounded-full p-2 bg-white'>
+				<img
+					class='w-6 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
+					src={twitter}
+					alt='Twitter Logo'
+				/>
 			</a>
 
-			<a href='#'>
-				<img class='w-6 invert' src={tiktok} alt='TikTok Logo' />
+			<a href='#' class='rounded-full p-2 bg-white'>
+				<img
+					class='w-6 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
+					src={tiktok}
+					alt='TikTok Logo'
+				/>
 			</a>
 
-			<a href='#'>
-				<img class='w-6 invert' src={instagram} alt='Instagram Logo' />
-			</a>
-		
-			<a href='#'>
-				<img class='w-8 invert' src={youtube} alt='YouTube Logo' />
+			<a href='#' class='rounded-full p-2 bg-white'>
+				<img
+					class='w-6 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
+					src={instagram}
+					alt='Instagram Logo'
+				/>
 			</a>
 
-					<nav class='flex gap-5 justify-center lg:justify-around'>
-						<span>Contacto</span>
-						<span>Política de Privacidad</span>
-						<span>Aviso Legal</span>
-						<span>Política de Cookies</span>
-					</nav>
-		
+			<a href='#' class='rounded-full p-2 bg-white'>
+				<img
+					class='w-8 bg:white transition-brightness duration-300 brightness-0 hover:brightness-100'
+					src={youtube}
+					alt='YouTube Logo'
+				/>
+			</a>
+
+			<nav class='flex gap-5 justify-center lg:justify-around'>
+				<span>Contacto</span>
+				<span>Política de Privacidad</span>
+				<span>Aviso Legal</span>
+				<span>Política de Cookies</span>
+			</nav>
 		</nav>
 	</section>
 </footer>
