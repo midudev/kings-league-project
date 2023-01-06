@@ -29,11 +29,13 @@ const teams = await response.json()
 ---
 
 <header
-	class='flex items-center w-screen bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] p-8 gap-x-8'
+	class='flex items-center w-full bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] p-8 gap-x-8'
 >
 	<div class='flex flex-col h-full gap-4 w-full'>
 		<nav>
-			<ul class='flex items-center justify-center rounded-xl gap-x-4 [&>li>a:hover]:scale-150 w-full'>
+			<ul
+				class='flex items-center justify-center rounded-xl gap-x-4 [&>li>a:hover]:scale-150 w-full'
+			>
 				{
 					teams.map(({ id, image, name }, index) => (
 						<>
@@ -61,7 +63,9 @@ const teams = await response.json()
 					menu.map(({ name, href }) => (
 						<li>
 							<a
-								class={`transition ${Astro.url.pathname === href ? 'opacity-100 underline pointer-events-none' : ''}`}
+								class={`transition ${
+									Astro.url.pathname === href ? 'opacity-100 underline pointer-events-none' : ''
+								}`}
 								href={href}
 							>
 								{name}
