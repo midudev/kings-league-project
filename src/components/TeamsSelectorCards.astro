@@ -17,6 +17,7 @@ const teams = await getAllTeams()
 						class='group transition-all hover:scale-110 flex gap-x-4 p-4 h-full items-center justify-center relative'
 						href={`/team/${id}`}
 						title={`Ver equipo ${name}`}
+						rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
 					>
 						<img
 							alt={`Logo del equipo ${name}`}
