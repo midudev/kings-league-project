@@ -22,8 +22,7 @@ app.get('/', (ctx) =>
 			parameters: [
 				{
 					name: 'id',
-					endpoint: '/teams/:id',
-					description: 'Return Kings League team by id'
+					endpoint: '/teams/:id'
 				}
 			]
 		},
@@ -33,8 +32,7 @@ app.get('/', (ctx) =>
 			parameters: [
 				{
 					name: 'id',
-					endpoint: '/presidents/:id',
-					description: 'Return Kings League president by id'
+					endpoint: '/presidents/:id'
 				}
 			]
 		},
@@ -44,25 +42,11 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/top-assists',
-			description: 'Returns Kings League Top Assists',
-			parameters: [
-				{
-					name: 'rank',
-					endpoint: '/top-assists/:rank',
-					description: 'Return Kings League top assister by rank'
-				}
-			]
+			description: 'Returns Kings League Top Assists'
 		},
 		{
 			endpoint: '/top-scorers',
-			description: 'Returns Kings League Top Scorers',
-			parameters: [
-				{
-					name: 'rank',
-					endpoint: '/top-scorers/:rank',
-					description: 'Return Kings League top scorer by rank'
-				}
-			]
+			description: 'Returns Kings League Top Scorers'
 		},
 		{
 			endpoint: '/mvp',
@@ -113,14 +97,6 @@ app.get('/mvp', (ctx) => {
 
 app.get('/coaches', (ctx) => {
 	return ctx.json(coaches)
-})
-
-app.get('/coaches/:teamId', (ctx) => {
-	const teamId = ctx.req.param('teamId')
-	const teamName = teams.find((team) => team.id === teamId)
-	const foundedCoach = coaches.find((coach) => coach.teamName === teamName)
-
-	return foundedCoach ? ctx.json(foundedCoach) : ctx.json({ message: 'Coach not found' }, 404)
 })
 
 app.get('/presidents/:id', (ctx) => {
