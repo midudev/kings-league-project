@@ -1,0 +1,63 @@
+---
+import kingsLeagueInfojobs from '../../assets/static/logos/kings-league-infojobs.svg'
+import instagram from '../../assets/static/logos/social/instagram.svg'
+import tiktok from '../../assets/static/logos/social/tiktok.svg'
+import twitch from '../../assets/static/logos/social/twitch.svg'
+import twitter from '../../assets/static/logos/social/twitter.svg'
+import youtube from '../../assets/static/logos/social/youtube.svg'
+---
+
+<footer class='w-screen p-8 bg-gradient-to-r from-[#ff6900] to-[#f7ab35]'>
+	<section class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'>
+		<img class='block w-52' src={kingsLeagueInfojobs} alt='logo de Kings League y Infojobs' />
+
+		<!--
+	<a href='/'>
+		<img
+			class='max-w-xs'
+			alt='Kings League Infojobs Logo Oficial'
+			src='https://kingsleague.pro/wp-content/uploads/2022/12/KL_landscape.svg'
+		/>
+	 -->
+
+		<nav class='flex gap-24 mr-36'>
+			<div class='flex flex-col gap-3'>
+				<span>Equipos</span>
+				<span>Jugador 12</span>
+				<span>Calendario</span>
+			</div>
+			<div class='flex flex-col gap-3'>
+				<span>Estadisticas</span>
+				<span>Reglamento</span>
+			</div>
+
+			<div class='flex flex-col gap-3'>
+				<span>Faqs</span>
+				<span>Draft</span>
+			</div>
+		</nav>
+	</section>
+
+	<section class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'>
+		<nav class='flex gap-4 align-middle'>
+			<img class='w-6' src={twitch} alt='logo' />
+			<img class='w-6' src={twitter} alt='logo' />
+			<img class='w-6' src={tiktok} alt='logo' />
+			<img class='w-6' src={instagram} alt='logo' />
+			<img class='w-6' src={youtube} alt='logo' />
+			<!-- <img src="https://api.kingsleague.dev/static/logos/logos/social/instagram.svg" alt="">
+			<img src="https://api.kingsleague.dev/static/logos/logos/social/tiktok.svg" alt="">
+			<img src="https://api.kingsleague.dev/static/logos/logos/social/instagram.svg" alt="">
+			<img src="https://api.kingsleague.dev/static/logos/logos/social/twitch.svg" alt="">
+			<img src="https://api.kingsleague.dev/static/logos/logos/social/twitter.svg" alt="">
+			<img src="https://api.kingsleague.dev/static/logos/logos/social/youtube.svg" alt=""> -->
+		</nav>
+
+		<nav class='flex gap-5 justify-center lg:justify-around'>
+			<span>Contacto</span>
+			<span>Política de Privacidad</span>
+			<span>Aviso Legal</span>
+			<span>Política de Cookies</span>
+		</nav>
+	</section>
+</footer>

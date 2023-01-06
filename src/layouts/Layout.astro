@@ -1,5 +1,6 @@
 ---
 import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
 
 const {
 	title,
@@ -24,6 +25,7 @@ const seoTitle = title
 	<body class="min-h-screen bg-orange-50/80">
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
