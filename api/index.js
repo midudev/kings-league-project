@@ -3,36 +3,44 @@ import { serveStatic } from 'hono/serve-static.module'
 import leaderboard from '../db/leaderboard.json'
 import teams from '../db/teams.json'
 import presidents from '../db/presidents.json'
-import topScorer from '../db/top_scorer.json'
+import topScorers from '../db/top_scorers.json'
 import coaches from '../db/coaches.json'
 import mvp from '../db/mvp.json'
-import assists from '../db/assists.json'
+import topAssists from '../db/top_assists.json'
 
 const app = new Hono()
 
 app.get('/', (ctx) =>
-  ctx.json([
-    {
-      endpoint: '/leaderboard',
-      description: 'Returns Kings League leaderboard'
-    },
-    {
-      endpoint: '/teams',
-      description: 'Returns Kings League teams'
-    },
-    {
-      endpoint: '/presidents',
-      description: 'Returns Kings League presidents'
-    },
-    {
-      endpoint: '/coaches',
-      description: 'Returns Kings League coaches'
-    },
-    {
-			endpoint: '/assists',
-			description: 'Returns Kings League assists'
+	ctx.json([
+		{
+			endpoint: '/leaderboard',
+			description: 'Returns Kings League leaderboard'
+		},
+		{
+			endpoint: '/teams',
+			description: 'Returns Kings League teams'
+		},
+		{
+			endpoint: '/presidents',
+			description: 'Returns Kings League presidents'
+		},
+		{
+			endpoint: '/coaches',
+			description: 'Returns Kings League coaches'
+		},
+		{
+			endpoint: '/top-assists',
+			description: 'Returns Kings League Top Assists'
+		},
+		{
+			endpoint: '/top-scorers',
+			description: 'Returns Kings League Top Scorers'
+		},
+		{
+			endpoint: '/mvp',
+			description: 'Returns Kings League Top Scorers'
 		}
-  ])
+	])
 )
 
 app.get('/leaderboard', (ctx) => {
@@ -40,15 +48,19 @@ app.get('/leaderboard', (ctx) => {
 })
 
 app.get('/teams', (ctx) => {
-  return ctx.json(teams)
+	return ctx.json(teams)
 })
 
 app.get('/presidents', (ctx) => {
-  return ctx.json(presidents)
+	return ctx.json(presidents)
 })
 
-app.get('/top-scorer', (ctx) => {
-	return ctx.json(topScorer)
+app.get('/top-scorers', (ctx) => {
+	return ctx.json(topScorers)
+})
+
+app.get('/top-assists', (ctx) => {
+	return ctx.json(topAssists)
 })
 
 app.get('/mvp', (ctx) => {
@@ -56,7 +68,7 @@ app.get('/mvp', (ctx) => {
 })
 
 app.get('/coaches', (ctx) => {
-  return ctx.json(coaches)
+	return ctx.json(coaches)
 })
 
 app.get('/presidents/:id', (ctx) => {
