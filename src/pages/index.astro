@@ -4,7 +4,7 @@ import Layout from '@layouts/Layout.astro'
 import Container from '@components/Container.astro'
 import Sponsors from '@components/Sponsors.astro'
 import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
-import UneteButton from '@components/Unete.astro'
+import JoinQueensLeague from '@components/JoinQueensLeague.astro'
 import PlayerPrizeCard from '@components/PlayerPrizeCard.astro'
 import { getFirstPlayersStatistics } from '@services/statistics.js'
 import NextMatchesTable from '@components/NextMatchesTable.astro'
@@ -39,8 +39,9 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 								)
 							}
 
-							<div class='col-span-3'>
+							<div class='col-span-6 xl:col-span-3'>
 								<PlayerPrizeCard
+									smallerBox
 									teamName={topScorer.team}
 									teamId={topScorer.teamId}
 									teamImage={topScorer.image}
@@ -51,15 +52,17 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 								/>
 							</div>
 
-							<div class='col-span-3'>
+							<div class='col-span-6 xl:col-span-3'>
 								<PlayerPrizeCard
+									smallerBox
 									teamName={topAssister.team}
 									teamImage={topAssister.image}
 									teamId={topAssister.teamId}
 									playerName={topAssister.playerName}
 									playerImage={topAssister.playerImage}
 									title={topAssister.assists}
-									subtitle='Asistencias' />
+									subtitle='Asistencias'
+								/>
 							</div>
 						</div>
 						<div class='my-10'>
@@ -68,7 +71,7 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 					</div>
 				</div>
 			</Container>
-			<UneteButton />
+			<JoinQueensLeague />
 		</section>
 	</main>
 	<Sponsors />

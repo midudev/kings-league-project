@@ -2,6 +2,7 @@
 import Logo from './Logo.astro'
 import MenuIcon from './icons/Menu.astro'
 import SocialNetworks from './SocialNetworks.astro'
+import { getAllTeams } from '@services/teams.js'
 
 const menu = [
 	{
@@ -26,8 +27,7 @@ const menu = [
 	}
 ]
 
-const response = await fetch('https://api.kingsleague.dev/teams')
-const teams = await response.json()
+const teams = await getAllTeams()
 ---
 
 <header
