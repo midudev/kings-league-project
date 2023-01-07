@@ -7,6 +7,7 @@ import topScorers from '../db/top_scorers.json'
 import coaches from '../db/coaches.json'
 import mvp from '../db/mvp.json'
 import topAssists from '../db/top_assists.json'
+import schedule from '../db/schedule.json'
 import playersTwelve from '../db/players_twelve.json'
 
 const app = new Hono()
@@ -84,6 +85,10 @@ app.get('/', (ctx) =>
 			description: 'Returns Kings League Most Valuable Players'
 		},
 		{
+			endpoint: '/schedule',
+			description: 'Returns Kings League match schedule and the final score of played games.'
+    },
+    {
 			endpoint: '/players-12',
 			description: 'Returns Kings League Players Twelve'
 		}
@@ -163,6 +168,11 @@ app.get('/teams/:id', (ctx) => {
 	const foundTeam = teams.find((team) => team.id === id)
 
 	return foundTeam ? ctx.json(foundTeam) : ctx.json({ message: 'Team not found' }, 404)
+})
+
+
+app.get('/schedule', (ctx) => {
+	return ctx.json(schedule)
 })
 
 app.get('/teams/:id/player-12', (ctx) => {
