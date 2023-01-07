@@ -163,3 +163,44 @@ describe('Testing /presidents route', () => {
 		})
 	})
 })
+
+describe('Test /schedule route', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it("All day should have it's date and matches", async () => {
+		const resp = await worker.fetch('/schedule')
+		expect(resp).toBeDefined()
+
+		const days = await resp.json()
+		const properties = ['date', 'matches']
+
+		days.forEach((day) => {
+			properties.forEach((property) => {
+				expect(day).toHaveProperty(property)
+			})
+		})
+	})
+
+	it("Matches should have all it's properties", async () => {
+		const resp = await worker.fetch('/schedule')
+		expect(resp).toBeDefined()
+
+		const days = await resp.json()
+		const matches = days.map((day) => day.matches).flat()
+		const properties = ['timestamp', 'hour', 'teams', 'score']
+
+		matches.forEach((match) => {
+			properties.forEach((property) => {
+				expect(match).toHaveProperty(property)
+			})
+		})
+	})
+})
