@@ -3,13 +3,15 @@ import Layout from '@layouts/Layout.astro'
 import SectionTitle from '@components/SectionTitle.astro'
 import Container from '@components/Container.astro'
 import Leaderboard from '@components/Leaderboard.astro'
-import FloatingBoxContainer from '@components/FloatingBoxContainer.astro';
+import FloatingBoxContainer from '@components/FloatingBoxContainer.astro'
+import TabsStatistics from '@components/TabsStatistics.astro'
 ---
 
 <!-- Página del Estadisticas -->
 <Layout title='Clasificación'>
 	<SectionTitle title='Clasificación' />
 	<Container>
+		<TabsStatistics />
 		<FloatingBoxContainer>
 			<Leaderboard />
 		</FloatingBoxContainer>
