@@ -34,6 +34,7 @@
     "tailwindcss": "3.2.4"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "1.0.0",
     "@typescript-eslint/parser": "5.48.0",
     "@vitest/coverage-c8": "0.26.3",
     "@vitest/ui": "0.26.3",
