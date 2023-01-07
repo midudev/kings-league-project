@@ -140,7 +140,7 @@ describe('Testing /presidents route', () => {
 		const iker = {
 			id: 'iker-casillas',
 			name: 'Iker Casillas',
-			image: 'https://api.kingsleague.dev/static/presidents/iker-casillas.png',
+			image: 'https://kingsleague.dev/presidents/iker-casillas.webp',
 			teamId: '1k'
 		}
 
