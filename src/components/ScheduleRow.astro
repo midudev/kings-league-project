@@ -40,8 +40,14 @@ const scoreStyles = {
 
 <!-- <tr class='group border-y [&>td]:py-2 transition hover:bg-black'>
 	<td class='text-right transition group-hover:text-white'>
-		<span class='md:hidden'>{local.shortName}</span>
-		<span class='hidden md:block'>{local.name}</span>
+		<a
+		href={`/team/${local.id}`}
+		rel={Astro.url.pathname !== `/team/${local.id}` && 'preload'}
+	>
+	<span class='md:hidden'>{local.shortName}</span>
+	<span class='hidden md:block'>{local.name}</span>
+	</a>
+
 	</td>
 	<td class='w-24'>
 		<img
@@ -52,10 +58,12 @@ const scoreStyles = {
 	</td>
 	<td class='w-24 md:w-48'>
 		{
-			score !== '0 – 0' ? (
-				<p class={`${scoreStyles['shared']} ${scoreStyles['played']}`}>{score}</p>
-			) : (
-				<p class={`${scoreStyles['shared']} ${scoreStyles['pending']}`}>vs</p>
+			score !== '0 – 0'
+? (
+				<p class={`${scoreStyles.shared} ${scoreStyles.played}`}>{score}</p>
+			)
+: (
+				<p class={`${scoreStyles.shared} ${scoreStyles.pending}`}>vs</p>
 			)
 		}
 	</td>
@@ -67,7 +75,12 @@ const scoreStyles = {
 		/>
 	</td>
 	<td class='text-left transition group-hover:text-white'>
-		<span class='md:hidden'>{visitant.shortName}</span>
-		<span class='hidden md:block'>{visitant.name}</span>
+		<a
+			href={`/team/${visitant.id}`}
+			rel={Astro.url.pathname !== `/team/${visitant.id}` && 'preload'}
+		>
+			<span class='md:hidden'>{visitant.shortName}</span>
+			<span class='hidden md:block'>{visitant.name}</span>
+		</a>
 	</td>
 </tr> -->
