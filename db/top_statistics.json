@@ -89,7 +89,8 @@
       "rank": 1,
       "team": "Saiyans FC",
       "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg",
-      "playerImage": "saiyans-fc-feliu.png"
+      "playerImage": "saiyans-fc-feliu.png",
+      "teamId": "saiyans-fc"
     },
     {
       "playerName": "Jacobo",
@@ -98,7 +99,8 @@
       "rank": 2,
       "team": "El Barrio",
       "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg",
-      "playerImage": "el-barrio-jacobo.png"
+      "playerImage": "el-barrio-jacobo.png",
+      "teamId": "el-barrio"
     },
     {
       "playerName": "J. Verdú «Gingko»",
@@ -107,7 +109,8 @@
       "rank": 3,
       "team": "Los Troncos FC",
       "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
-      "playerImage": "placeholder.png"
+      "playerImage": "placeholder.png",
+      "teamId": "los-troncos-fc"
     },
     {
       "playerName": "Juanma Glez",
@@ -116,7 +119,8 @@
       "rank": 4,
       "team": "Ultimate Móstoles",
       "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg",
-      "playerImage": "ultimate-mostoles-juanma-glez.png"
+      "playerImage": "ultimate-mostoles-juanma-glez.png",
+      "teamId": "ultimate-mostoles"
     },
     {
       "playerName": "Víctor",
@@ -125,7 +129,8 @@
       "rank": 5,
       "team": "Kunisports",
       "image": "https://api.kingsleague.dev/static/logos/kunisports.svg",
-      "playerImage": "kunisports-vctor.png"
+      "playerImage": "kunisports-vctor.png",
+      "teamId": "kunisports"
     }
   ],
   "topScorers": [
@@ -136,7 +141,8 @@
       "goals": 3,
       "team": "Saiyans FC",
       "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg",
-      "playerImage": "saiyans-fc-r-carbo.png"
+      "playerImage": "saiyans-fc-r-carbo.png",
+      "teamId": "saiyans-fc"
     },
     {
       "rank": 2,
@@ -145,7 +151,8 @@
       "goals": 3,
       "team": "Ultimate Móstoles",
       "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg",
-      "playerImage": "ultimate-mostoles-juanma-glez.png"
+      "playerImage": "ultimate-mostoles-juanma-glez.png",
+      "teamId": "ultimate-mostoles"
     },
     {
       "rank": 3,
@@ -154,7 +161,8 @@
       "goals": 2,
       "team": "El Barrio",
       "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg",
-      "playerImage": "el-barrio-jacobo.png"
+      "playerImage": "el-barrio-jacobo.png",
+      "teamId": "el-barrio"
     },
     {
       "rank": 4,
@@ -163,7 +171,8 @@
       "goals": 2,
       "team": "Los Troncos FC",
       "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
-      "playerImage": "los-troncos-fc-s-sanchez-drago.png"
+      "playerImage": "los-troncos-fc-s-sanchez-drago.png",
+      "teamId": "los-troncos-fc"
     },
     {
       "rank": 5,
@@ -172,7 +181,8 @@
       "goals": 2,
       "team": "Los Troncos FC",
       "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
-      "playerImage": "placeholder.png"
+      "playerImage": "placeholder.png",
+      "teamId": "los-troncos-fc"
     }
   ],
   "topAssists": [
@@ -183,7 +193,8 @@
       "rank": 1,
       "team": "Los Troncos FC",
       "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
-      "playerImage": "placeholder.png"
+      "playerImage": "placeholder.png",
+      "teamId": "los-troncos-fc"
     },
     {
       "playerName": "A. Bueno",
@@ -192,7 +203,8 @@
       "rank": 2,
       "team": "1K FC",
       "image": "https://api.kingsleague.dev/static/logos/1k.svg",
-      "playerImage": "placeholder.png"
+      "playerImage": "placeholder.png",
+      "teamId": "1k"
     },
     {
       "playerName": "Gio Ferinu",
@@ -201,7 +213,8 @@
       "rank": 3,
       "team": "Saiyans FC",
       "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg",
-      "playerImage": "saiyans-fc-gio-ferinu.png"
+      "playerImage": "saiyans-fc-gio-ferinu.png",
+      "teamId": "saiyans-fc"
     },
     {
       "playerName": "Feliu",
@@ -210,7 +223,8 @@
       "rank": 4,
       "team": "Saiyans FC",
       "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg",
-      "playerImage": "saiyans-fc-feliu.png"
+      "playerImage": "saiyans-fc-feliu.png",
+      "teamId": "saiyans-fc"
     },
     {
       "playerName": "David Alba",
@@ -219,7 +233,8 @@
       "rank": 5,
       "team": "Saiyans FC",
       "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg",
-      "playerImage": "saiyans-fc-david-alba.png"
+      "playerImage": "saiyans-fc-david-alba.png",
+      "teamId": "saiyans-fc"
     }
   ]
 }
