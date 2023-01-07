@@ -4,7 +4,7 @@ const INFO_COACHES_SELECTORS = {
 	coachImg: { selector: '.player-circle-box', typeOf: 'string' }
 }
 
-async function getCoaches($) {
+export async function getCoaches($) {
 	const coachesTeam = $(INFO_COACHES_SELECTORS.coach.selector)
 		.toArray()
 		.map((coachName) => coachName.children[0].data)

@@ -1,7 +1,7 @@
 ---
 import Logo from './Logo.astro'
 import MenuIcon from './icons/Menu.astro'
-import twitch from '../../assets/static/logos/social/twitch.svg'
+// import twitch from '../../assets/static/logos/social/twitch.svg'
 
 const menu = [
 	{
@@ -44,12 +44,15 @@ const teams = await response.json()
 							{index === 6 ? <Logo /> : ''}
 							<li>
 								<a class='group transition hidden md:block' href={`/team/${id}`} title={name}>
+								<a class='group transition hidden md:block' href={`/team/${id}`} title={name} rel={Astro.url.pathname !== `/team/${id}` && 'preload'}>
 									<img
 										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
 										src={image}
 										alt={`Escudo del equipo ${name}`}
 										width='48'
 										height='48'
+										deconding="async"
+										fetchpriority="high"
 									/>
 								</a>
 							</li>
@@ -81,6 +84,7 @@ const teams = await response.json()
 										: 'hover:underline-offset-8'
 								}`}
 								href={href}
+								rel={Astro.url.pathname !== href && 'preload'}
 							>
 								{name}
 							</a>
