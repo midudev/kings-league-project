@@ -17,7 +17,8 @@ export async function getStaticPaths() {
 	}))
 }
 
-const { id, name, imageWhite, presidentId, socialNetworks, channel, players, color } = Astro.props
+const { id, name, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
+const gradient = `bg-${id}`
 
 const socialNetworksWithIcon = socialNetworks.map((href) => ({
 	href,
@@ -30,14 +31,17 @@ const president = await findPresidentBy({ id: presidentId })
 <Layout title={name}>
 	<section class='bg-[#cd5500] py-20'>
 		<Container>
-			<div
-				class='relative bg-gradient-to-tr from-gray-600 to-gray-900 p-20 shadow-xl rounded -mt-10 z-10 mb-40'
-				style={`--tw-gradient-from: ${color}`}
-			>
+			<div class={`relative px-20 py-10 shadow-xl rounded -mt-10 z-10 mb-40 ${gradient}`}>
 				<section class='flex items-center justify-between pb-60'>
-					<div class='flex flex-col items-center'>
-						<div class="flex items-center gap-x-6">
-							<img class='w-48 h-48' src={imageWhite} alt={`Escudo del equipo ${name}`} />
+					<div class='flex flex-col'>
+						<div class='flex items-center gap-x-6 mb-10'>
+							<img
+								class='w-56 h-56 object-contain'
+								src={imageWhite}
+								alt={`Escudo del equipo ${name}`}
+                decoding="async"
+                fetchpriority="high"
+							/>
 							<div class='flex flex-col gap-y-4'>
 								<h1 class='font-title font-bold text-6xl text-white'>{name}</h1>
 								<ul class='flex flex-row gap-x-4'>
@@ -51,7 +55,7 @@ const president = await findPresidentBy({ id: presidentId })
 														target='_blank'
 														rel='noopener norefferer'
 													>
-														<img class='w-8 h-8' src={`/logo/${icon}.svg`} />
+														<img class='w-8 h-8 brightness-[1000]' src={`/logo/${icon}.svg`} decoding="async" fetchpriority="high" />
 													</a>
 												</li>
 											)
@@ -60,14 +64,19 @@ const president = await findPresidentBy({ id: presidentId })
 								</ul>
 							</div>
 						</div>
+
 						<TeamStats teamId={id} />
+
 					</div>
 
-					<div class='absolute -top-20 right-20 text-center'>
-						<img class='w-96 h-auto aspect-[170/239]' src={president.image} alt={president.name} />
-						<strong class='text-white text-xl font-bold font-title -mt-6 block'
-							>{president.name}</strong
+					<div class='absolute -top-20 right-10 text-center'>
+						<img class='w-[400px] h-auto aspect-[170/239]' src={president.image} alt={president.name} decoding="async" fetchpriority="high" />
+						<h3 class='text-white font-title text-3xl pt-2 -mt-6 block'
+							>{president.name}</h3
 						>
+						<h4 class='font-body uppercase rounded-full text-orange-500 bg-black/70 py-1 font-semibold'>
+							Presidente
+						</h4>
 					</div>
 				</section>
 
@@ -81,6 +90,8 @@ const president = await findPresidentBy({ id: presidentId })
 										class='w-56 h-auto aspect-[170/239]'
 										src={`https://api.kingsleague.dev/static/players/${player.image}`}
 										alt={`${player.name}`}
+										decoding="async"
+										fetchpriority="high"
 									/>
 									<h3 class='text-white font-title text-3xl pt-2'>{player.name}</h3>
 									<h4 class='font-body uppercase rounded-full text-orange-500 bg-black/70 py-1 font-semibold'>
@@ -93,7 +104,7 @@ const president = await findPresidentBy({ id: presidentId })
 				</section>
 
 				<div
-					class={`-z-10 absolute inset-0 opacity-5 bg-center bg-[size:80%] transition bg-no-repeat`}
+					class={'-z-10 absolute inset-0 opacity-5 bg-center bg-[size:80%] transition bg-no-repeat'}
 					style={`background-image:url('${imageWhite}')`}
 				>
 				</div>

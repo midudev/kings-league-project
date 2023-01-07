@@ -1,0 +1,915 @@
+[
+  {
+    "date": "1 de Enero de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          },
+          {
+            "id": "1k",
+            "name": "1K FC"
+          }
+        ],
+        "score": "2 – 4"
+      },
+      {
+        "teams": [
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          },
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          }
+        ],
+        "score": "2 – 1"
+      },
+      {
+        "teams": [
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          },
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          }
+        ],
+        "score": "5 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          },
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          }
+        ],
+        "score": "5 – 3"
+      },
+      {
+        "teams": [
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          },
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          }
+        ],
+        "score": "1 – 5"
+      },
+      {
+        "teams": [
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          },
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          }
+        ],
+        "score": "4 – 2"
+      }
+    ]
+  },
+  {
+    "date": "8 de Enero de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          },
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          },
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "1k",
+            "name": "1K FC"
+          },
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          },
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          },
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          },
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "15 de Enero de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          },
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          },
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          },
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          },
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          },
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          },
+          {
+            "id": "1k",
+            "name": "1K FC"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "22 de Enero de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "1k",
+            "name": "1K FC"
+          },
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          },
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          },
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          },
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          },
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          },
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "5 de Febrero de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          },
+          {
+            "id": "1k",
+            "name": "1K FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          },
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          },
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          },
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          },
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          },
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "12 de Febrero de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "1k",
+            "name": "1K FC"
+          },
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          },
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          },
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          },
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          },
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          },
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "19 de Febrero de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          },
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          },
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          },
+          {
+            "id": "1k",
+            "name": "1K FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          },
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          },
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          },
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "26 de Febrero de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "1k",
+            "name": "1K FC"
+          },
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          },
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          },
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          },
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          },
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          },
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "5 de Marzo de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          },
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          },
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          },
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          },
+          {
+            "id": "1k",
+            "name": "1K FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          },
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          },
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "12 de Marzo de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          },
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          },
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          },
+          {
+            "id": "1k",
+            "name": "1K FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          },
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          },
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          },
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  },
+  {
+    "date": "19 de Marzo de 2023",
+    "matches": [
+      {
+        "teams": [
+          {
+            "id": "1k",
+            "name": "1K FC"
+          },
+          {
+            "id": "ultimate-mostoles",
+            "name": "Ultimate Móstoles"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "xbuyer",
+            "name": "XBUYER TEAM"
+          },
+          {
+            "id": "saiyans-fc",
+            "name": "Saiyans FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC"
+          },
+          {
+            "id": "el-barrio",
+            "name": "El Barrio"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "pio",
+            "name": "PIO FC"
+          },
+          {
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "rayo-barcelona",
+            "name": "Rayo de Barcelona"
+          },
+          {
+            "id": "kunisports",
+            "name": "Kunisports"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "teams": [
+          {
+            "id": "jijantes",
+            "name": "Jijantes FC"
+          },
+          {
+            "id": "los-troncos",
+            "name": "Los Troncos FC"
+          }
+        ],
+        "score": "0 – 0"
+      }
+    ]
+  }
+]
