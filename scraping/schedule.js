@@ -81,7 +81,7 @@ export async function getSchedule() {
 
 	const end = performance.now()
 	const time = (end - start) / 1000
-	logSuccess(`Schedule was succesfully scraped in [{time}] seconds`)
+	logSuccess(`Schedule was succesfully scraped in [${time}] seconds`)
 
 	return schedule
 }
