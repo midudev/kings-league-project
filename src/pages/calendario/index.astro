@@ -18,27 +18,27 @@ console.log(schedule)
 					return (
 						<section>
 							<h2 class='font-bold text-xl my-8'>{day.date}</h2>
-							<table>
+							<table class='w-full'>
 								<tbody>
 									{day.matches.map((match) => (
-										<tr>
-											<td>{match.teams[0].name}</td>
+										<tr class='border-y'>
+											<td class='text-right'>{match.teams[0].name}</td>
 											<td>
 												<img
-													class='h-8 object-contain'
+													class='h-8 object-contain mx-auto'
 													src={`https://api.kingsleague.dev/static/logos/${match.teams[0].id}.svg`}
 													alt={`Escudo del equipo ${match.teams[0].name}`}
 												/>
 											</td>
-											<td>{match.score}</td>
+											<td class='text-center'>{match.score !== '0 – 0' ? match.score : 'vs'}</td>
 											<td>
 												<img
-													class='h-8 object-contain'
+													class='h-8 object-contain mx-auto'
 													src={`https://api.kingsleague.dev/static/logos/${match.teams[1].id}.svg`}
 													alt={`Escudo del equipo ${match.teams[0].name}`}
 												/>
 											</td>
-											<td>{match.teams[0].name}</td>
+											<td class='text-left'>{match.teams[0].name}</td>
 										</tr>
 									))}
 								</tbody>
