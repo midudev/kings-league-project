@@ -48,7 +48,7 @@ Los siguientes son los endpoints disponibles en la API:
 
 ## REDES SOCIALES
 
-¡Síguenos en nuestro canal de Twitch para ver cómo avanzamos en el desarrollo de la página web o siguenos en Youtube para mas desarollo web!
+¡Síguenos en nuestro canal de Twitch para ver cómo avanzamos en el desarrollo del proyecto o síguenos en Youtube para más contenido acerca de desarrollo fullstack!
 
 * [Twitch](https://twitch.tv/midudev)  
 * [YouTube](https://www.youtube.com/c/midudev)
