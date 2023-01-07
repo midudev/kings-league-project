@@ -3,25 +3,31 @@ const { local, score, visitant } = Astro.props
 ---
 
 <tr class='border-y [&>td]:py-2'>
-	<td class='text-right'>{local.name}</td>
-	<td>
+	<td class='text-right'>
+		<span class="md:hidden">{local.shortName}</span>
+		<span class="hidden md:block">{local.name}</span>
+	</td>
+	<td class="w-24">
 		<img
 			class='h-8 object-contain mx-auto'
 			src={`https://api.kingsleague.dev/static/logos/${local.id}.svg`}
 			alt={`Escudo del equipo ${local.name}`}
 		/>
 	</td>
-	<td class='w-32'>
+	<td class='w-24 md:w-48'>
 		<p class='text-center text-xs bg-gray-200 rounded-sm p-2'>
 			{score !== '0 – 0' ? score : 'vs'}
 		</p>
 	</td>
-	<td>
+	<td class="w-24">
 		<img
 			class='h-8 object-contain mx-auto'
 			src={`https://api.kingsleague.dev/static/logos/${visitant.id}.svg`}
 			alt={`Escudo del equipo ${visitant.name}`}
 		/>
 	</td>
-	<td class='text-left'>{visitant.name}</td>
+	<td class='text-left'>
+		<span class="md:hidden">{visitant.shortName}</span>
+		<span class="hidden md:block">{visitant.name}</span>
+	</td>
 </tr>
