@@ -163,3 +163,45 @@ describe('Testing /presidents route', () => {
 		})
 	})
 })
+
+describe('Testing /leaderboard route', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('Should return 12 teams', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		expect(resp).toBeDefined()
+
+		const leaderboard = await resp.json()
+		expect(leaderboard).toHaveLength(12)
+	})
+
+	it('Teams should have all their properties', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		const leaderboard = await resp.json()
+
+		const properties = [
+			'wins',
+			'losses',
+			'scoredGoals',
+			'concededGoals',
+			'yellowCards',
+			'redCards',
+			'team',
+			'rank'
+		]
+
+		leaderboard.forEach((team) => {
+			properties.forEach((property) => {
+				expect(team).toHaveProperty(property)
+			})
+		})
+	})
+})
