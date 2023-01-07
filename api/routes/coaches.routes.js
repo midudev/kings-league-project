@@ -8,7 +8,7 @@ const coachesApi = new Hono()
 /**
 	@api {GET} /coaches Get all coaches
 	@apiName GetCoaches
-	@APIGroup Coaches
+	@apiGroup Coaches
 	@apiSuccess {Object[]} Coaches list.
 	@apiSuccess {String} coaches.name Name of coach.
 	@apiSuccess {String} coaches.teamName Name of team belongs to coach.
@@ -19,9 +19,9 @@ coachesApi.get('/', (ctx) => {
 })
 
 /**
-	@api {GET} /coaches/:teamId Get all coaches
+	@api {GET} /coaches/:teamId Get all coaches by team ID
 	@apiName GetCoachByTeamId
-	@APIGroup Coaches
+	@apiGroup Coaches
 	@apiParam {String} teamId Id of team
 	@apiSuccess {String} coaches.name Name of coach.
 	@apiSuccess {String} coaches.teamName Name of team belongs to coach.

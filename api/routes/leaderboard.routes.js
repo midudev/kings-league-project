@@ -7,7 +7,7 @@ const leaderboardApi = new Hono()
 /**
 	@api {GET} /leaderboard Get all teams
 	@apiName GetLeaderboard
-	@APIGroup Leaderboard
+	@apiGroup Leaderboard
 	@apiSuccess {Object[]} leaderboard list.
 	@apiSuccess {Number} leaderboard.wins Team wins.
 	@apiSuccess {Number} leaderboard.loses Team loses.
@@ -26,7 +26,7 @@ leaderboardApi.get('/', (ctx) => {
 /**
 	@api {GET} /leaderboard/:teamId Get leaderboard by team ID
 	@apiName GetLeaderboardByTeamId
-	@APIGroup Leaderboard
+	@apiGroup Leaderboard
 	@apiParam {String} teamId Id of team
 	@apiSuccess {Number} leaderboard.wins Team wins.
 	@apiSuccess {Number} leaderboard.loses Team loses.

@@ -7,7 +7,7 @@ const mvpApi = new Hono()
 /**
 	@api {GET} /mvp Get all presidents
 	@apiName GetMVPPlayers
-	@APIGroup MVP
+	@apiGroup MVP
 	@apiSuccess {Object[]} MVP List of players.
 	@apiSuccess {String} MVP.playerName MVP player's name.
 	@apiSuccess {String} MVP.gamesPlayed Player games.

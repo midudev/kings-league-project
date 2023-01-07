@@ -7,7 +7,7 @@ const teamsApi = new Hono()
 /**
 	@api {GET} /teams Get all teams
 	@apiName GetTeams
-	@APIGroup Teams
+	@apiGroup Teams
 	@apiSuccess {Object[]} team list.
 	@apiSuccess {String} teams.id Team ID.
 	@apiSuccess {String} teams.color Team primary color.
@@ -28,7 +28,7 @@ teamsApi.get('/', (ctx) => {
 /**
 	@api {GET} /teams/:id Get team by ID
 	@apiName GetTeamById
-	@APIGroup Teams
+	@apiGroup Teams
 	@apiParam {String} id Id of Team
 	@apiSuccess {String} teams.id Team ID.
 	@apiSuccess {String} teams.color Team primary color.

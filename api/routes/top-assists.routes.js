@@ -7,7 +7,7 @@ const topAssistsApi = new Hono()
 /**
 	@api {GET} /top-assists Get Top Assists
 	@apiName GetTopAssists
-	@APIGroup Top Assists
+	@apiGroup Top Assists
 	@apiSuccess {Object[]} Top Assists.
 	@apiSuccess {String} topAssists.playerName Top Scorer's name.
 	@apiSuccess {String} topAssists.gamesPlayed Played games.
@@ -21,9 +21,9 @@ topAssistsApi.get('/', (ctx) => {
 })
 
 /**
-	@api {GET} /top-assists/:rank Get Top Assists
+	@api {GET} /top-assists/:rank Get Top Assists by rank
 	@apiName GetTopAssistsByRank
-	@APIGroup Top Assists
+	@apiGroup Top Assists
 	@apiParam {String} rank Id of ranking
 	@apiSuccess {String} topAssists.playerName Top Scorer's name.
 	@apiSuccess {String} topAssists.gamesPlayed Played games.

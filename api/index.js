@@ -96,6 +96,7 @@ app.route('/top-assists', topAssistsApi)
 app.route('/top-scorers', topScorersApi)
 
 app.get('/static/*', serveStatic({ root: './' }))
+app.get('/api', serveStatic({root: './docs'}))
 
 app.notFound((c) => {
 	const { pathname } = new URL(c.req.url)

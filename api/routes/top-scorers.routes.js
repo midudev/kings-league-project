@@ -7,7 +7,7 @@ const topScorersApi = new Hono()
 /**
 	@api {GET} /top-scores Get Top Scorers
 	@apiName GetTopScorers
-	@APIGroup Top Scorers
+	@apiGroup Top Scorers
 	@apiSuccess {Object[]} Top Scorers.
 	@apiSuccess {String} topScorers.playerName Top Scorer's name.
 	@apiSuccess {String} topScorers.gamesPlayed Played games.
@@ -21,9 +21,9 @@ topScorersApi.get('/', (ctx) => {
 })
 
 /**
-	@api {GET} /top-scores/:rank Get Top Scorers
+	@api {GET} /top-scores/:rank Get Top Scorers by rank
 	@apiName GetTopScorersByRank
-	@APIGroup Top Scorers
+	@apiGroup Top Scorers
 	@apiParam {String} rank Id of ranking
 	@apiSuccess {String} topScorers.playerName Top Scorer's name.
 	@apiSuccess {String} topScorers.gamesPlayed Played games.
