@@ -87,8 +87,8 @@ app.get('/', (ctx) =>
 		{
 			endpoint: '/schedule',
 			description: 'Returns Kings League match schedule and the final score of played games.'
-    },
-    {
+		},
+		{
 			endpoint: '/players-12',
 			description: 'Returns Kings League Players Twelve'
 		}
@@ -170,18 +170,17 @@ app.get('/teams/:id', (ctx) => {
 	return foundTeam ? ctx.json(foundTeam) : ctx.json({ message: 'Team not found' }, 404)
 })
 
-
 app.get('/schedule', (ctx) => {
 	return ctx.json(schedule)
 })
 
-app.get('/teams/:id/player-12', (ctx) => {
+app.get('/teams/:id/players-12', (ctx) => {
 	const id = ctx.req.param('id')
-	const foundPlayerTwelve = playersTwelve.find((player) => player.team.id === id)
+	const foundPlayerTwelve = playersTwelve.filter((player) => player.team.id === id)
 
 	return foundPlayerTwelve
 		? ctx.json(foundPlayerTwelve)
-		: ctx.json({ message: 'Player not found' }, 404)
+		: ctx.json({ message: `Players for team ${id} not found` }, 404)
 })
 
 app.get('/players-12', (ctx) => {
