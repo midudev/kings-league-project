@@ -8,6 +8,7 @@ import { getPlayersTwelve } from './players_twelve.js'
 import { logError, logInfo, logSuccess } from './log.js'
 import { writeDBFile } from '../db/index.js'
 import { getSchedule } from './schedule.js'
+import { getTopStatistics } from './top_statistics.js'
 
 export const SCRAPINGS = {
 	leaderboard: {
@@ -33,6 +34,9 @@ export const SCRAPINGS = {
 	schedule: {
 		url: 'https://kingsleague.pro/calendario/',
 		scraper: getSchedule
+	},
+	top_statistics: {
+		scraper: getTopStatistics
 	}
 	// coaches: {
 	// 	url: 'https://es.besoccer.com/competicion/info/kings-league/2023',
@@ -59,7 +63,7 @@ export async function scrapeAndSave(name) {
 		const { scraper, url } = SCRAPINGS[name]
 
 		logInfo(`Scraping [${name}]...`)
-		const $ = await scrape(url)
+		const $ = url ? await scrape(url) : null
 		const content = await scraper($)
 		logSuccess(`[${name}] scraped successfully`)
 
