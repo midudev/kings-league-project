@@ -175,10 +175,16 @@ describe('Test /schedule route', () => {
 		await teardown(worker)
 	})
 
-	it('Days should have their date and matches', async () => {
+	it('Should return 11 days', async () => {
 		const resp = await worker.fetch('/schedule')
 		expect(resp).toBeDefined()
 
+		const days = await resp.json()
+		expect(days).toHaveLength(11)
+	})
+
+	it('Days should have their date and matches', async () => {
+		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
 		const properties = ['date', 'matches']
 
@@ -191,8 +197,6 @@ describe('Test /schedule route', () => {
 
 	it('Matches should have all their properties', async () => {
 		const resp = await worker.fetch('/schedule')
-		expect(resp).toBeDefined()
-
 		const days = await resp.json()
 		const matches = days.map((day) => day.matches).flat()
 		const properties = ['timestamp', 'hour', 'teams', 'score']
@@ -206,8 +210,6 @@ describe('Test /schedule route', () => {
 
 	it('Teams should have all their properties', async () => {
 		const resp = await worker.fetch('/schedule')
-		expect(resp).toBeDefined()
-
 		const days = await resp.json()
 
 		const teams = days
