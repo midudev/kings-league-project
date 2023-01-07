@@ -8,7 +8,7 @@ const SELECTORS = {
 	scores: '.fs-table-text_8'
 }
 
-export async function getSchedule2($) {
+export async function getSchedule($) {
 	const schedule = []
 	const $days = $(SELECTORS['match'])
 
