@@ -1,5 +1,6 @@
-import puppeteer from 'puppeteer'
 import { cleanText } from './utils.js'
+import { writeDBFile } from '../db/index.js'
+import puppeteer from 'puppeteer'
 
 const BASE_URL = 'https://kingsleague.pro/calendario/'
 
@@ -62,4 +63,4 @@ export async function getSchedule() {
 }
 
 const schedule = await getSchedule()
-console.log(schedule)
+writeDBFile('schedule', schedule)

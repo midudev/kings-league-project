@@ -1,0 +1,486 @@
+[
+  [
+    {
+      "teams": [
+        "Rayo de Barcelona",
+        "1K FC"
+      ],
+      "score": "2 – 4"
+    },
+    {
+      "teams": [
+        "Kunisports",
+        "Jijantes FC"
+      ],
+      "score": "2 – 1"
+    },
+    {
+      "teams": [
+        "El Barrio",
+        "PIO FC"
+      ],
+      "score": "5 – 0"
+    },
+    {
+      "teams": [
+        "Los Troncos FC",
+        "XBUYER TEAM"
+      ],
+      "score": "5 – 3"
+    },
+    {
+      "teams": [
+        "Aniquiladores FC",
+        "Ultimate Móstoles"
+      ],
+      "score": "1 – 5"
+    },
+    {
+      "teams": [
+        "Saiyans FC",
+        "Porcinos FC"
+      ],
+      "score": "4 – 2"
+    }
+  ],
+  [
+    {
+      "teams": [
+        "Jijantes FC",
+        "Rayo de Barcelona"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Ultimate Móstoles",
+        "El Barrio"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "1K FC",
+        "Aniquiladores FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Porcinos FC",
+        "Los Troncos FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "XBUYER TEAM",
+        "Kunisports"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "PIO FC",
+        "Saiyans FC"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "El Barrio",
+        "Aniquiladores FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Kunisports",
+        "Porcinos FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Rayo de Barcelona",
+        "XBUYER TEAM"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Saiyans FC",
+        "Ultimate Móstoles"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Los Troncos FC",
+        "PIO FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Jijantes FC",
+        "1K FC"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "1K FC",
+        "El Barrio"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Aniquiladores FC",
+        "Saiyans FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "XBUYER TEAM",
+        "Jijantes FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Porcinos FC",
+        "Rayo de Barcelona"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "PIO FC",
+        "Kunisports"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Ultimate Móstoles",
+        "Los Troncos FC"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "XBUYER TEAM",
+        "1K FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Kunisports",
+        "Ultimate Móstoles"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Rayo de Barcelona",
+        "PIO FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Saiyans FC",
+        "El Barrio"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Los Troncos FC",
+        "Aniquiladores FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Jijantes FC",
+        "Porcinos FC"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "1K FC",
+        "Saiyans FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Aniquiladores FC",
+        "Kunisports"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "El Barrio",
+        "Los Troncos FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Porcinos FC",
+        "XBUYER TEAM"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "PIO FC",
+        "Jijantes FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Ultimate Móstoles",
+        "Rayo de Barcelona"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "XBUYER TEAM",
+        "PIO FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Kunisports",
+        "El Barrio"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Porcinos FC",
+        "1K FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Rayo de Barcelona",
+        "Aniquiladores FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Los Troncos FC",
+        "Saiyans FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Jijantes FC",
+        "Ultimate Móstoles"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "1K FC",
+        "Los Troncos FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Aniquiladores FC",
+        "Jijantes FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "El Barrio",
+        "Rayo de Barcelona"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "PIO FC",
+        "Porcinos FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Saiyans FC",
+        "Kunisports"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Ultimate Móstoles",
+        "XBUYER TEAM"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "XBUYER TEAM",
+        "Aniquiladores FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Kunisports",
+        "Los Troncos FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Porcinos FC",
+        "Ultimate Móstoles"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "PIO FC",
+        "1K FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Rayo de Barcelona",
+        "Saiyans FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Jijantes FC",
+        "El Barrio"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "Aniquiladores FC",
+        "Porcinos FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "El Barrio",
+        "XBUYER TEAM"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Kunisports",
+        "1K FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Saiyans FC",
+        "Jijantes FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Ultimate Móstoles",
+        "PIO FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Los Troncos FC",
+        "Rayo de Barcelona"
+      ],
+      "score": null
+    }
+  ],
+  [
+    {
+      "teams": [
+        "1K FC",
+        "Ultimate Móstoles"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "XBUYER TEAM",
+        "Saiyans FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Porcinos FC",
+        "El Barrio"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "PIO FC",
+        "Aniquiladores FC"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Rayo de Barcelona",
+        "Kunisports"
+      ],
+      "score": null
+    },
+    {
+      "teams": [
+        "Jijantes FC",
+        "Los Troncos FC"
+      ],
+      "score": null
+    }
+  ]
+]
