@@ -16,7 +16,7 @@ const PLAYER_SELECTORS = {
 export async function getPlayersTwelve($) {
 	const $rows = $('div.fs-load-more-item.fs-mw')
 
-	const getTeamFrom = ({ name }) => TEAMS.find((team) => team.name === name)
+	const getTeamFrom = ({ name: teamName }) => TEAMS.find((team) => team.name === teamName)
 
 	const playerSelectorEntries = Object.entries(PLAYER_SELECTORS)
 	const players = []
@@ -32,6 +32,7 @@ export async function getPlayersTwelve($) {
 		})
 
 		const { teamName, firstName, lastName, ...playerInfo } = Object.fromEntries(playerEntries)
+		const name = `${firstName} ${lastName}`
 
 		const team = getTeamFrom({ name: teamName })
 
@@ -42,6 +43,7 @@ export async function getPlayersTwelve($) {
 			firstName,
 			lastName,
 			image,
+			name,
 			team: {
 				id: team.id,
 				name: teamName,

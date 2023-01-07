@@ -1,6 +1,8 @@
+import { apiURL } from './config.js'
+
 export const findPresidentBy = async ({ id }) => {
 	try {
-		const response = await fetch(`https://api.kingsleague.dev/presidents/${id}`)
+		const response = await fetch(`${apiURL}/presidents/${id}`)
 		const president = await response.json()
 		return president
 	} catch (e) {

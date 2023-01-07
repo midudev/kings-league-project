@@ -4,18 +4,9 @@ import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
 import TeamStats from '@components/TeamStats.astro'
 import Layout from '@layouts/Layout.astro'
 import { findPresidentBy } from '@services/presidents.js'
+import { getAllTeams, getPlayerTwelveFor } from '@services/teams.js'
 
 const ICON_NETWORK_MAPPING = ['instagram', 'tiktok', 'twitch', 'twitter', 'youtube']
-
-export async function getStaticPaths() {
-	const response = await fetch('https://api.kingsleague.dev/teams')
-	const teams = await response.json()
-
-	return teams.map((team) => ({
-		params: { teamId: team.id },
-		props: { ...team }
-	}))
-}
 
 const { id, name, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
 const gradient = `bg-${id}`
@@ -26,6 +17,18 @@ const socialNetworksWithIcon = socialNetworks.map((href) => ({
 }))
 
 const president = await findPresidentBy({ id: presidentId })
+const playerTwelve = await getPlayerTwelveFor({ teamId: id })
+
+console.log(playerTwelve)
+
+export async function getStaticPaths() {
+	const teams = await getAllTeams()
+
+	return teams.map((team) => ({
+		params: { teamId: team.id },
+		props: { ...team }
+	}))
+}
 ---
 
 <Layout title={name}>
@@ -84,7 +87,7 @@ const president = await findPresidentBy({ id: presidentId })
 					<h2 class='font-title text-5xl text-white text-center py-10'>Jugadores</h2>
 					<div class='grid grid-cols-4 gap-2'>
 						{
-							players.map((player) => (
+							[playerTwelve, ...players].map((player) => (
 								<article class='text-center font-title text-slate-900 rounded-sm p-5 m-auto'>
 									<img
 										class='w-56 h-auto aspect-[170/239]'
