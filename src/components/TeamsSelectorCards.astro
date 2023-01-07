@@ -7,12 +7,10 @@ const teams = await getAllTeams()
 <section class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
 	{
 		teams.map((team) => {
-			const { id, name, imageWhite, color } = team
+			const { id, name, imageWhite } = team
+			const gradient = `bg-${team.id}`
 			return (
-				<article
-					class='overflow-hidden col-span-1 rounded aspect-video bg-gradient-to-tr from-gray-600 to-gray-900'
-					style={`--tw-gradient-from: ${color}`}
-				>
+				<article class={`overflow-hidden col-span-1 rounded aspect-video ${gradient}`}>
 					<a
 						class='group transition-all hover:scale-110 flex gap-x-4 p-4 h-full items-center justify-center relative'
 						href={`/team/${id}`}
