@@ -15,7 +15,6 @@ describe('testing db functionality', () => {
 	})
 	it('returns default image for unknown team', () => {
 		const image = getImageFromTeam({ name: 'Unknown Team' })
-		expect(image).toBe('https://api.kingsleague.dev/static/logos/default.svg')
+		expect(image).toBe('https://api.kingsleague.dev/static/logos/1k.svg')
 	})
 })
-
