@@ -10,7 +10,7 @@ const { players, title } = Astro.props
 				<article class='text-center relative font-title text-slate-900 rounded-sm p-5 m-auto'>
 					<img
 						class='w-56 h-auto m-auto aspect-[170/239]'
-						src={`https://api.kingsleague.dev/static/players/${player.image}`}
+						src={`/teams/players/${player.image}`}
 						alt={`${player.name}`}
 						decoding='async'
 						fetchpriority='high'
