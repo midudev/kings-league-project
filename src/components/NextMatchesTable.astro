@@ -4,14 +4,11 @@ import ScheduleRow from './ScheduleRow.astro'
 
 const schedule = await getSchedule()
 
-console.log({ schedule })
 const firstDayWithPendingMatches = schedule.find(
   ({ matches }) => {
-    const found = matches.some(({ score }) => score === '0 – 0')
+    const found = matches.some(({ timestamp }) => timestamp > Date.now())
     return found
   })
-
-console.log({ firstDayWithPendingMatches })
 ---
 
 <div class='relative overflow-x-auto shadow-md sm:rounded-lg'>
@@ -26,9 +23,12 @@ console.log({ firstDayWithPendingMatches })
 		<tbody>
 			{firstDayWithPendingMatches.matches.map((match) => (
 				<ScheduleRow
+					useSmallNames
 					local={match.teams[0]}
 					visitant={match.teams[1]}
 					score={match.score}
+					timestamp={match.timestamp}
+					hour={match.hour}
 				/>
 			))}
 		</tbody>
