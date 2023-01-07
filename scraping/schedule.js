@@ -3,6 +3,7 @@ import { cleanText } from './utils.js'
 const SELECTORS = {
 	match: '#calendarMatch',
 	date: '.el-table-title',
+	hour: '.fs-table-text_4',
 	locals: '.el-text-1',
 	localsImages: '.fs-table-text_3 img',
 	visitants: '.el-text-7',
@@ -52,10 +53,14 @@ export async function getSchedule($) {
 		const $visitants = $day.find(SELECTORS.visitants)
 		const $visitantsImages = $day.find(SELECTORS.visitantsImages)
 		const $results = $day.find(SELECTORS.scores)
+		const $hours = $day.find(SELECTORS.hour)
 
 		$results.each((index, result) => {
 			const scoreRaw = $(result).text()
 			const score = cleanText(scoreRaw)
+
+			const hourRaw = $($hours[index]).text()
+			const hour = hourRaw.replace(/\t|\n|\s:/g, '').trim()
 
 			const localNameRaw = $($locals[index]).text()
 			const localName = cleanText(localNameRaw)
@@ -72,6 +77,7 @@ export async function getSchedule($) {
 			const visitantShortName = shortNames[visitantId]
 
 			matches.push({
+				hour: hour === 'vs' ? null : hour,
 				teams: [
 					{ id: localId, name: localName, shortName: localShortName },
 					{ id: visitantId, name: visitantName, shortName: visitantShortName }
