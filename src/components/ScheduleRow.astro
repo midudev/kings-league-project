@@ -2,9 +2,9 @@
 const { local, score, visitant, useSmallNames, hour, timestamp } = Astro.props
 
 const scoreStyles = {
-	shared: 'text-center text-xs font-title rounded-md p-2 px-20 text-[25px] py-2',
-	played: 'text-white bg-gray-700 font-title px-20 text-[25px] py-2',
-	pending: 'bg-gray-200 transition group-hover:bg-gray-200 font-title px-20 text-[25px] py-2'
+	shared: 'text-center font-title rounded-md p-2 px-20 text-xl leading-none',
+	played: 'text-white bg-gray-700 font-title px-20 text-xl leading-none',
+	pending: 'bg-gray-200 transition group-hover:bg-gray-200 font-title px-20 text-xl leading-none'
 }
 
 let text = 'vs'
@@ -32,7 +32,7 @@ if (timestamp && timestamp <= Date.now()) {
 		{
 			useSmallNames
 ? (
-				<span class='font-bold font-title'>{local.shortName}</span>
+				<span class='font-bold font-title' title={local.name}>{local.shortName}</span>
 			)
 : (
 				<>
@@ -51,7 +51,7 @@ if (timestamp && timestamp <= Date.now()) {
 		{
 			useSmallNames
 ? (
-				<span class='font-bold font-title'>{visitant.shortName}</span>
+				<span class='font-bold font-title' title={visitant.name}>{visitant.shortName}</span>
 			)
 : (
 				<>

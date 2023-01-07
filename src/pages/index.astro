@@ -41,6 +41,7 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 
 							<div class='col-span-6 xl:col-span-3'>
 								<PlayerPrizeCard
+									smallerBox
 									teamName={topScorer.team}
 									teamId={topScorer.teamId}
 									teamImage={topScorer.image}
@@ -53,6 +54,7 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 
 							<div class='col-span-6 xl:col-span-3'>
 								<PlayerPrizeCard
+									smallerBox
 									teamName={topAssister.team}
 									teamImage={topAssister.image}
 									teamId={topAssister.teamId}
