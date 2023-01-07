@@ -11,6 +11,21 @@ const SELECTORS = {
 	scores: '.fs-table-text_8'
 }
 
+const MONTHS = {
+	ENERO: 1,
+	FEBRERO: 2,
+	MARZO: 3,
+	ABRIL: 4,
+	MAYO: 5,
+	JUNIO: 6,
+	JULIO: 7,
+	AGOSTO: 8,
+	SEPTIEMBRE: 9,
+	OCTUBRE: 10,
+	NOVIEMBRE: 11,
+	DICIEMBRE: 12
+}
+
 const MAPS = {
 	'el-bbarrio': 'el-barrio',
 	'jijantes-fc': 'jijantes',
@@ -29,8 +44,7 @@ const shortNames = {
 	'ultimate-mostoles': 'ULT',
 	'saiyans-fc': 'SAI',
 	'porcinos-fc': 'POR',
-	'los-troncos': 'TFC',
-	kunisports: 'KNS'
+	'los-troncos': 'TFC'
 }
 
 export async function getSchedule($) {
@@ -48,6 +62,10 @@ export async function getSchedule($) {
 		const dateRaw = $day.find(SELECTORS.date).text()
 		const date = cleanText(dateRaw)
 
+		const [dayNumber, textMonth, yearNumber] = date.split(' de ')
+		const monthNumber = MONTHS[textMonth.toUpperCase()]
+		const prefixDate = `${yearNumber}-${monthNumber}-${dayNumber}`
+
 		const $locals = $day.find(SELECTORS.locals)
 		const $localsImages = $day.find(SELECTORS.localsImages)
 		const $visitants = $day.find(SELECTORS.visitants)
@@ -61,6 +79,8 @@ export async function getSchedule($) {
 
 			const hourRaw = $($hours[index]).text()
 			const hour = hourRaw.replace(/\t|\n|\s:/g, '').trim()
+
+			const matchDate = new Date(`${prefixDate} ${hour} GMT+2`)
 
 			const localNameRaw = $($locals[index]).text()
 			const localName = cleanText(localNameRaw)
@@ -76,7 +96,10 @@ export async function getSchedule($) {
 			visitantId = MAPS[visitantId] || visitantId
 			const visitantShortName = shortNames[visitantId]
 
+			const timestamp = hour === 'vs' ? null : matchDate.getTime()
+
 			matches.push({
+				timestamp,
 				hour: hour === 'vs' ? null : hour,
 				teams: [
 					{ id: localId, name: localName, shortName: localShortName },
