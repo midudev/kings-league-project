@@ -20,7 +20,7 @@ Before you submit a pull request, please make sure to do the following:
 - Ensure that your code follows the style guide for the project.
 - Write tests for any new code you have added.
 - Make sure that all tests pass.
-- Update the documentation to reflect any changes. (recommendable)
+- Update the documentation to reflect any changes. (recommended)
 
 ## Pull Request Process 🚀
 
