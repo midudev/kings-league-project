@@ -4,6 +4,7 @@ import { getAssists } from './top_assists.js'
 import { getLeaderBoard } from './leaderboard.js'
 import { getMvpList } from './mvp.js'
 import { getTopScoresList } from './top_scorers.js'
+import { getTwelfthPlayers } from './twelfth_players.js'
 import { logError, logInfo, logSuccess } from './log.js'
 import { writeDBFile } from '../db/index.js'
 
@@ -23,6 +24,10 @@ export const SCRAPINGS = {
 	top_assists: {
 		url: 'https://kingsleague.pro/estadisticas/asistencias/',
 		scraper: getAssists
+	},
+	twelfth_players: {
+		url: 'https://kingsleague.pro/jugador-12/',
+		scraper: getTwelfthPlayers
 	}
 	// coaches: {
 	// 	url: 'https://es.besoccer.com/competicion/info/kings-league/2023',
