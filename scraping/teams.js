@@ -23,13 +23,11 @@ async function getTeams() {
 		const arrayBuffer = await responseImage.arrayBuffer()
 		const buffer = Buffer.from(arrayBuffer)
 
-		const webpBuffer = await sharp(buffer).webp().toBuffer()
-
 		logInfo(`Writing image to disk ${fileName}`)
 		const imageFileNameClean = removeCharacters(fileName)
 		const imageFileName = `${imageFileNameClean}.webp`
 		const imageFilePath = path.join(STATICS_PATH, folder, imageFileName)
-		await writeFile(imageFilePath, webpBuffer)
+		await sharp(buffer).webp().toFile(imageFilePath)
 
 		logInfo(`Everything is done! ${fileName}`)
 

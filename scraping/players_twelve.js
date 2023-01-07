@@ -1,10 +1,10 @@
-import { writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import sharp from 'sharp'
 
 import { TEAMS } from '../db/index.js'
 import { cleanText } from './utils.js'
 
-const PLAYER_FOLDER_PATH = path.join(process.cwd(), './assets/static/players')
+const PLAYER_FOLDER_PATH = path.join(process.cwd(), './public/teams/players')
 
 const PLAYER_SELECTORS = {
 	firstName: { selector: '.el-title', typeOf: 'string' },
@@ -81,22 +81,22 @@ async function saveImageBase64(player) {
 
 	let playerImage = null
 	try {
-		const res = await fetch(image)
-		const extension = res.headers.get('content-type').replace(/image\//, '')
-
-		const imgArrayBuffer = await res.arrayBuffer()
-		const imageBase64 = Buffer.from(imgArrayBuffer).toString('base64')
-
 		const imageName = lastName
-			? `${team.id}-${firstName.toLowerCase()}-${lastName.toLowerCase()}.${extension}`
-			: `${team.id}-${firstName.toLowerCase()}.${extension}`
+			? `${team.id}-${firstName.toLowerCase()}-${lastName.toLowerCase()}.webp`
+			: `${team.id}-${firstName.toLowerCase()}.webp`
 
 		const normalizedImageName = imageName
 			.normalize('NFD')
 			.replace(/\s+/g, '-')
 			.replace(/[\u0300-\u036f]/g, '')
 
-		await writeFile(`${PLAYER_FOLDER_PATH}/${normalizedImageName}`, imageBase64, 'base64')
+		const imageFilePath = `${PLAYER_FOLDER_PATH}/${normalizedImageName}`
+
+		const res = await fetch(image)
+		const imgArrayBuffer = await res.arrayBuffer()
+		const buffer = Buffer.from(imgArrayBuffer)
+
+		await sharp(buffer).webp().toFile(imageFilePath)
 
 		playerImage = `${normalizedImageName}`
 	} catch (error) {

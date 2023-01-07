@@ -101,7 +101,7 @@
     "role": "Delantero",
     "firstName": "Sergio",
     "lastName": "García",
-    "image": null,
+    "image": "ultimate-mostoles-sergio-garcia.webp",
     "name": "Sergio García",
     "id": "ultimate-mostoles-9",
     "team": {
@@ -115,7 +115,7 @@
     "role": "Delantero",
     "firstName": "Alberto",
     "lastName": "Bueno",
-    "image": null,
+    "image": "1k-alberto-bueno.webp",
     "name": "Alberto Bueno",
     "id": "1k-23",
     "team": {
@@ -129,7 +129,7 @@
     "role": "Defensa",
     "firstName": "Javi",
     "lastName": "Chica",
-    "image": null,
+    "image": "kunisports-javi-chica.webp",
     "name": "Javi Chica",
     "id": "kunisports-17",
     "team": {
@@ -143,7 +143,7 @@
     "role": "Defensa",
     "firstName": "Dídac",
     "lastName": "Vilà",
-    "image": null,
+    "image": "rayo-barcelona-didac-vila.webp",
     "name": "Dídac Vilà",
     "id": "rayo-barcelona-7",
     "team": {
@@ -157,7 +157,7 @@
     "role": "Delantero",
     "firstName": "Borja",
     "lastName": "Criado",
-    "image": null,
+    "image": "pio-fc-borja-criado.webp",
     "name": "Borja Criado",
     "id": "pio-fc-7",
     "team": {
@@ -171,7 +171,7 @@
     "role": "Delantero",
     "firstName": "Jordi",
     "lastName": "Campoy",
-    "image": null,
+    "image": "aniquiladores-fc-jordi-campoy.webp",
     "name": "Jordi Campoy",
     "id": "aniquiladores-fc-18",
     "team": {
@@ -185,7 +185,7 @@
     "role": "Medio",
     "firstName": "Nando",
     "lastName": "Quesada",
-    "image": null,
+    "image": "jijantes-fc-nando-quesada.webp",
     "name": "Nando Quesada",
     "id": "jijantes-fc-18",
     "team": {
@@ -199,7 +199,7 @@
     "role": "Medio",
     "firstName": "Joan",
     "lastName": "Verdú",
-    "image": null,
+    "image": "los-troncos-fc-joan-verdu.webp",
     "name": "Joan Verdú",
     "id": "los-troncos-fc-23",
     "team": {
@@ -213,7 +213,7 @@
     "role": "Delantero",
     "firstName": "Jorge",
     "lastName": "Gómez",
-    "image": null,
+    "image": "el-barrio-jorge-gomez.webp",
     "name": "Jorge Gómez",
     "id": "el-barrio-99",
     "team": {
@@ -227,7 +227,7 @@
     "role": "Defensa",
     "firstName": "Joan",
     "lastName": "Capdevila",
-    "image": null,
+    "image": "saiyans-fc-joan-capdevila.webp",
     "name": "Joan Capdevila",
     "id": "saiyans-fc-21",
     "team": {
@@ -241,7 +241,7 @@
     "role": "Delantero",
     "firstName": "Javier",
     "lastName": "Hérnandez",
-    "image": null,
+    "image": "porcinos-fc-javier-hernandez.webp",
     "name": "Javier Hérnandez",
     "id": "porcinos-fc-14",
     "team": {
