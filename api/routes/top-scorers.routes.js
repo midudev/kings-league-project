@@ -9,12 +9,12 @@ const topScorersApi = new Hono()
 	@apiName GetTopScorers
 	@APIGroup Top Scorers
 	@apiSuccess {Object[]} Top Scorers.
-	@apiSuccess {String} topScorer.playerName Top Scorer's name.
-	@apiSuccess {String} topScorer.gamesPlayed Played games.
-	@apiSuccess {String} topScorer.goals Number of goals
-	@apiSuccess {String} topScorer.rank Ranking position
-	@apiSuccess {String} topScorer.team Team belongs to player
-	@apiSuccess {String} topScorer.image Logo of the team
+	@apiSuccess {String} topScorers.playerName Top Scorer's name.
+	@apiSuccess {String} topScorers.gamesPlayed Played games.
+	@apiSuccess {String} topScorers.goals Number of goals
+	@apiSuccess {String} topScorers.rank Ranking position
+	@apiSuccess {String} topScorers.team Team belongs to player
+	@apiSuccess {String} topScorers.image Logo of the team
 */
 topScorersApi.get('/', (ctx) => {
   return ctx.json(topScorers)
@@ -24,12 +24,13 @@ topScorersApi.get('/', (ctx) => {
 	@api {GET} /top-scores/:rank Get Top Scorers
 	@apiName GetTopScorersByRank
 	@APIGroup Top Scorers
-	@apiSuccess {String} topScorer.playerName Top Scorer's name.
-	@apiSuccess {String} topScorer.gamesPlayed Played games.
-	@apiSuccess {String} topScorer.goals Number of goals
-	@apiSuccess {String} topScorer.rank Ranking position
-	@apiSuccess {String} topScorer.team Team belongs to player
-	@apiSuccess {String} topScorer.image Logo of the team
+	@apiParam {String} rank Id of ranking
+	@apiSuccess {String} topScorers.playerName Top Scorer's name.
+	@apiSuccess {String} topScorers.gamesPlayed Played games.
+	@apiSuccess {String} topScorers.goals Number of goals
+	@apiSuccess {String} topScorers.rank Ranking position
+	@apiSuccess {String} topScorers.team Team belongs to player
+	@apiSuccess {String} topScorers.image Logo of the team
 	@apiError (404) {Object} NotFoundError Team not found.
 */
 topScorersApi.get('/:rank', (ctx) => {

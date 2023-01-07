@@ -27,6 +27,7 @@ leaderboardApi.get('/', (ctx) => {
 	@api {GET} /leaderboard/:teamId Get leaderboard by team ID
 	@apiName GetLeaderboardByTeamId
 	@APIGroup Leaderboard
+	@apiParam {String} teamId Id of team
 	@apiSuccess {Number} leaderboard.wins Team wins.
 	@apiSuccess {Number} leaderboard.loses Team loses.
 	@apiSuccess {Number} leaderboard.scoredGoals Scored goals of team.

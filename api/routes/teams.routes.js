@@ -29,6 +29,7 @@ teamsApi.get('/', (ctx) => {
 	@api {GET} /teams/:id Get team by ID
 	@apiName GetTeamById
 	@APIGroup Teams
+	@apiParam {String} id Id of Team
 	@apiSuccess {String} teams.id Team ID.
 	@apiSuccess {String} teams.color Team primary color.
 	@apiSuccess {String} teams.name Team name.

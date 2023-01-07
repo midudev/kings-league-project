@@ -22,6 +22,7 @@ presidentApi.get('/', (ctx) => {
 	@api {GET} /presidents/:id Get a president by ID
 	@apiName GetPresidentById
 	@APIGroup Presidents
+	@apiParam {String} id Id of President
 	@apiSuccess {Number} presidents.id President ID.
 	@apiSuccess {String} presidents.name President name.
 	@apiSuccess {String} presidents.image President image.

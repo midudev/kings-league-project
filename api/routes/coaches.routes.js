@@ -22,6 +22,7 @@ coachesApi.get('/', (ctx) => {
 	@api {GET} /coaches/:teamId Get all coaches
 	@apiName GetCoachByTeamId
 	@APIGroup Coaches
+	@apiParam {String} teamId Id of team
 	@apiSuccess {String} coaches.name Name of coach.
 	@apiSuccess {String} coaches.teamName Name of team belongs to coach.
 	@apiSuccess {String} coaches.image Image o the coach.
