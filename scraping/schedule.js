@@ -10,6 +10,12 @@ const SELECTORS = {
 	scores: '.fs-table-text_8'
 }
 
+const MAPS = {
+	'el-bbarrio': 'el-barrio',
+	'jijantes-fc': 'jijantes',
+	'xbuyer-team': 'xbuyer'
+}
+
 export async function getSchedule($) {
 	const schedule = []
 	const $days = $(SELECTORS['match'])
@@ -43,8 +49,8 @@ export async function getSchedule($) {
 
 			matches.push({
 				teams: [
-					{ id: localId, name: localName },
-					{ id: visitantId, name: visitantName }
+					{ id: MAPS[localId] || localId, name: localName },
+					{ id: MAPS[visitantId] || visitantId, name: visitantName }
 				],
 				score
 			})
