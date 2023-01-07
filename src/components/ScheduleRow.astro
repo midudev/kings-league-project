@@ -1,5 +1,11 @@
 ---
 const { local, score, visitant } = Astro.props
+
+const scoreStyles = {
+	shared: 'text-center text-xs font-bold rounded-md p-2',
+	played: 'text-white bg-gradient-to-b from-principal-dark via-principal-dark to-principal',
+	pending: 'bg-gray-200 transition group-hover:bg-gray-50'
+}
 ---
 
 <tr class='group border-y [&>td]:py-2 transition hover:bg-black'>
@@ -15,11 +21,13 @@ const { local, score, visitant } = Astro.props
 		/>
 	</td>
 	<td class='w-24 md:w-48'>
-		<p
-			class='text-center text-xs font-bold bg-gray-200 rounded-sm p-2 transition group-hover:bg-gray-50'
-		>
-			{score !== '0 – 0' ? score : 'vs'}
-		</p>
+		{
+			score !== '0 – 0' ? (
+				<p class={`${scoreStyles['shared']} ${scoreStyles['played']}`}>{score}</p>
+			) : (
+				<p class={`${scoreStyles['shared']} ${scoreStyles['pending']}`}>vs</p>
+			)
+		}
 	</td>
 	<td class='w-24'>
 		<img
