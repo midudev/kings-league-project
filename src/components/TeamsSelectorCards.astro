@@ -2,6 +2,8 @@
 import { getAllTeams } from '@services/teams.js'
 
 const teams = await getAllTeams()
+
+const { small } = Astro.props
 ---
 
 <section class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -19,13 +21,13 @@ const teams = await getAllTeams()
 					>
 						<img
 							alt={`Logo del equipo ${name}`}
-							class='brightness-[100] object-contain transition-all group-hover:scale-110 group-hover:brightness-200 z-10 w-28 h-28 [backface-visibility:hidden]'
+							class={`${small ? 'w-20 h-20' : 'w-28 h-28'} brightness-[100] object-contain transition-all group-hover:scale-110 group-hover:brightness-200 z-10 [backface-visibility:hidden]`}
 							src={imageWhite}
 							loading="lazy"
 							decoding="async"
 							fetchpriority="low"
 						/>
-						<h3 class='z-10 font-title text-white text-xl xl:text-2xl'>{name}</h3>
+						<h3 class={`z-10 font-title text-white ${small ? 'text-base xl:text-lg' : 'text-xl xl:text-2xl'}`}>{name}</h3>
 						<div
 							class={'z-0 absolute inset-0 opacity-10 bg-center bg-[size:150%] group-hover:bg-[size:200%] transition'}
 							style={`background-image:url('${imageWhite}')`}
