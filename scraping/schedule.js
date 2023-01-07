@@ -20,6 +20,10 @@ export async function getSchedule($) {
 	const schedule = []
 	const $days = $(SELECTORS['match'])
 
+	const getTeamIdFromImageUrl = (url) => {
+		return url.slice(url.lastIndexOf('/') + 1).replace(/.(png|svg)/, '')
+	}
+
 	$days.each((_, day) => {
 		const matches = []
 		const $day = $(day)
@@ -40,12 +44,12 @@ export async function getSchedule($) {
 			const localNameRaw = $($locals[index]).text()
 			const localName = cleanText(localNameRaw)
 			const localImg = $($localsImages[index]).attr('src')
-			const localId = localImg.replace('/wp-content/uploads/2022/11/', '').replace('.svg', '')
+			const localId = getTeamIdFromImageUrl(localImg)
 
 			const visitantNameRaw = $($visitants[index]).text()
 			const visitantName = cleanText(visitantNameRaw)
 			const visitantImg = $($visitantsImages[index]).attr('src')
-			const visitantId = visitantImg.replace('/wp-content/uploads/2022/11/', '').replace('.svg', '')
+			const visitantId = getTeamIdFromImageUrl(visitantImg)
 
 			matches.push({
 				teams: [
