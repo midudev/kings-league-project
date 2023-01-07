@@ -18,6 +18,31 @@ console.log(schedule)
 					return (
 						<section>
 							<h2 class='font-bold text-xl my-8'>{day.date}</h2>
+							<table>
+								<tbody>
+									{day.matches.map((match) => (
+										<tr>
+											<td>{match.teams[0].name}</td>
+											<td>
+												<img
+													class='h-8 object-contain'
+													src={`https://api.kingsleague.dev/static/logos/${match.teams[0].id}.svg`}
+													alt={`Escudo del equipo ${match.teams[0].name}`}
+												/>
+											</td>
+											<td>{match.score}</td>
+											<td>
+												<img
+													class='h-8 object-contain'
+													src={`https://api.kingsleague.dev/static/logos/${match.teams[1].id}.svg`}
+													alt={`Escudo del equipo ${match.teams[0].name}`}
+												/>
+											</td>
+											<td>{match.teams[0].name}</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
 						</section>
 					)
 				})
