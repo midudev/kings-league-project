@@ -2,16 +2,52 @@
 const { local, score, visitant } = Astro.props
 
 const scoreStyles = {
-	shared: 'text-center text-xs font-bold rounded-md p-2',
-	played: 'text-white bg-gradient-to-b from-principal-dark via-principal-dark to-principal',
-	pending: 'bg-gray-200 transition group-hover:bg-gray-50'
+	shared: 'text-center text-xs font-title rounded-md p-2 px-20 text-[25px] py-2',
+	played: 'text-white bg-gray-700 font-title px-20 text-[25px] py-2',
+	pending: 'bg-gray-200 transition group-hover:bg-gray-200 font-title px-20 text-[25px] py-2'
 }
 ---
 
-<tr class='group border-y [&>td]:py-2 transition hover:bg-black'>
-	<td class='text-right transition group-hover:text-white'>
+<tr class='flex justify-between group border-y [&>td]:py-2 transition hover:bg-gray-100'>
+	<td class='px-2 py-4 border-b-1 flex justify-start items-center w-full'>
+		<img
+			class='w-12 h-12 mx-2'
+			src={`https://api.kingsleague.dev/static/logos/${local.id}.svg`}
+			alt={`Escudo del equipo ${local.name}`}
+		/>
 		<span class='md:hidden'>{local.shortName}</span>
 		<span class='hidden md:block'>{local.name}</span>
+	</td>
+	<td class='px-6 py-4 border-b-1 text-center flex justify-center w-full items-center'>
+		{
+			score !== '0 – 0' ? (
+				<p class={`${scoreStyles.shared} ${scoreStyles.played}`}>{score}</p>
+			) : (
+				<p class={`${scoreStyles.shared} ${scoreStyles.pending}`}>vs</p>
+			)
+		}
+	</td>
+	<td class='px-2 py-4 border-b-1 flex justify-end items-center w-full'>
+		<span class='md:hidden'>{visitant.shortName}</span>
+		<span class='hidden md:block'>{visitant.name}</span>
+		<img
+			class='w-12 h-12 mx-2'
+			src={`https://api.kingsleague.dev/static/logos/${visitant.id}.svg`}
+			alt={`Escudo del equipo ${visitant.name}`}
+		/>
+	</td>
+</tr>
+
+<!-- <tr class='group border-y [&>td]:py-2 transition hover:bg-black'>
+	<td class='text-right transition group-hover:text-white'>
+		<a
+		href={`/team/${local.id}`}
+		rel={Astro.url.pathname !== `/team/${local.id}` && 'preload'}
+	>
+	<span class='md:hidden'>{local.shortName}</span>
+	<span class='hidden md:block'>{local.name}</span>
+	</a>
+
 	</td>
 	<td class='w-24'>
 		<img
@@ -22,10 +58,12 @@ const scoreStyles = {
 	</td>
 	<td class='w-24 md:w-48'>
 		{
-			score !== '0 – 0' ? (
-				<p class={`${scoreStyles['shared']} ${scoreStyles['played']}`}>{score}</p>
-			) : (
-				<p class={`${scoreStyles['shared']} ${scoreStyles['pending']}`}>vs</p>
+			score !== '0 – 0'
+? (
+				<p class={`${scoreStyles.shared} ${scoreStyles.played}`}>{score}</p>
+			)
+: (
+				<p class={`${scoreStyles.shared} ${scoreStyles.pending}`}>vs</p>
 			)
 		}
 	</td>
@@ -37,7 +75,12 @@ const scoreStyles = {
 		/>
 	</td>
 	<td class='text-left transition group-hover:text-white'>
-		<span class='md:hidden'>{visitant.shortName}</span>
-		<span class='hidden md:block'>{visitant.name}</span>
+		<a
+			href={`/team/${visitant.id}`}
+			rel={Astro.url.pathname !== `/team/${visitant.id}` && 'preload'}
+		>
+			<span class='md:hidden'>{visitant.shortName}</span>
+			<span class='hidden md:block'>{visitant.name}</span>
+		</a>
 	</td>
-</tr>
+</tr> -->

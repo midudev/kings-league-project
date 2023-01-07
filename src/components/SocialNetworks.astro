@@ -1,0 +1,63 @@
+---
+import twitch from '../../assets/static/logos/social/twitch.svg'
+import twitter from '../../assets/static/logos/social/twitter.svg'
+import tiktok from '../../assets/static/logos/social/tiktok.svg'
+import instagram from '../../assets/static/logos/social/instagram.svg'
+import youtube from '../../assets/static/logos/social/youtube.svg'
+
+const { theme, mobileHidden } = Astro.props
+
+const socialNetworks = [
+	{
+		name: 'Twitch',
+		icon: twitch,
+		href: 'https://www.twitch.tv/kingsleague'
+	},
+	{
+		name: 'Twitter',
+		icon: twitter,
+		href: 'https://twitter.com/kingsleague'
+	},
+	{
+		name: 'Tiktok',
+		icon: tiktok,
+		href: 'https://www.tiktok.com/@kingsleague'
+	},
+	{
+		name: 'Instagram',
+		icon: instagram,
+		href: 'https://www.instagram.com/kingsleague'
+	},
+	{
+		name: 'Youtube',
+		icon: youtube,
+		href: 'https://www.youtube.com/@KingsLeagueOfficial'
+	}
+]
+---
+
+<div class={`gap-4 justify-center ${mobileHidden ? 'hidden md:flex' : 'flex'}`}>
+	{
+		socialNetworks.map(({ href, icon, name }) => (
+			<a
+				href={href}
+				target='_blank'
+				rel='noopener norefferer'
+				class={`w-11 h-11 flex items-center justify-center rounded-full transition-all duration-500 ${
+					theme === 'dark' ? 'bg-white' : 'bg-transparent hover:bg-white'
+				} [&>img]:hover:scale-125 [&>img]:hover:invert-0 [&>img]:hover:brightness-100`}
+			>
+				<img
+					class={`w-5 transition-all duration-500 ${
+						theme === 'dark' ? 'invert-0' : 'invert-[100]'
+					} brightness-0`}
+					src={icon}
+					alt={`${name} Logo`}
+					loading='lazy'
+					decoding='async'
+					fetchpriority='low'
+				/>
+			</a>
+		))
+	}
+</div>
