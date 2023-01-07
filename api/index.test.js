@@ -206,6 +206,38 @@ describe('Test /schedule route', () => {
 				expect(match).toHaveProperty(property)
 			})
 		})
+
+		it('Should return a 405 status code for invalid request method', async () => {
+			const resp = await worker.fetch('/schedule', { method: 'POST' })
+			expect(resp).toBeDefined()
+			expect(resp.status).toBe(405)
+		})
+
+		it('Should return a 400 status code for missing or invalid query parameters', async () => {
+			const resp = await worker.fetch('/schedule?sort=invalid')
+			expect(resp).toBeDefined()
+			expect(resp.status).toBe(400)
+		})
+
+		it('Should return an empty array when there are no matches scheduled', async () => {
+			await worker.fetch('/matches', { method: 'DELETE' })
+
+			const resp = await worker.fetch('/schedule')
+			expect(resp).toBeDefined()
+
+			const days = await resp.json()
+			expect(days).toEqual([])
+		})
+
+		it('Should return the matches sorted by timestamp', async () => {
+			const resp = await worker.fetch('/schedule')
+			expect(resp).toBeDefined()
+
+			const days = await resp.json()
+			const matches = days.map((day) => day.matches).flat()
+
+			expect(matches).toBeSorted((a, b) => a.timestamp - b.timestamp)
+		})
 	})
 
 	it('Teams should have all their properties', async () => {
