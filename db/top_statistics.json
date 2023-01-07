@@ -109,7 +109,7 @@
       "rank": 3,
       "team": "Los Troncos FC",
       "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
-      "playerImage": "placeholder.png",
+      "playerImage": "los-troncos-fc-joan-verdu.png",
       "teamId": "los-troncos-fc"
     },
     {
@@ -181,7 +181,7 @@
       "goals": 2,
       "team": "Los Troncos FC",
       "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
-      "playerImage": "placeholder.png",
+      "playerImage": "los-troncos-fc-joan-verdu.png",
       "teamId": "los-troncos-fc"
     }
   ],
@@ -193,7 +193,7 @@
       "rank": 1,
       "team": "Los Troncos FC",
       "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
-      "playerImage": "placeholder.png",
+      "playerImage": "los-troncos-fc-joan-verdu.png",
       "teamId": "los-troncos-fc"
     },
     {
