@@ -50,7 +50,7 @@ Los siguientes son los endpoints disponibles en la API:
 
 ¡Síguenos en nuestro canal de Twitch para ver cómo avanzamos en el desarrollo de la página web o siguenos en Youtube para mas desarollo web!
 
-* [Twitct](https://twitch.tv/midudev)  
+* [Twitch](https://twitch.tv/midudev)  
 * [YouTube](https://www.youtube.com/c/midudev)
 
 o unete a la comunidad en [Discord](https://discord.gg/midudev)
