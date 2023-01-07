@@ -1,0 +1,24 @@
+---
+import queensLeague from '../../assets/static/other/queens-league.webp'
+import Container from './Container.astro'
+---
+
+<Container>
+	<section class='flex justify-center md:max-w-md mx-auto w-[85%]'>
+		<a
+			href='https://www.infojobs.net/barcelona/deportista-profesional-para-queens-league/of-i0177a442274e8384b5890ba28d5856'
+			target='_blank'
+			title='¡Únete a la Queens League!'
+			class='hover:scale-110 transition-transform duration-300'
+		>
+			<img
+				alt='Queens League'
+				class='w-full rounded'
+				src={queensLeague}
+				loading='lazy'
+				decoding='async'
+				fetchpriority='low'
+			/>
+		</a>
+	</section>
+</Container>
