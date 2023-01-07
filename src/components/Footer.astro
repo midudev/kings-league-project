@@ -49,7 +49,7 @@ const NAV_ENTRIES = [
 		href: '/calendario'
 	},
 	{
-		name: 'Estadisticas',
+		name: 'Estadísticas',
 		href: '/estadisticas'
 	},
 	{
@@ -81,8 +81,9 @@ const NAV_ENTRIES = [
 				fetchpriority='low'
 			/>
 
-			<nav class='flex-col lg:grid lg:grid-cols-3 gap-4 lg:gap-0 lg:justify-between lg:gap-x-16 lg:gap-y-4
-			'>
+			<nav
+				class='flex-col lg:grid lg:grid-cols-3 gap-4 lg:gap-0 lg:justify-between lg:gap-x-16 lg:gap-y-4'
+			>
 				{
 					NAV_ENTRIES.map((entry) => (
 						<a href={entry.href} class='flex items-center hover:underline'>
