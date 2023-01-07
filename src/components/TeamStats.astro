@@ -8,7 +8,7 @@ const { rank, wins, losses, scoredGoals, concededGoals, yellowCards, redCards } 
 
 const stats = [
 	{
-		title: 'Clasificación',
+		title: 'Posición',
 		value: rank
 	},
 	{
@@ -28,20 +28,24 @@ const stats = [
 		value: concededGoals
 	},
 	{
-		title: 'T. Amarillas',
+		title: '',
+		value: ''
+	},
+	{
+		title: 'Amarillas',
 		value: yellowCards
 	},
 	{
-		title: 'T. Rojas',
+		title: 'Rojas',
 		value: redCards
 	}
 ]
 ---
 
-<div class="flex">
+<div class='flex'>
 	<section
-	  class='p-4 rounded-lg mt-5 grid grid-cols-3 gap-2 bg-gradient-to-tr from-[#202020c9] via-[#36363685] to-[#cd55002a] shadow-xl'
-  >
+		class='p-4 rounded-lg mt-5 grid grid-cols-3 gap-y-2 gap-x-8 bg-gradient-to-tr from-[#202020c9] via-[#36363685] to-[#cd55002a] shadow-xl'
+	>
 		{
 			stats.map((stat) => (
 				<div class='flex flex-col justify-between items-start'>
