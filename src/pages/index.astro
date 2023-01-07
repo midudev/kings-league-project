@@ -7,10 +7,9 @@ import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
 import UneteButton from '@components/Unete.astro'
 import PlayerPrizeCard from '@components/PlayerPrizeCard.astro'
 import { getFirstPlayersStatistics } from '@services/statistics.js'
+import NextMatchesTable from '@components/NextMatchesTable.astro'
 
 const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
-
-console.log({ mvp, topScorer, topAssister })
 ---
 
 <Layout title='Kings League Infojobs'>
@@ -18,7 +17,8 @@ console.log({ mvp, topScorer, topAssister })
 		<section class='bg-principal py-20'>
 			<Container>
 				<div class='grid grid-cols-8 gap-10 w-full px-10'>
-					<div class='col-span-12 lg:col-span-4 xl:col-span-3'>
+					<div class='col-span-12 lg:col-span-4 xl:col-span-3 flex flex-col gap-y-10'>
+						<NextMatchesTable />
 						<Leaderboard format='small' />
 					</div>
 					<div class='col-span-12 lg:col-span-4 xl:col-span-5'>
@@ -62,7 +62,7 @@ console.log({ mvp, topScorer, topAssister })
 									subtitle='Asistencias' />
 							</div>
 						</div>
-						<div class='my-5'>
+						<div class='my-10'>
 							<TeamsSelectorCards small />
 						</div>
 					</div>
