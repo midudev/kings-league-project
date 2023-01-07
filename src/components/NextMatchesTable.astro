@@ -1,0 +1,36 @@
+---
+import { getSchedule } from '@services/schedule.js'
+import ScheduleRow from './ScheduleRow.astro'
+
+const schedule = await getSchedule()
+
+console.log({ schedule })
+const firstDayWithPendingMatches = schedule.find(
+  ({ matches }) => {
+    const found = matches.some(({ score }) => score === '0 – 0')
+    return found
+  })
+
+console.log({ firstDayWithPendingMatches })
+---
+
+<div class='relative overflow-x-auto shadow-md sm:rounded-lg'>
+	<table class='w-full text-xs text-left text-black'>
+		<thead class='font-black text-white uppercase bg-black'>
+			<tr>
+				<th scope='col' colspan="5" class='w-full px-6 py-3 text-center'>
+					ESPECIAL
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{firstDayWithPendingMatches.matches.map((match) => (
+				<ScheduleRow
+					local={match.teams[0]}
+					visitant={match.teams[1]}
+					score={match.score}
+				/>
+			))}
+		</tbody>
+	</table>
+</div>
