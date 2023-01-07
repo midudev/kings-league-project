@@ -9,7 +9,7 @@ Thank you for considering contributing to the Kings League API! We appreciate an
 There are many ways you can contribute to the Kings League API, including:
 
 - Reporting bugs and submitting feature requests.
-- writing documentation.
+- Writing documentation.
 - Improving the test coverage of the codebase.
 - Submitting code changes and bug fixes.
 
@@ -35,7 +35,7 @@ Before you submit a pull request, please make sure to do the following:
 
 When writing commit messages, please follow these best practices:
 
-- Use the imperative mood in your commit message. For example, "Fix bug" instead of "Fixed bug" or "Fixes bug.".
+- Use the imperative mood in your commit message. For example, "Fix bug" instead of "Fixed bug" or "Fixes bug".
 - Avoid using exclamation points or question marks in your commit message.
 - Keep your commit message short and concise, ideally no more than 50 characters.
 - Use the commit message body to provide any necessary context or details about the commit.
