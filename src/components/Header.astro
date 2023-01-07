@@ -1,6 +1,12 @@
 ---
 import Logo from './Logo.astro'
+import MenuIcon from './icons/Menu.astro'
+
 // import twitch from '../../assets/static/logos/social/twitch.svg'
+import twitter from '../../assets/static/logos/social/twitter.svg'
+import instagram from '../../assets/static/logos/social/instagram.svg'
+import tiktok from '../../assets/static/logos/social/tiktok.svg'
+import youtube from '../../assets/static/logos/social/youtube.svg'
 
 const menu = [
 	{
@@ -25,15 +31,38 @@ const menu = [
 	}
 ]
 
+const SOCIAL_NETWORKS = [
+	{
+		name: 'twitter',
+		icon: twitter,
+		href: 'https://twitter.com/kingsleague'
+	},
+	{
+		name: 'tiktok',
+		icon: tiktok,
+		href: 'https://www.tiktok.com/@kingsleague'
+	},
+	{
+		name: 'instagram',
+		icon: instagram,
+		href: 'https://www.instagram.com/kingsleague/'
+	},
+	{
+		name: 'youtube',
+		icon: youtube,
+		href: 'https://www.youtube.com/@KingsLeagueOfficial'
+	}
+]
+
 const response = await fetch('https://api.kingsleague.dev/teams')
 const teams = await response.json()
 ---
 
 <header
-	class='flex items-center w-full bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] p-8 gap-x-8'
+	class='flex items-center w-full bg-gradient-to-b from-principal-dark via-principal-dark to-principal py-3 px-8 md:p-8 gap-x-8'
 >
-	<div class='flex flex-col h-full gap-4 w-full'>
-		<nav>
+	<div class='flex md:flex-col h-full md:gap-4 w-full justify-between'>
+		<nav class='w-min md:w-auto'>
 			<ul
 				class='flex flex-wrap items-center justify-center rounded-xl gap-x-4 [&>li>a:hover]:scale-150 w-full'
 			>
@@ -42,14 +71,14 @@ const teams = await response.json()
 						<>
 							{index === 6 ? <Logo /> : ''}
 							<li>
-								<a class='group transition block' href={`/team/${id}`} title={name} rel={Astro.url.pathname !== `/team/${id}` && 'preload'}>
+								<a class='group transition hidden md:block' href={`/team/${id}`} title={name} rel={Astro.url.pathname !== `/team/${id}` && 'preload'}>
 									<img
-										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-12 w-12 aspect-square'
+										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
 										src={image}
 										alt={`Escudo del equipo ${name}`}
 										width='48'
 										height='48'
-										deconding="async"
+										decoding="async"
 										fetchpriority="high"
 									/>
 								</a>
@@ -60,16 +89,26 @@ const teams = await response.json()
 			</ul>
 		</nav>
 
-		<nav>
+		<nav class='flex self-center'>
+			<input type='checkbox' id='menu' hidden class='peer' />
+			<label
+				for='menu'
+				class='relative z-50 sm:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110'
+			>
+				<MenuIcon />
+			</label>
 			<ul
-				class='flex justify-center text-white gap-x-4 font-semibold text-md [&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline'
+				id='navbar'
+				class='absolute sm:relative top-0 left-0 right-0 z-40 hidden peer-checked:text-2xl peer-checked:flex peer-checked:flex-col peer-checked:bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] min-h-screen sm:min-h-min py-24 sm:py-0 sm:flex justify-center text-white gap-6 sm:gap-x-4 font-semibold text-center text-md [&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline'
 			>
 				{
 					menu.map(({ name, href }) => (
 						<li>
 							<a
 								class={`transition ${
-									Astro.url.pathname === href ? 'opacity-100 underline pointer-events-none' : ''
+									Astro.url.pathname === href
+										? 'opacity-100 pointer-events-none'
+										: 'hover:underline-offset-8'
 								}`}
 								href={href}
 								rel={Astro.url.pathname !== href && 'preload'}
@@ -85,10 +124,66 @@ const teams = await response.json()
 				<a class="flex justify-center items-center gap-x-2 py-1 px-4 font-bold bg-purple-600 hover:bg-purple-500 transition-all duration-300 hover:scale-110 rounded-lg text-white" href='https://www.twitch.tv/kingsleague' target="_blank" rel="noopener norefferer">
 					<img class='w-6 brightness-[200]' src={twitch} alt='Twitch Logo' />
 					KINGSLEAGUE
-					<span class="font-bold text-xl text-title text-[#ff6900] rounded-xl">TV</span>
+					<span class="font-bold text-xl text-title text-principal-dark rounded-xl">TV</span>
 				</a>
 			</div> -->
-
 		</nav>
+		<div>
+			<div class='flex gap-4 justify-center'>
+				{
+					SOCIAL_NETWORKS.map((network) => (
+						<a
+							href={network.href}
+							target='_blank'
+							rel='noopener norefferer'
+							class='w-10 h-10 flex items-center '
+						>
+							<img
+								class='w-6  transition-all duration-300 transform hover:scale-110 brightness-[0] invert-[100]'
+								src={network.icon}
+								alt={`${network.name} Logo`}
+								loading="lazy"
+								decoding="async"
+								fetchpriority="low"
+							/>
+						</a>
+					))
+				}
+			</div>
+		</div>
 	</div>
 </header>
+<script type='module'>
+	const menuCheckbox = document.getElementById('menu')
+	const mediaQuery = window.matchMedia('(min-width: 640px)') // Breakpoint sm
+	const $navbar = document.querySelector('#navbar')
+
+	$navbar.querySelectorAll('a').forEach((anchor) => {
+		anchor.addEventListener('click', (_event) => {
+			if (document.body.style.overflowY === 'hidden') {
+				hideOverFlow(false)
+			}
+		})
+	})
+
+	/** @param {boolean} value */
+	function hideOverFlow(value) {
+		if (value) {
+			window.scrollTo(0, 0)
+			document.body.style.overflowY = 'hidden'
+		} else {
+			document.body.style.overflowY = 'auto'
+		}
+	}
+
+	menuCheckbox.addEventListener('change', (e) =>
+		e.target.checked ? hideOverFlow(true) : hideOverFlow(false)
+	)
+
+	mediaQuery.addEventListener('change', (e) => {
+		if (e.matches) {
+			hideOverFlow(false)
+			menuCheckbox.checked = false
+		}
+	})
+</script>
