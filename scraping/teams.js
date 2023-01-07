@@ -25,13 +25,20 @@ async function getTeams() {
 		const buffer = Buffer.from(arrayBuffer)
 
 		logInfo(`Writing image to disk ${fileName}`)
-		const imageFileName = `${fileName}.${fileExtension}`
+		const imageFileNameClean = removeCharacters(fileName)
+		const imageFileName = `${imageFileNameClean}.${fileExtension}`
 		const imageFilePath = path.join(STATICS_PATH, folder, imageFileName)
 		await writeFile(imageFilePath, buffer)
 
 		logInfo(`Everything is done! ${fileName}`)
 
 		return imageFileName
+	}
+
+	const removeCharacters = (s) => {
+		const withOutAccents = s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+		const regex = /[^a-zA-Z0-9.-]/g
+		return withOutAccents.replace(regex, '')
 	}
 
 	const onlyLettersString = (s) => {
