@@ -35,6 +35,8 @@ async function getTeams() {
 		return imageFileName
 	}
 
+	const extractIdFromUrl = (url) => url.split('/').at(-1).split('.').at(0)
+
 	const removeCharacters = (s) => {
 		const withOutAccents = s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 		const regex = /[^a-zA-Z0-9.-]/g
@@ -86,6 +88,7 @@ async function getTeams() {
 				const image = await saveImage({ url, folder: 'players', fileName })
 
 				players.push({
+					id: `${teamId}-${extractIdFromUrl(url)}`,
 					name,
 					role,
 					image
