@@ -15,9 +15,9 @@ La API proporciona acceso a datos de equipos, presidentes, entrenadores, goleado
 
 ### Tecnologías usadas
 
-Para recuperar los datos de la API, usamos *Web Scraping*, Node.js, [Hono](https://honojs.dev/) y el servicio de hosting de APIs Cloudflare Workers para la construcción y el despliegue.
+Para recuperar los datos de la API, usamos _Web Scraping_, Node.js, [Hono](https://honojs.dev/) y el servicio de hosting de APIs Cloudflare Workers para la construcción y el despliegue.
 
-La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cherrio](https://github.com/cheeriojs/cheerio) para realizar *Web Scraping* y obtener datos de la **Kings League Infojobs**.
+La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cherrio](https://github.com/cheeriojs/cheerio) para realizar _Web Scraping_ y obtener datos de la **Kings League Infojobs**.
 
 Para probar y validar el funcionamiento de la aplicación, hemos utilizado la librería de pruebas [Vitest](https://vitest.dev/).
 
@@ -41,13 +41,14 @@ Los endpoints disponibles son:
 - GET `/top-assists`: Devuelve los asistentes más destacados de la Kings League.
 - GET `/top-assists/:rank`: Devuelve el asistente más destacado de acuerdo a su posicion en la lista de la Kings League.
 - GET `/mvp`: Devuelve los MVPs de la Kings League.
+- GET `/schedule`: Devuelve el calendario de partidos de la Kings League y el resultado de los partidos jugados.
 
 ## Redes Sociales
 
 ¡Síguenos en nuestro canal de Twitch para ver cómo avanzamos en el desarrollo del proyecto o síguenos en Youtube para más contenido acerca de desarrollo fullstack!
 
-* [Twitch](https://twitch.tv/midudev)  
-* [YouTube](https://www.youtube.com/c/midudev)
+- [Twitch](https://twitch.tv/midudev)
+- [YouTube](https://www.youtube.com/c/midudev)
 
 o únete a la comunidad en [Discord](https://discord.gg/midudev)
 
@@ -58,4 +59,3 @@ o únete a la comunidad en [Discord](https://discord.gg/midudev)
 [![Lighthouse Performance Badge](./test_results/lighthouse_performance.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse PWA Badge](./test_results/lighthouse_pwa.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse SEO Badge](./test_results/lighthouse_seo.svg)](https://github.com/midudev/kings-league-project)
-
