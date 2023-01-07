@@ -4,7 +4,7 @@ const { players, title } = Astro.props
 
 <section>
 	<h2 class='font-title text-5xl text-white text-center py-10'>{title}</h2>
-	<div class='grid grid-cols-4 gap-2'>
+	<div class='grid md:grid-cols-3 xl:grid-cols-4 gap-2'>
 		{
 			players.map((player) => (
 				<article class='text-center relative font-title text-slate-900 rounded-sm p-5 m-auto'>

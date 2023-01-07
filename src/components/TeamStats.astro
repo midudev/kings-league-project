@@ -10,7 +10,7 @@ const stats = [
 	{
 		title: 'Posición',
 		value: rank
-		},
+	},
 	{
 		title: 'Victorias',
 		value: wins
@@ -44,7 +44,8 @@ const stats = [
 	>
 		{
 			stats.map((stat) => (
-				<div class='flex
+				<div
+					class='flex
 					flex-col
 					justify-between
 					items-start
@@ -53,7 +54,8 @@ const stats = [
 					[&>strong]:first:text-[9em] [&>strong]:first:leading-[1em]
 					[&>h4]:first:text-[1.6em]
 					first:justify-center
-					first:items-center'>
+					first:items-center'
+				>
 					<h4 class='text-yellow-400 uppercase font-bold font-title'>{stat.title}</h4>
 					<strong class='text-4xl font-title text-white font-bold'>{stat.value}</strong>
 				</div>
