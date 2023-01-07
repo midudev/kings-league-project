@@ -73,8 +73,8 @@ export async function getSchedule($) {
 
 			matches.push({
 				teams: [
-					{ id: localId, name: localName, shortname: localShortName },
-					{ id: visitantId, name: visitantName, shortname: visitantShortName }
+					{ id: localId, name: localName, shortName: localShortName },
+					{ id: visitantId, name: visitantName, shortName: visitantShortName }
 				],
 				score
 			})
