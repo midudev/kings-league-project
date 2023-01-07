@@ -14,12 +14,12 @@
 
 ## Descripcion 
 
-Este proyecto tiene como objetivo crear una API y página web de la Kings League con fines educativos.
+Este proyecto tiene como objetivo crear una API y página web de la [Kings League](https://kingsleague.pro/git) con fines educativos.
 La API proporciona acceso a datos de equipos, presidentes, entrenadores, goleadores y asistentes de la Kings League, y la página web ofrece información sobre los equipos, resultados y clasificaciones de la liga.
 
-La  Api esta construida utilizando "Web scraping" raspado web, hemos utilizado Node.js, Hono y el servicio de hosting de APIs Cloudflare Workers para construir la API. La página web está desarrollada con el framework Astro y utilizamos el framework CSS Tailwind para estilizar la interfaz de usuario. Además, hemos utilizado la librería Cherrio para realizar web scraping y obtener datos de la Kings League.
+La  Api esta construida utilizando "Web scraping" raspado web, hemos utilizado Node.js, [Hono](https://honojs.dev/) y el servicio de hosting de APIs Cloudflare Workers para construir la API. La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cherrio](https://github.com/cheeriojs/cheerio) para realizar web scraping y obtener datos de la Kings League.
 
-Para probar y validar el funcionamiento de la aplicación, hemos utilizado la librería de pruebas ViteTest.
+Para probar y validar el funcionamiento de la aplicación, hemos utilizado la librería de pruebas [ViteTest](https://vitest.dev/).
 
 Si quieres ayudarnos, por favor toma un momento para leer el archivo [CONTRIBUTING.md](https://github.com/midudev/kings-league-project/blob/main/CONTRIBUTING.md) Allí encontrarás información útil sobre cómo contribuir de manera efectiva y cómo seguir nuestras guías de estilo. ¡Esperamos que disfrutes colaborando con nosotros!
 
