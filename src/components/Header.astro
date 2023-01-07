@@ -35,35 +35,39 @@ const teams = await response.json()
 >
 	<div class='flex md:flex-col h-full md:gap-4 w-full justify-between'>
 		<nav class='w-min md:w-auto'>
-			<ul
-				class='flex flex-wrap items-center justify-center rounded-xl gap-x-4 [&>li>a:hover]:scale-150 w-full'
-			>
-				{
-					teams.map(({ id, image, name }, index) => (
-						<>
-							{index === 6 ? <Logo /> : ''}
-							<li>
-								<a
-									class='group transition hidden md:block'
-									href={`/team/${id}`}
-									title={name}
-									rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
-								>
-									<img
-										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
-										src={image}
-										alt={`Escudo del equipo ${name}`}
-										width='48'
-										height='48'
-										decoding='async'
-										fetchpriority='high'
-									/>
-								</a>
-							</li>
-						</>
-					))
-				}
-			</ul>
+			<div class="m-auto w-fit rounded-full md:bg-black p-1">
+				<div class="md:w-[724px] lg:w-[884px] md:rounded-full md:m-auto md:bg-black md:border-[#fab50c] md:border-2 md:p-2 px-0">
+					<ul
+						class='flex items-center justify-center rounded-x md:gap-x-4 [&>li>a:hover]:scale-150 w-full'
+					>
+						{
+							teams.map(({ id, image, name }, index) => (
+								<>
+									{index === 6 && <div class="w-16 lg:w-20"><Logo /></div>}
+									<li>
+										<a
+											class='group transition hidden md:block'
+											href={`/team/${id}`}
+											title={name}
+											rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
+										>
+											<img
+												class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
+												src={image}
+												alt={`Escudo del equipo ${name}`}
+												width='48'
+												height='48'
+												decoding='async'
+												fetchpriority='high'
+											/>
+										</a>
+									</li>
+								</>
+							))
+						}
+					</ul>
+				</div>
+			</div>
 		</nav>
 
 		<nav class='flex self-center items-center md:justify-between md:w-full max-w-3xl'>
