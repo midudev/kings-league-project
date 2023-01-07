@@ -227,3 +227,93 @@ describe('Test /schedule route', () => {
 		})
 	})
 })
+
+describe('Testing /leaderboard route', () => {
+	let worker
+
+	const entryProperties = [
+		'wins',
+		'losses',
+		'scoredGoals',
+		'concededGoals',
+		'yellowCards',
+		'redCards',
+		'team',
+		'rank'
+	]
+
+	const nestedTeamProperties = [
+		'color',
+		'id',
+		'name',
+		'image',
+		'imageWhite',
+		'url',
+		'channel',
+		'socialNetworks',
+		'players',
+		'coach',
+		'shortName',
+		'coachInfo',
+		'president'
+	]
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('Should return 12 teams', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		expect(resp).toBeDefined()
+
+		const leaderboard = await resp.json()
+		expect(leaderboard).toHaveLength(12)
+	})
+
+	it('Entries should have all their properties', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		const leaderboard = await resp.json()
+
+		leaderboard.forEach((entry) => {
+			entryProperties.forEach((property) => {
+				expect(entry).toHaveProperty(property)
+			})
+		})
+	})
+
+	it('Teams should have all their properties', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		const leaderboard = await resp.json()
+		const teams = leaderboard.map((entry) => entry.team)
+
+		teams.forEach((team) => {
+			nestedTeamProperties.forEach((property) => {
+				expect(team).toHaveProperty(property)
+			})
+		})
+	})
+
+	it('Shoud return a team from its id', async () => {
+		const resp = await worker.fetch('/leaderboard/1k')
+		expect(resp).toBeDefined()
+		const entry = await resp.json()
+		const { team } = entry
+
+		entryProperties.forEach((property) => expect(entry).toHaveProperty(property))
+		nestedTeamProperties.forEach((property) => expect(team).toHaveProperty(property))
+	})
+
+	it("Should return 404 message when the id doesn't exists", async () => {
+		const resp = await worker.fetch('/leaderboard/midudev')
+		expect(resp).toBeDefined()
+		const errorMessage = await resp.json()
+
+		expect(errorMessage).toEqual({
+			message: 'Team not found'
+		})
+	})
+})
