@@ -183,7 +183,7 @@ describe('Testing /leaderboard route', () => {
 		expect(leaderboard).toHaveLength(12)
 	})
 
-	it('Teams should have all their properties', async () => {
+	it('Entries should have all their properties', async () => {
 		const resp = await worker.fetch('/leaderboard')
 		const leaderboard = await resp.json()
 
@@ -198,7 +198,35 @@ describe('Testing /leaderboard route', () => {
 			'rank'
 		]
 
-		leaderboard.forEach((team) => {
+		leaderboard.forEach((entry) => {
+			properties.forEach((property) => {
+				expect(entry).toHaveProperty(property)
+			})
+		})
+	})
+
+	it('Teams should have all their properties', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		const leaderboard = await resp.json()
+		const teams = leaderboard.map((entry) => entry.team)
+
+		const properties = [
+			'color',
+			'id',
+			'name',
+			'image',
+			'imageWhite',
+			'url',
+			'channel',
+			'socialNetworks',
+			'players',
+			'coach',
+			'shortName',
+			'coachInfo',
+			'president'
+		]
+
+		teams.forEach((team) => {
 			properties.forEach((property) => {
 				expect(team).toHaveProperty(property)
 			})
