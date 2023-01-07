@@ -5,7 +5,8 @@ import puppeteer from 'puppeteer'
 const BASE_URL = 'https://kingsleague.pro/calendario/'
 
 const SELECTORS = {
-	tables: '.uk-table',
+	match: '#calendarMatch',
+	date: '.el-table-title',
 	locals: '.el-text-1',
 	visitants: '.el-text-7',
 	scores: '.el-text-4'
@@ -17,22 +18,29 @@ async function getTextFromElement(element, page) {
 
 export async function getSchedule() {
 	const schedule = []
+
 	const browser = await puppeteer.launch()
 	const page = await browser.newPage()
 	await page.goto(BASE_URL)
-	await page.waitForSelector(SELECTORS['tables'])
-
-	const $tables = await page.$$(SELECTORS['tables'])
+	await page.waitForSelector(SELECTORS['match'])
 
 	// Each day
-	for await (const $table of $tables) {
+	const $matches = await page.$$(SELECTORS['match'])
+
+	for await (const $match of $matches) {
 		const day = []
-		const $locals = await $table.$$(SELECTORS['locals'])
-		const $visitants = await $table.$$(SELECTORS['visitants'])
-		const $scores = await $table.$$(SELECTORS['scores'])
+
+		const $date = await $match.$(SELECTORS['date'])
+		const dateRaw = await getTextFromElement($date, page)
+		const date = cleanText(dateRaw)
+
+		const $locals = await $match.$$(SELECTORS['locals'])
+		const $visitants = await $match.$$(SELECTORS['visitants'])
+		const $scores = await $match.$$(SELECTORS['scores'])
 
 		// Each match of the day
 		let matchIndex = 0
+
 		for await (const $score of $scores) {
 			const $currentScore = $score
 			const $currentLocal = $locals[matchIndex]
@@ -53,7 +61,8 @@ export async function getSchedule() {
 
 			matchIndex++
 		}
-		schedule.push(day)
+
+		schedule.push({ date, matches: day })
 	}
 
 	await page.close()
