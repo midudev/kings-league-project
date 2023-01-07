@@ -18,6 +18,7 @@ const isSmall = format === 'small'
 					!isSmall && (
 						<th title='Goles a favor' scope='col' class='px-6 py-3 text-center'>GF</th>
 						<th title='Goles en contra' scope='col' class='px-6 py-3 text-center'>GC</th>
+						<th title='Diferencia de goles' scope='col' class='px-6 py-3 text-center'>DG</th>
 						<th title='Tarjetas Amarillas' scope='col' class='px-6 py-3 text-center'>TA</th>
 						<th title='Tarjetas Rojas' scope='col' class='px-6 py-3 text-center'>TR</th>
 					)
@@ -27,7 +28,7 @@ const isSmall = format === 'small'
 		<tbody>
 			{
 				leaderboard.map((info, index) => {
-					const { wins, losses, team, rank, scoredGoals, concededGoals, yellowCards, redCards } = info
+					const { wins, losses, team, rank, scoredGoals, concededGoals, diferenceGoals = scoredGoals - concededGoals, yellowCards, redCards } = info
 					const { image, name, id } = team
 
 					return (
@@ -51,6 +52,7 @@ const isSmall = format === 'small'
 								<>
 									<td class='px-6 py-4 text-center'>{scoredGoals}</td>
 									<td class='px-6 py-4 text-center'>{concededGoals}</td>
+									<td class='px-6 py-4 text-center'>{diferenceGoals}</td>
 									<td class='px-6 py-4 text-center'>{yellowCards}</td>
 									<td class='px-6 py-4 text-center'>{redCards}</td>
 								</>
