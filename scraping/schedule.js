@@ -13,7 +13,7 @@ const SELECTORS = {
 	scores: '.el-text-4'
 }
 
-async function getTextFromElement(element, page) {
+async function getTextFromPuppeteerElement(element, page) {
 	return await page.evaluate((element) => element.textContent, element)
 }
 
@@ -36,7 +36,7 @@ export async function getSchedule() {
 			const day = []
 
 			const $date = await $match.$(SELECTORS['date'])
-			const dateRaw = await getTextFromElement($date, page)
+			const dateRaw = await getTextFromPuppeteerElement($date, page)
 			const date = cleanText(dateRaw)
 			logInfo(`Starting with day: [${date}]`)
 
@@ -52,11 +52,11 @@ export async function getSchedule() {
 				const $currentLocal = $locals[matchIndex]
 				const $currentVisitant = $visitants[matchIndex]
 
-				const scoreRaw = await getTextFromElement($currentScore, page)
+				const scoreRaw = await getTextFromPuppeteerElement($currentScore, page)
 				const score = cleanText(scoreRaw)
-				const localRaw = await getTextFromElement($currentLocal, page)
+				const localRaw = await getTextFromPuppeteerElement($currentLocal, page)
 				const local = cleanText(localRaw)
-				const visitantRaw = await getTextFromElement($currentVisitant, page)
+				const visitantRaw = await getTextFromPuppeteerElement($currentVisitant, page)
 				const visitant = cleanText(visitantRaw)
 
 				if (score.includes('–')) {
