@@ -27,10 +27,10 @@ const stats = [
 		title: 'GC',
 		value: concededGoals
 	},
-	{
-		title: '',
-		value: ''
-	},
+	// {
+	// 	title: '',
+	// 	value: ''
+	// },
 	{
 		title: 'Amarillas',
 		value: yellowCards
@@ -48,10 +48,12 @@ const stats = [
 	>
 		{
 			stats.map((stat) => (
-				<div class='flex flex-col justify-between items-start'>
-					<h4 class='text-yellow-400 uppercase font-bold font-title'>{stat.title}</h4>
-					<strong class='text-4xl font-title text-white font-bold'>{stat.value}</strong>
-				</div>
+				<>
+					<div class='flex flex-col justify-between items-start first:col-start-3 first:row-start-1 first:row-end-4 [&>strong]:first:text-[9em] [&>h4]:first:text-[1.6em] [&>h4]:first:mb-7 first:justify-center first:items-center'>
+						<h4 class='text-yellow-400 uppercase font-bold font-title'>{stat.title}</h4>
+						<strong class='text-4xl font-title text-white font-bold'>{stat.value}</strong>
+					</div>
+				</>
 			))
 		}
 	</section>
