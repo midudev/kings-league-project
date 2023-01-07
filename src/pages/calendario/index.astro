@@ -1,3 +1,15 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import Container from '@components/Container.astro'
+---
+
 <!-- Página del calendario -->
-<a href="/">Inicio</a>
-<h1>Calendario</h1>
+<Layout title='Calendario'>
+	<SectionTitle title='Calendario' />
+	<Container>
+		<div class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40'>
+			<a href='/'>Inicio</a>
+		</div>
+	</Container>
+</Layout>
