@@ -1,82 +1,88 @@
 ---
+import Container from '@components/Container.astro';
 import SectionTitle from '@components/SectionTitle.astro'
 import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout title='Contacto'>
 	<SectionTitle title='Contacto' />
-	<main class='max-w-4xl mx-auto my-16'>
-		<h2 class='font-bold mb-2 text-lg'>Horario de apertura</h2>
-		<p>
-			<strong>Sólo se podrá acceder al recinto con acreditación o invitación</strong> El horario de apertura
-			al público a la Zona Deportiva Port de Barcelona será en los días de partido de 15h a 22h.
-		</p>
-		<div class='grid md:grid-cols-2 mt-4 gap-x-8'>
-			<section>
-				<h2 class='font-bold mb-2 text-xl'>Accesos</h2>
-				<!--This should be replaced with the map -->
-				<div class='border-2 w-full h-80 my-2'></div>
-				<p class='mb-2 text-justify'>
-					La entrada al pabellón de la Zona Deportiva Port de Barcelona será a través del Carrer de
-					la Mar Roja, s/n, 08040 Barcelona, que da a la entrada principal del recinto.
-				</p>
-				<p class='mb-2 text-justify'>
-					El acceso al entorno del recinto se realizará por la Porta 34 (Av. Ports d’Europa) de la
-					Zona de Actividades Logísticas (ZAL).
-				</p>
-				<p>
-					Deberá recogerse un ticket en el paso por la puerta que será sellado a la salida del
-					recinto.
-				</p>
-			</section>
-			<section>
-				<h2 class='font-bold mb-2 text-xl'>Cómo llegar al pabellón</h2>
-				<!--This should be replaced with the map -->
-				<div class='border-2 w-full h-80 my-2'></div>
 
-				<h3 class='text-lg font-bold mb-2'>Transporte Público</h3>
-				<p><strong>Metro:</strong> L10S ZAL | Riu Vell / Collblanc, parada ZAL | Riu Vell.</p>
-				<p>
-					<strong>Desde Plaça Catalunya:</strong> L1 (Catalunya) – L1 (Torrassa) – L10S (ZAL | Riu Vell.
-				</p>
-				<p>
-					<strong>Desde Sants Estació:</strong> L5 (Sants Estació) – L5 (Collblanc) – L10S (ZAL | Riu
-					Vell).
-				</p>
-				<p>
-					<strong>Estos son los horarios del metro en Barcelona:</strong>
-					<a
-						class='text-orange-500'
-						href='https://www.tmb.cat/es/barcelona/metro/-/lineametro/L10S'
+	<Container>
+		<div class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'>
+			<h2 class='font-bold mb-2 text-lg'>Horario de apertura</h2>
+			<p>
+				<strong>Sólo se podrá acceder al recinto con acreditación o invitación.</strong> El horario de apertura
+				al público a la Zona Deportiva Port de Barcelona será en los días de partido de 15h a 22h.
+			</p>
+			<div class='grid md:grid-cols-2 mt-4 gap-x-8'>
+				<section>
+					<h2 class='font-bold mb-2 text-xl'>Accesos</h2>
+					<!--This should be replaced with the map -->
+					<div class='border-2 w-full h-80 my-2'></div>
+					<p class='mb-2 text-justify'>
+						La entrada al pabellón de la Zona Deportiva Port de Barcelona será a través del Carrer de
+						la Mar Roja, s/n, 08040 Barcelona, que da a la entrada principal del recinto.
+					</p>
+					<p class='mb-2 text-justify'>
+						El acceso al entorno del recinto se realizará por la Porta 34 (Av. Ports d’Europa) de la
+						Zona de Actividades Logísticas (ZAL).
+					</p>
+					<p>
+						Deberá recogerse un ticket en el paso por la puerta que será sellado a la salida del
+						recinto.
+					</p>
+				</section>
+				<section>
+					<h2 class='font-bold mb-2 text-xl'>Cómo llegar al pabellón</h2>
+					<!--This should be replaced with the map -->
+					<div class='border-2 w-full h-80 my-2'></div>
+	
+					<h3 class='text-lg font-bold mb-2'>Transporte Público</h3>
+					<p><strong>Metro:</strong> L10S ZAL | Riu Vell / Collblanc, parada ZAL | Riu Vell.</p>
+					<p>
+						<strong>Desde Plaça Catalunya:</strong> L1 (Catalunya) – L1 (Torrassa) – L10S (ZAL | Riu Vell.
+					</p>
+					<p>
+						<strong>Desde Sants Estació:</strong> L5 (Sants Estació) – L5 (Collblanc) – L10S (ZAL | Riu
+						Vell).
+					</p>
+					<p class="my-5">
+						Estos son los horarios del metro en Barcelona:
+						<a
+							class='text-orange-500'
+							href='https://www.tmb.cat/es/barcelona/metro/-/lineametro/L10S'
+							target='_blank'
+							rel='noopener norefferer'>https://www.tmb.cat/es/barcelona/metro/-/lineametro/L10S</a
+						>
+					</p>
+	
+					<h3 class='text-lg font-bold my-2'>Parking</h3>
+					<p>
+						Hay plazas limitadas de parking gratuitas tanto en el Carrer de la Mar Roja como en la
+						Avinguda Ports d’Europa.
+					</p>
+				</section>
+			</div>
+			<div class="mt-10">
+				<p class='my-2'>
+					Para más información, escríbenos a: <a
+						class='block text-orange-500'
+						href='mailto:info@kingsleague.pro'
 						target='_blank'
-						rel='noopener norefferer'>https://www.tmb.cat/es/barcelona/metro/-/lineametro/L10S</a
+						rel='noopener norefferer'
+					>
+						info@kingsleague.pro
+					</a>
+				</p>
+				<p class='my-2'>
+					Para contacto con el departamento de prensa: <a
+						class='block text-orange-500'
+						href='mailto:media@kingsleague.pro'
+						target='_blank'
+						rel='noopener norefferer'>media@kingsleague.pro</a
 					>
 				</p>
-
-				<h3 class='text-lg font-bold my-2'>Parking</h3>
-				<p>
-					Hay plazas limitadas de parking gratuitas tanto en el Carrer de la Mar Roja como en la
-					Avinguda Ports d’Europa.
-				</p>
-			</section>
+			</div>
 		</div>
-		<p class='my-2'>
-			Para más información, escríbenos a: <a
-				class='block text-orange-500'
-				href='mailto:info@kingsleague.pro'
-				target='_blank'
-				rel='noopener norefferer'
-			>
-				info@kingsleague.pro
-			</a>
-		</p>
-		<p class='my-2'>
-			Para contacto con el departamento de prensa: <a
-				class='block text-orange-500'
-				href='mailto:media@kingsleague.pro'
-				target='_blank'
-				rel='noopener norefferer'>media@kingsleague.pro</a
-			>
-		</p>
-	</main>
+	</Container>
 </Layout>
