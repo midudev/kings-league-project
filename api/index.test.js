@@ -177,7 +177,7 @@ describe('Test /schedule route', () => {
 		const resp = await worker.fetch('/schedule')
 		expect(resp).toBeDefined()
 		const days = await resp.json()
-		expect(days).toBe(11)
+		expect(days).toHaveLength(11)
 	})
 
 	it('Days should have their date and matches', async () => {
