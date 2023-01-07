@@ -1,3 +1,16 @@
-<!-- Página del calendario -->
-<a href="/">Inicio</a>
-<h1>Calendario</h1>
+---
+import Layout from '@layouts/Layout.astro'
+import Container from '@components/Container.astro'
+import Sponsors from '@components/Sponsors.astro'
+---
+
+<Layout title='Calendario'>
+	<main>
+		<section class='bg-[#cd5500] py-20'>
+			<Container>
+				<h1 class="font-title font-bold text-6xl text-white">Calendario</h1>
+			</Container>
+		</section>
+	</main>
+	<Sponsors />
+</Layout>

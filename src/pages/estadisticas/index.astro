@@ -1,3 +1,16 @@
-<!-- Página de estadísticas -->
-<a href="/">Inicio</a>
-<h1>estadisticas</h1>
+---
+import Layout from '@layouts/Layout.astro'
+import Container from '@components/Container.astro'
+import Sponsors from '@components/Sponsors.astro'
+---
+
+<Layout title='Estadísticas'>
+	<main>
+		<section class='bg-[#cd5500] py-20'>
+			<Container>
+				<h1 class="font-title font-bold text-6xl text-white">Estadísticas</h1>
+			</Container>
+		</section>
+	</main>
+	<Sponsors />
+</Layout>
