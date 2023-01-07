@@ -5,8 +5,11 @@ export default defineConfig({
 		setupFiles: ['./global-setup/shared-mocks.js'],
 		exclude: [...configDefaults.exclude, 'astro.config.mjs', 'tailwind.config.cjs'],
 		coverage: {
-			exclude: [...configDefaults.coverage.exclude, 'astro.config.mjs', 'tailwind.config.cjs'],
-			all: true
+      exclude: [...configDefaults.coverage.exclude, 'astro.config.mjs', 'tailwind.config.cjs'],
+			provider: 'c8',
+			reporter: ['text', 'json', 'html'],
+			all: true,
+			include: ['api/*']
 		}
 	}
 })
