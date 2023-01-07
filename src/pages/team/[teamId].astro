@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 	}))
 }
 
-const { id, name, imageWhite, presidentId, socialNetworks, channel, players, color } = Astro.props
+const { id, name, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
 
 const socialNetworksWithIcon = socialNetworks.map((href) => ({
 	href,
@@ -93,7 +93,7 @@ const president = await findPresidentBy({ id: presidentId })
 				</section>
 
 				<div
-					class={`-z-10 absolute inset-0 opacity-5 bg-center bg-[size:80%] transition bg-no-repeat`}
+					class={'-z-10 absolute inset-0 opacity-5 bg-center bg-[size:80%] transition bg-no-repeat'}
 					style={`background-image:url('${imageWhite}')`}
 				>
 				</div>
