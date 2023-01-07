@@ -242,4 +242,14 @@ describe('Testing /leaderboard route', () => {
 		entryProperties.forEach((property) => expect(entry).toHaveProperty(property))
 		nestedTeamProperties.forEach((property) => expect(team).toHaveProperty(property))
 	})
+
+	it("Should return 404 message when the id doesn't exists", async () => {
+		const resp = await worker.fetch('/leaderboard/midudev')
+		expect(resp).toBeDefined()
+		const errorMessage = await resp.json()
+
+		expect(errorMessage).toEqual({
+			message: 'Team not found'
+		})
+	})
 })
