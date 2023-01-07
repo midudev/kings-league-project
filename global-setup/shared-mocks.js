@@ -1,5 +1,6 @@
 import { vi } from 'vitest'
-import { writeDBFile } from '../db/index'
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 /**
  * the mock for writeDBFile will prevent accidental
@@ -11,9 +12,10 @@ export default async function () {
 		return {
 			...actual,
 			writeDBFile: (file, data) => {
-				console.log(`saving...`)
+				console.log('saving...')
 			}
 		}
 	})
+
 	await sleep(25)
 }

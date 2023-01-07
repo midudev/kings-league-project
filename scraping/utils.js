@@ -24,11 +24,11 @@ export const SCRAPINGS = {
 	top_assists: {
 		url: 'https://kingsleague.pro/estadisticas/asistencias/',
 		scraper: getAssists
+	},
+	schedule: {
+		url: 'https://kingsleague.pro/calendario/',
+		scraper: getSchedule
 	}
-	// schedule: {
-	// 	url: 'https://kingsleague.pro/calendario/',
-	// 	scraper: getSchedule
-	// }
 	// coaches: {
 	// 	url: 'https://es.besoccer.com/competicion/info/kings-league/2023',
 	// 	scraper: getCoaches
