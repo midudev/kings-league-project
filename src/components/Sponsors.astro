@@ -14,7 +14,7 @@ import HostingPartner from '../../assets/static/logos/sponsors/hosting-partner.s
 import Container from './Container.astro'
 ---
 
-<section class='text-sm text-white p-8 bg-black'>
+<section class='text-sm text-white p-8 bg-gradient-to-tr from-black via-black to-[#cd5500] border-white border-t-2 border-b-2'>
 	<Container>
 		<div class='flex justify-between flex-wrap gap-10'>
 			<div>
@@ -22,7 +22,7 @@ import Container from './Container.astro'
 					<span class='font-black'>Principal</span> partner
 				</div>
 
-				<img src={LogoPrincipalSponsor} alt='Logo Principal Sponsor' />
+				<img src={LogoPrincipalSponsor} alt='Logo Principal Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
 			</div>
 
 			<div>
@@ -30,7 +30,7 @@ import Container from './Container.astro'
 					<span class='font-black'>Stadium</span> partner
 				</div>
 
-				<img src={StadiumPartner} alt='Logo Stadium Sponsor' />
+				<img src={StadiumPartner} alt='Logo Stadium Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
 			</div>
 
 			<div class='col-span-3'>
@@ -39,15 +39,15 @@ import Container from './Container.astro'
 				</div>
 
 				<div class='grid grid-cols-8 gap-5 items-center'>
-					<img src={LogoGrefusa} alt='Logo Grefusa Sponsor' />
-					<img src={LogoSpotify} alt='Logo Spotify Sponsor' />
-					<img src={LogoSmyo} alt='Logo Smyo Sponsor' />
-					<img src={LogoAdidas} alt='Logo Adidas Sponsor' />
-					<img src={LogoMahau} alt='Logo Mahau Sponsor' />
-					<img src={LogoMI} alt='Logo MI Sponsor' />
-					<img src={LogoShukran} alt='Logo Shukran Sponsor' />
-					<img src={LogoImagin} alt='Logo Imagin Sponsor' />
-					<img src={LogoIQ} alt='Logo IQ Sponsor' />
+					<img src={LogoGrefusa} alt='Logo Grefusa Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					<img src={LogoSpotify} alt='Logo Spotify Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					<img src={LogoSmyo} alt='Logo Smyo Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					<img src={LogoAdidas} alt='Logo Adidas Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					<img src={LogoMahau} alt='Logo Mahau Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					<img src={LogoMI} alt='Logo MI Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					<img src={LogoShukran} alt='Logo Shukran Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					<img src={LogoImagin} alt='Logo Imagin Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					<img src={LogoIQ} alt='Logo IQ Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
 				</div>
 			</div>
 
@@ -56,7 +56,7 @@ import Container from './Container.astro'
 					<span class='font-black'>Hosting</span> partner
 				</div>
 
-				<img src={HostingPartner} alt='Logo Stadium Sponsor' />
+				<img src={HostingPartner} alt='Logo Stadium Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
 			</div>
 		</div>
 	</Container>

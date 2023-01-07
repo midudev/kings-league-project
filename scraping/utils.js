@@ -7,6 +7,7 @@ import { getTopScoresList } from './top_scorers.js'
 import { getPlayersTwelve } from './players_twelve.js'
 import { logError, logInfo, logSuccess } from './log.js'
 import { writeDBFile } from '../db/index.js'
+import { getSchedule } from './schedule.js'
 
 export const SCRAPINGS = {
 	leaderboard: {
@@ -28,6 +29,10 @@ export const SCRAPINGS = {
 	twelfth_players: {
 		url: 'https://kingsleague.pro/jugador-12/',
 		scraper: getPlayersTwelve
+  },
+	schedule: {
+		url: 'https://kingsleague.pro/calendario/',
+		scraper: getSchedule
 	}
 	// coaches: {
 	// 	url: 'https://es.besoccer.com/competicion/info/kings-league/2023',
