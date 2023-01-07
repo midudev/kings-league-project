@@ -8,5 +8,8 @@ const website = "https://kingsleague.dev/";
 // https://astro.build/config
 export default defineConfig({
   site: website,
+  server: {
+    host: true,
+  },
   integrations: [tailwind(), prefetch()],
 });
