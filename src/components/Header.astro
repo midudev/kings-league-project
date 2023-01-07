@@ -3,6 +3,10 @@ import Logo from './Logo.astro'
 import MenuIcon from './icons/Menu.astro'
 
 // import twitch from '../../assets/static/logos/social/twitch.svg'
+import twitter from '../../assets/static/logos/social/twitter.svg'
+import instagram from '../../assets/static/logos/social/instagram.svg'
+import tiktok from '../../assets/static/logos/social/tiktok.svg'
+import youtube from '../../assets/static/logos/social/youtube.svg'
 
 const menu = [
 	{
@@ -24,6 +28,29 @@ const menu = [
 	{
 		name: 'Reglamento',
 		href: '/reglamento'
+	}
+]
+
+const SOCIAL_NETWORKS = [
+	{
+		name: 'twitter',
+		icon: twitter,
+		href: 'https://twitter.com/kingsleague'
+	},
+	{
+		name: 'tiktok',
+		icon: tiktok,
+		href: 'https://www.tiktok.com/@kingsleague'
+	},
+	{
+		name: 'instagram',
+		icon: instagram,
+		href: 'https://www.instagram.com/kingsleague/'
+	},
+	{
+		name: 'youtube',
+		icon: youtube,
+		href: 'https://www.youtube.com/@KingsLeagueOfficial'
 	}
 ]
 
@@ -101,6 +128,29 @@ const teams = await response.json()
 				</a>
 			</div> -->
 		</nav>
+		<div>
+			<div class='flex gap-4 justify-center'>
+				{
+					SOCIAL_NETWORKS.map((network) => (
+						<a
+							href={network.href}
+							target='_blank'
+							rel='noopener norefferer'
+							class='w-10 h-10 flex items-center '
+						>
+							<img
+								class='w-6  transition-all duration-300 transform hover:scale-110 brightness-[0] invert-[100]'
+								src={network.icon}
+								alt={`${network.name} Logo`}
+								loading="lazy"
+								decoding="async"
+								fetchpriority="low"
+							/>
+						</a>
+					))
+				}
+			</div>
+		</div>
 	</div>
 </header>
 <script type='module'>
