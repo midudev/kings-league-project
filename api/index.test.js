@@ -167,6 +167,33 @@ describe('Testing /presidents route', () => {
 describe('Testing /leaderboard route', () => {
 	let worker
 
+	const entryProperties = [
+		'wins',
+		'losses',
+		'scoredGoals',
+		'concededGoals',
+		'yellowCards',
+		'redCards',
+		'team',
+		'rank'
+	]
+
+	const nestedTeamProperties = [
+		'color',
+		'id',
+		'name',
+		'image',
+		'imageWhite',
+		'url',
+		'channel',
+		'socialNetworks',
+		'players',
+		'coach',
+		'shortName',
+		'coachInfo',
+		'president'
+	]
+
 	beforeAll(async () => {
 		worker = await setup()
 	})
@@ -187,19 +214,8 @@ describe('Testing /leaderboard route', () => {
 		const resp = await worker.fetch('/leaderboard')
 		const leaderboard = await resp.json()
 
-		const properties = [
-			'wins',
-			'losses',
-			'scoredGoals',
-			'concededGoals',
-			'yellowCards',
-			'redCards',
-			'team',
-			'rank'
-		]
-
 		leaderboard.forEach((entry) => {
-			properties.forEach((property) => {
+			entryProperties.forEach((property) => {
 				expect(entry).toHaveProperty(property)
 			})
 		})
@@ -210,26 +226,20 @@ describe('Testing /leaderboard route', () => {
 		const leaderboard = await resp.json()
 		const teams = leaderboard.map((entry) => entry.team)
 
-		const properties = [
-			'color',
-			'id',
-			'name',
-			'image',
-			'imageWhite',
-			'url',
-			'channel',
-			'socialNetworks',
-			'players',
-			'coach',
-			'shortName',
-			'coachInfo',
-			'president'
-		]
-
 		teams.forEach((team) => {
-			properties.forEach((property) => {
+			nestedTeamProperties.forEach((property) => {
 				expect(team).toHaveProperty(property)
 			})
 		})
+	})
+
+	it('Shoud return a team from its id', async () => {
+		const resp = await worker.fetch('/leaderboard/1k')
+		expect(resp).toBeDefined()
+		const entry = await resp.json()
+		const { team } = entry
+
+		entryProperties.forEach((property) => expect(entry).toHaveProperty(property))
+		nestedTeamProperties.forEach((property) => expect(team).toHaveProperty(property))
 	})
 })
