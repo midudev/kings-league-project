@@ -53,7 +53,7 @@ Los siguientes son los endpoints disponibles en la API:
 * [Twitch](https://twitch.tv/midudev)  
 * [YouTube](https://www.youtube.com/c/midudev)
 
-o unete a la comunidad en [Discord](https://discord.gg/midudev)
+o únete a la comunidad en [Discord](https://discord.gg/midudev)
 
 ## ATENCION ⚠️
 
