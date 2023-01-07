@@ -33,22 +33,22 @@ const menu = [
 
 const SOCIAL_NETWORKS = [
 	{
-		name: 'twitter',
+		name: 'Twitter',
 		icon: twitter,
 		href: 'https://twitter.com/kingsleague'
 	},
 	{
-		name: 'tiktok',
+		name: 'Tiktok',
 		icon: tiktok,
 		href: 'https://www.tiktok.com/@kingsleague'
 	},
 	{
-		name: 'instagram',
+		name: 'Instagram',
 		icon: instagram,
-		href: 'https://www.instagram.com/kingsleague/'
+		href: 'https://www.instagram.com/kingsleague'
 	},
 	{
-		name: 'youtube',
+		name: 'Youtube',
 		icon: youtube,
 		href: 'https://www.youtube.com/@KingsLeagueOfficial'
 	}
@@ -71,15 +71,20 @@ const teams = await response.json()
 						<>
 							{index === 6 ? <Logo /> : ''}
 							<li>
-								<a class='group transition hidden md:block' href={`/team/${id}`} title={name} rel={Astro.url.pathname !== `/team/${id}` && 'preload'}>
+								<a
+									class='group transition hidden md:block'
+									href={`/team/${id}`}
+									title={name}
+									rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
+								>
 									<img
 										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
 										src={image}
 										alt={`Escudo del equipo ${name}`}
 										width='48'
 										height='48'
-										decoding="async"
-										fetchpriority="high"
+										decoding='async'
+										fetchpriority='high'
 									/>
 								</a>
 							</li>
@@ -122,26 +127,26 @@ const teams = await response.json()
 
 			<div class='gap-4 justify-center hidden md:flex'>
 				{
-					SOCIAL_NETWORKS.map((network) => (
+					SOCIAL_NETWORKS.map(({ href, icon, name }) => (
 						<a
-							href={network.href}
+							href={href}
 							target='_blank'
 							rel='noopener norefferer'
-							class='w-10 h-10 flex items-center '
+							class='w-11 h-11 flex items-center justify-center rounded-full transition-all duration-500 hover:bg-white [&>img]:hover:scale-125 [&>img]:hover:invert-0 [&>img]:hover:brightness-100'
 						>
 							<img
-								class='w-6 transition-all transform hover:scale-125 brightness-[0] invert-[100]'
-								src={network.icon}
-								alt={`${network.name} Logo`}
-								loading="lazy"
-								decoding="async"
-								fetchpriority="low"
+								class='w-5 transition-all duration-300 invert-[100] brightness-0'
+								src={icon}
+								alt={`${name} Logo`}
+								loading='lazy'
+								decoding='async'
+								fetchpriority='low'
 							/>
 						</a>
 					))
 				}
 			</div>
-	</nav>
+		</nav>
 	</div>
 </header>
 <script type='module'>
