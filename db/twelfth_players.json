@@ -1,7 +1,6 @@
 [
   {
     "role": "Medio",
-    "fullName": "Javier Espinosa",
     "firstName": "Javier",
     "lastName": "Espinosa",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
@@ -14,7 +13,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "David Acedo",
     "firstName": "David",
     "lastName": "Acedo",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
@@ -27,7 +25,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "Ibai Gómez",
     "firstName": "Ibai",
     "lastName": "Gómez",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
@@ -40,7 +37,6 @@
   },
   {
     "role": "Medio",
-    "fullName": "Víctor Sánchez",
     "firstName": "Víctor",
     "lastName": "Sánchez",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
@@ -53,7 +49,6 @@
   },
   {
     "role": "Medio",
-    "fullName": "Javi Márquez",
     "firstName": "Javi",
     "lastName": "Márquez",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
@@ -66,7 +61,6 @@
   },
   {
     "role": "Medio",
-    "fullName": "Rubén de la Red",
     "firstName": "Rubén",
     "lastName": "de la Red",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
@@ -79,7 +73,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "Enigma",
     "firstName": "Enigma",
     "lastName": "",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
@@ -92,7 +85,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "Sergio García",
     "firstName": "Sergio",
     "lastName": "García",
     "image": "https://api.kingsleague.dev/static/players/ultimate-mostoles-sergio-garcia.png",
@@ -105,7 +97,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "Alberto Bueno",
     "firstName": "Alberto",
     "lastName": "Bueno",
     "image": "https://api.kingsleague.dev/static/players/1k-alberto-bueno.png",
@@ -118,7 +109,6 @@
   },
   {
     "role": "Defensa",
-    "fullName": "Javi Chica",
     "firstName": "Javi",
     "lastName": "Chica",
     "image": "https://api.kingsleague.dev/static/players/kunisports-javi-chica.png",
@@ -131,7 +121,6 @@
   },
   {
     "role": "Defensa",
-    "fullName": "Dídac Vilà",
     "firstName": "Dídac",
     "lastName": "Vilà",
     "image": "https://api.kingsleague.dev/static/players/rayo-barcelona-didac-vila.png",
@@ -144,7 +133,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "Borja Criado",
     "firstName": "Borja",
     "lastName": "Criado",
     "image": "https://api.kingsleague.dev/static/players/pio-fc-borja-criado.png",
@@ -157,7 +145,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "Jordi Campoy",
     "firstName": "Jordi",
     "lastName": "Campoy",
     "image": "https://api.kingsleague.dev/static/players/aniquiladores-fc-jordi-campoy.png",
@@ -170,7 +157,6 @@
   },
   {
     "role": "Medio",
-    "fullName": "Nando Quesada",
     "firstName": "Nando",
     "lastName": "Quesada",
     "image": "https://api.kingsleague.dev/static/players/jijantes-fc-nando-quesada.png",
@@ -183,7 +169,6 @@
   },
   {
     "role": "Medio",
-    "fullName": "Joan Verdú",
     "firstName": "Joan",
     "lastName": "Verdú",
     "image": "https://api.kingsleague.dev/static/players/los-troncos-fc-joan-verdu.png",
@@ -196,7 +181,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "Jorge Gómez",
     "firstName": "Jorge",
     "lastName": "Gómez",
     "image": "https://api.kingsleague.dev/static/players/el-barrio-jorge-gomez.png",
@@ -209,7 +193,6 @@
   },
   {
     "role": "Defensa",
-    "fullName": "Joan Capdevila",
     "firstName": "Joan",
     "lastName": "Capdevila",
     "image": "https://api.kingsleague.dev/static/players/saiyans-fc-joan-capdevila.png",
@@ -222,7 +205,6 @@
   },
   {
     "role": "Delantero",
-    "fullName": "Javier Hérnandez",
     "firstName": "Javier",
     "lastName": "Hérnandez",
     "image": "https://api.kingsleague.dev/static/players/porcinos-fc-javier-hernandez.png",

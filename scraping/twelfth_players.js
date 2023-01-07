@@ -37,11 +37,8 @@ export async function getTwelfthPlayers($) {
 
 		const image = $(el).find('.el-image.uk-invisible').attr('src')
 
-		const fullName = `${firstName} ${lastName}`.trim()
-
 		players.push({
 			...playerInfo,
-			fullName,
 			firstName,
 			lastName,
 			image,
