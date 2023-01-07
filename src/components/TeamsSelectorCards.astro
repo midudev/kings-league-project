@@ -7,7 +7,7 @@ const teams = await getAllTeams()
 const { small } = Astro.props
 ---
 
-<section class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
+<section class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5'>
 	{
 		teams.map((team) => {
 			const { id, name, imageWhite } = team
