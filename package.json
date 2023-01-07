@@ -38,6 +38,7 @@
     "@typescript-eslint/parser": "5.48.0",
     "@vitest/coverage-c8": "0.26.3",
     "@vitest/ui": "0.26.3",
+    "astro-critters": "1.1.25",
     "eslint": "8.31.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-astro": "0.21.1",

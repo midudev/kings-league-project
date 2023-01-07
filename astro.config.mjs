@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
+import critters from "astro-critters";
 import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
 
@@ -14,6 +15,7 @@ export default defineConfig({
   },
   integrations: [
     tailwind(),
+    critters(),
     prefetch(),
     sitemap({
       lastmod: new Date(),
