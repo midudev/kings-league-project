@@ -16,6 +16,22 @@ const MAPS = {
 	'xbuyer-team': 'xbuyer'
 }
 
+const shortNames = {
+	'rayo-barcelona': 'RDB',
+	'1k': '1K',
+	kunisports: 'KNS',
+	jijantes: 'JFC',
+	'el-barrio': 'ELB',
+	pio: 'PIO',
+	xbuyer: 'XBU',
+	aniquiladores: 'ANI',
+	'ultimate-mostoles': 'ULT',
+	'saiyans-fc': 'SAI',
+	'porcinos-fc': 'POR',
+	'los-troncos': 'TFC',
+	kunisports: 'KNS'
+}
+
 export async function getSchedule($) {
 	const schedule = []
 	const $days = $(SELECTORS.match)
@@ -44,17 +60,21 @@ export async function getSchedule($) {
 			const localNameRaw = $($locals[index]).text()
 			const localName = cleanText(localNameRaw)
 			const localImg = $($localsImages[index]).attr('src')
-			const localId = getTeamIdFromImageUrl(localImg)
+			let localId = getTeamIdFromImageUrl(localImg)
+			localId = MAPS[localId] || localId
+			const localShortName = shortNames[localId]
 
 			const visitantNameRaw = $($visitants[index]).text()
 			const visitantName = cleanText(visitantNameRaw)
 			const visitantImg = $($visitantsImages[index]).attr('src')
-			const visitantId = getTeamIdFromImageUrl(visitantImg)
+			let visitantId = getTeamIdFromImageUrl(visitantImg)
+			visitantId = MAPS[visitantId] || visitantId
+			const visitantShortName = shortNames[visitantId]
 
 			matches.push({
 				teams: [
-					{ id: MAPS[localId] || localId, name: localName },
-					{ id: MAPS[visitantId] || visitantId, name: visitantName }
+					{ id: localId, name: localName, shortName: localShortName },
+					{ id: visitantId, name: visitantName, shortName: visitantShortName }
 				],
 				score
 			})

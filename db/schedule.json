@@ -6,11 +6,13 @@
         "teams": [
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           },
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           }
         ],
         "score": "2 – 4"
@@ -19,11 +21,13 @@
         "teams": [
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           },
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           }
         ],
         "score": "2 – 1"
@@ -32,11 +36,13 @@
         "teams": [
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           },
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           }
         ],
         "score": "5 – 0"
@@ -45,11 +51,13 @@
         "teams": [
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           },
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           }
         ],
         "score": "5 – 3"
@@ -58,11 +66,13 @@
         "teams": [
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           },
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           }
         ],
         "score": "1 – 5"
@@ -71,11 +81,13 @@
         "teams": [
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           },
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           }
         ],
         "score": "4 – 2"
@@ -89,11 +101,13 @@
         "teams": [
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           },
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           }
         ],
         "score": "0 – 0"
@@ -102,11 +116,13 @@
         "teams": [
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           },
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           }
         ],
         "score": "0 – 0"
@@ -115,11 +131,13 @@
         "teams": [
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           },
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           }
         ],
         "score": "0 – 0"
@@ -128,11 +146,13 @@
         "teams": [
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           },
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           }
         ],
         "score": "0 – 0"
@@ -141,11 +161,13 @@
         "teams": [
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           },
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           }
         ],
         "score": "0 – 0"
@@ -154,11 +176,13 @@
         "teams": [
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           },
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           }
         ],
         "score": "0 – 0"
@@ -172,11 +196,13 @@
         "teams": [
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           },
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           }
         ],
         "score": "0 – 0"
@@ -185,11 +211,13 @@
         "teams": [
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           },
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           }
         ],
         "score": "0 – 0"
@@ -198,11 +226,13 @@
         "teams": [
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           },
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           }
         ],
         "score": "0 – 0"
@@ -211,11 +241,13 @@
         "teams": [
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           },
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           }
         ],
         "score": "0 – 0"
@@ -224,11 +256,13 @@
         "teams": [
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           },
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           }
         ],
         "score": "0 – 0"
@@ -237,11 +271,13 @@
         "teams": [
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           },
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           }
         ],
         "score": "0 – 0"
@@ -255,11 +291,13 @@
         "teams": [
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           },
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           }
         ],
         "score": "0 – 0"
@@ -268,11 +306,13 @@
         "teams": [
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           },
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           }
         ],
         "score": "0 – 0"
@@ -281,11 +321,13 @@
         "teams": [
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           },
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           }
         ],
         "score": "0 – 0"
@@ -294,11 +336,13 @@
         "teams": [
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           },
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           }
         ],
         "score": "0 – 0"
@@ -307,11 +351,13 @@
         "teams": [
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           },
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           }
         ],
         "score": "0 – 0"
@@ -320,11 +366,13 @@
         "teams": [
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           },
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           }
         ],
         "score": "0 – 0"
@@ -338,11 +386,13 @@
         "teams": [
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           },
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           }
         ],
         "score": "0 – 0"
@@ -351,11 +401,13 @@
         "teams": [
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           },
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           }
         ],
         "score": "0 – 0"
@@ -364,11 +416,13 @@
         "teams": [
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           },
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           }
         ],
         "score": "0 – 0"
@@ -377,11 +431,13 @@
         "teams": [
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           },
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           }
         ],
         "score": "0 – 0"
@@ -390,11 +446,13 @@
         "teams": [
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           },
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           }
         ],
         "score": "0 – 0"
@@ -403,11 +461,13 @@
         "teams": [
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           },
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           }
         ],
         "score": "0 – 0"
@@ -421,11 +481,13 @@
         "teams": [
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           },
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           }
         ],
         "score": "0 – 0"
@@ -434,11 +496,13 @@
         "teams": [
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           },
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           }
         ],
         "score": "0 – 0"
@@ -447,11 +511,13 @@
         "teams": [
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           },
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           }
         ],
         "score": "0 – 0"
@@ -460,11 +526,13 @@
         "teams": [
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           },
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           }
         ],
         "score": "0 – 0"
@@ -473,11 +541,13 @@
         "teams": [
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           },
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           }
         ],
         "score": "0 – 0"
@@ -486,11 +556,13 @@
         "teams": [
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           },
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           }
         ],
         "score": "0 – 0"
@@ -504,11 +576,13 @@
         "teams": [
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           },
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           }
         ],
         "score": "0 – 0"
@@ -517,11 +591,13 @@
         "teams": [
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           },
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           }
         ],
         "score": "0 – 0"
@@ -530,11 +606,13 @@
         "teams": [
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           },
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           }
         ],
         "score": "0 – 0"
@@ -543,11 +621,13 @@
         "teams": [
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           },
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           }
         ],
         "score": "0 – 0"
@@ -556,11 +636,13 @@
         "teams": [
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           },
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           }
         ],
         "score": "0 – 0"
@@ -569,11 +651,13 @@
         "teams": [
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           },
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           }
         ],
         "score": "0 – 0"
@@ -587,11 +671,13 @@
         "teams": [
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           },
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           }
         ],
         "score": "0 – 0"
@@ -600,11 +686,13 @@
         "teams": [
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           },
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           }
         ],
         "score": "0 – 0"
@@ -613,11 +701,13 @@
         "teams": [
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           },
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           }
         ],
         "score": "0 – 0"
@@ -626,11 +716,13 @@
         "teams": [
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           },
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           }
         ],
         "score": "0 – 0"
@@ -639,11 +731,13 @@
         "teams": [
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           },
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           }
         ],
         "score": "0 – 0"
@@ -652,11 +746,13 @@
         "teams": [
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           },
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           }
         ],
         "score": "0 – 0"
@@ -670,11 +766,13 @@
         "teams": [
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           },
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           }
         ],
         "score": "0 – 0"
@@ -683,11 +781,13 @@
         "teams": [
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           },
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           }
         ],
         "score": "0 – 0"
@@ -696,11 +796,13 @@
         "teams": [
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           },
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           }
         ],
         "score": "0 – 0"
@@ -709,11 +811,13 @@
         "teams": [
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           },
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           }
         ],
         "score": "0 – 0"
@@ -722,11 +826,13 @@
         "teams": [
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           },
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           }
         ],
         "score": "0 – 0"
@@ -735,11 +841,13 @@
         "teams": [
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           },
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           }
         ],
         "score": "0 – 0"
@@ -753,11 +861,13 @@
         "teams": [
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           },
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           }
         ],
         "score": "0 – 0"
@@ -766,11 +876,13 @@
         "teams": [
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           },
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           }
         ],
         "score": "0 – 0"
@@ -779,11 +891,13 @@
         "teams": [
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           },
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           }
         ],
         "score": "0 – 0"
@@ -792,11 +906,13 @@
         "teams": [
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           },
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           }
         ],
         "score": "0 – 0"
@@ -805,11 +921,13 @@
         "teams": [
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           },
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           }
         ],
         "score": "0 – 0"
@@ -818,11 +936,13 @@
         "teams": [
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           },
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           }
         ],
         "score": "0 – 0"
@@ -836,11 +956,13 @@
         "teams": [
           {
             "id": "1k",
-            "name": "1K FC"
+            "name": "1K FC",
+            "shortName": "1K"
           },
           {
             "id": "ultimate-mostoles",
-            "name": "Ultimate Móstoles"
+            "name": "Ultimate Móstoles",
+            "shortName": "ULT"
           }
         ],
         "score": "0 – 0"
@@ -849,11 +971,13 @@
         "teams": [
           {
             "id": "xbuyer",
-            "name": "XBUYER TEAM"
+            "name": "XBUYER TEAM",
+            "shortName": "XBU"
           },
           {
             "id": "saiyans-fc",
-            "name": "Saiyans FC"
+            "name": "Saiyans FC",
+            "shortName": "SAI"
           }
         ],
         "score": "0 – 0"
@@ -862,11 +986,13 @@
         "teams": [
           {
             "id": "porcinos-fc",
-            "name": "Porcinos FC"
+            "name": "Porcinos FC",
+            "shortName": "POR"
           },
           {
             "id": "el-barrio",
-            "name": "El Barrio"
+            "name": "El Barrio",
+            "shortName": "ELB"
           }
         ],
         "score": "0 – 0"
@@ -875,11 +1001,13 @@
         "teams": [
           {
             "id": "pio",
-            "name": "PIO FC"
+            "name": "PIO FC",
+            "shortName": "PIO"
           },
           {
             "id": "aniquiladores",
-            "name": "Aniquiladores FC"
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           }
         ],
         "score": "0 – 0"
@@ -888,11 +1016,13 @@
         "teams": [
           {
             "id": "rayo-barcelona",
-            "name": "Rayo de Barcelona"
+            "name": "Rayo de Barcelona",
+            "shortName": "RDB"
           },
           {
             "id": "kunisports",
-            "name": "Kunisports"
+            "name": "Kunisports",
+            "shortName": "KNS"
           }
         ],
         "score": "0 – 0"
@@ -901,11 +1031,13 @@
         "teams": [
           {
             "id": "jijantes",
-            "name": "Jijantes FC"
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           },
           {
             "id": "los-troncos",
-            "name": "Los Troncos FC"
+            "name": "Los Troncos FC",
+            "shortName": "TFC"
           }
         ],
         "score": "0 – 0"
