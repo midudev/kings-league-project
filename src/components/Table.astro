@@ -29,7 +29,7 @@ const leaderboard = await response.json()
 						</th>
 						<td class='px-6 py-4 font-black'>
 							<a class="flex items-center gap-x-4 transition hover:opacity-75" href={`/team/${id}`} rel='preload'>
-								<img src={image} alt={'Logo de ' + name} class='w-6 h-6' />
+								<img src={image} alt={'Logo de ' + name} class='w-6 h-6' decoding="async" fetchpriority="high" />
 								{name}
 							</a>
 						</td>
