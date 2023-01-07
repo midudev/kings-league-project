@@ -4,7 +4,7 @@ const { players, title } = Astro.props
 
 <section>
 	<h2 class='font-title text-5xl text-white text-center py-10'>{title}</h2>
-	<div class='grid grid-cols-4 gap-2'>
+	<div class='grid grid-cols-2 md:grid-cols-4 gap-2'>
 		{
 			players.map((player) => (
 				<article class='text-center relative font-title text-slate-900 rounded-sm p-5 m-auto'>
@@ -15,11 +15,9 @@ const { players, title } = Astro.props
 						decoding='async'
 						fetchpriority='high'
 					/>
-					<div class="bg-black/70 rounded-xl">
+					<div class='bg-black/70 rounded-xl'>
 						<h3 class='text-white font-title text-3xl pt-2'>{player.name}</h3>
-						<h4 class='font-body uppercase  text-orange-500  py-1 font-semibold'>
-							{player.role}
-						</h4>
+						<h4 class='font-body uppercase  text-orange-500  py-1 font-semibold'>{player.role}</h4>
 					</div>
 				</article>
 			))
