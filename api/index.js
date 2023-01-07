@@ -9,7 +9,6 @@ import { topScorersApi } from './routes/top-scorers.routes'
 import { topAssistsApi } from './routes/top-assists.routes'
 import { leaderboardApi } from './routes/leaderboard.routes'
 
-
 const app = new Hono()
 
 app.get('/', (ctx) =>
@@ -96,7 +95,6 @@ app.route('/top-assists', topAssistsApi)
 app.route('/top-scorers', topScorersApi)
 
 app.get('/static/*', serveStatic({ root: './' }))
-app.get('/api', serveStatic({root: './docs'}))
 
 app.notFound((c) => {
 	const { pathname } = new URL(c.req.url)

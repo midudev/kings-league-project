@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-		"doc:api": "apidoc -c apidoc.json -i api/ -o api/docs",
+    "doc:api": "apidoc -c apidoc.json -i api/ -o api/docs",
     "astro": "astro",
     "build": "astro build",
     "dev:api": "wrangler dev api/index.js",
