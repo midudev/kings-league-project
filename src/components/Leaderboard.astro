@@ -10,16 +10,16 @@ const isSmall = format === 'small'
 	<table class='w-full text-xs text-left text-black'>
 		<thead class='font-black text-white uppercase bg-black'>
 			<tr>
-				<th scope='col' class='px-6 py-3 text-center'>Pos.</th>
+				<th scope='col' class='w-5 px-6 py-3 text-center'>Pos.</th>
 				<th scope='col' class='px-6 py-3'>Equipo</th>
-				<th title='Victorias' scope='col' class='px-6 py-3'>V</th>
-				<th title='Derrotas' scope='col' class='px-6 py-3'>D</th>
+				<th title='Victorias' scope='col' class='px-4 py-3'>V</th>
+				<th title='Derrotas' scope='col' class='px-4 py-3'>D</th>
 				{
 					!isSmall && (
-						<th title='Goles a favor' scope='col' class='px-6 py-3 text-center'>GF</th>
-						<th title='Goles en contra' scope='col' class='px-6 py-3 text-center'>GC</th>
-						<th title='Tarjetas Amarillas' scope='col' class='px-6 py-3 text-center'>TA</th>
-						<th title='Tarjetas Rojas' scope='col' class='px-6 py-3 text-center'>TR</th>
+						<th title='Goles a favor' scope='col' class='px-4 py-3 text-center'>GF</th>
+						<th title='Goles en contra' scope='col' class='px-4 py-3 text-center'>GC</th>
+						<th title='Tarjetas Amarillas' scope='col' class='px-4 py-3 text-center'>TA</th>
+						<th title='Tarjetas Rojas' scope='col' class='px-4 py-3 text-center'>TR</th>
 					)
 				}
 			</tr>
@@ -44,16 +44,14 @@ const isSmall = format === 'small'
 								{name}
 							</a>
 						</td>
-						<td class='px-6 py-4'>{wins}</td>
-						<td class='px-6 py-4'>{losses}</td>
+						<td class='px-4 py-4'>{wins}</td>
+						<td class='px-4 py-4'>{losses}</td>
 						{
 							!isSmall && (
-								<>
-									<td class='px-6 py-4 text-center'>{scoredGoals}</td>
-									<td class='px-6 py-4 text-center'>{concededGoals}</td>
-									<td class='px-6 py-4 text-center'>{yellowCards}</td>
-									<td class='px-6 py-4 text-center'>{redCards}</td>
-								</>
+									<td class='px-4 py-4 text-center'>{scoredGoals}</td>
+									<td class='px-4 py-4 text-center'>{concededGoals}</td>
+									<td class='px-4 py-4 text-center'>{yellowCards}</td>
+									<td class='px-4 py-4 text-center'>{redCards}</td>
 							)
 						}
 					</tr>

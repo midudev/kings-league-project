@@ -5,6 +5,7 @@ import Container from '@components/Container.astro'
 import Sponsors from '@components/Sponsors.astro'
 import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
 import UneteButton from '@components/Unete.astro'
+import PlayerPrizeCard from '@components/PlayerPrizeCard.astro'
 ---
 
 <Layout title='Kings League Infojobs'>
@@ -17,22 +18,16 @@ import UneteButton from '@components/Unete.astro'
 					</div>
 					<div class='col-span-12 lg:col-span-4 xl:col-span-5'>
 						<div class='grid grid-cols-6 gap-y-10 gap-x-5 w-full'>
-							<!-- MVP -->
-
-							<div class='col-span-6 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
+							<div class='col-span-6'>
+								<PlayerPrizeCard teamId='ultimate-mostoles' title='MVP' subtitle='Jornada 1' />
 							</div>
 
-							<!-- Goal Scorer -->
-
-							<div class='col-span-3 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
+							<div class='col-span-3'>
+								<PlayerPrizeCard teamId='saiyans-fc' title='2' subtitle='Goles' />
 							</div>
 
-							<!-- Assistant -->
-
-							<div class='col-span-3 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
+							<div class='col-span-3'>
+								<PlayerPrizeCard teamId='los-troncos-fc' title='2' subtitle='Asistencias' />
 							</div>
 						</div>
 						<div class='my-5'>

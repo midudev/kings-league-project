@@ -1,0 +1,27 @@
+---
+	const { playerName, playerImage, teamId, teamImage, teamName, title, subtitle } = Astro.props
+	const gradient = `bg-${teamId}`
+---
+
+<article class={`relative ${gradient} rounded p-5`}>
+	<div class="flex flex-col justify-between gap-y-10">
+		<header>
+			<h4 class="text-white font-title font-black text-[80px] leading-none">{title}</h4>
+			<h5 class="uppercase text-orange-500 font-black font-title text-3xl">{subtitle}</h5>
+		</header>
+
+		<footer>
+			<strong class="text-white font-bold text-xl">{playerName}</strong>
+			<p class="text-white opacity-80">{teamName}</p>
+		</footer>
+	</div>
+	<img
+		alt={`Logo del equipo ${teamName}`}
+		class='w-28 h-28 object-contain transition-all group-hover:scale-110 group-hover:brightness-200 z-10'
+		src={teamImage}
+		loading="lazy"
+		decoding="async"
+		fetchpriority="low"
+	/>
+	<img class="absolute right-0 w-36" src={playerImage} />
+</article>
