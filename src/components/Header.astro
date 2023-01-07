@@ -43,7 +43,6 @@ const teams = await response.json()
 						<>
 							{index === 6 ? <Logo /> : ''}
 							<li>
-								<a class='group transition hidden md:block' href={`/team/${id}`} title={name}>
 								<a class='group transition hidden md:block' href={`/team/${id}`} title={name} rel={Astro.url.pathname !== `/team/${id}` && 'preload'}>
 									<img
 										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
