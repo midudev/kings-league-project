@@ -42,7 +42,7 @@ const teams = await response.json()
 						<>
 							{index === 6 ? <Logo /> : ''}
 							<li>
-								<a class='group transition block' href={`/team/${id}`} title={name}>
+								<a class='group transition block' href={`/team/${id}`} title={name} rel={Astro.url.pathname !== `/team/${id}` && 'preload'}>
 									<img
 										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-12 w-12 aspect-square'
 										src={image}
@@ -72,6 +72,7 @@ const teams = await response.json()
 									Astro.url.pathname === href ? 'opacity-100 underline pointer-events-none' : ''
 								}`}
 								href={href}
+								rel={Astro.url.pathname !== href && 'preload'}
 							>
 								{name}
 							</a>

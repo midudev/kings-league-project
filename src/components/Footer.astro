@@ -39,11 +39,11 @@ const SOCIAL_NETWORKS = [
 <footer class='text-white w-full p-8 bg-black'>
 	<Container>
 		<section
-			class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'
+			class='flex flex-wrap justify-center text-center md:text-left lg:flex-row md:justify-between gap-14 lg:gap-4 text-sm text-lig my-10'
 		>
 			<img class='block w-52' src={kingsLeagueInfojobs} alt='logo de Kings League y Infojobs' loading="lazy" decoding="async" fetchpriority="low" />
 
-			<nav class='flex gap-24'>
+			<nav class='flex gap-12 md:gap-24'>
 				<div class='flex flex-col gap-3'>
 					<span>Equipos</span>
 					<span>Jugador 12</span>
@@ -62,28 +62,33 @@ const SOCIAL_NETWORKS = [
 		</section>
 
 		<section
-			class='flex flex-col lg:flex-row justify-between gap-14 lg:gap-4 text-sm text-lig my-10'
+			class='flex flex-col lg:flex-row text-center lg:text-left gap-14 lg:gap-4 text-sm text-lig my-10'
 		>
-			<nav class='flex gap-4 align-middle items-center'>
-				{
-					SOCIAL_NETWORKS.map((network) => (
-						<a
-							href={network.href}
-							target='_blank'
-							rel='noopener norefferer'
-							class='w-10 h-10 flex items-center rounded-full p-2 bg-white group'
-						>
-							<img
-								class='w-6 transition-brightness duration-300 brightness-0 group-hover:brightness-100'
-								src={network.icon}
-								alt={`${network.name} Logo`}
-								loading="lazy"
-								decoding="async"
-								fetchpriority="low"
-							/>
-						</a>
-					))
-				}
+
+			<nav
+				class='flex flex-col lg:flex-row gap-12 md:gap-4 justify-between w-full align-middle items-center'
+			>
+				<div class='flex gap-4'>
+					{
+						SOCIAL_NETWORKS.map((network) => (
+							<a
+								href={network.href}
+								target='_blank'
+								rel='noopener norefferer'
+								class='w-10 h-10 flex items-center rounded-full p-2 bg-white group'
+							>
+								<img
+									class='w-6 transition-brightness duration-300 brightness-0 group-hover:brightness-100'
+									src={network.icon}
+									alt={`${network.name} Logo`}
+             			loading="lazy"
+								  decoding="async"
+								  fetchpriority="low"
+								/>
+							</a>
+						))
+					}
+				</div>
 
 				<nav class='flex gap-5 justify-center lg:justify-around'>
 					<span>Contacto</span>

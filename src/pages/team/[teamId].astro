@@ -36,8 +36,14 @@ const president = await findPresidentBy({ id: presidentId })
 			>
 				<section class='flex items-center justify-between pb-60'>
 					<div class='flex flex-col items-center'>
-						<div class="flex items-center gap-x-6">
-							<img class='w-48 h-48' src={imageWhite} alt={`Escudo del equipo ${name}`} decoding="async" fetchpriority="high" />
+						<div class='flex items-center gap-x-6'>
+							<img
+								class='w-48 h-48 object-contain'
+								src={imageWhite}
+								alt={`Escudo del equipo ${name}`}
+                decoding="async"
+                fetchpriority="high"
+							/>
 							<div class='flex flex-col gap-y-4'>
 								<h1 class='font-title font-bold text-6xl text-white'>{name}</h1>
 								<ul class='flex flex-row gap-x-4'>
