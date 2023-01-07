@@ -7,15 +7,19 @@
 </h1>
 </div>
 
-## Descripcion 
+## Descripcion del proyecto
 
-Este proyecto tiene como objetivo crear una API y página web de la [Kings League](https://kingsleague.pro/git) con fines educativos.
+Este proyecto tiene como objetivo crear una API y página web de la [Kings League Infojobs](https://kingsleague.pro) con fines educativos.
 
 La API proporciona acceso a datos de equipos, presidentes, entrenadores, goleadores y asistentes de la Kings League, y la página web ofrece información sobre los equipos, resultados y clasificaciones de la liga.
 
-La API esta construida utilizando "Web scraping" raspado web, hemos utilizado Node.js, [Hono](https://honojs.dev/) y el servicio de hosting de APIs Cloudflare Workers para construir la API. La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cherrio](https://github.com/cheeriojs/cheerio) para realizar web scraping y obtener datos de la Kings League.
+### Tecnologías usadas
 
-Para probar y validar el funcionamiento de la aplicación, hemos utilizado la librería de pruebas [ViteTest](https://vitest.dev/).
+Para recuperar los datos de la API, usamos *Web Scraping*, Node.js, [Hono](https://honojs.dev/) y el servicio de hosting de APIs Cloudflare Workers para la construcción y el despliegue.
+
+La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cherrio](https://github.com/cheeriojs/cheerio) para realizar *Web Scraping* y obtener datos de la **Kings League Infojobs**.
+
+Para probar y validar el funcionamiento de la aplicación, hemos utilizado la librería de pruebas [Vitest](https://vitest.dev/).
 
 Si quieres ayudarnos, por favor toma un momento para leer el archivo [CONTRIBUTING.md](https://github.com/midudev/kings-league-project/blob/main/CONTRIBUTING.md) Allí encontrarás información útil sobre cómo contribuír de manera efectiva y cómo seguir nuestras guías de estilo. ¡Esperamos que disfrutes colaborando con nosotros!
 
@@ -38,7 +42,7 @@ Los endpoints disponibles son:
 - GET `/top-assists/:rank`: Devuelve el asistente más destacado de acuerdo a su posicion en la lista de la Kings League.
 - GET `/mvp`: Devuelve los MVPs de la Kings League.
 
-## REDES SOCIALES
+## Redes Sociales
 
 ¡Síguenos en nuestro canal de Twitch para ver cómo avanzamos en el desarrollo del proyecto o síguenos en Youtube para más contenido acerca de desarrollo fullstack!
 
