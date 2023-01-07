@@ -175,7 +175,7 @@ describe('Test /schedule route', () => {
 		await teardown(worker)
 	})
 
-	it("All day should have it's date and matches", async () => {
+	it('Days should have their date and matches', async () => {
 		const resp = await worker.fetch('/schedule')
 		expect(resp).toBeDefined()
 
@@ -189,7 +189,7 @@ describe('Test /schedule route', () => {
 		})
 	})
 
-	it("Matches should have all it's properties", async () => {
+	it('Matches should have all their properties', async () => {
 		const resp = await worker.fetch('/schedule')
 		expect(resp).toBeDefined()
 
@@ -200,6 +200,27 @@ describe('Test /schedule route', () => {
 		matches.forEach((match) => {
 			properties.forEach((property) => {
 				expect(match).toHaveProperty(property)
+			})
+		})
+	})
+
+	it('Teams should have all their properties', async () => {
+		const resp = await worker.fetch('/schedule')
+		expect(resp).toBeDefined()
+
+		const days = await resp.json()
+
+		const teams = days
+			.map((day) => day.matches)
+			.flat()
+			.map((match) => match.teams)
+			.flat()
+
+		const properties = ['id', 'name', 'shortName']
+
+		teams.forEach((team) => {
+			properties.forEach((property) => {
+				expect(team).toHaveProperty(property)
 			})
 		})
 	})
