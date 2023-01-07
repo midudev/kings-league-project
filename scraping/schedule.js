@@ -18,7 +18,7 @@ const MAPS = {
 
 export async function getSchedule($) {
 	const schedule = []
-	const $days = $(SELECTORS['match'])
+	const $days = $(SELECTORS.match)
 
 	const getTeamIdFromImageUrl = (url) => {
 		return url.slice(url.lastIndexOf('/') + 1).replace(/.(png|svg)/, '')
@@ -28,14 +28,14 @@ export async function getSchedule($) {
 		const matches = []
 		const $day = $(day)
 
-		const dateRaw = $day.find(SELECTORS['date']).text()
+		const dateRaw = $day.find(SELECTORS.date).text()
 		const date = cleanText(dateRaw)
 
-		const $locals = $day.find(SELECTORS['locals'])
-		const $localsImages = $day.find(SELECTORS['localsImages'])
-		const $visitants = $day.find(SELECTORS['visitants'])
-		const $visitantsImages = $day.find(SELECTORS['visitantsImages'])
-		const $results = $day.find(SELECTORS['scores'])
+		const $locals = $day.find(SELECTORS.locals)
+		const $localsImages = $day.find(SELECTORS.localsImages)
+		const $visitants = $day.find(SELECTORS.visitants)
+		const $visitantsImages = $day.find(SELECTORS.visitantsImages)
+		const $results = $day.find(SELECTORS.scores)
 
 		$results.each((index, result) => {
 			const scoreRaw = $(result).text()
