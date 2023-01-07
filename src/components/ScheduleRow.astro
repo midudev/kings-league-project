@@ -1,0 +1,27 @@
+---
+const { local, score, visitant } = Astro.props
+---
+
+<tr class='border-y [&>td]:py-2'>
+	<td class='text-right'>{local.name}</td>
+	<td>
+		<img
+			class='h-8 object-contain mx-auto'
+			src={`https://api.kingsleague.dev/static/logos/${local.id}.svg`}
+			alt={`Escudo del equipo ${local.name}`}
+		/>
+	</td>
+	<td class='w-32'>
+		<p class='text-center text-xs bg-gray-200 rounded-sm p-2'>
+			{score !== '0 – 0' ? score : 'vs'}
+		</p>
+	</td>
+	<td>
+		<img
+			class='h-8 object-contain mx-auto'
+			src={`https://api.kingsleague.dev/static/logos/${visitant.id}.svg`}
+			alt={`Escudo del equipo ${visitant.name}`}
+		/>
+	</td>
+	<td class='text-left'>{visitant.name}</td>
+</tr>

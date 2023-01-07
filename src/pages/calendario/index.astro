@@ -2,14 +2,37 @@
 import Layout from '@layouts/Layout.astro'
 import SectionTitle from '@components/SectionTitle.astro'
 import Container from '@components/Container.astro'
+import { getSchedule } from '@services/schedule'
+import ScheduleRow from '@components/ScheduleRow.astro'
+
+const schedule = await getSchedule()
 ---
 
 <!-- Página del calendario -->
 <Layout title='Calendario'>
 	<SectionTitle title='Calendario' />
 	<Container>
-		<div class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40'>
-			<a href='/'>Inicio</a>
-		</div>
+		<main class='max-w-4xl mx-auto my-4'>
+			{
+				schedule.map((day) => {
+					return (
+						<section>
+							<h2 class='font-bold text-xl my-8'>{day.date}</h2>
+							<table class='w-full'>
+								<tbody>
+									{day.matches.map((match) => (
+										<ScheduleRow
+											local={match.teams[0]}
+											visitant={match.teams[1]}
+											score={match.score}
+										/>
+									))}
+								</tbody>
+							</table>
+						</section>
+					)
+				})
+			}
+		</main>
 	</Container>
 </Layout>

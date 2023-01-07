@@ -7,7 +7,7 @@ import { scrapeAndSave, SCRAPINGS } from './utils.js'
 // get first parameter from command line
 const scrapeParameter = process.argv.at(-1)
 
-if (scrapeParameter) {
+if (SCRAPINGS[scrapeParameter]) {
 	await scrapeAndSave(scrapeParameter)
 } else {
 	logInfo('Scraping all data...')
