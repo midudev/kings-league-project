@@ -162,6 +162,20 @@ describe('Testing /presidents route', () => {
 			message: 'President not found'
 		})
 	})
+
+	it('should filter presidents by team using the "team" parameter', async () => {
+		const resp = await worker.fetch('/presidents?team=1k')
+		expect(resp).toBeDefined()
+
+		const presidents = await resp.json()
+		expect(presidents).toEqual(
+			expect.arrayContaining([
+				expect.objectContaining({
+					teamId: '1k'
+				})
+			])
+		)
+	})
 })
 
 describe('Test /schedule route', () => {
