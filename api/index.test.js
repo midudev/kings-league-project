@@ -166,11 +166,9 @@ describe('Testing /presidents route', () => {
 
 describe('Test /schedule route', () => {
 	let worker
-
 	beforeAll(async () => {
 		worker = await setup()
 	})
-
 	afterAll(async () => {
 		await teardown(worker)
 	})
@@ -178,19 +176,17 @@ describe('Test /schedule route', () => {
 	it('Should return 11 days', async () => {
 		const resp = await worker.fetch('/schedule')
 		expect(resp).toBeDefined()
-
 		const days = await resp.json()
-		expect(days).toHaveLength(11)
+		expect(days).toBe(11)
 	})
 
 	it('Days should have their date and matches', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
-		const properties = ['date', 'matches']
-
 		days.forEach((day) => {
-			properties.forEach((property) => {
-				expect(day).toHaveProperty(property)
+			expect(day).toMatchObject({
+				date: expect.any(String),
+				matches: expect.any(Array)
 			})
 		})
 	})
@@ -199,11 +195,12 @@ describe('Test /schedule route', () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
 		const matches = days.map((day) => day.matches).flat()
-		const properties = ['timestamp', 'hour', 'teams', 'score']
-
 		matches.forEach((match) => {
-			properties.forEach((property) => {
-				expect(match).toHaveProperty(property)
+			expect(match).toMatchObject({
+				timestamp: expect.any(Number),
+				hour: expect.any(String),
+				teams: expect.any(Array),
+				score: expect.any(String)
 			})
 		})
 	})
@@ -211,18 +208,51 @@ describe('Test /schedule route', () => {
 	it('Teams should have all their properties', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
-
 		const teams = days
 			.map((day) => day.matches)
 			.flat()
 			.map((match) => match.teams)
 			.flat()
-
-		const properties = ['id', 'name', 'shortName']
-
 		teams.forEach((team) => {
-			properties.forEach((property) => {
-				expect(team).toHaveProperty(property)
+			expect(team).toMatchObject({
+				id: expect.any(String),
+				name: expect.any(String),
+				shortName: expect.any(String)
+			})
+		})
+	})
+
+	it('should return the correct schedule', async () => {
+		const resp = await worker.fetch('/schedule')
+		const days = await resp.json()
+		// Validar que cada día del horario tenga las propiedades esperadas
+		days.forEach((day) => {
+			expect(day).toMatchObject({
+				date: expect.any(String),
+				matches: expect.any(Array)
+			})
+		})
+		// Validar que cada partido del horario tenga las propiedades esperadas
+		const matches = days.map((day) => day.matches).flat()
+		matches.forEach((match) => {
+			expect(match).toMatchObject({
+				timestamp: expect.any(Number),
+				hour: expect.any(String),
+				teams: expect.any(Array),
+				score: expect.any(String)
+			})
+		})
+		// Validar que cada equipo del horario tenga las propiedades esperadas
+		const teams = days
+			.map((day) => day.matches)
+			.flat()
+			.map((match) => match.teams)
+			.flat()
+		teams.forEach((team) => {
+			expect(team).toMatchObject({
+				id: expect.any(String),
+				name: expect.any(String),
+				shortName: expect.any(String)
 			})
 		})
 	})
