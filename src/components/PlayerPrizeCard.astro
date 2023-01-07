@@ -1,7 +1,7 @@
 ---
 import CardBackgroundTeam from './CardBackgroundTeam.astro'
 
-	const { playerName, playerImage, teamId, teamImage, teamName, title, subtitle } = Astro.props
+	const { playerName, smallerBox, playerImage, teamId, teamImage, teamName, title, subtitle } = Astro.props
 	const gradient = `bg-${teamId}`
 
 	const whiteImage = teamImage?.replace('.svg', '-inverse.svg')
@@ -21,5 +21,5 @@ import CardBackgroundTeam from './CardBackgroundTeam.astro'
 	</div>
 	<CardBackgroundTeam image={whiteImage} />
 
-	<img class="absolute -right-2 bottom-0 w-60" src={`https://api.kingsleague.dev/static/players/${playerImage}`} />
+	<img class={`absolute -right-2 bottom-0 ${smallerBox ? 'w-52' : 'w-60'}`} src={`https://api.kingsleague.dev/static/players/${playerImage}`} />
 </article>
