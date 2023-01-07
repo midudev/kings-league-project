@@ -38,12 +38,14 @@ const stats = [
 ]
 ---
 
-<section class='bg-black p-4 rounded-lg'>
+<section
+	class='p-4 rounded-lg mt-5 grid grid-cols-3 gap-2 bg-gradient-to-tr from-[#202020c9] via-[#36363685] to-[#cd55002a] shadow-xl'
+>
 	{
 		stats.map((stat) => (
-			<div class='flex justify-between items-center mb-2'>
+			<div class='flex items-center mb-2 p-2 rounded-lg'>
+				<strong class='text-4xl font-title text-white font-bold mr-2'>{stat.value}</strong>
 				<h4 class='text-yellow-400 uppercase font-bold font-title'>{stat.title}</h4>
-				<strong class='text-4xl font-title text-white font-bold'>{stat.value}</strong>
 			</div>
 		))
 	}
