@@ -82,6 +82,10 @@ app.get('/', (ctx) =>
 		{
 			endpoint: '/mvp',
 			description: 'Returns Kings League Most Valuable Players'
+		},
+		{
+			endpoint: '/schedule',
+			description: 'Returns Kings League match schedule and the final score of played games.'
 		}
 	])
 )
