@@ -8,15 +8,15 @@ const SCORES_SELECTORS = {
 	goals: { selector: '.fs-table-text_6', typeOf: 'number' }
 }
 
-export async function getTopScoresList($) {
+export async function getTopScorersList($) {
 	const $rows = $('table tbody tr')
 
 	const scoresSelectorEntries = Object.entries(SCORES_SELECTORS)
-	const topScorerList = []
+	const topScorersList = []
 
 	$rows.each((index, el) => {
 		const $el = $(el)
-		const topScorerEntries = scoresSelectorEntries.map(([key, { selector, typeOf }]) => {
+		const topScorersEntries = scoresSelectorEntries.map(([key, { selector, typeOf }]) => {
 			const rawValue = $el.find(selector).text()
 			const cleanedValue = cleanText(rawValue)
 
@@ -25,10 +25,10 @@ export async function getTopScoresList($) {
 			return [key, value]
 		})
 
-		const { team: teamName, ...scorerData } = Object.fromEntries(topScorerEntries)
+		const { team: teamName, ...scorerData } = Object.fromEntries(topScorersEntries)
 		const image = getImageFromTeam({ name: teamName })
 
-		topScorerList.push({
+		topScorersList.push({
 			rank: index + 1,
 			...scorerData,
 			team: teamName,
@@ -36,5 +36,5 @@ export async function getTopScoresList($) {
 		})
 	})
 
-	return topScorerList
+	return topScorersList
 }
