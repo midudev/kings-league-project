@@ -39,7 +39,7 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 								)
 							}
 
-							<div class='col-span-3'>
+							<div class='col-span-6 xl:col-span-3'>
 								<PlayerPrizeCard
 									teamName={topScorer.team}
 									teamId={topScorer.teamId}
@@ -51,7 +51,7 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 								/>
 							</div>
 
-							<div class='col-span-3'>
+							<div class='col-span-6 xl:col-span-3'>
 								<PlayerPrizeCard
 									teamName={topAssister.team}
 									teamImage={topAssister.image}
