@@ -28,6 +28,7 @@ if (timestamp && timestamp <= Date.now()) {
 			src={`https://api.kingsleague.dev/static/logos/${local.id}.svg`}
 			alt={`Escudo del equipo ${local.name}`}
 		/>
+		<a title={local.name} href={`/team/${local.id}`}>
 		{
 			useSmallNames
 ? (
@@ -40,6 +41,7 @@ if (timestamp && timestamp <= Date.now()) {
 				</>
 			)
 		}
+		</a>
 	</td>
 
 	<td class='px-6 py-4 border-b-1 text-center flex justify-center w-full items-center'>
@@ -47,6 +49,7 @@ if (timestamp && timestamp <= Date.now()) {
 	</td>
 
 	<td class='px-2 py-4 border-b-1 flex justify-end items-center w-full'>
+		<a title={visitant.name} href={`/team/${visitant.id}`}>
 		{
 			useSmallNames
 ? (
@@ -59,6 +62,7 @@ if (timestamp && timestamp <= Date.now()) {
 				</>
 			)
 		}
+		</a>
 
 		<img
 			class='w-12 h-12 mx-2'
