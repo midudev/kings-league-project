@@ -89,7 +89,7 @@ const teams = await response.json()
 			</ul>
 		</nav>
 
-		<nav class='flex self-center'>
+		<nav class='flex self-center items-center md:justify-between md:w-full max-w-3xl'>
 			<input type='checkbox' id='menu' hidden class='peer' />
 			<label
 				for='menu'
@@ -120,16 +120,7 @@ const teams = await response.json()
 				}
 			</ul>
 
-			<!-- <div class="flex justify-center mt-5">
-				<a class="flex justify-center items-center gap-x-2 py-1 px-4 font-bold bg-purple-600 hover:bg-purple-500 transition-all duration-300 hover:scale-110 rounded-lg text-white" href='https://www.twitch.tv/kingsleague' target="_blank" rel="noopener norefferer">
-					<img class='w-6 brightness-[200]' src={twitch} alt='Twitch Logo' />
-					KINGSLEAGUE
-					<span class="font-bold text-xl text-title text-principal-dark rounded-xl">TV</span>
-				</a>
-			</div> -->
-		</nav>
-		<div>
-			<div class='flex gap-4 justify-center'>
+			<div class='gap-4 justify-center hidden md:flex'>
 				{
 					SOCIAL_NETWORKS.map((network) => (
 						<a
@@ -139,7 +130,7 @@ const teams = await response.json()
 							class='w-10 h-10 flex items-center '
 						>
 							<img
-								class='w-6  transition-all duration-300 transform hover:scale-110 brightness-[0] invert-[100]'
+								class='w-6 transition-all transform hover:scale-125 brightness-[0] invert-[100]'
 								src={network.icon}
 								alt={`${network.name} Logo`}
 								loading="lazy"
@@ -150,7 +141,7 @@ const teams = await response.json()
 					))
 				}
 			</div>
-		</div>
+	</nav>
 	</div>
 </header>
 <script type='module'>
