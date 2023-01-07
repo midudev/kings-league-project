@@ -1,6 +1,7 @@
 ---
-const response = await fetch('https://api.kingsleague.dev/leaderboard')
-const leaderboard = await response.json()
+import { getLeaderboard } from '@services/leaderboard.js'
+
+const leaderboard = await getLeaderboard()
 
 const { format } = Astro.props
 const isSmall = format === 'small'
@@ -27,7 +28,7 @@ const isSmall = format === 'small'
 		</thead>
 		<tbody>
 			{
-				leaderboard.map((info, index) => {
+				leaderboard.map((info) => {
 					const { wins, losses, team, rank, scoredGoals, concededGoals, diferenceGoals = scoredGoals - concededGoals, yellowCards, redCards } = info
 					const { image, name, id } = team
 
