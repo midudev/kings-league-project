@@ -31,7 +31,7 @@ if (timestamp && timestamp <= Date.now()) {
 		{
 			useSmallNames
 ? (
-				<span class='font-bold font-title'>{local.shortName}</span>
+				<span class='font-bold font-title' title={local.name}>{local.shortName}</span>
 			)
 : (
 				<>
@@ -48,7 +48,7 @@ if (timestamp && timestamp <= Date.now()) {
 		{
 			useSmallNames
 ? (
-				<span class='font-bold font-title'>{visitant.shortName}</span>
+				<span class='font-bold font-title' title={visitant.name}>{visitant.shortName}</span>
 			)
 : (
 				<>
