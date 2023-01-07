@@ -2,16 +2,16 @@
 import Layout from '@layouts/Layout.astro'
 import SectionTitle from '@components/SectionTitle.astro'
 import Container from '@components/Container.astro'
-import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
+import Leaderboard from '@components/Leaderboard.astro'
 import FloatingBoxContainer from '@components/FloatingBoxContainer.astro';
 ---
 
-<!-- Página de equipos -->
-<Layout title='Equipos'>
-	<SectionTitle title='Equipos' />
+<!-- Página del Estadisticas -->
+<Layout title='Clasificación'>
+	<SectionTitle title='Clasificación' />
 	<Container>
 		<FloatingBoxContainer>
-			<TeamsSelectorCards />
+			<Leaderboard />
 		</FloatingBoxContainer>
 	</Container>
 </Layout>

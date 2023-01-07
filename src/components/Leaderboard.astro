@@ -1,0 +1,65 @@
+---
+const response = await fetch('https://api.kingsleague.dev/leaderboard')
+const leaderboard = await response.json()
+
+const { format } = Astro.props
+const isSmall = format === 'small'
+---
+
+<div class='relative overflow-x-auto shadow-md sm:rounded-lg'>
+	<table class='w-full text-xs text-left text-black'>
+		<thead class='font-black text-white uppercase bg-black'>
+			<tr>
+				<th scope='col' class='px-6 py-3 text-center'>Pos.</th>
+				<th scope='col' class='px-6 py-3'>Equipo</th>
+				<th title='Victorias' scope='col' class='px-6 py-3'>V</th>
+				<th title='Derrotas' scope='col' class='px-6 py-3'>D</th>
+				{
+					!isSmall && (
+						<th title='Goles a favor' scope='col' class='px-6 py-3 text-center'>GF</th>
+						<th title='Goles en contra' scope='col' class='px-6 py-3 text-center'>GC</th>
+						<th title='Tarjetas Amarillas' scope='col' class='px-6 py-3 text-center'>TA</th>
+						<th title='Tarjetas Rojas' scope='col' class='px-6 py-3 text-center'>TR</th>
+					)
+				}
+			</tr>
+		</thead>
+		<tbody>
+			{
+				leaderboard.map((info, index) => {
+					const { wins, losses, team, rank, scoredGoals, concededGoals, yellowCards, redCards } = info
+					const { image, name, id } = team
+
+					return (
+						<tr class={'even:bg-white odd:bg-slate-100 border-b text-base hover:bg-slate-100'}>
+							<th
+							scope='row'
+							class='text-center px-6 py-4 font-black text-black whitespace-nowrap'
+						>
+							{rank}
+						</th>
+						<td class='px-6 py-4 font-black'>
+							<a class="flex items-center gap-x-4 transition hover:opacity-75" href={`/team/${id}`} rel='preload'>
+								<img src={image} alt={'Logo de ' + name} class='w-6 h-6' decoding="async" fetchpriority="high" />
+								{name}
+							</a>
+						</td>
+						<td class='px-6 py-4'>{wins}</td>
+						<td class='px-6 py-4'>{losses}</td>
+						{
+							!isSmall && (
+								<>
+									<td class='px-6 py-4 text-center'>{scoredGoals}</td>
+									<td class='px-6 py-4 text-center'>{concededGoals}</td>
+									<td class='px-6 py-4 text-center'>{yellowCards}</td>
+									<td class='px-6 py-4 text-center'>{redCards}</td>
+								</>
+							)
+						}
+					</tr>
+					)
+				})
+			}
+		</tbody>
+	</table>
+</div>
