@@ -21,7 +21,7 @@ La  Api esta construida utilizando "Web scraping" raspado web, hemos utilizado N
 
 Para probar y validar el funcionamiento de la aplicación, hemos utilizado la librería de pruebas [ViteTest](https://vitest.dev/).
 
-Si quieres ayudarnos, por favor toma un momento para leer el archivo [CONTRIBUTING.md](https://github.com/midudev/kings-league-project/blob/main/CONTRIBUTING.md) Allí encontrarás información útil sobre cómo contribuir de manera efectiva y cómo seguir nuestras guías de estilo. ¡Esperamos que disfrutes colaborando con nosotros!
+Si quieres ayudarnos, por favor toma un momento para leer el archivo [CONTRIBUTING.md](https://github.com/midudev/kings-league-project/blob/main/CONTRIBUTING.md) Allí encontrarás información útil sobre cómo contribuír de manera efectiva y cómo seguir nuestras guías de estilo. ¡Esperamos que disfrutes colaborando con nosotros!
 
 ## API
 
