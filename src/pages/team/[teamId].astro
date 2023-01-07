@@ -18,6 +18,7 @@ export async function getStaticPaths() {
 }
 
 const { id, name, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
+const gradient = `bg-${id}`
 
 const socialNetworksWithIcon = socialNetworks.map((href) => ({
 	href,
@@ -30,10 +31,7 @@ const president = await findPresidentBy({ id: presidentId })
 <Layout title={name}>
 	<section class='bg-[#cd5500] py-20'>
 		<Container>
-			<div
-				class='relative bg-gradient-to-tr from-gray-600 to-gray-900 p-20 shadow-xl rounded -mt-10 z-10 mb-40'
-				style={`--tw-gradient-from: ${color}`}
-			>
+			<div class={`relative p-20 shadow-xl rounded -mt-10 z-10 mb-40 ${gradient}`}>
 				<section class='flex items-center justify-between pb-60'>
 					<div class='flex flex-col items-center'>
 						<div class='flex items-center gap-x-6'>
