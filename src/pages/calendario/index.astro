@@ -21,7 +21,7 @@ console.log(schedule)
 							<table class='w-full'>
 								<tbody>
 									{day.matches.map((match) => (
-										<tr class='border-y'>
+										<tr class='border-y [&>td]:py-2'>
 											<td class='text-right'>{match.teams[0].name}</td>
 											<td>
 												<img
@@ -30,7 +30,11 @@ console.log(schedule)
 													alt={`Escudo del equipo ${match.teams[0].name}`}
 												/>
 											</td>
-											<td class='text-center'>{match.score !== '0 – 0' ? match.score : 'vs'}</td>
+											<td class='w-32'>
+												<p class='text-center text-xs bg-gray-200 rounded-sm p-2'>
+													{match.score !== '0 – 0' ? match.score : 'vs'}
+												</p>
+											</td>
 											<td>
 												<img
 													class='h-8 object-contain mx-auto'
