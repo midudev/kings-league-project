@@ -2,4 +2,5 @@ node_modules
 pnpm-lock.yaml
 package-lock.json
 /coverage
-dist
+# Ignore build folder of Astro
+/dist
