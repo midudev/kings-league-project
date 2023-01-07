@@ -11,35 +11,28 @@ import UneteButton from '@components/Unete.astro'
 	<main>
 		<section class='bg-[#cd5500] py-20'>
 			<Container>
-				<div class='grid grid-cols-3 gap-10 w-full px-10'>
-					<div>
+				<div class='grid grid-cols-12 gap-x-5 gap-y-8 md:gap-x-10 w-full px-5'>
+					<div class='col-span-12 sm:col-span-6 lg:col-span-5'>
 						<Table />
 					</div>
-					<div class='col-span-2'>
-						<div class='grid grid-cols-6 gap-y-10 gap-x-5 w-full'>
+					<div class='col-span-12 sm:col-span-6 lg:col-span-7 h-100'>
+						<div class='grid grid-cols-2 gap-8 w-full'>
 							<!-- MVP -->
-
-							<div class='col-span-6 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
-							</div>
+							<div class='col-span-2 bg-white 500 h-80 rounded-'></div>
 
 							<!-- Goal Scorer -->
-
-							<div class='col-span-3 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
-							</div>
+							<div class='col-span-2 lg:col-span-1 bg-white 500 h-80 rounded-'></div>
 
 							<!-- Assistant -->
-
-							<div class='col-span-3 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
-							</div>
-
+							<div class='col-span-2 lg:col-span-1 bg-white 500 h-80 rounded-'></div>
 						</div>
-						<div class="my-5">
+						<div class='my-8 hidden lg:block'>
 							<TeamsSelectorCards />
 						</div>
 					</div>
+				</div>
+				<div class='my-8 block px-5 lg:hidden'>
+					<TeamsSelectorCards />
 				</div>
 			</Container>
 			<UneteButton />
