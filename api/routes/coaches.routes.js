@@ -18,6 +18,15 @@ coachesApi.get('/', (ctx) => {
   return ctx.json(coaches)
 })
 
+/**
+	@api {GET} /coaches/:teamId Get all coaches
+	@apiName GetCoachByTeamId
+	@APIGroup Coaches
+	@apiSuccess {String} coaches.name Name of coach.
+	@apiSuccess {String} coaches.teamName Name of team belongs to coach.
+	@apiSuccess {String} coaches.image Image o the coach.
+	@apiError (404) {Object} NotFoundError President not found.
+*/
 coachesApi.get('/:teamId', (ctx) => {
 	const teamId = ctx.req.param('teamId')
 	const teamName = teams.find((team) => team.id === teamId)

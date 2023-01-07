@@ -5,38 +5,37 @@ import leaderboard from '../../db/leaderboard.json'
 const leaderboardApi = new Hono()
 
 /**
-	@api {GET} /teams Get all teams
-	@apiName GetTeams
-	@APIGroup Teams
-	@apiSuccess {Object[]} team list.
-	@apiSuccess {Number} teams.id Team ID.
-	@apiSuccess {String} teams.name Team name.
-	@apiSuccess {String} teams.image Team image.
-	@apiSuccess {String} teams.url Team URL.
-	@apiSuccess {Number} presindent.id ID of President belongs to team.
-	@apiSuccess {String} teams.channel URL of channel of the team.
-	@apiSuccess {Array} teams.socialNetwork List of networks of the team.
-	@apiSuccess {Array} teams.players List of players belongs to team.
-	@apiSuccess {String} teams.coach Name of the coach.
+	@api {GET} /leaderboard Get all teams
+	@apiName GetLeaderboard
+	@APIGroup Leaderboard
+	@apiSuccess {Object[]} leaderboard list.
+	@apiSuccess {Number} leaderboard.wins Team wins.
+	@apiSuccess {Number} leaderboard.loses Team loses.
+	@apiSuccess {Number} leaderboard.scoredGoals Scored goals of team.
+	@apiSuccess {Number} leaderboard.concededGoals Conceded goals of team.
+	@apiSuccess {Number} leaderboard.yellowCards Yellow cards accumulated..
+	@apiSuccess {Array} leaderboard.redCards Red cards accumulated.
+	@apiSuccess {Object} leaderboard.team Team info.
+	@apiSuccess {Number} leaderboard.rank Ranking.
+	@apiError (404) {Object} NotFoundError Leaderboard not found.
 */
 leaderboardApi.get('/', (ctx) => {
 	return ctx.json(leaderboard)
 })
 
 /**
-	@api {GET} /teams/teamId Get team by ID
-	@apiName GetTeams
-	@APIGroup Teams
-	@apiSuccess {Number} teams.id Team ID.
-	@apiSuccess {String} teams.name Team name.
-	@apiSuccess {String} teams.image Team image.
-	@apiSuccess {String} teams.url Team URL.
-	@apiSuccess {Number} presindent.id ID of President belongs to team.
-	@apiSuccess {String} teams.channel URL of channel of the team.
-	@apiSuccess {Array} teams.socialNetwork List of networks of the team.
-	@apiSuccess {Array} teams.players List of players belongs to team.
-	@apiSuccess {String} teams.coach Name of the coach.
-	@apiError (404) {Object} NotFoundError Team not found.
+	@api {GET} /leaderboard/:teamId Get leaderboard by team ID
+	@apiName GetLeaderboardByTeamId
+	@APIGroup Leaderboard
+	@apiSuccess {Number} leaderboard.wins Team wins.
+	@apiSuccess {Number} leaderboard.loses Team loses.
+	@apiSuccess {Number} leaderboard.scoredGoals Scored goals of team.
+	@apiSuccess {Number} leaderboard.concededGoals Conceded goals of team.
+	@apiSuccess {Number} leaderboard.yellowCards Yellow cards accumulated..
+	@apiSuccess {Array} leaderboard.redCards Red cards accumulated.
+	@apiSuccess {Object} leaderboard.team Team info.
+	@apiSuccess {Number} leaderboard.rank Ranking.
+	@apiError (404) {Object} NotFoundError Leaderboard not found.
 */
 leaderboardApi.get('/:teamId', (ctx) => {
 	const teamId = ctx.req.param('teamId')

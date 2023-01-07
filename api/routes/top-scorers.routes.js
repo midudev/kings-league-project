@@ -20,6 +20,18 @@ topScorersApi.get('/', (ctx) => {
   return ctx.json(topScorers)
 })
 
+/**
+	@api {GET} /top-scores/:rank Get Top Scorers
+	@apiName GetTopScorersByRank
+	@APIGroup Top Scorers
+	@apiSuccess {String} topScorer.playerName Top Scorer's name.
+	@apiSuccess {String} topScorer.gamesPlayed Played games.
+	@apiSuccess {String} topScorer.goals Number of goals
+	@apiSuccess {String} topScorer.rank Ranking position
+	@apiSuccess {String} topScorer.team Team belongs to player
+	@apiSuccess {String} topScorer.image Logo of the team
+	@apiError (404) {Object} NotFoundError Team not found.
+*/
 topScorersApi.get('/:rank', (ctx) => {
 	const ranking = ctx.req.param('rank')
 	const foundScorer = topScorers.find((scorer) => scorer.ranking === ranking)

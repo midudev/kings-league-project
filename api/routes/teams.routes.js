@@ -9,33 +9,37 @@ const teamsApi = new Hono()
 	@apiName GetTeams
 	@APIGroup Teams
 	@apiSuccess {Object[]} team list.
-	@apiSuccess {Number} teams.id Team ID.
+	@apiSuccess {String} teams.id Team ID.
+	@apiSuccess {String} teams.color Team primary color.
 	@apiSuccess {String} teams.name Team name.
 	@apiSuccess {String} teams.image Team image.
+	@apiSuccess {String} teams.imageWhite Team image inverted.
 	@apiSuccess {String} teams.url Team URL.
-	@apiSuccess {Number} presindent.id ID of President belongs to team.
+	@apiSuccess {String} teams.presidentId ID of President belongs to team.
 	@apiSuccess {String} teams.channel URL of channel of the team.
 	@apiSuccess {Array} teams.socialNetwork List of networks of the team.
 	@apiSuccess {Array} teams.players List of players belongs to team.
-	@apiSuccess {String} teams.coach Name of the coach.
+	@apiSuccess {Object} teams.coachInfo Information of the coach.
 */
 teamsApi.get('/', (ctx) => {
   return ctx.json(teams)
 })
 
 /**
-	@api {GET} /teams/id Get team by ID
-	@apiName GetTeams
+	@api {GET} /teams/:id Get team by ID
+	@apiName GetTeamById
 	@APIGroup Teams
-	@apiSuccess {Number} teams.id Team ID.
+	@apiSuccess {String} teams.id Team ID.
+	@apiSuccess {String} teams.color Team primary color.
 	@apiSuccess {String} teams.name Team name.
 	@apiSuccess {String} teams.image Team image.
+	@apiSuccess {String} teams.imageWhite Team image inverted.
 	@apiSuccess {String} teams.url Team URL.
-	@apiSuccess {Number} presindent.id ID of President belongs to team.
+	@apiSuccess {String} teams.presidentId ID of President belongs to team.
 	@apiSuccess {String} teams.channel URL of channel of the team.
 	@apiSuccess {Array} teams.socialNetwork List of networks of the team.
 	@apiSuccess {Array} teams.players List of players belongs to team.
-	@apiSuccess {String} teams.coach Name of the coach.
+	@apiSuccess {Object} teams.coachInfo Information of the coach.
 	@apiError (404) {Object} NotFoundError Team not found.
 */
 teamsApi.get('/:id', (ctx) => {
