@@ -7,7 +7,8 @@ import topScorers from '../db/top_scorers.json'
 import coaches from '../db/coaches.json'
 import mvp from '../db/mvp.json'
 import topAssists from '../db/top_assists.json'
-import PlayersTwelve from '../db/players_twelve.json'
+import schedule from '../db/schedule.json'
+import playersTwelve from '../db/players_twelve.json'
 
 const app = new Hono()
 
@@ -82,6 +83,10 @@ app.get('/', (ctx) =>
 		{
 			endpoint: '/mvp',
 			description: 'Returns Kings League Most Valuable Players'
+		},
+		{
+			endpoint: '/schedule',
+			description: 'Returns Kings League match schedule and the final score of played games.'
 		},
 		{
 			endpoint: '/players-12',
@@ -165,8 +170,21 @@ app.get('/teams/:id', (ctx) => {
 	return foundTeam ? ctx.json(foundTeam) : ctx.json({ message: 'Team not found' }, 404)
 })
 
+app.get('/schedule', (ctx) => {
+	return ctx.json(schedule)
+})
+
+app.get('/teams/:id/players-12', (ctx) => {
+	const id = ctx.req.param('id')
+	const foundPlayerTwelve = playersTwelve.filter((player) => player.team.id === id)
+
+	return foundPlayerTwelve
+		? ctx.json(foundPlayerTwelve)
+		: ctx.json({ message: `Players for team ${id} not found` }, 404)
+})
+
 app.get('/players-12', (ctx) => {
-	return ctx.json(PlayersTwelve)
+	return ctx.json(playersTwelve)
 })
 
 app.get('/static/*', serveStatic({ root: './' }))

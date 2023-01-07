@@ -16,7 +16,7 @@ const PLAYER_SELECTORS = {
 export async function getPlayersTwelve($) {
 	const $rows = $('div.fs-load-more-item.fs-mw')
 
-	const getTeamFrom = ({ name }) => TEAMS.find((team) => team.name === name)
+	const getTeamFrom = ({ name: teamName }) => TEAMS.find((team) => team.name === teamName)
 
 	const playerSelectorEntries = Object.entries(PLAYER_SELECTORS)
 	const players = []
@@ -32,6 +32,7 @@ export async function getPlayersTwelve($) {
 		})
 
 		const { teamName, firstName, lastName, ...playerInfo } = Object.fromEntries(playerEntries)
+		const name = `${firstName} ${lastName}`
 
 		const team = getTeamFrom({ name: teamName })
 
@@ -42,6 +43,7 @@ export async function getPlayersTwelve($) {
 			firstName,
 			lastName,
 			image,
+			name,
 			team: {
 				id: team.id,
 				name: teamName,
@@ -63,7 +65,7 @@ async function saveImageBase64(player) {
 	const { firstName, lastName, team, image } = player
 
 	if (image.includes('placeholder.png')) {
-		return 'https://api.kingsleague.dev/static/players/placeholder.png'
+		return 'placeholder.png'
 	}
 
 	let playerImage = null
@@ -85,7 +87,7 @@ async function saveImageBase64(player) {
 
 		await writeFile(`${PLAYER_FOLDER_PATH}/${normalizedImageName}`, imageBase64, 'base64')
 
-		playerImage = `https://api.kingsleague.dev/static/players/${normalizedImageName}`
+		playerImage = `${normalizedImageName}`
 	} catch (error) {
 		console.log(error)
 	}

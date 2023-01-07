@@ -26,10 +26,10 @@ export const SCRAPINGS = {
 		url: 'https://kingsleague.pro/estadisticas/asistencias/',
 		scraper: getAssists
 	},
-	twelfth_players: {
+	players_twelve: {
 		url: 'https://kingsleague.pro/jugador-12/',
 		scraper: getPlayersTwelve
-  },
+	},
 	schedule: {
 		url: 'https://kingsleague.pro/calendario/',
 		scraper: getSchedule
