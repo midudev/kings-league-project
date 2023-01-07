@@ -4,6 +4,7 @@
     "firstName": "Javier",
     "lastName": "Espinosa",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
+    "name": "Javier Espinosa",
     "team": {
       "id": "porcinos-fc",
       "name": "Porcinos FC",
@@ -16,6 +17,7 @@
     "firstName": "David",
     "lastName": "Acedo",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
+    "name": "David Acedo",
     "team": {
       "id": "aniquiladores-fc",
       "name": "Aniquiladores FC",
@@ -28,6 +30,7 @@
     "firstName": "Ibai",
     "lastName": "Gómez",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
+    "name": "Ibai Gómez",
     "team": {
       "id": "jijantes-fc",
       "name": "Jijantes FC",
@@ -40,6 +43,7 @@
     "firstName": "Víctor",
     "lastName": "Sánchez",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
+    "name": "Víctor Sánchez",
     "team": {
       "id": "los-troncos-fc",
       "name": "Los Troncos FC",
@@ -52,6 +56,7 @@
     "firstName": "Javi",
     "lastName": "Márquez",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
+    "name": "Javi Márquez",
     "team": {
       "id": "pio-fc",
       "name": "PIO FC",
@@ -64,6 +69,7 @@
     "firstName": "Rubén",
     "lastName": "de la Red",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
+    "name": "Rubén de la Red",
     "team": {
       "id": "ultimate-mostoles",
       "name": "Ultimate Móstoles",
@@ -76,6 +82,7 @@
     "firstName": "Enigma",
     "lastName": "",
     "image": "https://api.kingsleague.dev/static/players/placeholder.png",
+    "name": "Enigma ",
     "team": {
       "id": "xbuyer-team",
       "name": "XBUYER TEAM",
@@ -88,6 +95,7 @@
     "firstName": "Sergio",
     "lastName": "García",
     "image": "https://api.kingsleague.dev/static/players/ultimate-mostoles-sergio-garcia.png",
+    "name": "Sergio García",
     "team": {
       "id": "ultimate-mostoles",
       "name": "Ultimate Móstoles",
@@ -100,6 +108,7 @@
     "firstName": "Alberto",
     "lastName": "Bueno",
     "image": "https://api.kingsleague.dev/static/players/1k-alberto-bueno.png",
+    "name": "Alberto Bueno",
     "team": {
       "id": "1k",
       "name": "1K FC",
@@ -112,6 +121,7 @@
     "firstName": "Javi",
     "lastName": "Chica",
     "image": "https://api.kingsleague.dev/static/players/kunisports-javi-chica.png",
+    "name": "Javi Chica",
     "team": {
       "id": "kunisports",
       "name": "Kunisports",
@@ -124,6 +134,7 @@
     "firstName": "Dídac",
     "lastName": "Vilà",
     "image": "https://api.kingsleague.dev/static/players/rayo-barcelona-didac-vila.png",
+    "name": "Dídac Vilà",
     "team": {
       "id": "rayo-barcelona",
       "name": "Rayo de Barcelona",
@@ -136,6 +147,7 @@
     "firstName": "Borja",
     "lastName": "Criado",
     "image": "https://api.kingsleague.dev/static/players/pio-fc-borja-criado.png",
+    "name": "Borja Criado",
     "team": {
       "id": "pio-fc",
       "name": "PIO FC",
@@ -148,6 +160,7 @@
     "firstName": "Jordi",
     "lastName": "Campoy",
     "image": "https://api.kingsleague.dev/static/players/aniquiladores-fc-jordi-campoy.png",
+    "name": "Jordi Campoy",
     "team": {
       "id": "aniquiladores-fc",
       "name": "Aniquiladores FC",
@@ -160,6 +173,7 @@
     "firstName": "Nando",
     "lastName": "Quesada",
     "image": "https://api.kingsleague.dev/static/players/jijantes-fc-nando-quesada.png",
+    "name": "Nando Quesada",
     "team": {
       "id": "jijantes-fc",
       "name": "Jijantes FC",
@@ -172,6 +186,7 @@
     "firstName": "Joan",
     "lastName": "Verdú",
     "image": "https://api.kingsleague.dev/static/players/los-troncos-fc-joan-verdu.png",
+    "name": "Joan Verdú",
     "team": {
       "id": "los-troncos-fc",
       "name": "Los Troncos FC",
@@ -184,6 +199,7 @@
     "firstName": "Jorge",
     "lastName": "Gómez",
     "image": "https://api.kingsleague.dev/static/players/el-barrio-jorge-gomez.png",
+    "name": "Jorge Gómez",
     "team": {
       "id": "el-barrio",
       "name": "El Barrio",
@@ -196,6 +212,7 @@
     "firstName": "Joan",
     "lastName": "Capdevila",
     "image": "https://api.kingsleague.dev/static/players/saiyans-fc-joan-capdevila.png",
+    "name": "Joan Capdevila",
     "team": {
       "id": "saiyans-fc",
       "name": "Saiyans FC",
@@ -208,6 +225,7 @@
     "firstName": "Javier",
     "lastName": "Hérnandez",
     "image": "https://api.kingsleague.dev/static/players/porcinos-fc-javier-hernandez.png",
+    "name": "Javier Hérnandez",
     "team": {
       "id": "porcinos-fc",
       "name": "Porcinos FC",
