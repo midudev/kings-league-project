@@ -7,9 +7,11 @@
     "yellowCards": 0,
     "redCards": 0,
     "team": {
+      "color": "#49b2ad",
       "id": "el-barrio",
       "name": "El Barrio",
       "image": "https://api.kingsleague.dev/static/logos/el-barrio.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/el-barrio-inverse.svg",
       "url": "https://kingsleague.pro/team/el-barrio/",
       "channel": "https://twitch.tv/1k",
       "socialNetworks": [
@@ -84,7 +86,7 @@
       "president": {
         "id": "adri-contreras",
         "name": "Adri Contreras",
-        "image": "https://api.kingsleague.dev/static/presidents/adri-contreras.png",
+        "image": "https://kingsleague.dev/presidents/adri-contreras.webp",
         "teamId": "el-barrio"
       }
     },
@@ -98,9 +100,11 @@
     "yellowCards": 0,
     "redCards": 0,
     "team": {
+      "color": "#7b7b7b",
       "id": "ultimate-mostoles",
       "name": "Ultimate Móstoles",
       "image": "https://api.kingsleague.dev/static/logos/ultimate-mostoles.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/ultimate-mostoles-inverse.svg",
       "url": "https://kingsleague.pro/team/ultimate-mostoles/",
       "channel": "https://youtube.com/DjMaRiiO",
       "socialNetworks": [
@@ -172,7 +176,7 @@
       "president": {
         "id": "djmariio",
         "name": "DjMaRiiO",
-        "image": "https://api.kingsleague.dev/static/presidents/djmariio.png",
+        "image": "https://kingsleague.dev/presidents/djmariio.webp",
         "teamId": "ultimate-mostoles"
       }
     },
@@ -186,9 +190,11 @@
     "yellowCards": 1,
     "redCards": 0,
     "team": {
+      "color": "#31585a",
       "id": "los-troncos-fc",
       "name": "Los Troncos FC",
       "image": "https://api.kingsleague.dev/static/logos/los-troncos.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/los-troncos-inverse.svg",
       "url": "https://kingsleague.pro/team/los-troncos-fc/",
       "channel": "https://twitch.tv/perxitaa",
       "socialNetworks": [
@@ -201,12 +207,12 @@
         {
           "name": "C. Planas «Chopo»",
           "role": "jugador 11",
-          "image": "los-troncos-fc-c-planas-«chopo».png"
+          "image": "los-troncos-fc-c-planas-chopo.png"
         },
         {
           "name": "E. Álvaro «Roble»",
           "role": "Delantero",
-          "image": "los-troncos-fc-e-álvaro-«roble».png"
+          "image": "los-troncos-fc-e-alvaro-roble.png"
         },
         {
           "name": "Lechuga",
@@ -216,42 +222,42 @@
         {
           "name": "D. Soriano «Olivo»",
           "role": "Defensa",
-          "image": "los-troncos-fc-d-soriano-«olivo».png"
+          "image": "los-troncos-fc-d-soriano-olivo.png"
         },
         {
           "name": "S. Sánchez «Drago»",
           "role": "Medio",
-          "image": "los-troncos-fc-s-sánchez-«drago».png"
+          "image": "los-troncos-fc-s-sanchez-drago.png"
         },
         {
           "name": "Noel L. «Ahuehuete»",
           "role": "Medio",
-          "image": "los-troncos-fc-noel-l-«ahuehuete».png"
+          "image": "los-troncos-fc-noel-l-ahuehuete.png"
         },
         {
           "name": "X. Molas «Mimosa»",
           "role": "Medio",
-          "image": "los-troncos-fc-x-molas-«mimosa».png"
+          "image": "los-troncos-fc-x-molas-mimosa.png"
         },
         {
           "name": "R. Martínez «Bonsai»",
           "role": "Delantero",
-          "image": "los-troncos-fc-r-martínez-«bonsai».png"
+          "image": "los-troncos-fc-r-martinez-bonsai.png"
         },
         {
           "name": "Dorkis P. «Mango»",
           "role": "Delantero",
-          "image": "los-troncos-fc-dorkis-p-«mango».png"
+          "image": "los-troncos-fc-dorkis-p-mango.png"
         },
         {
           "name": "I. Nuevo «Ficus»",
           "role": "Medio",
-          "image": "los-troncos-fc-i-nuevo-«ficus».png"
+          "image": "los-troncos-fc-i-nuevo-ficus.png"
         },
         {
           "name": "M. Arús «Pino»",
           "role": "Portero",
-          "image": "los-troncos-fc-m-arús-«pino».png"
+          "image": "los-troncos-fc-m-arus-pino.png"
         }
       ],
       "coach": "Pol Font",
@@ -263,7 +269,7 @@
       "president": {
         "id": "perxitaa",
         "name": "Perxitaa",
-        "image": "https://api.kingsleague.dev/static/presidents/perxitaa.png",
+        "image": "https://kingsleague.dev/presidents/perxitaa.webp",
         "teamId": "los-troncos-fc"
       }
     },
@@ -278,6 +284,7 @@
     "redCards": 0,
     "team": {
       "id": "1k",
+      "color": "#6f68f4",
       "name": "1K FC",
       "image": "https://api.kingsleague.dev/static/logos/1k.svg",
       "imageWhite": "https://api.kingsleague.dev/static/logos/1k-inverse.svg",
@@ -355,7 +362,7 @@
       "president": {
         "id": "iker-casillas",
         "name": "Iker Casillas",
-        "image": "https://api.kingsleague.dev/static/presidents/iker-casillas.png",
+        "image": "https://kingsleague.dev/presidents/iker-casillas.webp",
         "teamId": "1k"
       }
     },
@@ -369,9 +376,11 @@
     "yellowCards": 1,
     "redCards": 0,
     "team": {
+      "color": "#1932e0",
       "id": "saiyans-fc",
       "name": "Saiyans FC",
       "image": "https://api.kingsleague.dev/static/logos/saiyans-fc.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/saiyans-fc-inverse.svg",
       "url": "https://kingsleague.pro/team/saiyans-fc/",
       "channel": "https://twitch.tv/thegrefg",
       "socialNetworks": [
@@ -426,7 +435,7 @@
         {
           "name": "R. Carbó",
           "role": "Medio",
-          "image": "saiyans-fc-r-carbó.png"
+          "image": "saiyans-fc-r-carbo.png"
         },
         {
           "name": "Fajardo",
@@ -443,7 +452,7 @@
       "president": {
         "id": "thegrefg",
         "name": "TheGrefg",
-        "image": "https://api.kingsleague.dev/static/presidents/thegrefg.png",
+        "image": "https://kingsleague.dev/presidents/thegrefg.webp",
         "teamId": "saiyans-fc"
       }
     },
@@ -457,9 +466,11 @@
     "yellowCards": 1,
     "redCards": 0,
     "team": {
+      "color": "#101920",
       "id": "kunisports",
       "name": "Kunisports",
       "image": "https://api.kingsleague.dev/static/logos/kunisports.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/kunisports-inverse.svg",
       "url": "https://kingsleague.pro/team/kunisports/",
       "channel": "https://twitch.tv/slakun10",
       "socialNetworks": [
@@ -531,7 +542,7 @@
       "president": {
         "id": "kun-aguero",
         "name": "Kun Agüero",
-        "image": "https://api.kingsleague.dev/static/presidents/kun-aguero.png",
+        "image": "https://kingsleague.dev/presidents/kun-aguero.webp",
         "teamId": "kunisports"
       }
     },
@@ -546,8 +557,10 @@
     "redCards": 0,
     "team": {
       "id": "jijantes-fc",
+      "color": "#d4293d",
       "name": "Jijantes FC",
       "image": "https://api.kingsleague.dev/static/logos/jijantes.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/jijantes-inverse.svg",
       "url": "https://kingsleague.pro/team/jijantes-fc/",
       "channel": "https://twitch.tv/gerardromero",
       "socialNetworks": [
@@ -622,7 +635,7 @@
       "president": {
         "id": "gerard-romero",
         "name": "Gerard Romero",
-        "image": "https://api.kingsleague.dev/static/presidents/gerard-romero.png",
+        "image": "https://kingsleague.dev/presidents/gerard-romero.webp",
         "teamId": "jijantes-fc"
       }
     },
@@ -636,9 +649,11 @@
     "yellowCards": 1,
     "redCards": 0,
     "team": {
+      "color": "#d91f5d",
       "id": "porcinos-fc",
       "name": "Porcinos FC",
       "image": "https://api.kingsleague.dev/static/logos/porcinos-fc.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/porcinos-fc-inverse.svg",
       "url": "https://kingsleague.pro/team/porcinos-fc/",
       "channel": "https://twitch.tv/ibai",
       "socialNetworks": [
@@ -711,7 +726,7 @@
       "president": {
         "id": "ibai-llanos",
         "name": "Ibai Llanos",
-        "image": "https://api.kingsleague.dev/static/presidents/ibai-llanos.png",
+        "image": "https://kingsleague.dev/presidents/ibai-llanos.webp",
         "teamId": "porcinos-fc"
       }
     },
@@ -725,9 +740,11 @@
     "yellowCards": 0,
     "redCards": 0,
     "team": {
+      "color": "#f6ab34",
       "id": "rayo-barcelona",
       "name": "Rayo de Barcelona",
       "image": "https://api.kingsleague.dev/static/logos/rayo-barcelona.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/rayo-barcelona-inverse.svg",
       "url": "https://kingsleague.pro/team/rayo-barcelona/",
       "channel": "https://twitch.tv/spursito",
       "socialNetworks": [
@@ -802,7 +819,7 @@
       "president": {
         "id": "spursito",
         "name": "Spursito",
-        "image": "https://api.kingsleague.dev/static/presidents/spursito.png",
+        "image": "https://kingsleague.dev/presidents/spursito.webp",
         "teamId": "rayo-barcelona"
       }
     },
@@ -816,9 +833,11 @@
     "yellowCards": 1,
     "redCards": 0,
     "team": {
+      "color": "#979797",
       "id": "xbuyer-team",
       "name": "XBUYER TEAM",
       "image": "https://api.kingsleague.dev/static/logos/xbuyer.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/xbuyer-inverse.svg",
       "url": "https://kingsleague.pro/team/xbuyer-team/",
       "channel": "https://www.youtube.com/xbuyer",
       "socialNetworks": [
@@ -890,7 +909,7 @@
       "president": {
         "id": "hnos-buyer",
         "name": "Hnos. Buyer",
-        "image": "https://api.kingsleague.dev/static/presidents/hnos-buyer.png",
+        "image": "https://kingsleague.dev/presidents/hnos-buyer.webp",
         "teamId": "xbuyer-team"
       }
     },
@@ -905,8 +924,10 @@
     "redCards": 0,
     "team": {
       "id": "aniquiladores-fc",
+      "color": "#ea4163",
       "name": "Aniquiladores FC",
       "image": "https://api.kingsleague.dev/static/logos/aniquiladores.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/aniquiladores-inverse.svg",
       "url": "https://kingsleague.pro/team/aniquiladores-fc/",
       "channel": "https://twitch.tv/juansguarnizo",
       "socialNetworks": [
@@ -941,7 +962,7 @@
         {
           "name": "Pau Mañé",
           "role": "Delantero",
-          "image": "aniquiladores-fc-pau-maé.png"
+          "image": "aniquiladores-fc-pau-mae.png"
         },
         {
           "name": "Jorquera",
@@ -978,7 +999,7 @@
       "president": {
         "id": "juan-guarnizo",
         "name": "Juan Guarnizo",
-        "image": "https://api.kingsleague.dev/static/presidents/juan-guarnizo.png",
+        "image": "https://kingsleague.dev/presidents/juan-guarnizo.webp",
         "teamId": "aniquiladores-fc"
       }
     },
@@ -992,9 +1013,11 @@
     "yellowCards": 1,
     "redCards": 0,
     "team": {
+      "color": "#fff68d",
       "id": "pio-fc",
       "name": "PIO FC",
       "image": "https://api.kingsleague.dev/static/logos/pio.svg",
+      "imageWhite": "https://api.kingsleague.dev/static/logos/pio-inverse.svg",
       "url": "https://kingsleague.pro/team/pio-fc/",
       "channel": "https://twitch.tv/rivers_gg",
       "socialNetworks": [
@@ -1030,7 +1053,7 @@
         {
           "name": "B. Juárez",
           "role": "Medio",
-          "image": "pio-fc-b-juárez.png"
+          "image": "pio-fc-b-juarez.png"
         },
         {
           "name": "Turner",
@@ -1067,7 +1090,7 @@
       "president": {
         "id": "rivers",
         "name": "Rivers",
-        "image": "https://api.kingsleague.dev/static/presidents/rivers.png",
+        "image": "https://kingsleague.dev/presidents/rivers.webp",
         "teamId": "pio-fc"
       }
     },

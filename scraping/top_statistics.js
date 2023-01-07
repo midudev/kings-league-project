@@ -28,28 +28,35 @@ export function getTopStatistics() {
 		}
 	})
 
-	const mvp = getLimitFrom(mvpDB).map(generatePlayerData)
-	const topScorers = getLimitFrom(topScorersDB).map(generatePlayerData)
-	const topAssists = getLimitFrom(topAssistsDB).map(generatePlayerData)
+	const mvp = getLimitFrom(mvpDB).map(extractMoreData)
+	const topScorers = getLimitFrom(topScorersDB).map(extractMoreData)
+	const topAssists = getLimitFrom(topAssistsDB).map(extractMoreData)
 
 	return { leaderboard, mvp, topScorers, topAssists }
 }
 
-function generatePlayerData(player) {
-	const playerImage = findPlayerImage({ playerName: player.playerName, teamName: player.team })
+function extractMoreData(player) {
+	const { team: teamName } = player
+	const team = TEAMS.find((team) => team.name === teamName)
+
+	const { players, id: teamId } = team
+
+	const playerImage = findPlayerImage({ playerName: player.playerName, players })
+
 	return {
 		...player,
-		playerImage
+		playerImage,
+		teamId
 	}
 }
 
-function findPlayerImage({ playerName, teamName }) {
-	const team = TEAMS.find((team) => team.name === teamName)
-	const player = team.players.find((player) => player.name === playerName)
+function findPlayerImage({ playerName, players }) {
+	console.log(playerName)
 
-	// we need to get the player 12 image/info if needed
-
+	const player = players.find((player) => player.name === playerName)
 	const playerImage = player?.image ? `${player.image}` : 'placeholder.png'
+
+	// buscar player 12
 
 	return playerImage
 }

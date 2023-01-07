@@ -16,56 +16,67 @@
     ],
     "players": [
       {
+        "id": "1k-1",
         "name": "Ricardo",
         "role": "jugador 11",
         "image": "1k-ricardo.png"
       },
       {
+        "id": "1k-0",
         "name": "Román",
         "role": "Defensa",
         "image": "1k-romn.png"
       },
       {
+        "id": "1k-7",
         "name": "Sorroche",
         "role": "Delantero",
         "image": "1k-sorroche.png"
       },
       {
+        "id": "1k-97",
         "name": "Marino",
         "role": "Delantero",
         "image": "1k-marino.png"
       },
       {
+        "id": "1k-3",
         "name": "Ledo",
         "role": "Defensa",
         "image": "1k-ledo.png"
       },
       {
+        "id": "1k-8",
         "name": "Sauras",
         "role": "Defensa",
         "image": "1k-sauras.png"
       },
       {
+        "id": "1k-14",
         "name": "Bruno",
         "role": "Defensa",
         "image": "1k-bruno.png"
       },
       {
+        "id": "1k-80",
         "name": "Pluvins",
         "role": "Medio",
         "image": "1k-pluvins.png"
       },
       {
+        "id": "1k-10",
         "name": "Rivero",
         "role": "Medio",
         "image": "1k-rivero.png"
       },
       {
+        "id": "1k-9",
         "name": "Lautaro",
         "role": "Delantero",
         "image": "1k-lautaro.png"
       },
       {
+        "id": "1k-11",
         "name": "Günter",
         "role": "Delantero",
         "image": "1k-gnter.png"
@@ -95,56 +106,67 @@
     ],
     "players": [
       {
+        "id": "el-barrio-1",
         "name": "José Juan",
         "role": "jugador 11",
         "image": "el-barrio-jos-juan.png"
       },
       {
+        "id": "el-barrio-10",
         "name": "Jacobo",
         "role": "Delantero",
         "image": "el-barrio-jacobo.png"
       },
       {
+        "id": "el-barrio-6",
         "name": "Mase",
         "role": "Defensa",
         "image": "el-barrio-mase.png"
       },
       {
+        "id": "el-barrio-9",
         "name": "Beguer",
         "role": "Delantero",
         "image": "el-barrio-beguer.png"
       },
       {
+        "id": "el-barrio-14",
         "name": "Ros",
         "role": "Medio",
         "image": "el-barrio-ros.png"
       },
       {
+        "id": "el-barrio-8",
         "name": "Ubón",
         "role": "Medio",
         "image": "el-barrio-ubn.png"
       },
       {
+        "id": "el-barrio-19",
         "name": "Pau ZZ",
         "role": "Defensa",
         "image": "el-barrio-pau-zz.png"
       },
       {
+        "id": "el-barrio-placeholder",
         "name": "Olae",
         "role": "Delantero",
         "image": "el-barrio-olae.png"
       },
       {
+        "id": "el-barrio-11",
         "name": "O. Boada",
         "role": "Delantero",
         "image": "el-barrio-o-boada.png"
       },
       {
+        "id": "el-barrio-7",
         "name": "Baranera",
         "role": "Medio",
         "image": "el-barrio-baranera.png"
       },
       {
+        "id": "el-barrio-12",
         "name": "Capilla",
         "role": "Medio",
         "image": "el-barrio-capilla.png"
@@ -171,56 +193,67 @@
     ],
     "players": [
       {
+        "id": "ultimate-mostoles-22",
         "name": "Juanma Glez",
         "role": "jugador 11",
         "image": "ultimate-mostoles-juanma-glez.png"
       },
       {
+        "id": "ultimate-mostoles-10",
         "name": "Arché",
         "role": "Medio",
         "image": "ultimate-mostoles-arch.png"
       },
       {
+        "id": "ultimate-mostoles-1",
         "name": "Iu",
         "role": "Portero",
         "image": "ultimate-mostoles-iu.png"
       },
       {
+        "id": "ultimate-mostoles-11",
         "name": "Guti",
         "role": "Defensa",
         "image": "ultimate-mostoles-guti.png"
       },
       {
+        "id": "ultimate-mostoles-6",
         "name": "Aleix",
         "role": "Medio",
         "image": "ultimate-mostoles-aleix.png"
       },
       {
+        "id": "ultimate-mostoles-19",
         "name": "Llur",
         "role": "Delantero",
         "image": "ultimate-mostoles-llur.png"
       },
       {
+        "id": "ultimate-mostoles-4",
         "name": "Iker",
         "role": "Defensa",
         "image": "ultimate-mostoles-iker.png"
       },
       {
+        "id": "ultimate-mostoles-3",
         "name": "Ian",
         "role": "Defensa",
         "image": "ultimate-mostoles-ian.png"
       },
       {
+        "id": "ultimate-mostoles-7",
         "name": "Zea",
         "role": "Delantero",
         "image": "ultimate-mostoles-zea.png"
       },
       {
+        "id": "ultimate-mostoles-13",
         "name": "Nacho",
         "role": "Portero",
         "image": "ultimate-mostoles-nacho.png"
       },
       {
+        "id": "ultimate-mostoles-20",
         "name": "Lucca",
         "role": "Medio",
         "image": "ultimate-mostoles-lucca.png"
@@ -250,56 +283,67 @@
     ],
     "players": [
       {
+        "id": "los-troncos-fc-21",
         "name": "C. Planas «Chopo»",
         "role": "jugador 11",
         "image": "los-troncos-fc-c-planas-chopo.png"
       },
       {
+        "id": "los-troncos-fc-9",
         "name": "E. Álvaro «Roble»",
         "role": "Delantero",
         "image": "los-troncos-fc-e-alvaro-roble.png"
       },
       {
+        "id": "los-troncos-fc-13",
         "name": "Lechuga",
         "role": "Portero",
         "image": "los-troncos-fc-lechuga.png"
       },
       {
+        "id": "los-troncos-fc-4",
         "name": "D. Soriano «Olivo»",
         "role": "Defensa",
         "image": "los-troncos-fc-d-soriano-olivo.png"
       },
       {
+        "id": "los-troncos-fc-8",
         "name": "S. Sánchez «Drago»",
         "role": "Medio",
         "image": "los-troncos-fc-s-sanchez-drago.png"
       },
       {
+        "id": "los-troncos-fc-5",
         "name": "Noel L. «Ahuehuete»",
         "role": "Medio",
         "image": "los-troncos-fc-noel-l-ahuehuete.png"
       },
       {
+        "id": "los-troncos-fc-10",
         "name": "X. Molas «Mimosa»",
         "role": "Medio",
         "image": "los-troncos-fc-x-molas-mimosa.png"
       },
       {
+        "id": "los-troncos-fc-7",
         "name": "R. Martínez «Bonsai»",
         "role": "Delantero",
         "image": "los-troncos-fc-r-martinez-bonsai.png"
       },
       {
+        "id": "los-troncos-fc-11",
         "name": "Dorkis P. «Mango»",
         "role": "Delantero",
         "image": "los-troncos-fc-dorkis-p-mango.png"
       },
       {
+        "id": "los-troncos-fc-6",
         "name": "I. Nuevo «Ficus»",
         "role": "Medio",
         "image": "los-troncos-fc-i-nuevo-ficus.png"
       },
       {
+        "id": "los-troncos-fc-1",
         "name": "M. Arús «Pino»",
         "role": "Portero",
         "image": "los-troncos-fc-m-arus-pino.png"
@@ -326,56 +370,67 @@
     ],
     "players": [
       {
+        "id": "saiyans-fc-16",
         "name": "Alfaya Jr.",
         "role": "jugador 11",
         "image": "saiyans-fc-alfaya-jr.png"
       },
       {
+        "id": "saiyans-fc-1",
         "name": "Briones",
         "role": "Portero",
         "image": "saiyans-fc-briones.png"
       },
       {
+        "id": "saiyans-fc-9",
         "name": "Gio Ferinu",
         "role": "Delantero",
         "image": "saiyans-fc-gio-ferinu.png"
       },
       {
+        "id": "saiyans-fc-4",
         "name": "Campu",
         "role": "Defensa",
         "image": "saiyans-fc-campu.png"
       },
       {
+        "id": "saiyans-fc-7",
         "name": "Temo",
         "role": "Medio",
         "image": "saiyans-fc-temo.png"
       },
       {
+        "id": "saiyans-fc-14",
         "name": "C. Valle",
         "role": "Medio",
         "image": "saiyans-fc-c-valle.png"
       },
       {
+        "id": "saiyans-fc-5",
         "name": "V. Torres",
         "role": "Defensa",
         "image": "saiyans-fc-v-torres.png"
       },
       {
+        "id": "saiyans-fc-20",
         "name": "Feliu",
         "role": "Medio",
         "image": "saiyans-fc-feliu.png"
       },
       {
+        "id": "saiyans-fc-10",
         "name": "David Alba",
         "role": "Delantero",
         "image": "saiyans-fc-david-alba.png"
       },
       {
+        "id": "saiyans-fc-11",
         "name": "R. Carbó",
         "role": "Medio",
         "image": "saiyans-fc-r-carbo.png"
       },
       {
+        "id": "saiyans-fc-22",
         "name": "Fajardo",
         "role": "Portero",
         "image": "saiyans-fc-fajardo.png"
@@ -402,56 +457,67 @@
     ],
     "players": [
       {
+        "id": "kunisports-23",
         "name": "Coro",
         "role": "jugador 11",
         "image": "kunisports-coro.png"
       },
       {
+        "id": "kunisports-11",
         "name": "Torrentbó",
         "role": "Delantero",
         "image": "kunisports-torrentb.png"
       },
       {
+        "id": "kunisports-1",
         "name": "Víctor",
         "role": "Portero",
         "image": "kunisports-vctor.png"
       },
       {
+        "id": "kunisports-4",
         "name": "Guerrero",
         "role": "Defensa",
         "image": "kunisports-guerrero.png"
       },
       {
+        "id": "kunisports-8",
         "name": "Joan Inés",
         "role": "Medio",
         "image": "kunisports-joan-ins.png"
       },
       {
+        "id": "kunisports-13",
         "name": "Rode",
         "role": "Portero",
         "image": "kunisports-rode.png"
       },
       {
+        "id": "kunisports-5",
         "name": "Ruggeri",
         "role": "Defensa",
         "image": "kunisports-ruggeri.png"
       },
       {
+        "id": "kunisports-6",
         "name": "Nacho",
         "role": "Defensa",
         "image": "kunisports-nacho.png"
       },
       {
+        "id": "kunisports-9",
         "name": "Hidalgo",
         "role": "Delantero",
         "image": "kunisports-hidalgo.png"
       },
       {
+        "id": "kunisports-7",
         "name": "Lluc",
         "role": "Delantero",
         "image": "kunisports-lluc.png"
       },
       {
+        "id": "kunisports-3",
         "name": "Miki",
         "role": "Defensa",
         "image": "kunisports-miki.png"
@@ -481,56 +547,67 @@
     ],
     "players": [
       {
+        "id": "jijantes-fc-26",
         "name": "Soriano",
         "role": "jugador 11",
         "image": "jijantes-fc-soriano.png"
       },
       {
+        "id": "jijantes-fc-8",
         "name": "Alsina",
         "role": "Medio",
         "image": "jijantes-fc-alsina.png"
       },
       {
+        "id": "jijantes-fc-1",
         "name": "Pol",
         "role": "Portero",
         "image": "jijantes-fc-pol.png"
       },
       {
+        "id": "jijantes-fc-4",
         "name": "Jay",
         "role": "Defensa",
         "image": "jijantes-fc-jay.png"
       },
       {
+        "id": "jijantes-fc-7",
         "name": "Quero",
         "role": "Medio",
         "image": "jijantes-fc-quero.png"
       },
       {
+        "id": "jijantes-fc-5",
         "name": "Arnau M.V",
         "role": "Defensa",
         "image": "jijantes-fc-arnau-mv.png"
       },
       {
+        "id": "jijantes-fc-10",
         "name": "De la Villa",
         "role": "Delantero",
         "image": "jijantes-fc-de-la-villa.png"
       },
       {
+        "id": "jijantes-fc-30",
         "name": "Maca",
         "role": "Medio",
         "image": "jijantes-fc-maca.png"
       },
       {
+        "id": "jijantes-fc-6",
         "name": "Noel",
         "role": "Defensa",
         "image": "jijantes-fc-noel.png"
       },
       {
+        "id": "jijantes-fc-31",
         "name": "Dorado",
         "role": "Delantero",
         "image": "jijantes-fc-dorado.png"
       },
       {
+        "id": "jijantes-fc-25",
         "name": "Mario",
         "role": "Portero",
         "image": "jijantes-fc-mario.png"
@@ -558,56 +635,67 @@
     ],
     "players": [
       {
+        "id": "porcinos-fc-19",
         "name": "Tamudo",
         "role": "jugador 11",
         "image": "porcinos-fc-tamudo.png"
       },
       {
+        "id": "porcinos-fc-13",
         "name": "J. Segovia",
         "role": "Portero",
         "image": "porcinos-fc-j-segovia.png"
       },
       {
+        "id": "porcinos-fc-6",
         "name": "G.Cichero",
         "role": "Defensa",
         "image": "porcinos-fc-gcichero.png"
       },
       {
+        "id": "porcinos-fc-23",
         "name": "David L.L.",
         "role": "Defensa",
         "image": "porcinos-fc-david-ll..png"
       },
       {
+        "id": "porcinos-fc-21",
         "name": "Toti",
         "role": "Medio",
         "image": "porcinos-fc-toti.png"
       },
       {
+        "id": "porcinos-fc-10",
         "name": "A.Ripol",
         "role": "Medio",
         "image": "porcinos-fc-aripol.png"
       },
       {
+        "id": "porcinos-fc-9",
         "name": "Kilian",
         "role": "Delantero",
         "image": "porcinos-fc-kilian.png"
       },
       {
+        "id": "porcinos-fc-7",
         "name": "J. Blanco",
         "role": "Delantero",
         "image": "porcinos-fc-j-blanco.png"
       },
       {
+        "id": "porcinos-fc-80",
         "name": "Lil Pizza",
         "role": "Defensa",
         "image": "porcinos-fc-lil-pizza.png"
       },
       {
+        "id": "porcinos-fc-8",
         "name": "Lao",
         "role": "Medio",
         "image": "porcinos-fc-lao.png"
       },
       {
+        "id": "porcinos-fc-1",
         "name": "Sergi",
         "role": "Portero",
         "image": "porcinos-fc-sergi.png"
@@ -637,56 +725,67 @@
     ],
     "players": [
       {
+        "id": "rayo-barcelona-45",
         "name": "Poloteli",
         "role": "jugador 11",
         "image": "rayo-barcelona-poloteli.png"
       },
       {
+        "id": "rayo-barcelona-10",
         "name": "Pelaz",
         "role": "Medio",
         "image": "rayo-barcelona-pelaz.png"
       },
       {
+        "id": "rayo-barcelona-41",
         "name": "Canet",
         "role": "Portero",
         "image": "rayo-barcelona-canet.png"
       },
       {
+        "id": "rayo-barcelona-19",
         "name": "Guillem ZZ",
         "role": "Delantero",
         "image": "rayo-barcelona-guillem-zz.png"
       },
       {
+        "id": "rayo-barcelona-22",
         "name": "M. Reyes",
         "role": "Defensa",
         "image": "rayo-barcelona-m-reyes.png"
       },
       {
+        "id": "rayo-barcelona-30",
         "name": "Franky P.",
         "role": "Medio",
         "image": "rayo-barcelona-franky-p.png"
       },
       {
+        "id": "rayo-barcelona-8",
         "name": "Dani P.",
         "role": "Medio",
         "image": "rayo-barcelona-dani-p.png"
       },
       {
+        "id": "rayo-barcelona-11",
         "name": "Alejandro",
         "role": "Defensa",
         "image": "rayo-barcelona-alejandro.png"
       },
       {
+        "id": "rayo-barcelona-9",
         "name": "Biboum M.",
         "role": "Delantero",
         "image": "rayo-barcelona-biboum-m.png"
       },
       {
+        "id": "rayo-barcelona-63",
         "name": "Jonathan",
         "role": "Medio",
         "image": "rayo-barcelona-jonathan.png"
       },
       {
+        "id": "rayo-barcelona-77",
         "name": "Alex Race",
         "role": "Delantero",
         "image": "rayo-barcelona-alex-race.png"
@@ -713,56 +812,67 @@
     ],
     "players": [
       {
+        "id": "xbuyer-team-10",
         "name": "C. Castro",
         "role": "jugador 11",
         "image": "xbuyer-team-c-castro.png"
       },
       {
+        "id": "xbuyer-team-13",
         "name": "Capi",
         "role": "Portero",
         "image": "xbuyer-team-capi.png"
       },
       {
+        "id": "xbuyer-team-9",
         "name": "Poch",
         "role": "Delantero",
         "image": "xbuyer-team-poch.png"
       },
       {
+        "id": "xbuyer-team-20",
         "name": "Iñaki",
         "role": "Medio",
         "image": "xbuyer-team-iaki.png"
       },
       {
+        "id": "xbuyer-team-5",
         "name": "Dani",
         "role": "Defensa",
         "image": "xbuyer-team-dani.png"
       },
       {
+        "id": "xbuyer-team-32",
         "name": "Granero",
         "role": "Delantero",
         "image": "xbuyer-team-granero.png"
       },
       {
+        "id": "xbuyer-team-11",
         "name": "Goran",
         "role": "Medio",
         "image": "xbuyer-team-goran.png"
       },
       {
+        "id": "xbuyer-team-3",
         "name": "Bañuls",
         "role": "Defensa",
         "image": "xbuyer-team-bauls.png"
       },
       {
+        "id": "xbuyer-team-7",
         "name": "Franc",
         "role": "Medio",
         "image": "xbuyer-team-franc.png"
       },
       {
+        "id": "xbuyer-team-21",
         "name": "B. Sierra",
         "role": "Delantero",
         "image": "xbuyer-team-b-sierra.png"
       },
       {
+        "id": "xbuyer-team-1",
         "name": "Sep",
         "role": "Portero",
         "image": "xbuyer-team-sep.png"
@@ -789,56 +899,67 @@
     ],
     "players": [
       {
+        "id": "aniquiladores-fc-placeholder",
         "name": "",
         "role": "jugador 11",
         "image": "aniquiladores-fc-.png"
       },
       {
+        "id": "aniquiladores-fc-25",
         "name": "Dani P.",
         "role": "Portero",
         "image": "aniquiladores-fc-dani-p.png"
       },
       {
+        "id": "aniquiladores-fc-8",
         "name": "Galvany",
         "role": "Medio",
         "image": "aniquiladores-fc-galvany.png"
       },
       {
+        "id": "aniquiladores-fc-5",
         "name": "Andrés",
         "role": "Defensa",
         "image": "aniquiladores-fc-andrs.png"
       },
       {
+        "id": "aniquiladores-fc-31",
         "name": "Bernat",
         "role": "Medio",
         "image": "aniquiladores-fc-bernat.png"
       },
       {
+        "id": "aniquiladores-fc-24",
         "name": "Pau Mañé",
         "role": "Delantero",
         "image": "aniquiladores-fc-pau-mae.png"
       },
       {
+        "id": "aniquiladores-fc-22",
         "name": "Jorquera",
         "role": "Defensa",
         "image": "aniquiladores-fc-jorquera.png"
       },
       {
+        "id": "aniquiladores-fc-9",
         "name": "Gilles V.",
         "role": "Medio",
         "image": "aniquiladores-fc-gilles-v.png"
       },
       {
+        "id": "aniquiladores-fc-21",
         "name": "Jadir",
         "role": "Defensa",
         "image": "aniquiladores-fc-jadir.png"
       },
       {
+        "id": "aniquiladores-fc-11",
         "name": "Roger",
         "role": "Medio",
         "image": "aniquiladores-fc-roger.png"
       },
       {
+        "id": "aniquiladores-fc-10",
         "name": "X.Morales",
         "role": "Portero",
         "image": "aniquiladores-fc-xmorales.png"
@@ -866,56 +987,67 @@
     ],
     "players": [
       {
+        "id": "pio-fc-4",
         "name": "Lopo",
         "role": "jugador 11",
         "image": "pio-fc-lopo.png"
       },
       {
+        "id": "pio-fc-1",
         "name": "Jorge",
         "role": "Portero",
         "image": "pio-fc-jorge.png"
       },
       {
+        "id": "pio-fc-2",
         "name": "Carlitos",
         "role": "Defensa",
         "image": "pio-fc-carlitos.png"
       },
       {
+        "id": "pio-fc-6",
         "name": "Pau Fer",
         "role": "Medio",
         "image": "pio-fc-pau-fer.png"
       },
       {
+        "id": "pio-fc-10",
         "name": "Carlinhos",
         "role": "Delantero",
         "image": "pio-fc-carlinhos.png"
       },
       {
+        "id": "pio-fc-21",
         "name": "B. Juárez",
         "role": "Medio",
         "image": "pio-fc-b-juarez.png"
       },
       {
+        "id": "pio-fc-42",
         "name": "Turner",
         "role": "Defensa",
         "image": "pio-fc-turner.png"
       },
       {
+        "id": "pio-fc-11",
         "name": "Adri",
         "role": "Delantero",
         "image": "pio-fc-adri.png"
       },
       {
+        "id": "pio-fc-8",
         "name": "Cokita",
         "role": "Medio",
         "image": "pio-fc-cokita.png"
       },
       {
+        "id": "pio-fc-22",
         "name": "A. Ropero",
         "role": "Medio",
         "image": "pio-fc-a-ropero.png"
       },
       {
+        "id": "pio-fc-14",
         "name": "Santiago",
         "role": "Defensa",
         "image": "pio-fc-santiago.png"

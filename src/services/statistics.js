@@ -43,3 +43,16 @@ export const getTopStatistics = async () => {
 		return null
 	}
 }
+
+export const getFirstPlayersStatistics = async () => {
+	const topStatistics = await getTopStatistics()
+	if (!topStatistics) return null
+
+	const { mvp, topScorers, topAssists } = topStatistics
+
+	const [firstMVP] = mvp
+	const [firstTopScorer] = topScorers
+	const [firstTopAssister] = topAssists
+
+	return { mvp: firstMVP, topScorer: firstTopScorer, topAssister: firstTopAssister }
+}
