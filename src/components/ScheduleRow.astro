@@ -2,9 +2,9 @@
 const { local, score, visitant, useSmallNames, hour, timestamp } = Astro.props
 
 const scoreStyles = {
-	shared: 'text-center font-title rounded-md p-2 px-20 text-xl leading-none',
-	played: 'text-white bg-gray-700 font-title px-20 text-xl leading-none',
-	pending: 'bg-gray-200 transition group-hover:bg-gray-200 font-title px-20 text-xl leading-none'
+	shared: 'text-center font-title rounded-md p-2 px-10 md:px-20 text-xl leading-none',
+	played: 'text-white bg-gray-700',
+	pending: 'bg-gray-200 transition group-hover:bg-gray-200'
 }
 
 let text = 'vs'
@@ -41,9 +41,11 @@ if (timestamp && timestamp <= Date.now()) {
 			)
 		}
 	</td>
+
 	<td class='px-6 py-4 border-b-1 text-center flex justify-center w-full items-center'>
-		<p class={`${scoreStyles.shared} ${scoreStyles[state]}`}>{text}</p>
+		<span class={`${scoreStyles.shared} ${scoreStyles[state]}`}>{text}</span>
 	</td>
+
 	<td class='px-2 py-4 border-b-1 flex justify-end items-center w-full'>
 		{
 			useSmallNames
