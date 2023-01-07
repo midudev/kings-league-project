@@ -13,7 +13,7 @@ const PLAYER_SELECTORS = {
 	role: { selector: '.fs-grid-meta', typeOf: 'string' }
 }
 
-export async function getTwelfthPlayers($) {
+export async function getPlayersTwelve($) {
 	const $rows = $('div.fs-load-more-item.fs-mw')
 
 	const getTeamFrom = ({ name }) => TEAMS.find((team) => team.name === name)
@@ -78,14 +78,14 @@ async function saveImageBase64(player) {
 			? `${team.id}-${firstName.toLowerCase()}-${lastName.toLowerCase()}.${extension}`
 			: `${team.id}-${firstName.toLowerCase()}.${extension}`
 
-		const imageNameNormalize = imageName
+		const normalizedImageName = imageName
 			.normalize('NFD')
 			.replace(/\s+/g, '-')
 			.replace(/[\u0300-\u036f]/g, '')
 
-		await writeFile(`${PLAYER_FOLDER_PATH}/${imageNameNormalize}`, imageBase64, 'base64')
+		await writeFile(`${PLAYER_FOLDER_PATH}/${normalizedImageName}`, imageBase64, 'base64')
 
-		playerImage = `https://api.kingsleague.dev/static/players/${imageNameNormalize}`
+		playerImage = `https://api.kingsleague.dev/static/players/${normalizedImageName}`
 	} catch (error) {
 		console.log(error)
 	}
