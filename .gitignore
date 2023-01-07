@@ -3,4 +3,4 @@ pnpm-lock.yaml
 package-lock.json
 /coverage
 # Ignore build folder of Astro
-dist/
+/dist
