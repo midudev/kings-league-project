@@ -1,0 +1,19 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import Container from '@components/Container.astro'
+import Leaderboard from '@components/Leaderboard.astro'
+import FloatingBoxContainer from '@components/FloatingBoxContainer.astro'
+import TabsStatistics from '@components/TabsStatistics.astro'
+import Assistants from '@components/Assistants.astro'
+---
+
+<Layout title='Clasificación'>
+	<SectionTitle title='Estadísticas' />
+	<Container>
+		<FloatingBoxContainer>
+			<TabsStatistics />
+			<Assistants/>
+		</FloatingBoxContainer>
+	</Container>
+</Layout>
