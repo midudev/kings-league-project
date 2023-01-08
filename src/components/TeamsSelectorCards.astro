@@ -24,9 +24,9 @@ const { small } = Astro.props
 							alt={`Logo del equipo ${name}`}
 							class={`${small ? 'w-20 h-20' : 'w-28 h-28'} brightness-[100] object-contain transition-all group-hover:scale-110 group-hover:brightness-200 z-10 [backface-visibility:hidden]`}
 							src={imageWhite}
-							loading="lazy"
+							loading={Astro.url.pathname.includes('/equipos') === false && 'lazy'}
 							decoding="async"
-							fetchpriority="low"
+							fetchpriority={Astro.url.pathname.includes('/equipos') ? 'high' : 'low'}
 						/>
 						<h3 class={`z-10 font-title text-white ${small ? 'text-base xl:text-lg' : 'text-xl xl:text-2xl'}`}>{name}</h3>
 						<CardBackgroundTeam image={imageWhite} />
