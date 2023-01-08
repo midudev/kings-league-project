@@ -4,6 +4,7 @@ module.exports = {
 	rules: {
 		'no-tabs': 'off',
 		indent: 'off',
+		'arrow-parens': ['error', 'as-needed'],
 		'space-before-function-paren': 'off'
 	},
 	// ...

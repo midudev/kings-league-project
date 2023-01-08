@@ -17,7 +17,7 @@ module.exports = {
 	endOfLine: 'lf',
 	bracketSpacing: true,
 	quoteProps: 'as-needed',
-	arrowParens: 'always',
+	arrowParens: 'avoid',
 	htmlWhitespaceSensitivity: 'css',
 	jsxBracketSameLine: false
 }
