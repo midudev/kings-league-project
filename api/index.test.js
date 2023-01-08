@@ -10,6 +10,20 @@ const teardown = async (worker) => {
 	await worker.stop()
 }
 
+/**
+ *
+ * @param {*} subject Object to validate
+ * @param {[{name: string, type: string}]} schema Properties schema
+ */
+function checkProperties(subject, schema) {
+	schema.forEach((property) => {
+		const { name, type } = property
+
+		expect(subject).toHaveProperty(property.name)
+		if (type) expect(subject[name]).toBeTypeOf(type)
+	})
+}
+
 describe('Testing / route', () => {
 	let worker
 
