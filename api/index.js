@@ -147,6 +147,13 @@ app.get('/mvp', (ctx) => {
 	return ctx.json(mvp)
 })
 
+app.get('/mvp/:rank', (ctx) => {
+	const rank = ctx.req.param('rank')
+	const foundMvp = mvp.find((mvp) => mvp.rank === rank)
+
+	return foundMvp ? ctx.json(foundMvp) : ctx.json({ message: 'MVP not found' }, 404)
+})
+
 app.get('/coaches', (ctx) => {
 	return ctx.json(coaches)
 })
