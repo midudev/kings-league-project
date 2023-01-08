@@ -179,6 +179,19 @@ app.get('/schedule', (ctx) => {
 	return ctx.json(schedule)
 })
 
+app.get('/schedule/:month', (ctx) => {
+	const month = ctx.req.param('month')
+	const schedulePerMonth = schedule.filter((day) => {
+		const infoDate = day.date.split(' ').filter((info) => info !== 'de')
+		const monthInSpanish = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(
+			new Date(2022, month, 1)
+		)
+
+		return infoDate[1].toLocaleLowerCase() === monthInSpanish
+	})
+	return ctx.json(schedulePerMonth)
+})
+
 app.get('/teams/:id/players-12', (ctx) => {
 	const id = ctx.req.param('id')
 	const foundPlayerTwelve = playersTwelve.filter((player) => player.team.id === id)
