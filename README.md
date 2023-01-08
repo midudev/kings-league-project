@@ -13,7 +13,7 @@
 [![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
 
 
-## Descripcion del proyecto
+## Descripción del proyecto
 
 Este proyecto tiene como objetivo crear una API y página web de la [Kings League Infojobs](https://kingsleague.pro) con fines educativos.
 
