@@ -1,4 +1,4 @@
-import { writeDBFile } from '../db/index.js'
+import { writeDBFile } from 'db/index.js'
 import { logInfo } from './log.js'
 import { getShortNameTeams } from './short_name_teams.js'
 import { getURLTeams } from './url_teams.js'

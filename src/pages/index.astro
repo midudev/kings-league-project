@@ -8,8 +8,13 @@ import JoinQueensLeague from '@components/JoinQueensLeague.astro'
 import PlayerPrizeCard from '@components/PlayerPrizeCard.astro'
 import { getFirstPlayersStatistics } from '@services/statistics.js'
 import NextMatchesTable from '@components/NextMatchesTable.astro'
+import Live from '@components/Live.astro'
+import { checkIsLive } from '@services/twitch.js'
 
 const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
+
+const { hostname } = new URL(Astro.request.url)
+const isLive = await checkIsLive()
 ---
 
 <Layout title='Kings League Infojobs'>
@@ -23,6 +28,9 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 					</div>
 					<div class='col-span-4 lg:col-span-4 xl:col-span-5 mt-[20px] lg:mt-0'>
 						<div class='grid grid-cols-6 gap-y-10 gap-x-5 w-full'>
+
+							{ isLive && <Live hostname={hostname} /> }
+
 							{
 								mvp && (
 									<div class='col-span-6'>
@@ -64,7 +72,7 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 									subtitle='Asistencias'
 								/>
 							</div>
-						</div>
+						</>
 						<div class='my-10'>
 							<TeamsSelectorCards small />
 						</div>
