@@ -13,6 +13,7 @@ export default async function () {
 			...actual,
 			writeDBFile: (file, data) => {
 				console.log('saving...')
+				return Promise.resolve(true)
 			}
 		}
 	})

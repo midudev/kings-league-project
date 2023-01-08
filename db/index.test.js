@@ -2,8 +2,9 @@ import { describe, expect, it } from 'vitest'
 import { writeDBFile, TEAMS, PRESIDENTS, getImageFromTeam } from './index'
 
 describe('testing db functionality', () => {
-	it('saves data to JSON file', () => {
-		writeDBFile('dummy', { data: 'dummy' })
+	it('saves data to JSON file', async () => {
+		const result = await writeDBFile('dummy', { data: 'dummy' })
+		expect(result).toBe(true)
 	})
 	it('teams  and presidents haves values', () => {
 		expect(TEAMS).toBeDefined()
