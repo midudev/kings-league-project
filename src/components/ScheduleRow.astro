@@ -2,7 +2,7 @@
 const { local, score, visitant, useSmallNames, hour, timestamp } = Astro.props
 
 const scoreStyles = {
-	shared: 'text-center font-title rounded-md p-2 px-10 md:px-20 text-xl leading-none',
+	shared: 'text-center font-title rounded-md p-2 px-10 md:px-20 text-sm lg:text-xl leading-none',
 	played: 'text-white bg-gray-700',
 	pending: 'bg-gray-200 transition group-hover:bg-gray-200'
 }
@@ -24,7 +24,7 @@ if (timestamp && timestamp <= Date.now()) {
 >
 	<td class='lg:px-2 py-4 border-b-1 flex flex-col 2xl:flex-row justify-start items-center w-full'>
 		<img
-			class='w-12 h-12 mx-2'
+			class='w-6 lg:w-12 h-6 lg:h-12 mx-2'
 			src={`https://kingsleague.dev/teams/logos/${local.id}.svg`}
 			alt={`Escudo del equipo ${local.name}`}
 		/>
