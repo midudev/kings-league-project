@@ -331,3 +331,32 @@ describe('Testing /leaderboard route', () => {
 		})
 	})
 })
+
+describe('Testing statistic routes', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('/top-scorers endpoint shoud return players with all their properties', async () => {
+		const resp = await worker.fetch('/top-scorers')
+		expect(resp).toBeDefined
+
+		const players = await resp.json()
+		const playersProperties = [
+			{ name: 'rank', type: 'number' },
+			{ name: 'playerName', type: 'string' },
+			{ name: 'gamesPlayed', type: 'number' },
+			{ name: 'goals', type: 'number' },
+			{ name: 'team', type: 'string' },
+			{ name: 'image', type: 'string' }
+		]
+
+		players.forEach((player) => checkProperties(player, playersProperties))
+	})
+})
