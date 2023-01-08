@@ -19,6 +19,7 @@ const TABS = [
 ]
 
 const getNameUrl = `/${Astro.url.pathname.split('/').at(-1)}`
+---
 
 <ul
 	class='flex flex-wrap justify-center font-medium text-center text-gray-500 dark:text-gray-400 mb-10 text-lg'
@@ -26,7 +27,8 @@ const getNameUrl = `/${Astro.url.pathname.split('/').at(-1)}`
 	{
 		TABS.map(({ title, href }) => (
 			<li class='mr-2'>
-				{getNameUrl === href ? (
+				{getNameUrl === href
+? (
 					<a
 						href='#'
 						class='inline-block p-4 border-b-2 rounded-t-lg border-orange-400 text-orange-400 font-title'
@@ -34,7 +36,8 @@ const getNameUrl = `/${Astro.url.pathname.split('/').at(-1)}`
 					>
 						{title}
 					</a>
-				) : (
+				)
+: (
 					<a
 						href={href}
 						class='inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 '
