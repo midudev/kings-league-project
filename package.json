@@ -15,7 +15,7 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:cov": "vitest run --coverage",
-    "start": "astro dev --env production",
+    "start": "astro dev",
     "lint": "eslint . --ext .js,.astro,.ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write ."
