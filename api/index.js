@@ -8,6 +8,8 @@ import { teamsApi } from './routes/teams.routes'
 import { topScorersApi } from './routes/top-scorers.routes'
 import { topAssistsApi } from './routes/top-assists.routes'
 import { leaderboardApi } from './routes/leaderboard.routes'
+import { playersTwelveApi } from './routes/players-twelve.routes'
+import { scheduleApi } from './routes/schedule.routes'
 
 const app = new Hono()
 
@@ -82,6 +84,14 @@ app.get('/', (ctx) =>
 		{
 			endpoint: '/mvp',
 			description: 'Returns Kings League Most Valuable Players'
+		},
+		{
+			endpoint: '/schedule',
+			description: 'Returns Kings League match schedule and the final score of played games.'
+		},
+		{
+			endpoint: '/players-12',
+			description: 'Returns Kings League Players Twelve'
 		}
 	])
 )
@@ -93,6 +103,8 @@ app.route('/presidents', presidentApi)
 app.route('/teams', teamsApi)
 app.route('/top-assists', topAssistsApi)
 app.route('/top-scorers', topScorersApi)
+app.route('/players-12', playersTwelveApi)
+app.route('/schedule', scheduleApi)
 
 app.get('/static/*', serveStatic({ root: './' }))
 

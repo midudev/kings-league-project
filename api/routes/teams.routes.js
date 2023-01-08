@@ -1,6 +1,7 @@
 import { Hono } from 'hono'
 
 import teams from '../../db/teams.json'
+import playersTwelve from '../../db/players_twelve.json'
 
 const teamsApi = new Hono()
 
@@ -48,6 +49,28 @@ teamsApi.get('/:id', (ctx) => {
 	const foundTeam = teams.find((team) => team.id === id)
 
 	return foundTeam ? ctx.json(foundTeam) : ctx.json({ message: 'Team not found' }, 404)
+})
+
+/**
+  @api {GET} /teams/:id/players-12 Get all Player twelve from team
+  @apiName GetPlayersTwelveByTeam
+  @apiGroup Teams
+  @apiParam {String} id Id of Team
+  @apiSuccess {Object[]} Players twelve list.
+  @apiSuccess {String} playersTwelve.role Player role.
+  @apiSuccess {String} playersTwelve.firstName Player first name.
+  @apiSuccess {String} playersTwelve.lastName Player first name.
+  @apiSuccess {String} playersTwelve.image Player image.
+  @apiSuccess {String} playersTwelve.id Player ID.
+  @apiSuccess {Object} playersTwelve.team Team belongs to Player.
+*/
+teamsApi.get('/:id/players-12', (ctx) => {
+	const id = ctx.req.param('id')
+	const foundPlayerTwelve = playersTwelve.filter((player) => player.team.id === id)
+
+	return foundPlayerTwelve
+		? ctx.json(foundPlayerTwelve)
+		: ctx.json({ message: `Players for team ${id} not found` }, 404)
 })
 
 export { teamsApi }

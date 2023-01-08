@@ -1,48 +1,77 @@
 ---
-import Table from '@components/Table.astro'
+import Leaderboard from '@components/Leaderboard.astro'
 import Layout from '@layouts/Layout.astro'
 import Container from '@components/Container.astro'
 import Sponsors from '@components/Sponsors.astro'
 import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
-import UneteButton from '@components/Unete.astro'
+import JoinQueensLeague from '@components/JoinQueensLeague.astro'
+import PlayerPrizeCard from '@components/PlayerPrizeCard.astro'
+import { getFirstPlayersStatistics } from '@services/statistics.js'
+import NextMatchesTable from '@components/NextMatchesTable.astro'
+
+const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 ---
 
 <Layout title='Kings League Infojobs'>
 	<main>
-		<section class='bg-[#cd5500] py-20'>
+		<section class='bg-principal py-20'>
 			<Container>
-				<div class='grid grid-cols-3 gap-10 w-full px-10'>
-					<div>
-						<Table />
+				<div class='grid grid-cols-8 gap-10 w-full px-10'>
+					<div class='col-span-12 lg:col-span-4 xl:col-span-3 flex flex-col gap-y-10'>
+						<NextMatchesTable />
+						<Leaderboard format='small' />
 					</div>
-					<div class='col-span-2'>
+					<div class='col-span-12 lg:col-span-4 xl:col-span-5'>
 						<div class='grid grid-cols-6 gap-y-10 gap-x-5 w-full'>
-							<!-- MVP -->
+							{
+								mvp && (
+									<div class='col-span-6'>
+										<PlayerPrizeCard
+											teamName={mvp.team}
+											teamId={mvp.teamId}
+											teamImage={mvp.image}
+											playerName={mvp.playerName}
+											playerImage={mvp.playerImage}
+											title='MVP'
+											subtitle='Jornada 1'
+										/>
+									</div>
+								)
+							}
 
-							<div class='col-span-6 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
+							<div class='col-span-6 xl:col-span-3'>
+								<PlayerPrizeCard
+									smallerBox
+									teamName={topScorer.team}
+									teamId={topScorer.teamId}
+									teamImage={topScorer.image}
+									playerName={topScorer.playerName}
+									playerImage={topScorer.playerImage}
+									title={topScorer.goals}
+									subtitle='Goles'
+								/>
 							</div>
 
-							<!-- Goal Scorer -->
-
-							<div class='col-span-3 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
+							<div class='col-span-6 xl:col-span-3'>
+								<PlayerPrizeCard
+									smallerBox
+									teamName={topAssister.team}
+									teamImage={topAssister.image}
+									teamId={topAssister.teamId}
+									playerName={topAssister.playerName}
+									playerImage={topAssister.playerImage}
+									title={topAssister.assists}
+									subtitle='Asistencias'
+								/>
 							</div>
-
-							<!-- Assistant -->
-
-							<div class='col-span-3 bg-white 500 h-80 rounded-'>
-								<!-- Card component here -->
-							</div>
-
 						</div>
-						<div class="my-5">
-							<TeamsSelectorCards />
+						<div class='my-10'>
+							<TeamsSelectorCards small />
 						</div>
 					</div>
 				</div>
 			</Container>
-			<UneteButton />
+			<JoinQueensLeague />
 		</section>
 	</main>
 	<Sponsors />

@@ -32,11 +32,10 @@ presidentApi.get('/', (ctx) => {
 presidentApi.get('/:id', (ctx) => {
 	const id = ctx.req.param('id')
 	const foundPresident = presidents.find((president) => president.id === id)
-	if (!foundPresident) {
-		return ctx.json({ message: 'President not found' }, 404)
-	}
 
-	return ctx.json(foundPresident)
+	return foundPresident
+		? ctx.json(foundPresident)
+		: ctx.json({ message: 'President not found' }, 404)
 })
 
 export { presidentApi }

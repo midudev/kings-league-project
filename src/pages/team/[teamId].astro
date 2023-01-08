@@ -1,23 +1,16 @@
 ---
 import Container from '@components/Container.astro'
+import TeamPagePlayers from '@components/TeamPagePlayers.astro'
 import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
 import TeamStats from '@components/TeamStats.astro'
 import Layout from '@layouts/Layout.astro'
 import { findPresidentBy } from '@services/presidents.js'
+import { getAllTeams, getPlayersTwelveFor } from '@services/teams.js'
 
 const ICON_NETWORK_MAPPING = ['instagram', 'tiktok', 'twitch', 'twitter', 'youtube']
 
-export async function getStaticPaths() {
-	const response = await fetch('https://api.kingsleague.dev/teams')
-	const teams = await response.json()
-
-	return teams.map((team) => ({
-		params: { teamId: team.id },
-		props: { ...team }
-	}))
-}
-
-const { id, name, imageWhite, presidentId, socialNetworks, channel, players, color } = Astro.props
+const { id, name, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
+const gradient = `bg-${id}`
 
 const socialNetworksWithIcon = socialNetworks.map((href) => ({
 	href,
@@ -25,22 +18,35 @@ const socialNetworksWithIcon = socialNetworks.map((href) => ({
 }))
 
 const president = await findPresidentBy({ id: presidentId })
+const playersTwelve = await getPlayersTwelveFor({ teamId: id })
+
+export async function getStaticPaths() {
+	const teams = await getAllTeams()
+
+	return teams.map((team) => ({
+		params: { teamId: team.id },
+		props: { ...team }
+	}))
+}
 ---
 
 <Layout title={name}>
-	<section class='bg-[#cd5500] py-20'>
+	<section class='bg-principal py-20'>
 		<Container>
-			<div
-				class='relative bg-gradient-to-tr from-gray-600 to-gray-900 p-20 shadow-xl rounded -mt-10 z-10 mb-40'
-				style={`--tw-gradient-from: ${color}`}
-			>
-				<section class='flex items-center justify-between pb-60'>
-					<div class='flex flex-col items-center'>
-						<div class="flex items-center gap-x-6">
-							<img class='w-48 h-48' src={imageWhite} alt={`Escudo del equipo ${name}`} />
-							<div class='flex flex-col gap-y-4'>
+			<div class={`relative p-0 md:px-20 md:py-10 shadow-xl rounded -mt-10 z-10 mb-40 ${gradient}`}>
+				<section class='flex flex-col xl:flex-row items-center justify-between pb-10'>
+					<div class='flex flex-col'>
+						<div class='flex flex-col xl:flex-row items-center gap-x-6 mb-2'>
+							<img
+								class='w-56 h-56 object-contain'
+								src={imageWhite}
+								alt={`Escudo del equipo ${name}`}
+								decoding='async'
+								fetchpriority='high'
+							/>
+							<div class='flex flex-col text-center gap-y-4'>
 								<h1 class='font-title font-bold text-6xl text-white'>{name}</h1>
-								<ul class='flex flex-row gap-x-4'>
+								<ul class='flex flex-row gap-x-4 justify-center xl:justify-start'>
 									{
 										socialNetworksWithIcon.map(({ href, icon }) => {
 											return (
@@ -51,7 +57,12 @@ const president = await findPresidentBy({ id: presidentId })
 														target='_blank'
 														rel='noopener norefferer'
 													>
-														<img class='w-8 h-8' src={`/logo/${icon}.svg`} />
+														<img
+															class='w-8 h-8 brightness-[1000]'
+															src={`/logos/social/${icon}.svg`}
+															decoding='async'
+															fetchpriority='high'
+														/>
 													</a>
 												</li>
 											)
@@ -60,40 +71,32 @@ const president = await findPresidentBy({ id: presidentId })
 								</ul>
 							</div>
 						</div>
+
 						<TeamStats teamId={id} />
 					</div>
 
-					<div class='absolute -top-20 right-20 text-center'>
-						<img class='w-96 h-auto aspect-[170/239]' src={president.image} alt={president.name} />
-						<strong class='text-white text-xl font-bold font-title -mt-6 block'
-							>{president.name}</strong
+					<div class='xl:absolute xl:-top-20 xl:right-10 text-center'>
+						<img
+							class='w-[400px] h-auto aspect-[170/239]'
+							src={president.image}
+							alt={president.name}
+							decoding='async'
+							fetchpriority='high'
+						/>
+						<h3 class='text-white font-title text-3xl pt-2 -mt-6 block'>{president.name}</h3>
+						<h4
+							class='font-body uppercase rounded-full text-orange-500 bg-black/70 py-1 font-semibold'
 						>
+							Presidente
+						</h4>
 					</div>
 				</section>
 
-				<section>
-					<h2 class='font-title text-5xl text-white text-center py-10'>Jugadores</h2>
-					<div class='grid grid-cols-4 gap-2'>
-						{
-							players.map((player) => (
-								<article class='text-center font-title text-slate-900 rounded-sm p-5 m-auto'>
-									<img
-										class='w-56 h-auto aspect-[170/239]'
-										src={`https://api.kingsleague.dev/static/players/${player.image}`}
-										alt={`${player.name}`}
-									/>
-									<h3 class='text-white font-title text-3xl pt-2'>{player.name}</h3>
-									<h4 class='font-body uppercase rounded-full text-orange-500 bg-black/70 py-1 font-semibold'>
-										{player.role}
-									</h4>
-								</article>
-							))
-						}
-					</div>
-				</section>
+				<TeamPagePlayers title='Jugadores' players={players} />
+				<TeamPagePlayers title='Jugador 12' players={playersTwelve} />
 
 				<div
-					class={`-z-10 absolute inset-0 opacity-5 bg-center bg-[size:80%] transition bg-no-repeat`}
+					class={'-z-10 absolute inset-0 opacity-5 bg-center bg-[size:80%] transition bg-no-repeat'}
 					style={`background-image:url('${imageWhite}')`}
 				>
 				</div>

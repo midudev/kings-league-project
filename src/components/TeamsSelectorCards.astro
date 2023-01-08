@@ -1,33 +1,35 @@
 ---
 import { getAllTeams } from '@services/teams.js'
+import CardBackgroundTeam from './CardBackgroundTeam.astro'
 
 const teams = await getAllTeams()
+
+const { small } = Astro.props
 ---
 
-<section class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
+<section class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5'>
 	{
 		teams.map((team) => {
-			const { id, name, imageWhite, color } = team
+			const { id, name, imageWhite } = team
+			const gradient = `bg-${team.id}`
 			return (
-				<article
-					class='overflow-hidden col-span-1 rounded aspect-video bg-gradient-to-tr from-gray-600 to-gray-900'
-					style={`--tw-gradient-from: ${color}`}
-				>
+				<article class={`overflow-hidden col-span-1 rounded aspect-video ${gradient}`}>
 					<a
 						class='group transition-all hover:scale-110 flex gap-x-4 p-4 h-full items-center justify-center relative'
 						href={`/team/${id}`}
 						title={`Ver equipo ${name}`}
+						rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
 					>
 						<img
 							alt={`Logo del equipo ${name}`}
-							class='brightness-[100] transition-all group-hover:scale-110 group-hover:brightness-200 z-10 w-28 h-28 [backface-visibility:hidden]'
+							class={`${small ? 'w-20 h-20' : 'w-28 h-28'} brightness-[100] object-contain transition-all group-hover:scale-110 group-hover:brightness-200 z-10 [backface-visibility:hidden]`}
 							src={imageWhite}
+							loading="lazy"
+							decoding="async"
+							fetchpriority="low"
 						/>
-						<h3 class='z-10 font-title text-white text-xl xl:text-2xl'>{name}</h3>
-						<div
-							class={`z-0 absolute inset-0 opacity-10 bg-center bg-[size:150%] group-hover:bg-[size:200%] transition`}
-							style={`background-image:url('${imageWhite}')`}
-						/>
+						<h3 class={`z-10 font-title text-white ${small ? 'text-base xl:text-lg' : 'text-xl xl:text-2xl'}`}>{name}</h3>
+						<CardBackgroundTeam image={imageWhite} />
 					</a>
 				</article>
 			)

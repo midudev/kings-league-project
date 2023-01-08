@@ -140,7 +140,7 @@ describe('Testing /presidents route', () => {
 		const iker = {
 			id: 'iker-casillas',
 			name: 'Iker Casillas',
-			image: 'https://api.kingsleague.dev/static/presidents/iker-casillas.png',
+			image: 'https://kingsleague.dev/presidents/iker-casillas.webp',
 			teamId: '1k'
 		}
 
@@ -160,6 +160,160 @@ describe('Testing /presidents route', () => {
 
 		expect(errorMessage).toEqual({
 			message: 'President not found'
+		})
+	})
+})
+
+describe('Test /schedule route', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('Should return 11 days', async () => {
+		const resp = await worker.fetch('/schedule')
+		expect(resp).toBeDefined()
+
+		const days = await resp.json()
+		expect(days).toHaveLength(11)
+	})
+
+	it('Days should have their date and matches', async () => {
+		const resp = await worker.fetch('/schedule')
+		const days = await resp.json()
+		const properties = ['date', 'matches']
+
+		days.forEach((day) => {
+			properties.forEach((property) => {
+				expect(day).toHaveProperty(property)
+			})
+		})
+	})
+
+	it('Matches should have all their properties', async () => {
+		const resp = await worker.fetch('/schedule')
+		const days = await resp.json()
+		const matches = days.map((day) => day.matches).flat()
+		const properties = ['timestamp', 'hour', 'teams', 'score']
+
+		matches.forEach((match) => {
+			properties.forEach((property) => {
+				expect(match).toHaveProperty(property)
+			})
+		})
+	})
+
+	it('Teams should have all their properties', async () => {
+		const resp = await worker.fetch('/schedule')
+		const days = await resp.json()
+
+		const teams = days
+			.map((day) => day.matches)
+			.flat()
+			.map((match) => match.teams)
+			.flat()
+
+		const properties = ['id', 'name', 'shortName']
+
+		teams.forEach((team) => {
+			properties.forEach((property) => {
+				expect(team).toHaveProperty(property)
+			})
+		})
+	})
+})
+
+describe('Testing /leaderboard route', () => {
+	let worker
+
+	const entryProperties = [
+		'wins',
+		'losses',
+		'scoredGoals',
+		'concededGoals',
+		'yellowCards',
+		'redCards',
+		'team',
+		'rank'
+	]
+
+	const nestedTeamProperties = [
+		'color',
+		'id',
+		'name',
+		'image',
+		'imageWhite',
+		'url',
+		'channel',
+		'socialNetworks',
+		'players',
+		'coach',
+		'shortName',
+		'coachInfo',
+		'president'
+	]
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('Should return 12 teams', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		expect(resp).toBeDefined()
+
+		const leaderboard = await resp.json()
+		expect(leaderboard).toHaveLength(12)
+	})
+
+	it('Entries should have all their properties', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		const leaderboard = await resp.json()
+
+		leaderboard.forEach((entry) => {
+			entryProperties.forEach((property) => {
+				expect(entry).toHaveProperty(property)
+			})
+		})
+	})
+
+	it('Teams should have all their properties', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		const leaderboard = await resp.json()
+		const teams = leaderboard.map((entry) => entry.team)
+
+		teams.forEach((team) => {
+			nestedTeamProperties.forEach((property) => {
+				expect(team).toHaveProperty(property)
+			})
+		})
+	})
+
+	it('Shoud return a team from its id', async () => {
+		const resp = await worker.fetch('/leaderboard/1k')
+		expect(resp).toBeDefined()
+		const entry = await resp.json()
+		const { team } = entry
+
+		entryProperties.forEach((property) => expect(entry).toHaveProperty(property))
+		nestedTeamProperties.forEach((property) => expect(team).toHaveProperty(property))
+	})
+
+	it("Should return 404 message when the id doesn't exists", async () => {
+		const resp = await worker.fetch('/leaderboard/midudev')
+		expect(resp).toBeDefined()
+		const errorMessage = await resp.json()
+
+		expect(errorMessage).toEqual({
+			message: 'Team not found'
 		})
 	})
 })

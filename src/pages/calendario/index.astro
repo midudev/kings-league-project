@@ -1,3 +1,46 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import Container from '@components/Container.astro'
+import { getSchedule } from '@services/schedule'
+import ScheduleRow from '@components/ScheduleRow.astro'
+
+const schedule = await getSchedule()
+---
+
 <!-- Página del calendario -->
-<a href="/">Inicio</a>
-<h1>Calendario</h1>
+<Layout title='Calendario'>
+	<SectionTitle title='Calendario' />
+	<Container>
+		<main class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'>
+			<div class='max-w-5xl mx-auto my-4 px-10'>
+				{
+					schedule.map((day) => {
+						return (
+							<section>
+								<table class='w-full table-fixed mb-16'>
+									<thead class='border-b-2 border-b-black'>
+										<tr>
+											<td class='text-[25px] text-black p-2'>{day.date}</td>
+										</tr>
+									</thead>
+									<tbody>
+										{day.matches.map((match) => (
+											<ScheduleRow
+												local={match.teams[0]}
+												visitant={match.teams[1]}
+												score={match.score}
+												timestamp={match.timestamp}
+												hour={match.hour}
+											/>
+										))}
+									</tbody>
+								</table>
+							</section>
+						)
+					})
+				}
+			</div>
+		</main>
+	</Container>
+</Layout>

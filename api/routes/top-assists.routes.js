@@ -34,10 +34,12 @@ topAssistsApi.get('/', (ctx) => {
   @apiError (404) {Object} NotFoundError Team not found.
 */
 topAssistsApi.get('/:rank', (ctx) => {
-	const ranking = ctx.req.param('rank')
-	const foundAssist = topAssists.find((scorer) => scorer.ranking === ranking)
+  const ranking = ctx.req.param('rank')
+	const foundAssister = topAssists.find((assister) => assister.rank === ranking)
 
-	return foundAssist ? ctx.json(foundAssist) : ctx.json({ message: 'Top assist not found' }, 404)
+	return foundAssister
+		? ctx.json(foundAssister)
+		: ctx.json({ message: 'Top assister not found' }, 404)
 })
 
 export { topAssistsApi }
