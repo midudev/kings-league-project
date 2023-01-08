@@ -1,18 +1,28 @@
-<!-- LANGUAGES -->
+[![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
 
 <div align="center">
-<h1>👑 Kings League Infojobs Project ⚽️
+<h1>👑 Kings League Infojobs Project ⚽️</h1>
 
 [![Deploy API](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml/badge.svg?branch=main)](https://github.com/maikCyphlock/kings-league-project/actions/workflows/deploy-api.yml) [![Scrape Kings League Infojobs Website](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml/badge.svg?branch=main)](https://github.com/maikCyphlock/kings-league-project/actions/workflows/scrape-kings-league-web.yml)
 
 <h2><a href='https://api.kingsleague.dev/'>API</a> | <a href='https://kingsleague.dev'>WEB</a></h2>
-</h1>
 </div>
+<details>
+  <summary>Sumario</summary>
+  <ol>
+    <li>
+      <a href="#descripción-del-proyecto">Descripción del proyecto</a>
+    </li>
+    <li>
+      <a href="#tecnologías-usadas">Tecnologías usadas</a>
+    </li>
+    <li><a href="#api">API</a></li>
+    <li><a href="#redes-sociales">Redes sociales</a></li>
+		<li><a href="#lighthouse">Lighthouse</a></li>
+  </ol>
+</details>
 
-[![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
-
-
-## Descripcion del proyecto
+## Descripción del proyecto
 
 Este proyecto tiene como objetivo crear una API y página web de la [Kings League Infojobs](https://kingsleague.pro) con fines educativos.
 
