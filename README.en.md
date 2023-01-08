@@ -24,20 +24,20 @@ https://api.kingsleague.dev/
 
 The following are the available endpoints in the API:
 
-GET `/leaderboard`: Returns the ranking of the Kings League.
-GET `/teams`: Returns all the teams in the Kings League.
-GET `/teams/:id`: Returns a team from the Kings League.
-GET `/presidents`: Returns all the presidents of the Kings League.
-GET `/presidents/`:id: Returns a president from the Kings League.
-GET `/coaches`: Returns all the coaches in the Kings League.
-GET `/coaches/`:teamId: Returns the coach of a team from the Kings League.
-GET `/top-scorers`: Returns the top scorers in the Kings League.
-GET `/top-scorers/:rank`: Returns the top scorer according to their position on the Kings League list.
-GET `/top-assists`: Returns the top assist leaders in the Kings League.
-GET `/top-assists/`:rank: Returns the top assist leader according to their position on the Kings League list.
-GET `/mvp`: Returns the MVPs of the Kings League.
+- GET `/leaderboard`: Returns the ranking of the Kings League.
+- GET `/teams`: Returns all the teams in the Kings League.
+- GET `/teams/:id`: Returns a team from the Kings League.
+- GET `/presidents`: Returns all the presidents of the Kings League.
+- GET `/presidents/`:id: Returns a president from the Kings League.
+- GET `/coaches`: Returns all the coaches in the Kings League.
+- GET `/coaches/`:teamId: Returns the coach of a team from the Kings League.
+- GET `/top-scorers`: Returns the top scorers in the Kings League.
+- GET `/top-scorers/:rank`: Returns the top scorer according to their position on the Kings League list.
+- GET `/top-assists`: Returns the top assist leaders in the Kings League.
+- GET `/top-assists/`:rank: Returns the top assist leader according to their position on the Kings League list.
+- GET `/mvp`: Returns the MVPs of the Kings League.
 Follow us on our Twitch channel to see how we progress in the development of the web page!
 
 https://twitch.tv/midudev
 
-Note: This project is still in development and should not be used yet.
+***Note: This project is still in development and should not be used yet.***
