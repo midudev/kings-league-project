@@ -66,7 +66,7 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/top-statistics',
-			description: 'Returns the top statistics of the Kings League',
+			description: 'Returns the top statistics of the Kings League'
 		},
 		{
 			endpoint: '/top-assists',
@@ -96,7 +96,8 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/schedule',
-			description: 'Returns the schedule of all Kings League matches and the final score of each match played'
+			description:
+				'Returns the schedule of all Kings League matches and the final score of each match played'
 		},
 		{
 			endpoint: '/players-12',
