@@ -15,7 +15,7 @@ const { small } = Astro.props
 			return (
 				<article class={`overflow-hidden col-span-1 rounded aspect-video ${gradient}`}>
 					<a
-						class='group transition-all hover:scale-110 flex gap-x-4 p-4 h-full items-center justify-center relative'
+						class='group transition-all hover:scale-110 flex gap-x-4 p-4 h-full items-center justify-center relative z-0'
 						href={`/team/${id}`}
 						title={`Ver equipo ${name}`}
 						rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
