@@ -1,0 +1,140 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import Container from '@components/Container.astro'
+import Accordion from '@components/Accordion.astro'
+
+const faqs = [
+	{
+		title: '¿Dónde puedo ver la Kings League InfoJobs?',
+		content:
+			'Todos los partidos pueden verse en <a class="text-principal-dark font-semibold" href="https://www.twitch.tv/kingsleague" target="_blank" rel="noopener">twitch.tv/kingsleague</a> y en los canales de los presidentes de los equipos de la liga.'
+	},
+	{
+		title: '¿Cuándo comienza la competición?',
+		content:
+			'La temporada está formada por dos splits, uno de invierno que arranca en enero de 2023 y otro de verano previsto en mayo.'
+	},
+	{
+		title: '¿Cuál es el formato de la competición?',
+		content:
+			'Es una liga de Fútbol-7, de 12 equipos y que tendrá dos splits de 11 jornadas cada uno. Después de la fase regular, arrancarán los play-off por el título entre los ocho primeros clasificados.'
+	},
+	{
+		title: '¿Qué días se disputa la Kings League InfoJobs?',
+		content:
+			'Todos los domingos por la tarde se disputarán los 6 partidos de cada jornada, uno tras otro.'
+	},
+	{
+		title: '¿Dónde puedo consultar el calendario de cada jornada?',
+		content: 'Puedes consultar todas las jornadas del primer split <a class="text-principal-dark font-semibold" href="https://kingsleague.pro/calendario/">aquí</a>.'
+	},
+	{
+		title: '¿Cuánto duran los partidos?',
+		content:
+			'Los encuentros tienen una duración de 40 minutos que se divide en dos partes de 20 minutos.'
+	},
+	{
+		title: '¿Qué ocurre si hay empate tras el tiempo reglamentario?',
+		content:
+			'Si tras los 40 minutos los equipos siguen empatados, tendrá lugar una tanda de penaltis en formato 1 vs 1 contra el portero.'
+	},
+	{
+		title: '¿Cuántos árbitros hay?',
+		content:
+			'Cada partido estará dirigido por dos árbitros colegiados: uno en el terreno de juego y otro en la sala VAR.'
+	},
+	{
+		title: '¿Cómo funciona el VAR?',
+		content: 'Será a petición de los equipos, que podrán solicitar el VAR una vez por partido.'
+	},
+	{
+		title: '¿Hay un reglamento de competición?',
+		content: 'Sí. El reglamento oficial está disponible <a class="text-principal-dark font-semibold" href="https://kingsleague.pro/wp-content/uploads/2022/12/KINGS-League-Reglamento.pdf" target="_blank" rel="noopener">aquí</a>.'
+	},
+	{
+		title: '¿Dónde se juegan los partidos?',
+		content:
+			'En Barcelona, en un pabellón cerrado, con césped artificial y medidas reglamentarias de Fútbol-7.'
+	},
+	{
+		title: '¿Cuántos jugadores conforman los equipos?',
+		content:
+			'Cada equipo está formado por 12 jugadores: 10 elegidos a través del draft y dos invitados, a elección de cada presidente. De estos últimos, uno jugará toda la temporada y el otro podrá ser rotativo.'
+	},
+	{
+		title: '¿Cómo funciona el draft para elegir a los jugadores?',
+		content:
+			'Tras sortearse en qué orden eligen los presidentes, cada uno seleccionará por turnos a un jugador hasta tener 10 en su plantilla. En las siguientes temporadas, el orden de elección del draft tendrá en cuenta la clasificación de los equipos en la anterior temporada.'
+	},
+	{
+		title: '¿Cuándo se celebra el draft?',
+		content: 'La primera edición del draft será el 27 de diciembre de 2022.'
+	},
+	{
+		title: '¿Cómo se eligen a los jugadores que participan en el draft?',
+		content:
+			'A través de un proceso de selección abierto a todo el mundo y previo a unas pruebas deportivas.'
+	},
+	{
+		title: '¿Los jugadores tienen que entrenar durante la semana?',
+		content:
+			'La Kings League InfoJobs no obliga a hacerlo pero cada presidente es libre de ofrecer la posibilidad de entrenar a sus jugadores.'
+	},
+	{
+		title: '¿Puedo apuntarme como jugador?',
+		content:
+			'El periodo para inscribirse a la primera temporada de la Kings League InfoJobs finalizó en el mes de noviembre, pero te animamos a seguir nuestras redes sociales para conocer futuras convocatorias.'
+	},
+	{
+		title: '¿Habrá mercado de fichajes?',
+		content:
+			'Sí. Habrá dos periodos de traspasos: uno tras el split de invierno y otro tras el split de verano.'
+	},
+	{
+		title: '¿Se pagarán traspasos por los futbolistas?',
+		content:
+			'No. El método de traspaso consistirá en el intercambio de jugadores y cada presidente podrá ofrecer, dentro de ese intercambio, futuras rondas de elección del draft.'
+	},
+	{
+		title: '¿Los futbolistas cobran por participar?',
+		content:
+			'Cada jugador recibe una remuneración por parte de la Kings League InfoJobs. Todos los jugadores seleccionados en el draft cobran lo mismo, mientras que el 11 y el 12 corren a cargo de cada presidente.'
+	},
+	{
+		title: '¿Pueden los presidentes pagar un salario extra a sus jugadores?',
+		content:
+			'No. Para favorecer la igualdad entre los equipos, solo la Kings League InfoJobs ofrece una contraprestación económica a los participantes.'
+	},
+	{
+		title: '¿Está prevista una competición femenina?',
+		content:
+			'Sí. Próximamente se darán más detalles sobre la Queens League, abierta a todas las futbolistas que deseen sumarse a una nueva forma de entender el fútbol.'
+	}
+]
+---
+
+<Layout title='FAQs'>
+	<SectionTitle title='FAQs' />
+	<Container>
+		<div
+			id='accordion-collapse'
+			data-accordion='collapse'
+			class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40'
+		>
+			{
+				faqs.map((e, i) => {
+					return (
+						<Accordion
+							id={i}
+							position={`${i === 0 ? 'first' : i === faqs.length - 1 ? 'last' : ''}`}
+							title={e.title}
+						>
+							<Fragment set:html={e.content} />
+						</Accordion>
+					)
+				})
+			}
+		</div>
+	</Container>
+</Layout>

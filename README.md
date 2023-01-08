@@ -1,3 +1,5 @@
+<!-- LANGUAGES -->
+
 <div align="center">
 <h1>👑 Kings League Infojobs Project ⚽️
 
@@ -6,6 +8,9 @@
 <h2><a href='https://api.kingsleague.dev/'>API</a> | <a href='https://kingsleague.dev'>WEB</a></h2>
 </h1>
 </div>
+
+[![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
+
 
 ## Descripcion del proyecto
 
