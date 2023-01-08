@@ -27,8 +27,12 @@ app.route('/players-12', playersTwelveApi)
 app.route('/schedule', scheduleApi)
 app.route('/top-statistics', topStatisticsApi)
 
+app.use('/static/*', serveStatic({ root: './' }))
+app.use('/assets/*', serveStatic({ root: './static/docs/api' }))
+
 app.get('/', (ctx) => ctx.json(apiDirectory))
-app.get('/static/*', serveStatic({ root: './' }))
+app.get('/api', serveStatic({ path: './static/docs/api' }))
+app.get('/assets', serveStatic({ path: './assets' }))
 
 app.notFound((c) => {
 	const { pathname } = new URL(c.req.url)
