@@ -96,9 +96,7 @@ app.get('/', (ctx) =>
 	])
 )
 
-app.get('/leaderboard', (ctx) => {
-	return ctx.json(leaderboard)
-})
+app.get('/leaderboard', (ctx) => ctx.json(leaderboard))
 
 app.get('/leaderboard/:teamId', (ctx) => {
 	const teamId = ctx.req.param('teamId')
@@ -107,21 +105,13 @@ app.get('/leaderboard/:teamId', (ctx) => {
 	return foundTeam ? ctx.json(foundTeam) : ctx.json({ message: 'Team not found' }, 404)
 })
 
-app.get('/teams', (ctx) => {
-	return ctx.json(teams)
-})
+app.get('/teams', (ctx) => ctx.json(teams))
 
-app.get('/presidents', (ctx) => {
-	return ctx.json(presidents)
-})
+app.get('/presidents', (ctx) => ctx.json(presidents))
 
-app.get('/top-statistics', (ctx) => {
-	return ctx.json(topStatistics)
-})
+app.get('/top-statistics', (ctx) => ctx.json(topStatistics))
 
-app.get('/top-scorers', (ctx) => {
-	return ctx.json(topScorers)
-})
+app.get('/top-scorers', (ctx) => ctx.json(topScorers))
 
 app.get('/top-scorers/:rank', (ctx) => {
 	const ranking = ctx.req.param('rank')
@@ -130,9 +120,7 @@ app.get('/top-scorers/:rank', (ctx) => {
 	return foundScorer ? ctx.json(foundScorer) : ctx.json({ message: 'Top scorer not found' }, 404)
 })
 
-app.get('/top-assists', (ctx) => {
-	return ctx.json(topAssists)
-})
+app.get('/top-assists', (ctx) => ctx.json(topAssists))
 
 app.get('/top-assists/:rank', (ctx) => {
 	const ranking = ctx.req.param('rank')
@@ -143,13 +131,9 @@ app.get('/top-assists/:rank', (ctx) => {
 		: ctx.json({ message: 'Top assister not found' }, 404)
 })
 
-app.get('/mvp', (ctx) => {
-	return ctx.json(mvp)
-})
+app.get('/mvp', (ctx) => ctx.json(mvp))
 
-app.get('/coaches', (ctx) => {
-	return ctx.json(coaches)
-})
+app.get('/coaches', (ctx) => ctx.json(coaches))
 
 app.get('/coaches/:teamId', (ctx) => {
 	const teamId = ctx.req.param('teamId')
@@ -175,9 +159,7 @@ app.get('/teams/:id', (ctx) => {
 	return foundTeam ? ctx.json(foundTeam) : ctx.json({ message: 'Team not found' }, 404)
 })
 
-app.get('/schedule', (ctx) => {
-	return ctx.json(schedule)
-})
+app.get('/schedule', (ctx) => ctx.json(schedule))
 
 app.get('/teams/:id/players-12', (ctx) => {
 	const id = ctx.req.param('id')
@@ -188,9 +170,7 @@ app.get('/teams/:id/players-12', (ctx) => {
 		: ctx.json({ message: `Players for team ${id} not found` }, 404)
 })
 
-app.get('/players-12', (ctx) => {
-	return ctx.json(playersTwelve)
-})
+app.get('/players-12', (ctx) => ctx.json(playersTwelve))
 
 app.get('/static/*', serveStatic({ root: './' }))
 
