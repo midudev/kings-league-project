@@ -317,3 +317,43 @@ describe('Testing /leaderboard route', () => {
 		})
 	})
 })
+
+describe('Testing /players-12 route', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('Players should have all their properties', async () => {
+		const resp = await worker.fetch('/players-12')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const playerProperties = ['role', 'firstName', 'lastName', 'image', 'name', 'id', 'team']
+
+		players.forEach((player) =>
+			playerProperties.forEach((property) => {
+				expect(player).toHaveProperty(property)
+			})
+		)
+	})
+
+	it('Nested teams should have all their properties', async () => {
+		const resp = await worker.fetch('/players-12')
+		const players = await resp.json()
+
+		const teams = players.map((player) => player.team)
+		const nestedTeamProperties = ['id', 'name', 'image', 'imageWhite']
+
+		teams.forEach((team) =>
+			nestedTeamProperties.forEach((property) => {
+				expect(team).toHaveProperty(property)
+			})
+		)
+	})
+})
