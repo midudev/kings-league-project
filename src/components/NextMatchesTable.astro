@@ -29,7 +29,7 @@ const firstDayWithPendingMatches = schedule.find(({ matches }) => {
 		</thead>
 		<tbody>
 			{
-				firstDayWithPendingMatches.matches.map((match) => (
+				firstDayWithPendingMatches?.matches.map((match) => (
 					<ScheduleRow
 						useSmallNames
 						local={match.teams[0]}
