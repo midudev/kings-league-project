@@ -1,4 +1,4 @@
-# Para README en español
+#### Para README en español
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/Pabl0Parra/kings-league-project/blob/main/README.md)
 
 # Kings League Project

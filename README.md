@@ -1,4 +1,4 @@
-# For README in English
+#### For README in english
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Pabl0Parra/kings-league-project/blob/main/README.en.md)
 
 # Kings League Project
@@ -42,4 +42,4 @@ Los siguientes son los endpoints disponibles en la API:
 
 https://twitch.tv/midudev
 
-Nota: Este proyecto todavía se encuentra en desarrollo y no debe ser utilizado aún.
+***Nota: Este proyecto todavía se encuentra en desarrollo y no debe ser utilizado aún.***
