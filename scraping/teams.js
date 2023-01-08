@@ -3,8 +3,9 @@ import { logInfo, logSuccess } from './log.js'
 import { cleanText, scrape } from './utils.js'
 import path from 'node:path'
 import { writeFile } from 'node:fs/promises'
+import sharp from 'sharp'
 
-const STATICS_PATH = path.join(process.cwd(), './assets/static')
+const STATICS_PATH = path.join(process.cwd(), './public/teams/')
 const DB_PATH = path.join(process.cwd(), './db/')
 const BASE_URL = 'https://kingsleague.pro/team'
 const SELECTORS = {
@@ -17,8 +18,6 @@ async function getTeams() {
 	const teams = []
 
 	const saveImage = async ({ url, folder, fileName }) => {
-		const fileExtension = url.split('.').at(-1)
-
 		logInfo(`Fetching image for file name: ${fileName}`)
 		const responseImage = await fetch(url)
 		const arrayBuffer = await responseImage.arrayBuffer()
@@ -26,9 +25,9 @@ async function getTeams() {
 
 		logInfo(`Writing image to disk ${fileName}`)
 		const imageFileNameClean = removeCharacters(fileName)
-		const imageFileName = `${imageFileNameClean}.${fileExtension}`
+		const imageFileName = `${imageFileNameClean}.webp`
 		const imageFilePath = path.join(STATICS_PATH, folder, imageFileName)
-		await writeFile(imageFilePath, buffer)
+		await sharp(buffer).webp().toFile(imageFilePath)
 
 		logInfo(`Everything is done! ${fileName}`)
 

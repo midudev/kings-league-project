@@ -47,6 +47,7 @@
     "eslint-plugin-promise": "6.1.1",
     "prettier": "2.8.1",
     "prettier-plugin-astro": "0.7.2",
+    "sharp": "0.31.3",
     "vite": "4.0.4",
     "vitest": "0.26.3",
     "wrangler": "2.6.2"
