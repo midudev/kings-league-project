@@ -1,6 +1,7 @@
 <!-- LANGUAGES -->
 <!-- en -->
-
+###### ***Para README en español***
+[![Español](https://img.shields.io/badge/Language-Español-yellow.svg)](https://github.com/midudev/kings-league-project/blob/main/README.md)
 <div align="center">
 <h1>👑 Kings League Infojobs Project ⚽️
 
