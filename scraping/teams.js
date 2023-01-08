@@ -1,4 +1,4 @@
-import { TEAMS } from '../db/index.js'
+import { TEAMS } from 'db/index.js'
 import { logInfo, logSuccess } from './log.js'
 import { cleanText, scrape } from './utils.js'
 import path from 'node:path'

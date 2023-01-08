@@ -1,7 +1,7 @@
 import path from 'node:path'
 import sharp from 'sharp'
 
-import { TEAMS } from '../db/index.js'
+import { TEAMS } from 'db/index.js'
 import { logInfo, logError } from './log.js'
 import { cleanText } from './utils.js'
 

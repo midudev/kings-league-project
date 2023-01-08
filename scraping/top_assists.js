@@ -1,4 +1,4 @@
-import { getImageFromTeam } from '../db/index.js'
+import { getImageFromTeam } from 'db/index.js'
 import { cleanText } from './utils.js'
 
 const ASSISTS_SELECTORS = {
