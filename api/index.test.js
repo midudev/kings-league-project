@@ -434,3 +434,50 @@ it('Should return a reasonable number of teams for a large number of teams', asy
 		}
 	})
 })
+
+describe('Testing /players-12 route', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('Players should have all their properties', async () => {
+		const resp = await worker.fetch('/players-12')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const playerProperties = ['role', 'firstName', 'lastName', 'image', 'name', 'id', 'team']
+
+		players.forEach((player) =>
+			playerProperties.forEach((property) => {
+				expect(player).toHaveProperty(property)
+			})
+		)
+	})
+
+	it('Nested teams should have all their properties', async () => {
+		const resp = await worker.fetch('/players-12')
+		const players = await resp.json()
+
+		const teams = players.map((player) => player.team)
+		const nestedTeamProperties = [
+			{ name: 'id', type: 'string' },
+			{ name: 'name', type: 'string' },
+			{ name: 'image', type: 'string' },
+			{ name: 'imageWhite', type: 'string' }
+		]
+
+		teams.forEach((team) =>
+			nestedTeamProperties.forEach((property) => {
+				const { name, type } = property
+				expect(team).toHaveProperty(name)
+				expect(team[name]).toBeTypeOf(type)
+			})
+		)
+	})
+})
