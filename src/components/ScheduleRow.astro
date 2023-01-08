@@ -28,7 +28,7 @@ if (timestamp && timestamp <= Date.now()) {
 			src={`https://kingsleague.dev/teams/logos/${local.id}.svg`}
 			alt={`Escudo del equipo ${local.name}`}
 		/>
-		<a title={local.name} href={`/team/${local.id}`}>
+		<a title={local.name} href={`/team/${local.page}`}>
 			{
 				useSmallNames ? (
 					<span class='font-bold font-title' title={local.name}>
@@ -49,7 +49,7 @@ if (timestamp && timestamp <= Date.now()) {
 	</td>
 
 	<td class='lg:px-2 py-4 border-b-1 flex flex-col md:flex-row justify-end items-center w-full'>
-		<a title={visitant.name} href={`/team/${visitant.id}`} class='order-2 2xl:order-1'>
+		<a title={visitant.name} href={`/team/${visitant.page}`} class='order-2 2xl:order-1'>
 			{
 				useSmallNames ? (
 					<span class='font-bold font-title' title={visitant.name}>
