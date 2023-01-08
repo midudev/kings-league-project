@@ -1,4 +1,4 @@
-import { TEAMS } from 'db/index.js'
+import { TEAMS } from '../db/index.js'
 import { logInfo, logSuccess } from './log.js'
 import { cleanText, scrape } from './utils.js'
 import path from 'node:path'
@@ -6,7 +6,7 @@ import { writeFile } from 'node:fs/promises'
 import sharp from 'sharp'
 
 const STATICS_PATH = path.join(process.cwd(), './public/teams/')
-const DB_PATH = path.join(process.cwd(), './db/')
+const DB_PATH = path.join(process.cwd(), '../db/')
 const BASE_URL = 'https://kingsleague.pro/team'
 const SELECTORS = {
 	name: '.el-title',

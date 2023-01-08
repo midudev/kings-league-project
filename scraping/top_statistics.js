@@ -1,4 +1,4 @@
-import { readDBFile, TEAMS } from 'db/index.js'
+import { readDBFile, TEAMS } from '../db/index.js'
 
 const LIMIT_TOP = 5
 
