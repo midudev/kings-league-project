@@ -119,6 +119,11 @@ app.get('/top-statistics', (ctx) => {
 	return ctx.json(topStatistics)
 })
 
+app.get('/top-statistics/:nameStat', (ctx) => {
+	const nameStat = ctx.req.param('nameStat')
+	return ctx.json(topStatistics[nameStat.toLocaleLowerCase()])
+})
+
 app.get('/top-scorers', (ctx) => {
 	return ctx.json(topScorers)
 })
