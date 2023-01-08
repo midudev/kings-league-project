@@ -70,19 +70,20 @@ const teams = await getAllTeams()
 			</div>
 		</nav>
 
-		<nav class='flex self-center items-center md:justify-between md:w-full max-w-3xl'>
+		<nav class='flex self-center items-center md:justify-between md:w-full max-w-4xl'>
 			<input type='checkbox' id='menu' hidden class='peer' />
 			<label
 				for='menu'
-				class='relative z-50 sm:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110 peer-checked:rotate-90 rotate-0'
+				class='relative z-50 md:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110 peer-checked:rotate-90 rotate-0'
 			>
 				<MenuIcon />
 			</label>
-			<div class="absolute top-0 left-0 opacity-0 w-0 transition-all duration-300 peer-checked:w-full peer-checked:opacity-100 z-10 ease-linear">
+			<div class="absolute md:static top-0 left-0 opacity-0 md:opacity-100 w-0 md:w-full transition-all duration-300 peer-checked:w-full peer-checked:opacity-100 z-10 ease-linear">
 				<ul
 					id='navbar'
-					class=' sm:relative text-2xl flex flex-col bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500]
-					min-h-screen sm:min-h-min py-24 sm:py-0 sm:flex justify-center text-white gap-6 sm:gap-x-4 font-semibold text-center text-md
+					class=' md:relative text-2xl flex flex-col md:flex-row bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] md:from-transparent md:to-transparent
+					min-h-screen md:min-h-min py-24 md:py-0 md:flex justify-center text-white gap-6 md:gap-x-4 font-semibold text-center text-md md:text-base
+					md:justify-start
 					[&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline'
 				>
 					{
