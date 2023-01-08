@@ -21,5 +21,5 @@ import CardBackgroundTeam from './CardBackgroundTeam.astro'
 	</div>
 	<CardBackgroundTeam image={whiteImage} />
 
-	<img class={`absolute -right-2 bottom-0 ${smallerBox ? 'w-52' : 'w-60'}`} src={`https://kingsleague.dev/teams/players/${playerImage}`} />
+	<img class={`absolute -right-2 bottom-0 ${smallerBox ? 'w-52' : 'w-60'}`} src={`https://kingsleague.dev/teams/players/${playerImage}`} alt={playerName} decoding="async" fetchpriority="high" />
 </article>

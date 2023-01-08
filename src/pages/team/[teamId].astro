@@ -38,7 +38,7 @@ export async function getStaticPaths() {
 					<div class='flex flex-col'>
 						<div class='flex flex-col xl:flex-row items-center gap-x-6 mb-2'>
 							<img
-								class='w-56 h-56 object-contain'
+								class='w-56 h-56 object-contain aspect-square'
 								src={imageWhite}
 								alt={`Escudo del equipo ${name}`}
 								decoding='async'
@@ -56,10 +56,14 @@ export async function getStaticPaths() {
 														href={href}
 														target='_blank'
 														rel='noopener norefferer'
+														title={`${icon.charAt(0).toUpperCase() + icon.slice(1)}`}
 													>
 														<img
-															class='w-8 h-8 brightness-[1000]'
+															class='w-8 h-8 brightness-[1000] aspect-square'
 															src={`/logos/social/${icon}.svg`}
+															alt={`${icon.charAt(0).toUpperCase() + icon.slice(1)} del equipo ${name}`}
+															width="32"
+															height="32"
 															decoding='async'
 															fetchpriority='high'
 														/>
@@ -77,7 +81,7 @@ export async function getStaticPaths() {
 
 					<div class='xl:absolute xl:-top-20 xl:right-10 text-center'>
 						<img
-							class='w-[400px] h-auto aspect-[170/239]'
+							class='w-[400px] h-auto aspect-[400/562]'
 							src={president.image}
 							alt={president.name}
 							decoding='async'
