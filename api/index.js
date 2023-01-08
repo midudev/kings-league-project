@@ -37,8 +37,8 @@ app.get('/', (ctx) =>
 				},
 				{
 					name: 'player-12',
-					endpoint: '/teams/:id/player-12',
-					description: 'Return the Kings League player 12 for the choosed team'
+					endpoint: '/teams/:id/players-12',
+					description: 'Return the Kings League players 12 for the choosed team'
 				}
 			]
 		},
