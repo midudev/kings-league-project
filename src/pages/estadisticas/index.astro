@@ -2,14 +2,17 @@
 import Layout from '@layouts/Layout.astro'
 import SectionTitle from '@components/SectionTitle.astro'
 import Container from '@components/Container.astro'
+import Leaderboard from '@components/Leaderboard.astro'
+import FloatingBoxContainer from '@components/FloatingBoxContainer.astro'
+import TabsStatistics from '@components/TabsStatistics.astro'
 ---
 
-<!-- Página del Estadísticas -->
-<Layout title='Estadísticas'>
+<Layout title='Clasificación'>
 	<SectionTitle title='Estadísticas' />
 	<Container>
-		<div class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40'>
-			<a href='/'>Inicio</a>
-		</div>
+		<FloatingBoxContainer>
+			<TabsStatistics />
+			<Leaderboard />
+		</FloatingBoxContainer>
 	</Container>
 </Layout>
