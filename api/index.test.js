@@ -316,4 +316,75 @@ describe('Testing /leaderboard route', () => {
 			message: 'Team not found'
 		})
 	})
+
+it('Should return a reasonable number of teams for a large number of teams', async () => {
+	// Add a large number of teams to the database
+	const teams = []
+	for (let i = 0; i < 1000; i += 1) {
+		teams.push({
+			id: `team-${i}`,
+			name: `Team ${i}`,
+			wins: i,
+			losses: 1000 - i,
+			scoredGoals: i * 10,
+			concededGoals: (1000 - i) * 10,
+			yellowCards: i,
+			redCards: 0,
+			rank: i + 1,
+			team: {
+				id: `team-${i}`,
+				name: `Team ${i}`,
+				image: '',
+				imageWhite: '',
+				url: '',
+				channel: '',
+				socialNetworks: {},
+				players: [],
+				coached: '',
+				shortName: '',
+				coachInfo: '',
+				president: ''
+			}
+		})
+	}
+	await worker.fetch('/teams', {
+		method: 'POST',
+		body: JSON.stringify(teams)
+	})
+
+	const resp = await worker.fetch('/leaderboard')
+	expect(resp).toBeDefined()
+
+	const leaderboard = await resp.json()
+	expect(leaderboard.length).toBeLessThanOrEqual(100)
+})
+
+	it('Teams should be ordered by rank, with tiebreakers applied', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		const leaderboard = await resp.json()
+
+		let prevRank = leaderboard[0].rank
+		let prevWins = leaderboard[0].wins
+		let prevScoredGoals = leaderboard[0].scoredGoals
+		for (let i = 1; i < leaderboard.length; i += 1) {
+			const entry = leaderboard[i]
+			if (entry.rank > prevRank) {
+				prevRank = entry.rank
+				prevWins = entry.wins
+				prevScoredGoals = entry.scoredGoals
+			} else if (entry.rank === prevRank) {
+				if (entry.wins < prevWins) {
+					throw new Error('Teams are not ordered by wins')
+				} else if (entry.wins === prevWins) {
+					if (entry.scoredGoals < prevScoredGoals) {
+						throw new Error('Teams are not ordered by scored goals')
+					}
+				}
+				prevWins = entry.wins
+				prevScoredGoals = entry.scoredGoals
+			} else {
+				throw new Error('Teams are not ordered by rank')
+			}
+		}
+	})
 })
