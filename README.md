@@ -1,3 +1,6 @@
+# For README in English
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Pabl0Parra/kings-league-project/blob/main/README.en.md)
+
 # Kings League Project
 
 [![Deploy API](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml/badge.svg?branch=main)](https://github.com/maikCyphlock/kings-league-project/actions/workflows/deploy-api.yml)
