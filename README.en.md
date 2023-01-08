@@ -32,21 +32,21 @@ Address: https://api.kingsleague.dev/
 
 The available endpoints are:
 
- -GET /leaderboard: Returns the Kings League ranking.
- -GET /teams: Returns all the teams in the Kings League.
- -GET /teams/:id: Returns a Kings League team.
- -GET /teams/:id/player-12: Returns a player 12 from a Kings League team.
- -GET /presidents: Returns all Kings League presidents.
- -GET /presidents/:id: Returns a president of a Kings League team.
- -GET /coaches: Returns all the coaches in the Kings League.
- -GET /coaches/:teamId: Returns the coach of a Kings League team.
- -GET /top-scorers: Returns the top scorers in the Kings League.
- -GET /top-scorers/:rank: Returns the top scorer according to their position in the Kings League ranking.
- -GET /top-assists: Returns the top assisters in the Kings League.
- -GET /top-assists/:rank: Returns the top assist according to their position in the Kings League ranking.
- -GET /mvp: Returns the Kings League MVPs.
- -GET /schedule: Returns the Kings League match schedule and the result of the matches played.
- -GET /players-12: Returns the 12 players of the Kings League.
+ - GET `/leaderboard`: Returns the Kings League ranking.
+ - GET `/teams`: Returns all the teams in the Kings League.
+ - GET `/teams/:id` Returns a Kings League team.
+ - GET `/teams/:id/player-12`: Returns a player 12 from a Kings League team.
+ - GET `/presidents`: Returns all Kings League presidents.
+ - GET `/presidents/:id`: Returns a president of a Kings League team.
+ - GET `/coaches`: Returns all the coaches in the Kings League.
+ - GET `/coaches/:teamId`: Returns the coach of a Kings League team.
+ - GET `/top-scorers`: Returns the top scorers in the Kings League.
+ - GET `/top-scorers/:rank`: Returns the top scorer according to their position in the Kings League ranking.
+ - GET `/top-assists`: Returns the top assisters in the Kings League.
+ - GET `/top-assists/:rank`: Returns the top assist according to their position in the Kings League ranking.
+ - GET `/mvp`: Returns the Kings League MVPs.
+ - GET `/schedule`: Returns the Kings League match schedule and the result of the matches played.
+ - GET `/players-12`: Returns the 12 players of the Kings League.
 
 ## Social Media
 
