@@ -353,7 +353,7 @@ describe('Testing statistic routes', () => {
 
 	it('/top-scorers endpoint shoud return players with all their properties', async () => {
 		const resp = await worker.fetch('/top-scorers')
-		expect(resp).toBeDefined
+		expect(resp).toBeDefined()
 
 		const players = await resp.json()
 		const scorerProperties = [...playersProperties, { name: 'goals', type: 'number' }]
@@ -362,10 +362,19 @@ describe('Testing statistic routes', () => {
 
 	it('/top-assists endpoint should return players with all their properties', async () => {
 		const resp = await worker.fetch('/top-assists')
-		expect(resp).toBeDefined
+		expect(resp).toBeDefined()
 
 		const players = await resp.json()
 		const assisterProperties = [...playersProperties, { name: 'assists', type: 'number' }]
 		players.forEach((player) => checkProperties(player, assisterProperties))
+	})
+
+	it('/mvp endpoint should return players with all their properties', async () => {
+		const resp = await worker.fetch('/mvp')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const mvpsProperties = [...playersProperties, { name: 'mvps', type: 'number' }]
+		players.forEach((player) => checkProperties(player, mvpsProperties))
 	})
 })
