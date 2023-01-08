@@ -36,6 +36,7 @@ export const SCRAPINGS = {
 		scraper: getSchedule
 	},
 	top_statistics: {
+		url: 'https://kingsleague.pro/estadisticas/',
 		scraper: getTopStatistics
 	}
 	// coaches: {
