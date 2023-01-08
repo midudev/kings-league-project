@@ -52,7 +52,7 @@ const teams = await getAllTeams()
 											rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
 										>
 											<img
-												class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
+												class='h-9 w-9 lg:h-12 lg:w-12 aspect-square'
 												src={image}
 												alt={`Escudo del equipo ${name}`}
 												width='48'
@@ -81,8 +81,8 @@ const teams = await getAllTeams()
 			<div class="absolute top-0 left-0 opacity-0 w-0 transition-all duration-300 peer-checked:w-full peer-checked:opacity-100 z-10 ease-linear">
 				<ul
 					id='navbar'
-					class=' sm:relative text-2xl flex flex-col bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] 
-					min-h-screen sm:min-h-min py-24 sm:py-0 sm:flex justify-center text-white gap-6 sm:gap-x-4 font-semibold text-center text-md 
+					class=' sm:relative text-2xl flex flex-col bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500]
+					min-h-screen sm:min-h-min py-24 sm:py-0 sm:flex justify-center text-white gap-6 sm:gap-x-4 font-semibold text-center text-md
 					[&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline'
 				>
 					{
