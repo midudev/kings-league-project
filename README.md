@@ -15,9 +15,9 @@ La API proporciona acceso a datos de equipos, presidentes, entrenadores, goleado
 
 ### Tecnologías usadas
 
-Para recuperar los datos de la API, usamos *Web Scraping*, [Node.js](https://nodejs.org/es/), [Hono](https://honojs.dev/) y el servicio de hosting de APIs [Cloudflare Workers](https://workers.cloudflare.com/) para la construcción y el despliegue.
+Para recuperar los datos de la API, usamos _Web Scraping_, [Node.js](https://nodejs.org/es/), [Hono](https://honojs.dev/) y el servicio de hosting de APIs [Cloudflare Workers](https://workers.cloudflare.com/) para la construcción y el despliegue.
 
-La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cherrio](https://github.com/cheeriojs/cheerio) para realizar *Web Scraping* y obtener datos de la **Kings League Infojobs**.
+La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cherrio](https://github.com/cheeriojs/cheerio) para realizar _Web Scraping_ y obtener datos de la **Kings League Infojobs**.
 
 Para probar y validar el funcionamiento de la aplicación, hemos utilizado la librería de pruebas [Vitest](https://vitest.dev/).
 
@@ -42,6 +42,7 @@ Los endpoints disponibles son:
 - GET `/top-assists`: Devuelve los asistentes más destacados de la Kings League.
 - GET `/top-assists/:rank`: Devuelve el asistente más destacado de acuerdo a su posición en el ranking de la Kings League.
 - GET `/mvp`: Devuelve los MVPs de la Kings League.
+- GET `/mvp/:rank`: Devuelve el MVP de la Kings League segun el ranking que le pidamos.
 - GET `/schedule`: Devuelve el calendario de partidos de la Kings League y el resultado de los partidos jugados.
 - GET `/players-12`: Devuelve los jugadores 12 de la Kings League.
 
