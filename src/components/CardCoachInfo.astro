@@ -1,0 +1,12 @@
+<div class='flex items-center rounded-md bg-[#5050504f] text-white py-5 mt-3'>
+	<img
+		class='w-20 h-20 rounded-full mx-3'
+		src={`/teams/coaches/${Astro.props.coachInfo.image}`}
+		alt=''
+	/>
+
+	<p class='flex flex-col text-2xl font-title text-yellow-400'>
+		{Astro.props.coachInfo.name}
+		<span class='text-lg font-body text-white'>Coach</span>
+	</p>
+</div>

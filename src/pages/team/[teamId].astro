@@ -1,4 +1,5 @@
 ---
+import CardCoachInfo from '@components/CardCoachInfo.astro'
 import Container from '@components/Container.astro'
 import TeamPagePlayers from '@components/TeamPagePlayers.astro'
 import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
@@ -9,7 +10,8 @@ import { getAllTeams, getPlayersTwelveFor } from '@services/teams.js'
 
 const ICON_NETWORK_MAPPING = ['instagram', 'tiktok', 'twitch', 'twitter', 'youtube']
 
-const { id, name, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
+const { id, name, imageWhite, presidentId, socialNetworks, players, color, coachInfo } = Astro.props
+
 const gradient = `bg-${id}`
 
 const socialNetworksWithIcon = socialNetworks.map((href) => ({
@@ -63,9 +65,11 @@ export async function getStaticPaths() {
 														<img
 															class='w-8 h-8 brightness-[1000] aspect-square'
 															src={`/logos/social/${icon}.svg`}
-															alt={`${icon.charAt(0).toUpperCase() + icon.slice(1)} del equipo ${name}`}
-															width="32"
-															height="32"
+															alt={`${
+																icon.charAt(0).toUpperCase() + icon.slice(1)
+															} del equipo ${name}`}
+															width='32'
+															height='32'
 															decoding='async'
 															fetchpriority='high'
 														/>
@@ -79,6 +83,7 @@ export async function getStaticPaths() {
 						</div>
 
 						<TeamStats teamId={id} />
+						<CardCoachInfo coachInfo={coachInfo} />
 					</div>
 
 					<div class='xl:absolute xl:-top-20 xl:right-10 text-center'>
@@ -92,9 +97,7 @@ export async function getStaticPaths() {
 
 						<div class='bg-black/70 rounded-xl p-2 -mt-6'>
 							<h3 class='text-white font-title text-3xl'>{president.name}</h3>
-							<h4
-								class='font-body uppercase rounded-full text-orange-500  font-semibold'
-							>
+							<h4 class='font-body uppercase rounded-full text-orange-500 font-semibold'>
 								Presidente
 							</h4>
 						</div>
