@@ -1,4 +1,4 @@
-import { TEAMS } from 'db/index.js'
+import { TEAMS } from '../db/index.js'
 
 export async function getURLTeams($) {
 	/*
