@@ -81,14 +81,14 @@ const REGULATION = [
 	<SectionTitle title='Reglamento' />
 
 	<Container>
-		<div class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'>
-			<div class='w-3/4 m-auto'>
+		<div class='bg-white p-8 lg:p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'>
+			<div class='md:w-3/4 m-auto'>
 				<p class='pb-20 text-center text-[20px]'>
 					La Kings League InfoJobs la creamos entre todos. Y eso incluye la forma de jugar y el
 					reglamento. Estas son las normas que los aficionados han decidido por votación popular a
 					través de redes sociales:
 				</p>
-				<ul class='w-3/4'>
+				<ul class='w-full'>
 					{
 						REGULATION.map((regulation) => (
 							<li class='text-[20px]'>
@@ -113,7 +113,7 @@ const REGULATION = [
 			</div>
 
 			<a
-				class='uppercase bg-black text-white px-10 py-3 rounded w-58 m-auto mt-10'
+				class='uppercase bg-black text-white px-10 py-3 rounded w-58 m-auto mt-10 text-center'
 				href='https://kingsleague.pro/pdf/KINGS-League-Reglamento.pdf'
 				target='_blank'
 				rel='noopener noreferrer'

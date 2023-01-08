@@ -2,6 +2,7 @@ import path from 'node:path'
 import sharp from 'sharp'
 
 import { TEAMS } from '../db/index.js'
+import { logInfo, logError } from './log.js'
 import { cleanText } from './utils.js'
 
 const PLAYER_FOLDER_PATH = path.join(process.cwd(), './public/teams/players')
@@ -65,43 +66,35 @@ export async function getPlayersTwelve($) {
 	})
 
 	for (const player of players) {
-		const imageURL = await saveImageBase64(player)
+		const imageURL = await saveImageWebp(player)
 		player.image = imageURL
 	}
-
 	return players
 }
 
-async function saveImageBase64(player) {
-	const { firstName, lastName, team, image } = player
+async function saveImageWebp(player) {
+	const { id, image } = player
 
 	if (image.includes('placeholder.png')) {
 		return 'placeholder.png'
 	}
 
-	let playerImage = null
 	try {
-		const imageName = lastName
-			? `${team.id}-${firstName.toLowerCase()}-${lastName.toLowerCase()}.webp`
-			: `${team.id}-${firstName.toLowerCase()}.webp`
-
-		const normalizedImageName = imageName
-			.normalize('NFD')
-			.replace(/\s+/g, '-')
-			.replace(/[\u0300-\u036f]/g, '')
-
-		const imageFilePath = `${PLAYER_FOLDER_PATH}/${normalizedImageName}`
-
+		logInfo(`Fetching image for file name: ${id}`)
 		const res = await fetch(image)
 		const imgArrayBuffer = await res.arrayBuffer()
 		const buffer = Buffer.from(imgArrayBuffer)
 
+		logInfo(`Writing image to disk: ${id}`)
+		const imageFileName = `${id}.webp`
+		const imageFilePath = path.join(PLAYER_FOLDER_PATH, imageFileName)
 		await sharp(buffer).webp().toFile(imageFilePath)
+		logInfo(`Everything is done! ${id}`)
 
-		playerImage = `${normalizedImageName}`
+		return imageFileName
 	} catch (error) {
-		console.log(error)
+		logError(error)
 	}
 
-	return playerImage
+	return null
 }

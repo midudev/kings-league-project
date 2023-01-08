@@ -1,36 +1,30 @@
 ---
-const twitch = '/logos/social/twitch.svg'
-const twitter = '/logos/social/twitter.svg'
-const tiktok = '/logos/social/tiktok.svg'
-const instagram = '/logos/social/instagram.svg'
-const youtube = '/logos/social/youtube.svg'
-
 const { theme, mobileHidden } = Astro.props
 
 const socialNetworks = [
 	{
 		name: 'Twitch',
-		icon: twitch,
+		icon: '/logos/social/twitch.svg',
 		href: 'https://www.twitch.tv/kingsleague'
 	},
 	{
 		name: 'Twitter',
-		icon: twitter,
+		icon: '/logos/social/twitter.svg',
 		href: 'https://twitter.com/kingsleague'
 	},
 	{
 		name: 'Tiktok',
-		icon: tiktok,
+		icon: '/logos/social/tiktok.svg',
 		href: 'https://www.tiktok.com/@kingsleague'
 	},
 	{
 		name: 'Instagram',
-		icon: instagram,
+		icon: '/logos/social/instagram.svg',
 		href: 'https://www.instagram.com/kingsleague'
 	},
 	{
 		name: 'Youtube',
-		icon: youtube,
+		icon: '/logos/social/youtube.svg',
 		href: 'https://www.youtube.com/@KingsLeagueOfficial'
 	}
 ]
@@ -50,9 +44,11 @@ const socialNetworks = [
 				<img
 					class={`w-5 transition-all duration-500 ${
 						theme === 'dark' ? 'invert-0' : 'invert-[100]'
-					} brightness-0`}
+					} brightness-0 aspect-square`}
 					src={icon}
 					alt={`${name} Logo`}
+					width="20"
+					height="20"
 					loading='lazy'
 					decoding='async'
 					fetchpriority='low'

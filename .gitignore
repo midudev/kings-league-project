@@ -5,3 +5,6 @@ package-lock.json
 /coverage
 # Ignore build folder of Astro
 /dist
+
+# Webstorm folder
+/.idea
