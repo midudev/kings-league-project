@@ -19,10 +19,9 @@ const TABS = [
 ]
 
 const getNameUrl = `/${Astro.url.pathname.split('/').at(-1)}`
----
 
 <ul
-	class='flex flex-wrap justify-center font-medium text-center text-gray-500 dark:text-gray-400 mt-5 text-lg'
+	class='flex flex-wrap justify-center font-medium text-center text-gray-500 dark:text-gray-400 mb-10 text-lg'
 >
 	{
 		TABS.map(({ title, href }) => (
