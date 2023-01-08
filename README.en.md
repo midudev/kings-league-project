@@ -36,6 +36,7 @@ The following are the available endpoints in the API:
 - GET `/top-assists`: Returns the top assist leaders in the Kings League.
 - GET `/top-assists/`:rank: Returns the top assist leader according to their position on the Kings League list.
 - GET `/mvp`: Returns the MVPs of the Kings League.
+
 Follow us on our Twitch channel to see how we progress in the development of the web page!
 
 https://twitch.tv/midudev
