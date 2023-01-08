@@ -58,8 +58,10 @@ export async function getStaticPaths() {
 														rel='noopener norefferer'
 													>
 														<img
-															class='w-8 h-8 brightness-[1000]'
+															class='w-8 h-8 brightness-[1000] aspect-square'
 															src={`/logos/social/${icon}.svg`}
+															width="32"
+															height="32"
 															decoding='async'
 															fetchpriority='high'
 														/>
