@@ -12,8 +12,10 @@ const schedule = await getSchedule()
 <Layout title='Calendario'>
 	<SectionTitle title='Calendario' />
 	<Container>
-		<main class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'>
-			<div class='max-w-5xl mx-auto my-4 px-10'>
+		<main
+			class='bg-white p-8 sm:p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'
+		>
+			<div class='max-w-5xl mx-auto my-4'>
 				{
 					schedule.map((day) => {
 						return (
