@@ -10,6 +10,20 @@ const teardown = async (worker) => {
 	await worker.stop()
 }
 
+/**
+ *
+ * @param {*} subject Object to validate
+ * @param {[{name: string, type: string}]} schema Properties schema
+ */
+function checkProperties(subject, schema) {
+	schema.forEach((property) => {
+		const { name, type } = property
+
+		expect(subject).toHaveProperty(property.name)
+		if (type) expect(subject[name]).toBeTypeOf(type)
+	})
+}
+
 describe('Testing / route', () => {
 	let worker
 
@@ -479,5 +493,52 @@ describe('Testing /players-12 route', () => {
 				expect(team[name]).toBeTypeOf(type)
 			})
 		)
+	})
+})
+
+describe('Testing statistic routes', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	const playersProperties = [
+		{ name: 'rank', type: 'number' },
+		{ name: 'playerName', type: 'string' },
+		{ name: 'gamesPlayed', type: 'number' },
+		{ name: 'team', type: 'string' },
+		{ name: 'image', type: 'string' }
+	]
+
+	it('/top-scorers endpoint shoud return players with all their properties', async () => {
+		const resp = await worker.fetch('/top-scorers')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const scorerProperties = [...playersProperties, { name: 'goals', type: 'number' }]
+		players.forEach((player) => checkProperties(player, scorerProperties))
+	})
+
+	it('/top-assists endpoint should return players with all their properties', async () => {
+		const resp = await worker.fetch('/top-assists')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const assisterProperties = [...playersProperties, { name: 'assists', type: 'number' }]
+		players.forEach((player) => checkProperties(player, assisterProperties))
+	})
+
+	it('/mvp endpoint should return players with all their properties', async () => {
+		const resp = await worker.fetch('/mvp')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const mvpsProperties = [...playersProperties, { name: 'mvps', type: 'number' }]
+		players.forEach((player) => checkProperties(player, mvpsProperties))
 	})
 })
