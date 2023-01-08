@@ -16,12 +16,12 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 	<main>
 		<section class='bg-principal py-20'>
 			<Container>
-				<div class='grid grid-cols-8 lg:gap-10 w-full px-2 lg:px-10'>
-					<div class='col-span-12 lg:col-span-4 xl:col-span-3 flex flex-col gap-y-10'>
+				<div class='grid grid-cols-4 lg:grid-cols-8 gap-10 w-full px-10'>
+					<div class='col-span-4  xl:col-span-3 flex flex-col gap-y-10'>
 						<NextMatchesTable />
 						<Leaderboard format='small' />
 					</div>
-					<div class='col-span-12 lg:col-span-4 xl:col-span-5'>
+					<div class='col-span-4 lg:col-span-4 xl:col-span-5 mt-[20px] lg:mt-0'>
 						<div class='grid grid-cols-6 gap-y-10 gap-x-5 w-full'>
 							{
 								mvp && (
