@@ -3,7 +3,7 @@ import path from 'node:path'
 import { logInfo, logSuccess } from './log'
 
 const STATICS_PATH = path.join(process.cwd(), './assets/static/presidents')
-const DB_PATH = path.join(process.cwd(), './db/')
+const DB_PATH = path.join(process.cwd(), '../db/')
 const RAW_PRESIDENTS = await readFile(`${DB_PATH}/raw-presidents.json`, 'utf-8').then(JSON.parse)
 
 const presidents = await Promise.all(
