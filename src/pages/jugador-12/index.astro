@@ -1,0 +1,15 @@
+---
+import TeamPagePlayers from '@components/TeamPagePlayers.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import Layout from '@layouts/Layout.astro'
+import { getPlayersTwelve } from '@services/players'
+
+const players = await getPlayersTwelve()
+---
+
+<Layout>
+	<SectionTitle title='Jugadores 12' />
+	<main class='max-w-6xl mx-auto -mt-52 p-10'>
+		<TeamPagePlayers players={players} />
+	</main>
+</Layout>
