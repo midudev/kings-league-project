@@ -1,0 +1,51 @@
+---
+const TABS = [
+	{
+		title: 'Clasificación',
+		href: '/clasificacion'
+	},
+	{
+		title: 'MVP',
+		href: '/mvp'
+	},
+	{
+		title: 'Máximo Goleador',
+		href: '/maximo-goleador'
+	},
+	{
+		title: 'Asistencias',
+		href: '/asistencias'
+	}
+]
+
+const getNameUrl = `/${Astro.url.pathname.split('/').at(-1)}`
+---
+
+<ul
+	class='flex flex-wrap justify-center font-medium text-center text-gray-500 dark:text-gray-400 mb-10 text-lg'
+>
+	{
+		TABS.map(({ title, href }) => (
+			<li class='mr-2'>
+				{getNameUrl === href
+? (
+					<a
+						href='#'
+						class='inline-block p-4 border-b-2 rounded-t-lg border-orange-400 text-orange-400 font-title'
+						aria-current='page'
+					>
+						{title}
+					</a>
+				)
+: (
+					<a
+						href={href}
+						class='inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 '
+					>
+						{title}
+					</a>
+				)}
+			</li>
+		))
+	}
+</ul>

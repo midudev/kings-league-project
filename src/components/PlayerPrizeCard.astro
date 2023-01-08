@@ -9,17 +9,17 @@ import CardBackgroundTeam from './CardBackgroundTeam.astro'
 
 <article class={`relative ${gradient} rounded p-5`}>
 	<div class="flex flex-col justify-between gap-y-10">
-		<header>
-			<h4 class="text-white font-title font-black text-[80px] leading-none">{title}</h4>
-			<h5 class="uppercase text-orange-500 font-black font-title text-3xl">{subtitle}</h5>
+		<header class="relative z-40">
+			<h4 class="text-white font-title font-black text-[40px] lg:text-[80px] leading-none">{title}</h4>
+			<h5 class="uppercase text-orange-500 font-black font-title text-lg lg:text-3xl">{subtitle}</h5>
 		</header>
 
-		<footer>
+		<footer class="relative z-40">
 			<strong class="text-white font-bold text-xl">{playerName}</strong>
 			<p class="text-white opacity-80">{teamName}</p>
 		</footer>
 	</div>
 	<CardBackgroundTeam image={whiteImage} />
 
-	<img class={`absolute -right-2 bottom-0 ${smallerBox ? 'w-52' : 'w-60'}`} src={`https://kingsleague.dev/teams/players/${playerImage}`} />
+	<img alt={playerName} decoding="async" fetchpriority="high" class={`absolute -right-2 bottom-0 ${smallerBox ? 'w-36 lg:w-52' : 'w-36 lg:w-60'}`} src={`https://kingsleague.dev/teams/players/${playerImage}`} />
 </article>
