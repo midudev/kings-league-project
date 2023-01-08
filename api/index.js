@@ -183,8 +183,9 @@ app.get('/schedule/:month', (ctx) => {
 	const month = ctx.req.param('month')
 	const schedulePerMonth = schedule.filter((day) => {
 		const infoDate = day.date.split(' ').filter((info) => info !== 'de')
+		const actualYear = new Date().getFullYear()
 		const monthInSpanish = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(
-			new Date(2022, month, 1)
+			new Date(actualYear, month, 1)
 		)
 
 		return infoDate[1].toLocaleLowerCase() === monthInSpanish
