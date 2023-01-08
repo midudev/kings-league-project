@@ -1,5 +1,20 @@
-<!-- LANGUAGES -->
-<!-- en -->
+
+
+
+<details>
+  <summary>Table of contents</summary>
+  <ol>
+    <li>
+      <a href="#project-description">Project description</a>
+    </li>
+    <li>
+      <a href="#technologies-used">Technologies used</a>
+    </li>
+    <li><a href="#api">API</a></li>
+    <li><a href="#social-networks">Social networks</a></li>
+		<li><a href="#lighthouse">Lighthouse</a></li>
+  </ol>
+</details>
 
 <div align="center">
 <h1>👑 Kings League Infojobs Project ⚽️
@@ -48,14 +63,14 @@ The available endpoints are:
  - GET `/schedule`: Returns the Kings League match schedule and the result of the matches played.
  - GET `/players-12`: Returns the 12 players of the Kings League.
 
-## Social Media
+## Social Networks
 
 Follow us on our Twitch channel to see how we are progressing in the development of the project or follow us on YouTube for more content about full-stack development!
 
 - [Twitch](https://twitch.tv/midudev)
 - [YouTube](https://www.youtube.com/c/midudev)
 
-or join the community on [Discord](https://discord.gg/midudev)
+You can also join our community on [Discord](https://discord.gg/midudev)
 
 ## LightHouse
 
