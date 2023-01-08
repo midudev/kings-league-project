@@ -348,11 +348,18 @@ describe('Testing /players-12 route', () => {
 		const players = await resp.json()
 
 		const teams = players.map((player) => player.team)
-		const nestedTeamProperties = ['id', 'name', 'image', 'imageWhite']
+		const nestedTeamProperties = [
+			{ name: 'id', type: 'string' },
+			{ name: 'name', type: 'string' },
+			{ name: 'image', type: 'string' },
+			{ name: 'imageWhite', type: 'string' }
+		]
 
 		teams.forEach((team) =>
 			nestedTeamProperties.forEach((property) => {
-				expect(team).toHaveProperty(property)
+				const { name, type } = property
+				expect(team).toHaveProperty(name)
+				expect(team[name]).toBeTypeOf(type)
 			})
 		)
 	})
