@@ -33,10 +33,10 @@ export async function getStaticPaths() {
 <Layout title={name}>
 	<section class='bg-principal py-20'>
 		<Container>
-			<div class={`relative px-20 py-10 shadow-xl rounded -mt-10 z-10 mb-40 ${gradient}`}>
-				<section class='flex items-center justify-between pb-10'>
+			<div class={`relative p-0 md:px-20 md:py-10 shadow-xl rounded -mt-10 z-10 mb-40 ${gradient}`}>
+				<section class='flex flex-col xl:flex-row items-center justify-between pb-10'>
 					<div class='flex flex-col'>
-						<div class='flex items-center gap-x-6 mb-2'>
+						<div class='flex flex-col xl:flex-row items-center gap-x-6 mb-2'>
 							<img
 								class='w-56 h-56 object-contain'
 								src={imageWhite}
@@ -44,9 +44,9 @@ export async function getStaticPaths() {
 								decoding='async'
 								fetchpriority='high'
 							/>
-							<div class='flex flex-col gap-y-4'>
+							<div class='flex flex-col text-center gap-y-4'>
 								<h1 class='font-title font-bold text-6xl text-white'>{name}</h1>
-								<ul class='flex flex-row gap-x-4'>
+								<ul class='flex flex-row gap-x-4 justify-center xl:justify-start'>
 									{
 										socialNetworksWithIcon.map(({ href, icon }) => {
 											return (
@@ -59,7 +59,7 @@ export async function getStaticPaths() {
 													>
 														<img
 															class='w-8 h-8 brightness-[1000]'
-															src={`/logo/${icon}.svg`}
+															src={`/logos/social/${icon}.svg`}
 															decoding='async'
 															fetchpriority='high'
 														/>
@@ -75,7 +75,7 @@ export async function getStaticPaths() {
 						<TeamStats teamId={id} />
 					</div>
 
-					<div class='absolute -top-20 right-10 text-center'>
+					<div class='xl:absolute xl:-top-20 xl:right-10 text-center'>
 						<img
 							class='w-[400px] h-auto aspect-[170/239]'
 							src={president.image}

@@ -1,12 +1,8 @@
 ---
 import Logo from './Logo.astro'
 import MenuIcon from './icons/Menu.astro'
-
-// import twitch from '../../assets/static/logos/social/twitch.svg'
-import twitter from '../../assets/static/logos/social/twitter.svg'
-import instagram from '../../assets/static/logos/social/instagram.svg'
-import tiktok from '../../assets/static/logos/social/tiktok.svg'
-import youtube from '../../assets/static/logos/social/youtube.svg'
+import SocialNetworks from './SocialNetworks.astro'
+import { getAllTeams } from '@services/teams.js'
 
 const menu = [
 	{
@@ -31,31 +27,7 @@ const menu = [
 	}
 ]
 
-const SOCIAL_NETWORKS = [
-	{
-		name: 'twitter',
-		icon: twitter,
-		href: 'https://twitter.com/kingsleague'
-	},
-	{
-		name: 'tiktok',
-		icon: tiktok,
-		href: 'https://www.tiktok.com/@kingsleague'
-	},
-	{
-		name: 'instagram',
-		icon: instagram,
-		href: 'https://www.instagram.com/kingsleague/'
-	},
-	{
-		name: 'youtube',
-		icon: youtube,
-		href: 'https://www.youtube.com/@KingsLeagueOfficial'
-	}
-]
-
-const response = await fetch('https://api.kingsleague.dev/teams')
-const teams = await response.json()
+const teams = await getAllTeams()
 ---
 
 <header
@@ -71,15 +43,20 @@ const teams = await response.json()
 						<>
 							{index === 6 ? <Logo /> : ''}
 							<li>
-								<a class='group transition hidden md:block' href={`/team/${id}`} title={name} rel={Astro.url.pathname !== `/team/${id}` && 'preload'}>
+								<a
+									class='group transition hidden md:block'
+									href={`/team/${id}`}
+									title={name}
+									rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
+								>
 									<img
 										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
 										src={image}
 										alt={`Escudo del equipo ${name}`}
 										width='48'
 										height='48'
-										decoding="async"
-										fetchpriority="high"
+										decoding='async'
+										fetchpriority='high'
 									/>
 								</a>
 							</li>
@@ -93,55 +70,38 @@ const teams = await response.json()
 			<input type='checkbox' id='menu' hidden class='peer' />
 			<label
 				for='menu'
-				class='relative z-50 sm:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110'
+				class='relative z-50 sm:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110 peer-checked:rotate-90 rotate-0'
 			>
 				<MenuIcon />
 			</label>
-			<ul
-				id='navbar'
-				class='absolute sm:relative top-0 left-0 right-0 z-40 hidden peer-checked:text-2xl peer-checked:flex peer-checked:flex-col peer-checked:bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] min-h-screen sm:min-h-min py-24 sm:py-0 sm:flex justify-center text-white gap-6 sm:gap-x-4 font-semibold text-center text-md [&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline'
-			>
-				{
-					menu.map(({ name, href }) => (
-						<li>
-							<a
-								class={`transition ${
-									Astro.url.pathname === href
-										? 'opacity-100 pointer-events-none'
-										: 'hover:underline-offset-8'
-								}`}
-								href={href}
-								rel={Astro.url.pathname !== href && 'preload'}
-							>
-								{name}
-							</a>
-						</li>
-					))
-				}
-			</ul>
-
-			<div class='gap-4 justify-center hidden md:flex'>
-				{
-					SOCIAL_NETWORKS.map((network) => (
-						<a
-							href={network.href}
-							target='_blank'
-							rel='noopener norefferer'
-							class='w-10 h-10 flex items-center '
-						>
-							<img
-								class='w-6 transition-all transform hover:scale-125 brightness-[0] invert-[100]'
-								src={network.icon}
-								alt={`${network.name} Logo`}
-								loading="lazy"
-								decoding="async"
-								fetchpriority="low"
-							/>
-						</a>
-					))
-				}
+			<div class="absolute top-0 left-0 opacity-0 w-0 transition-all duration-300 peer-checked:w-full peer-checked:opacity-100 z-10 ease-linear">
+				<ul
+					id='navbar'
+					class=' sm:relative text-2xl flex flex-col bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] 
+					min-h-screen sm:min-h-min py-24 sm:py-0 sm:flex justify-center text-white gap-6 sm:gap-x-4 font-semibold text-center text-md 
+					[&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline'
+				>
+					{
+						menu.map(({ name, href }) => (
+							<li>
+								<a
+									class={`transition ${
+										Astro.url.pathname === href
+											? 'opacity-100 pointer-events-none'
+											: 'hover:underline-offset-8'
+									}`}
+									href={href}
+									rel={Astro.url.pathname !== href && 'preload'}
+								>
+									{name}
+								</a>
+							</li>
+						))
+					}
+				</ul>
 			</div>
-	</nav>
+			<SocialNetworks theme='white' mobileHidden={true} />
+		</nav>
 	</div>
 </header>
 <script type='module'>

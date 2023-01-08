@@ -1,16 +1,27 @@
-import { writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import sharp from 'sharp'
 
 import { TEAMS } from '../db/index.js'
+import { logInfo, logError } from './log.js'
 import { cleanText } from './utils.js'
 
-const PLAYER_FOLDER_PATH = path.join(process.cwd(), './assets/static/players')
+const PLAYER_FOLDER_PATH = path.join(process.cwd(), './public/teams/players')
 
 const PLAYER_SELECTORS = {
 	firstName: { selector: '.el-title', typeOf: 'string' },
 	lastName: { selector: '.el-meta', typeOf: 'string' },
 	teamName: { selector: '.uk-text-lead', typeOf: 'string' },
 	role: { selector: '.fs-grid-meta', typeOf: 'string' }
+}
+
+let counter = 1000
+
+const extractIdFromUrl = (url) => url.split('/').at(-1).split('.').at(0)
+
+const generateIdForPlayer = ({ teamId, image }) => {
+	const imageId = extractIdFromUrl(image)
+	const playerId = imageId === 'placeholder' ? counter++ : imageId
+	return `${teamId}-${playerId}`
 }
 
 export async function getPlayersTwelve($) {
@@ -44,6 +55,7 @@ export async function getPlayersTwelve($) {
 			lastName,
 			image,
 			name,
+			id: generateIdForPlayer({ teamId: team.id, image }),
 			team: {
 				id: team.id,
 				name: teamName,
@@ -54,43 +66,35 @@ export async function getPlayersTwelve($) {
 	})
 
 	for (const player of players) {
-		const imageURL = await saveImageBase64(player)
+		const imageURL = await saveImageWebp(player)
 		player.image = imageURL
 	}
-
 	return players
 }
 
-async function saveImageBase64(player) {
-	const { firstName, lastName, team, image } = player
+async function saveImageWebp(player) {
+	const { id, image } = player
 
 	if (image.includes('placeholder.png')) {
 		return 'placeholder.png'
 	}
 
-	let playerImage = null
 	try {
+		logInfo(`Fetching image for file name: ${id}`)
 		const res = await fetch(image)
-		const extension = res.headers.get('content-type').replace(/image\//, '')
-
 		const imgArrayBuffer = await res.arrayBuffer()
-		const imageBase64 = Buffer.from(imgArrayBuffer).toString('base64')
+		const buffer = Buffer.from(imgArrayBuffer)
 
-		const imageName = lastName
-			? `${team.id}-${firstName.toLowerCase()}-${lastName.toLowerCase()}.${extension}`
-			: `${team.id}-${firstName.toLowerCase()}.${extension}`
+		logInfo(`Writing image to disk: ${id}`)
+		const imageFileName = `${id}.webp`
+		const imageFilePath = path.join(PLAYER_FOLDER_PATH, imageFileName)
+		await sharp(buffer).webp().toFile(imageFilePath)
+		logInfo(`Everything is done! ${id}`)
 
-		const normalizedImageName = imageName
-			.normalize('NFD')
-			.replace(/\s+/g, '-')
-			.replace(/[\u0300-\u036f]/g, '')
-
-		await writeFile(`${PLAYER_FOLDER_PATH}/${normalizedImageName}`, imageBase64, 'base64')
-
-		playerImage = `${normalizedImageName}`
+		return imageFileName
 	} catch (error) {
-		console.log(error)
+		logError(error)
 	}
 
-	return playerImage
+	return null
 }
