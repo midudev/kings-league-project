@@ -1,12 +1,12 @@
 {
-	"recommendations": [
-		"astro-build.astro-vscode",
-		"esbenp.prettier-vscode",
-		"usernamehw.errorlens",
-		"wix.vscode-import-cost",
-		"dbaeumer.vscode-eslint",
-		"bradlc.vscode-tailwindcss",
-		"streetsidesoftware.code-spell-checker",
-		"streetsidesoftware.code-spell-checker-spanish"
-	]
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "esbenp.prettier-vscode",
+    "usernamehw.errorlens",
+    "wix.vscode-import-cost",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-spanish"
+  ]
 }

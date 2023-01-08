@@ -188,9 +188,7 @@
     "url": "https://kingsleague.pro/team/ultimate-mostoles/",
     "presidentId": "djmariio",
     "channel": "https://youtube.com/DjMaRiiO",
-    "socialNetworks": [
-      "https://m.youtube.com/user/DjMaRiiO/videos"
-    ],
+    "socialNetworks": ["https://m.youtube.com/user/DjMaRiiO/videos"],
     "players": [
       {
         "id": "ultimate-mostoles-22",
@@ -365,9 +363,7 @@
     "url": "https://kingsleague.pro/team/saiyans-fc/",
     "presidentId": "thegrefg",
     "channel": "https://twitch.tv/thegrefg",
-    "socialNetworks": [
-      "https://www.twitch.tv/thegrefg"
-    ],
+    "socialNetworks": ["https://www.twitch.tv/thegrefg"],
     "players": [
       {
         "id": "saiyans-fc-16",
@@ -452,9 +448,7 @@
     "url": "https://kingsleague.pro/team/kunisports/",
     "presidentId": "kun-aguero",
     "channel": "https://twitch.tv/slakun10",
-    "socialNetworks": [
-      "https://www.twitch.tv/slakun10"
-    ],
+    "socialNetworks": ["https://www.twitch.tv/slakun10"],
     "players": [
       {
         "id": "kunisports-23",
@@ -629,10 +623,7 @@
     "url": "https://kingsleague.pro/team/porcinos-fc/",
     "presidentId": "ibai-llanos",
     "channel": "https://twitch.tv/ibai",
-    "socialNetworks": [
-      "https://www.twitch.tv/ibai",
-      "https://twitter.com/FCPorcinos"
-    ],
+    "socialNetworks": ["https://www.twitch.tv/ibai", "https://twitter.com/FCPorcinos"],
     "players": [
       {
         "id": "porcinos-fc-19",
@@ -807,9 +798,7 @@
     "url": "https://kingsleague.pro/team/xbuyer-team/",
     "presidentId": "hnos-buyer",
     "channel": "https://www.youtube.com/xbuyer",
-    "socialNetworks": [
-      "https://www.youtube.com/xbuyer"
-    ],
+    "socialNetworks": ["https://www.youtube.com/xbuyer"],
     "players": [
       {
         "id": "xbuyer-team-10",
@@ -894,9 +883,7 @@
     "url": "https://kingsleague.pro/team/aniquiladores-fc/",
     "presidentId": "juan-guarnizo",
     "channel": "https://twitch.tv/juansguarnizo",
-    "socialNetworks": [
-      "https://www.twitch.tv/juansguarnizo"
-    ],
+    "socialNetworks": ["https://www.twitch.tv/juansguarnizo"],
     "players": [
       {
         "id": "aniquiladores-fc-placeholder",
@@ -981,10 +968,7 @@
     "url": "https://kingsleague.pro/team/pio-fc/",
     "presidentId": "rivers",
     "channel": "https://twitch.tv/rivers_gg",
-    "socialNetworks": [
-      "https://www.twitch.tv/rivers_gg",
-      "https://twitter.com/PIO_FC"
-    ],
+    "socialNetworks": ["https://www.twitch.tv/rivers_gg", "https://twitter.com/PIO_FC"],
     "players": [
       {
         "id": "pio-fc-4",
