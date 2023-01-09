@@ -34,26 +34,30 @@ const NAV_ENTRIES = [
 ]
 ---
 
-<footer class='text-white w-full p-8 bg-black'>
+<footer class='page-footer text-white w-full p-8 bg-black relative overflow-hidden [&>div]:relative [&>div]:z-10'>
 	<Container>
 		<section
-			class='flex flex-wrap justify-center text-center md:text-left lg:flex-row md:justify-between gap-14 lg:gap-4 text-sm text-lig my-10'
+			class='flex flex-col justify-center lg:flex-row lg:justify-between gap-10 text-sm my-10'
 		>
-			<img
-				class='block w-52 aspect-[208/92]'
-				src='/logos/kings-league-infojobs.svg'
-				alt='logo de Kings League y Infojobs'
-				loading='lazy'
-				decoding='async'
-				fetchpriority='low'
-			/>
+			<a href='/'>
+				<img
+					class='mx-auto lg:ml-0 aspect-[208/92]'
+					src='/logos/kings-league-infojobs.svg'
+					alt='logo de Kings League y Infojobs'
+					loading='lazy'
+					decoding='async'
+					fetchpriority='low'
+					width='208'
+					height='92'
+				/>
+			</a>
 
 			<nav
-				class='flex-col lg:grid lg:grid-cols-3 gap-4 lg:gap-0 lg:justify-between lg:gap-x-16 lg:gap-y-4'
+				class='flex flex-col lg:grid lg:grid-cols-3 gap-4 lg:gap-0 lg:justify-between lg:gap-x-16 lg:gap-y-4'
 			>
 				{
 					NAV_ENTRIES.map((entry) => (
-						<a href={entry.href} class='flex items-center hover:underline'>
+						<a href={entry.href} class='text-center lg:text-left hover:underline font-semibold'>
 							{entry.name}
 						</a>
 					))
