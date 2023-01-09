@@ -8,8 +8,10 @@ import Layout from '@layouts/Layout.astro'
 	<SectionTitle title='Contacto' />
 
 	<Container>
-		<div class='bg-white text-lg shadow-xl rounded z-10 max-w-screen-md m-auto px-4 py-8'>
-			<h2 class='font-bold text-3xl'>Horario de apertura</h2>
+		<main
+			class='max-w-5xl m-auto bg-white p-8 sm:p-20 sm:shadow-xl sm:rounded -mt-10 z-10 sm:mb-40 flex justify-center flex-col [&_p]:text-lg [&_p]:lg:text-xl [&_p]:text-gray-800'
+		>
+			<h2 class='font-title text-3xl mb-4'>Horario de apertura</h2>
 			<p>
 				<strong>Sólo se podrá acceder al recinto con acreditación o invitación.</strong> El horario de
 				apertura al público a la Zona Deportiva Port de Barcelona será en los días de partido de 15h
@@ -18,9 +20,10 @@ import Layout from '@layouts/Layout.astro'
 
 			<div class='my-6 flex flex-col gap-12'>
 				<section class='flex flex-col gap-6'>
-					<h2 class='font-bold text-2xl'>Accesos</h2>
+					<h2 class='font-bold text-2xl text-orange-500'>Accesos</h2>
 					<div class='border-2'>
 						<iframe
+							title='Mapa de Google Maps ubicado en el pabellón de la Zona deportiva Port de Barcelona.'
 							class='block m-auto w-full'
 							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3552011735433!2d2.1441944!3d41.322888899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b1655994fcebd8b!2zNDHCsDE5JzIyLjQiTiAywrAwOCczOS4xIkU!5e0!3m2!1ses!2sar!4v1673127000905!5m2!1ses!2sar'
 							width='600'
@@ -39,7 +42,7 @@ import Layout from '@layouts/Layout.astro'
 					</p>
 
 					<p>
-						El acceso al entorno del recinto se realizará por la Porta 34 (Av. Ports d’Europa) de la
+						El acceso al entorno del recinto se realizará por la Porta 34 (Av. Ports d'Europa) de la
 						Zona de Actividades Logísticas (ZAL).
 					</p>
 
@@ -52,9 +55,9 @@ import Layout from '@layouts/Layout.astro'
 				<hr />
 
 				<section class='flex flex-col gap-6'>
-					<h2 class='font-bold text-3xl'>Cómo llegar al pabellón</h2>
+					<h2 class='font-title text-3xl mb-4'>Cómo llegar al pabellón</h2>
 
-					<h3 class='font-bold text-2xl mt-4'>Transporte Público</h3>
+					<h3 class='font-bold text-2xl text-orange-500'>Transporte Público</h3>
 					<p><strong>Metro:</strong> L10S ZAL | Riu Vell / Collblanc, parada ZAL | Riu Vell.</p>
 					<p>
 						<strong>Desde Plaça Catalunya:</strong> L1 (Catalunya) – L1 (Torrassa) – L10S (ZAL | Riu
@@ -74,7 +77,7 @@ import Layout from '@layouts/Layout.astro'
 						>
 					</p>
 
-					<h3 class='font-bold text-2xl mt-4'>Parking</h3>
+					<h3 class='font-bold text-2xl text-orange-500'>Parking</h3>
 					<p>
 						Hay plazas limitadas de parking gratuitas tanto en el Carrer de la Mar Roja como en la
 						Avinguda Ports d’Europa.
@@ -102,6 +105,6 @@ import Layout from '@layouts/Layout.astro'
 					>
 				</p>
 			</div>
-		</div>
+		</main>
 	</Container>
 </Layout>
