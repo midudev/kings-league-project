@@ -1,114 +1,10 @@
 [
   {
-    "wins": 1,
+    "wins": 2,
     "losses": 0,
-    "scoredGoals": 5,
-    "concededGoals": 0,
-    "yellowCards": 0,
-    "redCards": 0,
-    "team": {
-      "color": "#49b2ad",
-      "id": "el-barrio",
-      "name": "El Barrio",
-      "image": "https://kingsleague.dev/teams/logos/el-barrio.svg",
-      "imageWhite": "https://kingsleague.dev/teams/logos/el-barrio-inverse.svg",
-      "url": "https://kingsleague.pro/team/el-barrio/",
-      "channel": "https://twitch.tv/1k",
-      "socialNetworks": [
-        "https://www.instagram.com/elbarrioklk/?hl=es",
-        "https://www.tiktok.com/@adricontreras4",
-        "https://twitter.com/elbarrioklk_",
-        "https://www.tiktok.com/@elbarrioklk"
-      ],
-      "players": [
-        {
-          "id": "el-barrio-1",
-          "name": "José Juan",
-          "role": "jugador 11",
-          "image": "el-barrio-jos-juan.webp"
-        },
-        {
-          "id": "el-barrio-10",
-          "name": "Jacobo",
-          "role": "Delantero",
-          "image": "el-barrio-jacobo.webp"
-        },
-        {
-          "id": "el-barrio-6",
-          "name": "Mase",
-          "role": "Defensa",
-          "image": "el-barrio-mase.webp"
-        },
-        {
-          "id": "el-barrio-9",
-          "name": "Beguer",
-          "role": "Delantero",
-          "image": "el-barrio-beguer.webp"
-        },
-        {
-          "id": "el-barrio-14",
-          "name": "Ros",
-          "role": "Medio",
-          "image": "el-barrio-ros.webp"
-        },
-        {
-          "id": "el-barrio-8",
-          "name": "Ubón",
-          "role": "Medio",
-          "image": "el-barrio-ubn.webp"
-        },
-        {
-          "id": "el-barrio-19",
-          "name": "Pau ZZ",
-          "role": "Defensa",
-          "image": "el-barrio-pau-zz.webp"
-        },
-        {
-          "id": "el-barrio-placeholder",
-          "name": "Olae",
-          "role": "Delantero",
-          "image": "el-barrio-olae.webp"
-        },
-        {
-          "id": "el-barrio-11",
-          "name": "O. Boada",
-          "role": "Delantero",
-          "image": "el-barrio-o-boada.webp"
-        },
-        {
-          "id": "el-barrio-7",
-          "name": "Baranera",
-          "role": "Medio",
-          "image": "el-barrio-baranera.webp"
-        },
-        {
-          "id": "el-barrio-12",
-          "name": "Capilla",
-          "role": "Medio",
-          "image": "el-barrio-capilla.webp"
-        }
-      ],
-      "coach": "Juan Arroita",
-      "shortName": "RDB",
-      "coachInfo": {
-        "name": "Juan Arroita",
-        "image": "juan-arroita.webp"
-      },
-      "president": {
-        "id": "adri-contreras",
-        "name": "Adri Contreras",
-        "image": "https://kingsleague.dev/presidents/adri-contreras.webp",
-        "teamId": "el-barrio"
-      }
-    },
-    "rank": 1
-  },
-  {
-    "wins": 1,
-    "losses": 0,
-    "scoredGoals": 5,
-    "concededGoals": 1,
-    "yellowCards": 0,
+    "scoredGoals": 8,
+    "concededGoals": 3,
+    "yellowCards": 1,
     "redCards": 0,
     "team": {
       "color": "#7b7b7b",
@@ -202,117 +98,13 @@
         "teamId": "ultimate-mostoles"
       }
     },
-    "rank": 2
+    "rank": 1
   },
   {
-    "wins": 1,
+    "wins": 2,
     "losses": 0,
-    "scoredGoals": 5,
-    "concededGoals": 3,
-    "yellowCards": 1,
-    "redCards": 0,
-    "team": {
-      "color": "#31585a",
-      "id": "los-troncos-fc",
-      "name": "Los Troncos FC",
-      "image": "https://kingsleague.dev/teams/logos/los-troncos.svg",
-      "imageWhite": "https://kingsleague.dev/teams/logos/los-troncos-inverse.svg",
-      "url": "https://kingsleague.pro/team/los-troncos-fc/",
-      "channel": "https://twitch.tv/perxitaa",
-      "socialNetworks": [
-        "https://www.twitch.tv/perxitaa",
-        "https://www.instagram.com/troncosfc.oficial/",
-        "https://twitter.com/lostroncosfc_/",
-        "https://www.tiktok.com/@lostroncosfc_"
-      ],
-      "players": [
-        {
-          "id": "los-troncos-fc-21",
-          "name": "C. Planas «Chopo»",
-          "role": "jugador 11",
-          "image": "los-troncos-fc-c-planas-chopo.webp"
-        },
-        {
-          "id": "los-troncos-fc-9",
-          "name": "E. Álvaro «Roble»",
-          "role": "Delantero",
-          "image": "los-troncos-fc-e-alvaro-roble.webp"
-        },
-        {
-          "id": "los-troncos-fc-13",
-          "name": "Lechuga",
-          "role": "Portero",
-          "image": "los-troncos-fc-lechuga.webp"
-        },
-        {
-          "id": "los-troncos-fc-4",
-          "name": "D. Soriano «Olivo»",
-          "role": "Defensa",
-          "image": "los-troncos-fc-d-soriano-olivo.webp"
-        },
-        {
-          "id": "los-troncos-fc-8",
-          "name": "S. Sánchez «Drago»",
-          "role": "Medio",
-          "image": "los-troncos-fc-s-sanchez-drago.webp"
-        },
-        {
-          "id": "los-troncos-fc-5",
-          "name": "Noel L. «Ahuehuete»",
-          "role": "Medio",
-          "image": "los-troncos-fc-noel-l-ahuehuete.webp"
-        },
-        {
-          "id": "los-troncos-fc-10",
-          "name": "X. Molas «Mimosa»",
-          "role": "Medio",
-          "image": "los-troncos-fc-x-molas-mimosa.webp"
-        },
-        {
-          "id": "los-troncos-fc-7",
-          "name": "R. Martínez «Bonsai»",
-          "role": "Delantero",
-          "image": "los-troncos-fc-r-martinez-bonsai.webp"
-        },
-        {
-          "id": "los-troncos-fc-11",
-          "name": "Dorkis P. «Mango»",
-          "role": "Delantero",
-          "image": "los-troncos-fc-dorkis-p-mango.webp"
-        },
-        {
-          "id": "los-troncos-fc-6",
-          "name": "I. Nuevo «Ficus»",
-          "role": "Medio",
-          "image": "los-troncos-fc-i-nuevo-ficus.webp"
-        },
-        {
-          "id": "los-troncos-fc-1",
-          "name": "M. Arús «Pino»",
-          "role": "Portero",
-          "image": "los-troncos-fc-m-arus-pino.webp"
-        }
-      ],
-      "coach": "Pol Font",
-      "shortName": "TFC",
-      "coachInfo": {
-        "name": "Pol Font",
-        "image": "pol-font.webp"
-      },
-      "president": {
-        "id": "perxitaa",
-        "name": "Perxitaa",
-        "image": "https://kingsleague.dev/presidents/perxitaa.webp",
-        "teamId": "los-troncos-fc"
-      }
-    },
-    "rank": 3
-  },
-  {
-    "wins": 1,
-    "losses": 0,
-    "scoredGoals": 4,
-    "concededGoals": 2,
+    "scoredGoals": 7,
+    "concededGoals": 4,
     "yellowCards": 0,
     "redCards": 0,
     "team": {
@@ -410,14 +202,14 @@
         "teamId": "1k"
       }
     },
-    "rank": 4
+    "rank": 2
   },
   {
-    "wins": 1,
+    "wins": 2,
     "losses": 0,
-    "scoredGoals": 4,
-    "concededGoals": 2,
-    "yellowCards": 1,
+    "scoredGoals": 5,
+    "concededGoals": 3,
+    "yellowCards": 3,
     "redCards": 0,
     "team": {
       "color": "#1932e0",
@@ -511,12 +303,12 @@
         "teamId": "saiyans-fc"
       }
     },
-    "rank": 5
+    "rank": 3
   },
   {
-    "wins": 1,
+    "wins": 2,
     "losses": 0,
-    "scoredGoals": 2,
+    "scoredGoals": 3,
     "concededGoals": 1,
     "yellowCards": 1,
     "redCards": 0,
@@ -612,117 +404,221 @@
         "teamId": "kunisports"
       }
     },
-    "rank": 6
+    "rank": 4
   },
   {
-    "wins": 0,
+    "wins": 1,
     "losses": 1,
-    "scoredGoals": 1,
-    "concededGoals": 2,
-    "yellowCards": 0,
+    "scoredGoals": 7,
+    "concededGoals": 3,
+    "yellowCards": 1,
     "redCards": 0,
     "team": {
-      "id": "jijantes-fc",
-      "color": "#d4293d",
-      "name": "Jijantes FC",
-      "image": "https://kingsleague.dev/teams/logos/jijantes.svg",
-      "imageWhite": "https://kingsleague.dev/teams/logos/jijantes-inverse.svg",
-      "url": "https://kingsleague.pro/team/jijantes-fc/",
-      "channel": "https://twitch.tv/gerardromero",
+      "color": "#49b2ad",
+      "id": "el-barrio",
+      "name": "El Barrio",
+      "image": "https://kingsleague.dev/teams/logos/el-barrio.svg",
+      "imageWhite": "https://kingsleague.dev/teams/logos/el-barrio-inverse.svg",
+      "url": "https://kingsleague.pro/team/el-barrio/",
+      "channel": "https://twitch.tv/1k",
       "socialNetworks": [
-        "https://www.twitch.tv/gerardromero",
-        "https://www.instagram.com/jijantesfc/?hl=es",
-        "https://twitter.com/JijantesFC?s=20&t=40PQRh7lXf2HVdUs1pe-9w",
-        "https://www.tiktok.com/@jijantesfutbolclub"
+        "https://www.instagram.com/elbarrioklk/?hl=es",
+        "https://www.tiktok.com/@adricontreras4",
+        "https://twitter.com/elbarrioklk_",
+        "https://www.tiktok.com/@elbarrioklk"
       ],
       "players": [
         {
-          "id": "jijantes-fc-26",
-          "name": "Soriano",
+          "id": "el-barrio-1",
+          "name": "José Juan",
           "role": "jugador 11",
-          "image": "jijantes-fc-soriano.webp"
+          "image": "el-barrio-jos-juan.webp"
         },
         {
-          "id": "jijantes-fc-8",
-          "name": "Alsina",
-          "role": "Medio",
-          "image": "jijantes-fc-alsina.webp"
-        },
-        {
-          "id": "jijantes-fc-1",
-          "name": "Pol",
-          "role": "Portero",
-          "image": "jijantes-fc-pol.webp"
-        },
-        {
-          "id": "jijantes-fc-4",
-          "name": "Jay",
-          "role": "Defensa",
-          "image": "jijantes-fc-jay.webp"
-        },
-        {
-          "id": "jijantes-fc-7",
-          "name": "Quero",
-          "role": "Medio",
-          "image": "jijantes-fc-quero.webp"
-        },
-        {
-          "id": "jijantes-fc-5",
-          "name": "Arnau M.V",
-          "role": "Defensa",
-          "image": "jijantes-fc-arnau-mv.webp"
-        },
-        {
-          "id": "jijantes-fc-10",
-          "name": "De la Villa",
+          "id": "el-barrio-10",
+          "name": "Jacobo",
           "role": "Delantero",
-          "image": "jijantes-fc-de-la-villa.webp"
+          "image": "el-barrio-jacobo.webp"
         },
         {
-          "id": "jijantes-fc-30",
-          "name": "Maca",
-          "role": "Medio",
-          "image": "jijantes-fc-maca.webp"
-        },
-        {
-          "id": "jijantes-fc-6",
-          "name": "Noel",
+          "id": "el-barrio-6",
+          "name": "Mase",
           "role": "Defensa",
-          "image": "jijantes-fc-noel.webp"
+          "image": "el-barrio-mase.webp"
         },
         {
-          "id": "jijantes-fc-31",
-          "name": "Dorado",
+          "id": "el-barrio-9",
+          "name": "Beguer",
           "role": "Delantero",
-          "image": "jijantes-fc-dorado.webp"
+          "image": "el-barrio-beguer.webp"
         },
         {
-          "id": "jijantes-fc-25",
-          "name": "Mario",
-          "role": "Portero",
-          "image": "jijantes-fc-mario.webp"
+          "id": "el-barrio-14",
+          "name": "Ros",
+          "role": "Medio",
+          "image": "el-barrio-ros.webp"
+        },
+        {
+          "id": "el-barrio-8",
+          "name": "Ubón",
+          "role": "Medio",
+          "image": "el-barrio-ubn.webp"
+        },
+        {
+          "id": "el-barrio-19",
+          "name": "Pau ZZ",
+          "role": "Defensa",
+          "image": "el-barrio-pau-zz.webp"
+        },
+        {
+          "id": "el-barrio-placeholder",
+          "name": "Olae",
+          "role": "Delantero",
+          "image": "el-barrio-olae.webp"
+        },
+        {
+          "id": "el-barrio-11",
+          "name": "O. Boada",
+          "role": "Delantero",
+          "image": "el-barrio-o-boada.webp"
+        },
+        {
+          "id": "el-barrio-7",
+          "name": "Baranera",
+          "role": "Medio",
+          "image": "el-barrio-baranera.webp"
+        },
+        {
+          "id": "el-barrio-12",
+          "name": "Capilla",
+          "role": "Medio",
+          "image": "el-barrio-capilla.webp"
         }
       ],
-      "coach": "Marc Carmona",
-      "shortName": "JFC",
+      "coach": "Juan Arroita",
+      "shortName": "RDB",
       "coachInfo": {
-        "name": "Marc Carmona",
-        "image": "marc-carmona.webp"
+        "name": "Juan Arroita",
+        "image": "juan-arroita.webp"
       },
       "president": {
-        "id": "gerard-romero",
-        "name": "Gerard Romero",
-        "image": "https://kingsleague.dev/presidents/gerard-romero.webp",
-        "teamId": "jijantes-fc"
+        "id": "adri-contreras",
+        "name": "Adri Contreras",
+        "image": "https://kingsleague.dev/presidents/adri-contreras.webp",
+        "teamId": "el-barrio"
       }
     },
-    "rank": 7
+    "rank": 5
   },
   {
-    "wins": 0,
+    "wins": 1,
     "losses": 1,
-    "scoredGoals": 2,
-    "concededGoals": 4,
+    "scoredGoals": 8,
+    "concededGoals": 8,
+    "yellowCards": 1,
+    "redCards": 0,
+    "team": {
+      "color": "#31585a",
+      "id": "los-troncos-fc",
+      "name": "Los Troncos FC",
+      "image": "https://kingsleague.dev/teams/logos/los-troncos.svg",
+      "imageWhite": "https://kingsleague.dev/teams/logos/los-troncos-inverse.svg",
+      "url": "https://kingsleague.pro/team/los-troncos-fc/",
+      "channel": "https://twitch.tv/perxitaa",
+      "socialNetworks": [
+        "https://www.twitch.tv/perxitaa",
+        "https://www.instagram.com/troncosfc.oficial/",
+        "https://twitter.com/lostroncosfc_/",
+        "https://www.tiktok.com/@lostroncosfc_"
+      ],
+      "players": [
+        {
+          "id": "los-troncos-fc-21",
+          "name": "C. Planas «Chopo»",
+          "role": "jugador 11",
+          "image": "los-troncos-fc-c-planas-chopo.webp"
+        },
+        {
+          "id": "los-troncos-fc-9",
+          "name": "E. Álvaro «Roble»",
+          "role": "Delantero",
+          "image": "los-troncos-fc-e-alvaro-roble.webp"
+        },
+        {
+          "id": "los-troncos-fc-13",
+          "name": "Lechuga",
+          "role": "Portero",
+          "image": "los-troncos-fc-lechuga.webp"
+        },
+        {
+          "id": "los-troncos-fc-4",
+          "name": "D. Soriano «Olivo»",
+          "role": "Defensa",
+          "image": "los-troncos-fc-d-soriano-olivo.webp"
+        },
+        {
+          "id": "los-troncos-fc-8",
+          "name": "S. Sánchez «Drago»",
+          "role": "Medio",
+          "image": "los-troncos-fc-s-sanchez-drago.webp"
+        },
+        {
+          "id": "los-troncos-fc-5",
+          "name": "Noel L. «Ahuehuete»",
+          "role": "Medio",
+          "image": "los-troncos-fc-noel-l-ahuehuete.webp"
+        },
+        {
+          "id": "los-troncos-fc-10",
+          "name": "X. Molas «Mimosa»",
+          "role": "Medio",
+          "image": "los-troncos-fc-x-molas-mimosa.webp"
+        },
+        {
+          "id": "los-troncos-fc-7",
+          "name": "R. Martínez «Bonsai»",
+          "role": "Delantero",
+          "image": "los-troncos-fc-r-martinez-bonsai.webp"
+        },
+        {
+          "id": "los-troncos-fc-11",
+          "name": "Dorkis P. «Mango»",
+          "role": "Delantero",
+          "image": "los-troncos-fc-dorkis-p-mango.webp"
+        },
+        {
+          "id": "los-troncos-fc-6",
+          "name": "I. Nuevo «Ficus»",
+          "role": "Medio",
+          "image": "los-troncos-fc-i-nuevo-ficus.webp"
+        },
+        {
+          "id": "los-troncos-fc-1",
+          "name": "M. Arús «Pino»",
+          "role": "Portero",
+          "image": "los-troncos-fc-m-arus-pino.webp"
+        }
+      ],
+      "coach": "Pol Font",
+      "shortName": "TFC",
+      "coachInfo": {
+        "name": "Pol Font",
+        "image": "pol-font.webp"
+      },
+      "president": {
+        "id": "perxitaa",
+        "name": "Perxitaa",
+        "image": "https://kingsleague.dev/presidents/perxitaa.webp",
+        "teamId": "los-troncos-fc"
+      }
+    },
+    "rank": 6
+  },
+  {
+    "wins": 1,
+    "losses": 1,
+    "scoredGoals": 7,
+    "concededGoals": 7,
     "yellowCards": 1,
     "redCards": 0,
     "team": {
@@ -818,13 +714,13 @@
         "teamId": "porcinos-fc"
       }
     },
-    "rank": 8
+    "rank": 7
   },
   {
-    "wins": 0,
+    "wins": 1,
     "losses": 1,
-    "scoredGoals": 2,
-    "concededGoals": 4,
+    "scoredGoals": 7,
+    "concededGoals": 7,
     "yellowCards": 0,
     "redCards": 0,
     "team": {
@@ -922,13 +818,117 @@
         "teamId": "rayo-barcelona"
       }
     },
+    "rank": 8
+  },
+  {
+    "wins": 0,
+    "losses": 2,
+    "scoredGoals": 4,
+    "concededGoals": 7,
+    "yellowCards": 2,
+    "redCards": 0,
+    "team": {
+      "id": "jijantes-fc",
+      "color": "#d4293d",
+      "name": "Jijantes FC",
+      "image": "https://kingsleague.dev/teams/logos/jijantes.svg",
+      "imageWhite": "https://kingsleague.dev/teams/logos/jijantes-inverse.svg",
+      "url": "https://kingsleague.pro/team/jijantes-fc/",
+      "channel": "https://twitch.tv/gerardromero",
+      "socialNetworks": [
+        "https://www.twitch.tv/gerardromero",
+        "https://www.instagram.com/jijantesfc/?hl=es",
+        "https://twitter.com/JijantesFC?s=20&t=40PQRh7lXf2HVdUs1pe-9w",
+        "https://www.tiktok.com/@jijantesfutbolclub"
+      ],
+      "players": [
+        {
+          "id": "jijantes-fc-26",
+          "name": "Soriano",
+          "role": "jugador 11",
+          "image": "jijantes-fc-soriano.webp"
+        },
+        {
+          "id": "jijantes-fc-8",
+          "name": "Alsina",
+          "role": "Medio",
+          "image": "jijantes-fc-alsina.webp"
+        },
+        {
+          "id": "jijantes-fc-1",
+          "name": "Pol",
+          "role": "Portero",
+          "image": "jijantes-fc-pol.webp"
+        },
+        {
+          "id": "jijantes-fc-4",
+          "name": "Jay",
+          "role": "Defensa",
+          "image": "jijantes-fc-jay.webp"
+        },
+        {
+          "id": "jijantes-fc-7",
+          "name": "Quero",
+          "role": "Medio",
+          "image": "jijantes-fc-quero.webp"
+        },
+        {
+          "id": "jijantes-fc-5",
+          "name": "Arnau M.V",
+          "role": "Defensa",
+          "image": "jijantes-fc-arnau-mv.webp"
+        },
+        {
+          "id": "jijantes-fc-10",
+          "name": "De la Villa",
+          "role": "Delantero",
+          "image": "jijantes-fc-de-la-villa.webp"
+        },
+        {
+          "id": "jijantes-fc-30",
+          "name": "Maca",
+          "role": "Medio",
+          "image": "jijantes-fc-maca.webp"
+        },
+        {
+          "id": "jijantes-fc-6",
+          "name": "Noel",
+          "role": "Defensa",
+          "image": "jijantes-fc-noel.webp"
+        },
+        {
+          "id": "jijantes-fc-31",
+          "name": "Dorado",
+          "role": "Delantero",
+          "image": "jijantes-fc-dorado.webp"
+        },
+        {
+          "id": "jijantes-fc-25",
+          "name": "Mario",
+          "role": "Portero",
+          "image": "jijantes-fc-mario.webp"
+        }
+      ],
+      "coach": "Marc Carmona",
+      "shortName": "JFC",
+      "coachInfo": {
+        "name": "Marc Carmona",
+        "image": "marc-carmona.webp"
+      },
+      "president": {
+        "id": "gerard-romero",
+        "name": "Gerard Romero",
+        "image": "https://kingsleague.dev/presidents/gerard-romero.webp",
+        "teamId": "jijantes-fc"
+      }
+    },
     "rank": 9
   },
   {
     "wins": 0,
-    "losses": 1,
-    "scoredGoals": 2,
-    "concededGoals": 5,
+    "losses": 2,
+    "scoredGoals": 3,
+    "concededGoals": 6,
     "yellowCards": 1,
     "redCards": 0,
     "team": {
@@ -1027,9 +1027,9 @@
   },
   {
     "wins": 0,
-    "losses": 1,
-    "scoredGoals": 1,
-    "concededGoals": 5,
+    "losses": 2,
+    "scoredGoals": 3,
+    "concededGoals": 8,
     "yellowCards": 0,
     "redCards": 0,
     "team": {
@@ -1128,10 +1128,10 @@
   },
   {
     "wins": 0,
-    "losses": 1,
-    "scoredGoals": 0,
-    "concededGoals": 5,
-    "yellowCards": 1,
+    "losses": 2,
+    "scoredGoals": 1,
+    "concededGoals": 6,
+    "yellowCards": 3,
     "redCards": 0,
     "team": {
       "color": "#fff68d",
