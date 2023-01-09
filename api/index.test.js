@@ -18,9 +18,12 @@ const teardown = async (worker) => {
 function checkProperties(subject, schema) {
 	schema.forEach((property) => {
 		const { name, type } = property
-
 		expect(subject).toHaveProperty(property.name)
-		if (type) expect(subject[name]).toBeTypeOf(type)
+
+		if (type) {
+			const customMessage = `Expected [${name}] property to be type: [${type}]`
+			expect(subject[name], customMessage).toBeTypeOf(type)
+		}
 	})
 }
 
