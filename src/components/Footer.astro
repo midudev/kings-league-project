@@ -73,13 +73,35 @@ const NAV_ENTRIES = [
 			>
 				<SocialNetworks theme='dark' />
 
-				<nav class='flex gap-5 justify-center lg:justify-around'>
-					<span>Contacto</span>
-					<span>Política de Privacidad</span>
-					<span>Aviso Legal</span>
-					<span>Política de Cookies</span>
+				<nav class='flex flex-wrap gap-5 justify-center lg:justify-around'>
+					<span class="font-semibold">Contacto</span>
+					<span class="font-semibold">Política de Privacidad</span>
+					<span class="font-semibold">Aviso Legal</span>
+					<span class="font-semibold">Política de Cookies</span>
 				</nav>
 			</nav>
 		</section>
 	</Container>
 </footer>
+
+<style>
+	.page-footer::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('/logos/kings-league-white.svg') no-repeat;
+		background-size: 100%;
+  	background-position: center right;
+  	opacity: 0.12;
+		pointer-events: none;
+	}
+
+	@media screen and (min-width: 992px) {
+		.page-footer::after {
+			background-size: 26%;
+		}
+	}
+</style>
