@@ -11,7 +11,7 @@ const {
 
 const seoTitle = title
 	? `${title} | Kings League Infojobs`
-	: 'Kings League Infojobs | Fútbol real';
+	: 'Kings League Infojobs | Fútbol real'
 
 const teams = await getAllTeams()
 ---
@@ -30,7 +30,7 @@ const teams = await getAllTeams()
 		<link href="/fonts/archivo-semibold.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
 		<link href="/fonts/archivo-black.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
 		{
-			teams.map(({image}) => (
+			teams.map(({ image }) => (
 				<link href={image} rel="preload" type="image/svg+xml" as="image" fetchpriority="high" crossorigin />
 			))
 		}
