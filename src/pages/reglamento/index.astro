@@ -1,5 +1,6 @@
 ---
 import Container from '@components/Container.astro'
+import FloatingBoxContainer from '@components/FloatingBoxContainer.astro'
 import SectionTitle from '@components/SectionTitle.astro'
 import Layout from '@layouts/Layout.astro'
 
@@ -81,15 +82,15 @@ const REGULATION = [
 	<SectionTitle title='Reglamento' />
 
 	<Container>
-		<div class='bg-white p-4 sm:p-8 lg:p-20 sm:shadow-xl sm:rounded -mt-10 z-10 lg:mb-40 flex justify-center flex-col'>
+		<FloatingBoxContainer>
 			<div class='md:w-3/4 m-auto'>
-				<p class='pb-20 text-center text-[20px]'>
+				<p class='pb-10 text-center text-lg'>
 					La Kings League InfoJobs la creamos entre todos. Y eso incluye la forma de jugar y el	reglamento. Estas son las normas que los aficionados han decidido por votación popular a través de redes sociales:
 				</p>
-				<ul class='w-full'>
+				<ul class='w-full block'>
 					{
 						REGULATION.map((regulation) => (
-							<li class='text-[20px]'>
+							<li class='text-lg'>
 								<div class='flex items-center mb-6 gap-x-6 leading-6'>
 									<span class='text-amber-500 text-5xl font-title'>
 										{regulation.number}
@@ -112,16 +113,19 @@ const REGULATION = [
 						))
 					}
 				</ul>
-			</div>
 
-			<a
-				class='uppercase bg-black text-white px-10 py-3 rounded w-58 m-auto mt-10 text-center'
-				href='https://kingsleague.pro/pdf/KINGS-League-Reglamento.pdf'
-				target='_blank'
-				rel='noopener noreferrer'
-			>
-				Ver todo el reglamento
-			</a>
-		</div>
+				<div class="block m-auto w-full text-center py-10">
+					<a
+					class='uppercase bg-black text-white px-10 py-3 rounded m-auto mt-10 text-center text-xl hover:bg-amber-600 transition'
+					href='https://kingsleague.pro/pdf/KINGS-League-Reglamento.pdf'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					Ver todo el reglamento
+				</a>
+				</div>
+
+			</div>
+		</FloatingBoxContainer>
 	</Container>
 </Layout>
