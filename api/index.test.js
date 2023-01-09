@@ -465,13 +465,18 @@ describe('Testing /players-12 route', () => {
 		expect(resp).toBeDefined()
 
 		const players = await resp.json()
-		const playerProperties = ['role', 'firstName', 'lastName', 'image', 'name', 'id', 'team']
 
-		players.forEach((player) =>
-			playerProperties.forEach((property) => {
-				expect(player).toHaveProperty(property)
-			})
-		)
+		const playerProperties = [
+			{ name: 'role', type: 'string' },
+			{ name: 'firstName', type: 'string' },
+			{ name: 'lastName', type: 'string' },
+			{ name: 'image', type: 'string' },
+			{ name: 'name', type: 'string' },
+			{ name: 'id', type: 'string' },
+			{ name: 'team' }
+		]
+
+		players.forEach((player) => checkProperties(player, playerProperties))
 	})
 
 	it('Nested teams should have all their properties', async () => {
@@ -479,6 +484,7 @@ describe('Testing /players-12 route', () => {
 		const players = await resp.json()
 
 		const teams = players.map((player) => player.team)
+
 		const nestedTeamProperties = [
 			{ name: 'id', type: 'string' },
 			{ name: 'name', type: 'string' },
@@ -486,13 +492,7 @@ describe('Testing /players-12 route', () => {
 			{ name: 'imageWhite', type: 'string' }
 		]
 
-		teams.forEach((team) =>
-			nestedTeamProperties.forEach((property) => {
-				const { name, type } = property
-				expect(team).toHaveProperty(name)
-				expect(team[name]).toBeTypeOf(type)
-			})
-		)
+		teams.forEach((team) => checkProperties(team, nestedTeamProperties))
 	})
 })
 
