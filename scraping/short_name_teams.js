@@ -12,7 +12,7 @@ export function getShortNameTeams() {
 		'el-barrio': 'RDB',
 		'ultimate-mostoles': 'ULT',
 		'saiyans-fc': 'SAI',
-		kunisports: 'KNS',
+		'kunisports': 'KNS',
 		'jijantes-fc': 'JFC',
 		'rayo-barcelona': 'RDB',
 		'porcinos-fc': 'POR',
