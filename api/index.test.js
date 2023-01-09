@@ -44,11 +44,13 @@ describe('Testing / route', () => {
 		if (!res) return
 
 		const apiRoutes = await res.json()
+		const apiRoutesProperties = [
+			{ name: 'endpoint', type: 'string' },
+			{ name: 'description', type: 'string' }
+		]
+
 		// verify the response to have the expected format
-		apiRoutes.forEach((endpoint) => {
-			expect(endpoint).toHaveProperty('endpoint')
-			expect(endpoint).toHaveProperty('description')
-		})
+		apiRoutes.forEach((endpoint) => checkProperties(endpoint, apiRoutesProperties))
 	})
 })
 
