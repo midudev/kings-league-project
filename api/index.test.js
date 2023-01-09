@@ -75,8 +75,8 @@ describe('Testing /teams route', () => {
 		{ name: 'url', type: 'string' },
 		{ name: 'presidentId', type: 'string' },
 		{ name: 'channel', type: 'string' },
-		{ name: 'socialNetworks' }, // Array
-		{ name: 'players' }, // Array
+		{ name: 'socialNetworks', type: 'object' },
+		{ name: 'players', type: 'object' },
 		{ name: 'coach', type: 'string' },
 		{ name: 'coachInfo', type: 'object' }
 	]
