@@ -1,4 +1,6 @@
 ---
+import { getAllTeams } from '@services/teams.js'
+
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 
@@ -9,7 +11,9 @@ const {
 
 const seoTitle = title
 	? `${title} | Kings League Infojobs`
-	: 'Kings League Infojobs | Fútbol real';
+	: 'Kings League Infojobs | Fútbol real'
+
+const teams = await getAllTeams()
 ---
 
 <!DOCTYPE html>
@@ -25,6 +29,11 @@ const seoTitle = title
 		<link href="/fonts/archivo.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
 		<link href="/fonts/archivo-semibold.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
 		<link href="/fonts/archivo-black.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
+		{
+			teams.map(({ image }) => (
+				<link href={image} rel="preload" type="image/svg+xml" as="image" fetchpriority="high" crossorigin />
+			))
+		}
 	</head>
 	<body class="min-h-screen overflow-x-hidden">
 		<Header />

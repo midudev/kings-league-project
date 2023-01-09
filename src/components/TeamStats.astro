@@ -38,9 +38,9 @@ const stats = [
 ]
 ---
 
-<div class='flex'>
+<div class='flex justify-center md:justify-start'>
 	<section
-		class='p-8 rounded-lg mt-5 grid grid-cols-3 gap-y-2 gap-x-12 bg-gradient-to-tr from-[#202020c9] via-[#36363685] to-[#cd55002a] shadow-xl'
+		class='p-5 md:p-10 rounded-lg mt-5 grid grid-cols-3 gap-y-2 gap-x-2 md:gap-x-12 bg-gradient-to-tr from-[#202020c9] via-[#36363685] to-[#cd55002a] shadow-xl'
 	>
 		{
 			stats.map((stat) => (
@@ -51,12 +51,14 @@ const stats = [
 					items-start
 					first:row-start-1
 					first:row-end-4
-					[&>strong]:first:text-[9em] [&>strong]:first:leading-[1em]
-					[&>h4]:first:text-[1.6em]
+					md:[&>strong]:first:text-[9em]
+					[&>strong]:first:text-[5em]
+					[&>strong]:first:leading-[1em]
+					md:[&>h4]:first:text-[1.5em]
 					first:justify-center
 					first:items-center'
 				>
-					<h4 class='text-yellow-400 uppercase font-bold font-title'>{stat.title}</h4>
+					<h4 class='text-yellow-400 uppercase font-bold font-title sm:text-base text-xs'>{stat.title}</h4>
 					<strong class='text-4xl font-title text-white font-bold'>{stat.value}</strong>
 				</div>
 			))

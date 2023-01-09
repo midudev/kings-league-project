@@ -10,6 +10,20 @@ const teardown = async (worker) => {
 	await worker.stop()
 }
 
+/**
+ *
+ * @param {*} subject Object to validate
+ * @param {[{name: string, type: string}]} schema Properties schema
+ */
+function checkProperties(subject, schema) {
+	schema.forEach((property) => {
+		const { name, type } = property
+
+		expect(subject).toHaveProperty(property.name)
+		if (type) expect(subject[name]).toBeTypeOf(type)
+	})
+}
+
 describe('Testing / route', () => {
 	let worker
 
@@ -162,6 +176,20 @@ describe('Testing /presidents route', () => {
 			message: 'President not found'
 		})
 	})
+
+	it('should filter presidents by team using the "team" parameter', async () => {
+		const resp = await worker.fetch('/presidents?team=1k')
+		expect(resp).toBeDefined()
+
+		const presidents = await resp.json()
+		expect(presidents).toEqual(
+			expect.arrayContaining([
+				expect.objectContaining({
+					teamId: '1k'
+				})
+			])
+		)
+	})
 })
 
 describe('Test /schedule route', () => {
@@ -205,6 +233,38 @@ describe('Test /schedule route', () => {
 			properties.forEach((property) => {
 				expect(match).toHaveProperty(property)
 			})
+		})
+
+		it('Should return a 405 status code for invalid request method', async () => {
+			const resp = await worker.fetch('/schedule', { method: 'POST' })
+			expect(resp).toBeDefined()
+			expect(resp.status).toBe(405)
+		})
+
+		it('Should return a 400 status code for missing or invalid query parameters', async () => {
+			const resp = await worker.fetch('/schedule?sort=invalid')
+			expect(resp).toBeDefined()
+			expect(resp.status).toBe(400)
+		})
+
+		it('Should return an empty array when there are no matches scheduled', async () => {
+			await worker.fetch('/matches', { method: 'DELETE' })
+
+			const resp = await worker.fetch('/schedule')
+			expect(resp).toBeDefined()
+
+			const days = await resp.json()
+			expect(days).toEqual([])
+		})
+
+		it('Should return the matches sorted by timestamp', async () => {
+			const resp = await worker.fetch('/schedule')
+			expect(resp).toBeDefined()
+
+			const days = await resp.json()
+			const matches = days.map((day) => day.matches).flat()
+
+			expect(matches).toBeSorted((a, b) => a.timestamp - b.timestamp)
 		})
 	})
 
@@ -315,5 +375,170 @@ describe('Testing /leaderboard route', () => {
 		expect(errorMessage).toEqual({
 			message: 'Team not found'
 		})
+	})
+
+	it('Should return a reasonable number of teams for a large number of teams', async () => {
+		// Add a large number of teams to the database
+		const teams = []
+		for (let i = 0; i < 1000; i += 1) {
+			teams.push({
+				id: `team-${i}`,
+				name: `Team ${i}`,
+				wins: i,
+				losses: 1000 - i,
+				scoredGoals: i * 10,
+				concededGoals: (1000 - i) * 10,
+				yellowCards: i,
+				redCards: 0,
+				rank: i + 1,
+				team: {
+					id: `team-${i}`,
+					name: `Team ${i}`,
+					image: '',
+					imageWhite: '',
+					url: '',
+					channel: '',
+					socialNetworks: {},
+					players: [],
+					coached: '',
+					shortName: '',
+					coachInfo: '',
+					president: ''
+				}
+			})
+		}
+		await worker.fetch('/teams', {
+			method: 'POST',
+			body: JSON.stringify(teams)
+		})
+
+		const resp = await worker.fetch('/leaderboard')
+		expect(resp).toBeDefined()
+
+		const leaderboard = await resp.json()
+		expect(leaderboard.length).toBeLessThanOrEqual(100)
+	})
+
+	it('Teams should be ordered by rank, with tiebreakers applied', async () => {
+		const resp = await worker.fetch('/leaderboard')
+		const leaderboard = await resp.json()
+
+		let prevRank = leaderboard[0].rank
+		let prevWins = leaderboard[0].wins
+		let prevScoredGoals = leaderboard[0].scoredGoals
+		for (let i = 1; i < leaderboard.length; i += 1) {
+			const entry = leaderboard[i]
+			if (entry.rank > prevRank) {
+				prevRank = entry.rank
+				prevWins = entry.wins
+				prevScoredGoals = entry.scoredGoals
+			} else if (entry.rank === prevRank) {
+				if (entry.wins < prevWins) {
+					throw new Error('Teams are not ordered by wins')
+				} else if (entry.wins === prevWins) {
+					if (entry.scoredGoals < prevScoredGoals) {
+						throw new Error('Teams are not ordered by scored goals')
+					}
+				}
+				prevWins = entry.wins
+				prevScoredGoals = entry.scoredGoals
+			} else {
+				throw new Error('Teams are not ordered by rank')
+			}
+		}
+	})
+})
+
+describe('Testing /players-12 route', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	it('Players should have all their properties', async () => {
+		const resp = await worker.fetch('/players-12')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const playerProperties = ['role', 'firstName', 'lastName', 'image', 'name', 'id', 'team']
+
+		players.forEach((player) =>
+			playerProperties.forEach((property) => {
+				expect(player).toHaveProperty(property)
+			})
+		)
+	})
+
+	it('Nested teams should have all their properties', async () => {
+		const resp = await worker.fetch('/players-12')
+		const players = await resp.json()
+
+		const teams = players.map((player) => player.team)
+		const nestedTeamProperties = [
+			{ name: 'id', type: 'string' },
+			{ name: 'name', type: 'string' },
+			{ name: 'image', type: 'string' },
+			{ name: 'imageWhite', type: 'string' }
+		]
+
+		teams.forEach((team) =>
+			nestedTeamProperties.forEach((property) => {
+				const { name, type } = property
+				expect(team).toHaveProperty(name)
+				expect(team[name]).toBeTypeOf(type)
+			})
+		)
+	})
+})
+
+describe('Testing statistic routes', () => {
+	let worker
+
+	beforeAll(async () => {
+		worker = await setup()
+	})
+
+	afterAll(async () => {
+		await teardown(worker)
+	})
+
+	const playersProperties = [
+		{ name: 'rank', type: 'number' },
+		{ name: 'playerName', type: 'string' },
+		{ name: 'gamesPlayed', type: 'number' },
+		{ name: 'team', type: 'string' },
+		{ name: 'image', type: 'string' }
+	]
+
+	it('/top-scorers endpoint shoud return players with all their properties', async () => {
+		const resp = await worker.fetch('/top-scorers')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const scorerProperties = [...playersProperties, { name: 'goals', type: 'number' }]
+		players.forEach((player) => checkProperties(player, scorerProperties))
+	})
+
+	it('/top-assists endpoint should return players with all their properties', async () => {
+		const resp = await worker.fetch('/top-assists')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const assisterProperties = [...playersProperties, { name: 'assists', type: 'number' }]
+		players.forEach((player) => checkProperties(player, assisterProperties))
+	})
+
+	it('/mvp endpoint should return players with all their properties', async () => {
+		const resp = await worker.fetch('/mvp')
+		expect(resp).toBeDefined()
+
+		const players = await resp.json()
+		const mvpsProperties = [...playersProperties, { name: 'mvps', type: 'number' }]
+		players.forEach((player) => checkProperties(player, mvpsProperties))
 	})
 })

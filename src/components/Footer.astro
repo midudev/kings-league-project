@@ -34,26 +34,30 @@ const NAV_ENTRIES = [
 ]
 ---
 
-<footer class='text-white w-full p-8 bg-black'>
+<footer class='page-footer text-white w-full p-8 bg-black relative overflow-hidden [&>div]:relative [&>div]:z-10'>
 	<Container>
 		<section
-			class='flex flex-wrap justify-center text-center md:text-left lg:flex-row md:justify-between gap-14 lg:gap-4 text-sm text-lig my-10'
+			class='flex flex-col justify-center lg:flex-row lg:justify-between gap-10 text-sm my-10'
 		>
-			<img
-				class='block w-52'
-				src='/logos/kings-league-infojobs.svg'
-				alt='logo de Kings League y Infojobs'
-				loading='lazy'
-				decoding='async'
-				fetchpriority='low'
-			/>
+			<a href='/'>
+				<img
+					class='mx-auto lg:ml-0 aspect-[208/92]'
+					src='/logos/kings-league-infojobs.svg'
+					alt='logo de Kings League y Infojobs'
+					loading='lazy'
+					decoding='async'
+					fetchpriority='low'
+					width='208'
+					height='92'
+				/>
+			</a>
 
 			<nav
-				class='flex-col lg:grid lg:grid-cols-3 gap-4 lg:gap-0 lg:justify-between lg:gap-x-16 lg:gap-y-4'
+				class='flex flex-col lg:grid lg:grid-cols-3 gap-4 lg:gap-0 lg:justify-between lg:gap-x-16 lg:gap-y-4'
 			>
 				{
 					NAV_ENTRIES.map((entry) => (
-						<a href={entry.href} class='flex items-center hover:underline'>
+						<a href={entry.href} class='text-center lg:text-left hover:underline font-semibold'>
 							{entry.name}
 						</a>
 					))
@@ -69,13 +73,35 @@ const NAV_ENTRIES = [
 			>
 				<SocialNetworks theme='dark' />
 
-				<nav class='flex gap-5 justify-center lg:justify-around'>
-					<span>Contacto</span>
-					<span>Política de Privacidad</span>
-					<span>Aviso Legal</span>
-					<span>Política de Cookies</span>
+				<nav class='flex flex-wrap gap-5 justify-center lg:justify-around'>
+					<a class="font-semibold hover:underline" href="/contacto">Contacto</a>
+					<a class="font-semibold hover:underline" href="#">Política de Privacidad</a>
+					<a class="font-semibold hover:underline" href="#">Aviso Legal</a>
+					<a class="font-semibold hover:underline" href="#">Política de Cookies</a>
 				</nav>
 			</nav>
 		</section>
 	</Container>
 </footer>
+
+<style>
+	.page-footer::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('/logos/kings-league-white.svg') no-repeat;
+		background-size: 100%;
+  	background-position: center right;
+  	opacity: 0.12;
+		pointer-events: none;
+	}
+
+	@media screen and (min-width: 992px) {
+		.page-footer::after {
+			background-size: 26%;
+		}
+	}
+</style>

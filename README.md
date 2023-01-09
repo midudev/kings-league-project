@@ -1,13 +1,29 @@
 <div align="center">
-<h1>👑 Kings League Infojobs Project ⚽️
+<h1>👑 Kings League Infojobs Project ⚽️</h1>
 
-[![Deploy API](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml/badge.svg?branch=main)](https://github.com/maikCyphlock/kings-league-project/actions/workflows/deploy-api.yml) [![Scrape Kings League Infojobs Website](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml/badge.svg?branch=main)](https://github.com/maikCyphlock/kings-league-project/actions/workflows/scrape-kings-league-web.yml)
+[![Deploy API](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml/badge.svg?branch=main)](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml) [![Scrape Kings League Infojobs Website](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml/badge.svg?branch=main)](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <h2><a href='https://api.kingsleague.dev/'>API</a> | <a href='https://kingsleague.dev'>WEB</a></h2>
-</h1>
 </div>
 
-## Descripcion del proyecto
+<details>
+  <summary>Sumario</summary>
+  <ol>
+    <li>
+      <a href="#descripción-del-proyecto">Descripción del proyecto</a>
+    </li>
+    <li>
+      <a href="#tecnologías-usadas">Tecnologías usadas</a>
+    </li>
+    <li><a href="#api">API</a></li>
+    <li><a href="#redes-sociales">Redes sociales</a></li>
+		<li><a href="#lighthouse">Lighthouse</a></li>
+  </ol>
+</details>
+
+[![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
+
+## Descripción del proyecto
 
 Este proyecto tiene como objetivo crear una API y página web de la [Kings League Infojobs](https://kingsleague.pro) con fines educativos.
 
@@ -56,8 +72,7 @@ o únete a la comunidad en [Discord](https://discord.gg/midudev)
 
 ## LightHouse
 
+[![Lighthouse Performance Badge](./test_results/lighthouse_performance.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse Accessibility Badge](./test_results/lighthouse_accessibility.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse Best Practices Badge](./test_results/lighthouse_best-practices.svg)](https://github.com/midudev/kings-league-project)
-[![Lighthouse Performance Badge](./test_results/lighthouse_performance.svg)](https://github.com/midudev/kings-league-project)
-[![Lighthouse PWA Badge](./test_results/lighthouse_pwa.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse SEO Badge](./test_results/lighthouse_seo.svg)](https://github.com/midudev/kings-league-project)
