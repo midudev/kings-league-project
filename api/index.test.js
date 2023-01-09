@@ -214,26 +214,22 @@ describe('Test /schedule route', () => {
 	it('Days should have their date and matches', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
-		const properties = ['date', 'matches']
-
-		days.forEach((day) => {
-			properties.forEach((property) => {
-				expect(day).toHaveProperty(property)
-			})
-		})
+		const properties = [{ name: 'date', type: 'string' }, { name: 'matches' }]
+		days.forEach((day) => checkProperties(day, properties))
 	})
 
 	it('Matches should have all their properties', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
 		const matches = days.map((day) => day.matches).flat()
-		const properties = ['timestamp', 'hour', 'teams', 'score']
+		const properties = [
+			{ name: 'timestamp' }, // Can be null
+			{ name: 'hour' }, // Can be null
+			{ name: 'teams' }, // Array
+			{ name: 'score', type: 'string' }
+		]
 
-		matches.forEach((match) => {
-			properties.forEach((property) => {
-				expect(match).toHaveProperty(property)
-			})
-		})
+		matches.forEach((match) => checkProperties(match, properties))
 
 		it('Should return a 405 status code for invalid request method', async () => {
 			const resp = await worker.fetch('/schedule', { method: 'POST' })
@@ -278,13 +274,13 @@ describe('Test /schedule route', () => {
 			.map((match) => match.teams)
 			.flat()
 
-		const properties = ['id', 'name', 'shortName']
+		const properties = [
+			{ name: 'id', type: 'string' },
+			{ name: 'name', type: 'string' },
+			{ name: 'shortName', type: 'string' }
+		]
 
-		teams.forEach((team) => {
-			properties.forEach((property) => {
-				expect(team).toHaveProperty(property)
-			})
-		})
+		teams.forEach((team) => checkProperties(team, properties))
 	})
 })
 
