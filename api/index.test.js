@@ -129,6 +129,13 @@ describe('Testing /presidents route', () => {
 		await teardown(worker)
 	})
 
+	const presidentsProperties = [
+		{ name: 'id', type: 'string' },
+		{ name: 'name', type: 'string' },
+		{ name: 'image', type: 'string' },
+		{ name: 'teamId', type: 'string' }
+	]
+
 	it('should return presidents', async () => {
 		const resp = await worker.fetch('/presidents')
 		expect(resp).toBeDefined()
@@ -137,14 +144,8 @@ describe('Testing /presidents route', () => {
 		const presidents = await resp.json()
 		const numberPresidents = Object.entries(presidents).length
 
-		// verify the team have all props
-		presidents.forEach((president) => {
-			expect(president).toHaveProperty('id')
-			expect(president).toHaveProperty('name')
-			expect(president).toHaveProperty('image')
-			expect(president).toHaveProperty('teamId')
-		})
-
+		// verify the president have all props
+		presidents.forEach((president) => checkProperties(president, presidentsProperties))
 		expect(numberPresidents).toBe(12)
 	})
 
@@ -161,10 +162,7 @@ describe('Testing /presidents route', () => {
 			teamId: '1k'
 		}
 
-		expect(president).toHaveProperty('id')
-		expect(president).toHaveProperty('name')
-		expect(president).toHaveProperty('image')
-		expect(president).toHaveProperty('teamId')
+		checkProperties(president, presidentsProperties)
 		expect(president).toEqual(iker)
 	})
 
