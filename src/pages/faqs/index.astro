@@ -118,20 +118,16 @@ const faqs = [
 	<SectionTitle title='FAQs' />
 	<Container>
 		<div
-			id='accordion-collapse'
-			data-accordion='collapse'
 			class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 space-y-8'
 		>
 			{
-				faqs.map((e, i) => {
+				faqs.map(({title, content}) => {
 					return (
-						<section>
+						<section class="max-w-5xl mx-auto">
 							<Accordion
-								id={i}
-								position={`${i === 0 ? 'first' : i === faqs.length - 1 ? 'last' : ''}`}
-								title={e.title}
+								{title}
 							>
-								<Fragment set:html={e.content} />
+								<Fragment set:html={content} />
 							</Accordion>
 						</section>
 					)
