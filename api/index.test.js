@@ -63,6 +63,22 @@ describe('Testing /teams route', () => {
 		await teardown(worker)
 	})
 
+	const teamsProperties = [
+		{ name: 'id', type: 'string' },
+		{ name: 'color', type: 'string' },
+		{ name: 'name', type: 'string' },
+		{ name: 'shortName', type: 'string' },
+		{ name: 'image', type: 'string' },
+		{ name: 'imageWhite', type: 'string' },
+		{ name: 'url', type: 'string' },
+		{ name: 'presidentId', type: 'string' },
+		{ name: 'channel', type: 'string' },
+		{ name: 'socialNetworks' }, // Array
+		{ name: 'players' }, // Array
+		{ name: 'coach', type: 'string' },
+		{ name: 'coachInfo', type: 'object' }
+	]
+
 	it('The teams should have all teams', async () => {
 		const resp = await worker.fetch('/teams')
 		expect(resp).toBeDefined()
@@ -72,18 +88,7 @@ describe('Testing /teams route', () => {
 		const numberTeams = Object.entries(teams).length
 
 		// verify the team have all props
-		teams.forEach((team) => {
-			expect(team).toHaveProperty('id')
-			expect(team).toHaveProperty('name')
-			expect(team).toHaveProperty('image')
-			expect(team).toHaveProperty('url')
-			expect(team).toHaveProperty('presidentId')
-			expect(team).toHaveProperty('channel')
-			expect(team).toHaveProperty('coach')
-			expect(team).toHaveProperty('socialNetworks')
-			expect(team).toHaveProperty('players')
-		})
-
+		teams.forEach((team) => checkProperties(team, teamsProperties))
 		expect(numberTeams).toBe(12)
 	})
 
@@ -93,16 +98,7 @@ describe('Testing /teams route', () => {
 		if (!resp) return
 
 		const team = await resp.json()
-
-		expect(team).toHaveProperty('id')
-		expect(team).toHaveProperty('name')
-		expect(team).toHaveProperty('image')
-		expect(team).toHaveProperty('url')
-		expect(team).toHaveProperty('presidentId')
-		expect(team).toHaveProperty('channel')
-		expect(team).toHaveProperty('coach')
-		expect(team).toHaveProperty('socialNetworks')
-		expect(team).toHaveProperty('players')
+		checkProperties(team, teamsProperties)
 	})
 
 	it('Get /teams/noexist should return 404 message missing team', async () => {
