@@ -4,20 +4,21 @@ const { players, title } = Astro.props
 
 <section>
 	<h2 class='font-title text-5xl text-white text-center py-10'>{title}</h2>
-	<div class='grid grid-cols-2 md:grid-cols-4 gap-2'>
+	<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2'>
 		{
 			players.map((player) => (
-				<article class='text-center relative font-title text-slate-900 rounded-sm p-5 m-auto'>
+				<article class='text-center relative font-title text-slate-900 rounded-sm p-1 md:p-5 m-auto'>
 					<img
-						class='w-56 h-auto m-auto aspect-[170/239]'
+						class='w-56 h-auto m-auto aspect-[224/315]'
 						src={`/teams/players/${player.image}`}
 						alt={`${player.name}`}
+						loading="lazy"
 						decoding='async'
-						fetchpriority='high'
+						fetchpriority='low'
 					/>
-					<div class='bg-black/70 rounded-xl'>
-						<h3 class='text-white font-title text-3xl pt-2'>{player.name}</h3>
-						<h4 class='font-body uppercase  text-orange-500  py-1 font-semibold'>{player.role}</h4>
+					<div class='bg-black/70 rounded-xl p-2'>
+						<h3 class='text-white font-title text-3xl leading-none'>{player.name}</h3>
+						<h4 class='font-body uppercase text-orange-500 font-semibold'>{player.role}</h4>
 					</div>
 				</article>
 			))

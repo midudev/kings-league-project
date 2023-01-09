@@ -1,5 +1,5 @@
 name: Generate Lighthouse Badges
-on: 
+on:
   deployment:
   workflow_dispatch:
 jobs:

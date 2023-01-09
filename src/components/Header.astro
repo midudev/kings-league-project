@@ -15,7 +15,7 @@ const menu = [
 	},
 	{
 		name: 'Estadísticas',
-		href: '/estadisticas'
+		href: '/estadisticas/clasificacion'
 	},
 	{
 		name: 'Contacto',
@@ -31,71 +31,85 @@ const teams = await getAllTeams()
 ---
 
 <header
-	class='flex items-center w-full bg-gradient-to-b from-principal-dark via-principal-dark to-principal py-3 px-8 md:p-8 gap-x-8'
+	class='flex items-center w-full bg-gradient-to-b from-principal-dark via-principal-dark to-principal py-3 px-4 md:px-8 md:py-8 gap-x-8'
 >
 	<div class='flex md:flex-col h-full md:gap-4 w-full justify-between'>
 		<nav class='w-min md:w-auto'>
-			<ul
-				class='flex flex-wrap items-center justify-center rounded-xl gap-x-4 [&>li>a:hover]:scale-150 w-full'
-			>
-				{
-					teams.map(({ id, image, name }, index) => (
-						<>
-							{index === 6 ? <Logo /> : ''}
-							<li>
-								<a
-									class='group transition hidden md:block'
-									href={`/team/${id}`}
-									title={name}
-									rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
-								>
-									<img
-										class='group-hover:drop-shadow-[0px_0px_8px_#fff] drop-shadow-[0px_0px_4px_#fff] h-9 w-9 lg:h-12 lg:w-12 aspect-square'
-										src={image}
-										alt={`Escudo del equipo ${name}`}
-										width='48'
-										height='48'
-										decoding='async'
-										fetchpriority='high'
-									/>
-								</a>
-							</li>
-						</>
-					))
-				}
-			</ul>
+			<div class='m-auto w-fit rounded-full md:bg-black p-1'>
+				<div
+					class='md:w-[724px] lg:w-[884px] md:rounded-full md:m-auto md:bg-black md:border-[#fab50c] md:border-2 md:p-2 px-0'
+				>
+					<ul
+						class='flex items-center justify-center rounded-x md:gap-x-4 [&>li>a:hover]:scale-125 [&>li>a:hover]:contrast-125 w-full'
+					>
+						{
+							teams.map(({ id, image, name }, index) => (
+								<>
+									{index === 6 && (
+										<li class='w-16 lg:w-20'>
+											<Logo />
+										</li>
+									)}
+									<li>
+										<a
+											class='group transition hidden md:block'
+											href={`/team/${id}`}
+											title={name}
+											rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
+										>
+											<img
+												class='h-9 w-9 lg:h-12 lg:w-12 aspect-square'
+												src={image}
+												alt={`Escudo del equipo ${name}`}
+												width='48'
+												height='48'
+												decoding='async'
+												fetchpriority='high'
+											/>
+										</a>
+									</li>
+								</>
+							))
+						}
+					</ul>
+				</div>
+			</div>
 		</nav>
 
-		<nav class='flex self-center items-center md:justify-between md:w-full max-w-3xl'>
+		<nav class='flex self-center items-center md:justify-between md:w-full max-w-4xl'>
 			<input type='checkbox' id='menu' hidden class='peer' />
 			<label
 				for='menu'
-				class='relative z-50 sm:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110'
+				class='relative z-50 md:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110 peer-checked:rotate-90 rotate-0'
 			>
 				<MenuIcon />
 			</label>
-			<ul
-				id='navbar'
-				class='absolute sm:relative top-0 left-0 right-0 z-40 hidden peer-checked:text-2xl peer-checked:flex peer-checked:flex-col peer-checked:bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] min-h-screen sm:min-h-min py-24 sm:py-0 sm:flex justify-center text-white gap-6 sm:gap-x-4 font-semibold text-center text-md [&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline'
+			<div
+				class='absolute md:static top-0 left-0 opacity-0 md:opacity-100 w-0 md:w-full transition-all duration-300 peer-checked:w-full peer-checked:opacity-100 z-20 ease-linear'
 			>
-				{
-					menu.map(({ name, href }) => (
-						<li>
-							<a
-								class={`transition ${
-									Astro.url.pathname === href
-										? 'opacity-100 pointer-events-none'
-										: 'hover:underline-offset-8'
-								}`}
-								href={href}
-								rel={Astro.url.pathname !== href && 'preload'}
-							>
-								{name}
-							</a>
-						</li>
-					))
-				}
-			</ul>
+				<ul
+					id='navbar'
+					class='md:relative text-2xl flex flex-col md:flex-row bg-gradient-to-b from-[#ff6900] via-[#ff6900] to-[#cd5500] md:from-transparent md:to-transparent min-h-screen md:min-h-min py-24 md:py-0 md:flex justify-center text-white gap-6 md:gap-x-4 font-semibold text-center text-md md:text-base md:justify-start [&>li>a]:opacity-80 [&>li>a:hover]:opacity-100 [&>li>a:hover]:underline'
+				>
+					{
+						menu.map(({ name, href }) => (
+							<li>
+								<a
+									class={`transition ${
+										Astro.url.pathname === href
+											? 'opacity-100 pointer-events-none'
+											: 'hover:underline-offset-8'
+									}`}
+									href={href}
+									rel={Astro.url.pathname !== href && 'preload'}
+								>
+									{name}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
 			<SocialNetworks theme='white' mobileHidden={true} />
 		</nav>
 	</div>

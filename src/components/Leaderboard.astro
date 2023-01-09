@@ -7,11 +7,11 @@ const { format } = Astro.props
 const isSmall = format === 'small'
 ---
 
-<div class='relative overflow-x-auto shadow-md sm:rounded-lg'>
+<div class='relative overflow-x-auto sm:rounded-lg'>
 	<table class='w-full text-xs text-left text-black'>
 		<thead class='font-black text-white uppercase bg-black'>
 			<tr>
-				<th scope='col' class='w-5 px-6 py-3 text-center'>Pos.</th>
+				<th scope='col' class='w-5 px-3 py-3 text-center'>Pos.</th>
 				<th scope='col' class='px-6 py-3'>Equipo</th>
 				<th title='Victorias' scope='col' class='px-4 py-3'>V</th>
 				<th title='Derrotas' scope='col' class='px-4 py-3'>D</th>
@@ -30,20 +30,21 @@ const isSmall = format === 'small'
 			{
 				leaderboard.map((info) => {
 					const { wins, losses, team, rank, scoredGoals, concededGoals, diferenceGoals = scoredGoals - concededGoals, yellowCards, redCards } = info
-					const { image, name, id } = team
+					const { image, name, id, shortName } = team
 
 					return (
-						<tr class={'odd:bg-white even:bg-slate-100 border-b text-base hover:bg-slate-100'}>
+						<tr class={'odd:bg-white even:bg-slate-100 border-b text-base hover:bg-slate-300'}>
 							<th
 							scope='row'
-							class='text-center px-6 py-4 font-black text-black whitespace-nowrap'
+							class='text-center px-3 py-4 font-black text-black whitespace-nowrap'
 						>
 							{rank}
 						</th>
 						<td class='px-6 py-4 font-black'>
 							<a class="flex items-center gap-x-4 transition hover:opacity-75" href={`/team/${id}`} rel='preload'>
 								<img src={image} alt={'Logo de ' + name} class='w-6 h-6' decoding="async" fetchpriority="high" />
-								{name}
+								<span class='md:hidden'>{shortName}</span>
+								<span class='hidden md:block'>{name}</span>
 							</a>
 						</td>
 						<td class='px-4 py-4'>{wins}</td>

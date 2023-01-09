@@ -1,18 +1,5 @@
 ---
 import Container from './Container.astro'
-
-const LogoPrincipalSponsor = '/sponsors/logo-infojobs.svg'
-const StadiumPartner = '/sponsors/stadium-partner.svg'
-const LogoGrefusa = '/sponsors/logo-grefusa.svg'
-const LogoSpotify = '/sponsors/logo-spotify.svg'
-const LogoSmyo = '/sponsors/logo-simyo.svg'
-const LogoAdidas = '/sponsors/logo-adidas.svg'
-const LogoMahau = '/sponsors/logo-mahou.svg'
-const LogoMI = '/sponsors/logo-mi.svg'
-const LogoShukran = '/sponsors/logo-shukran.png'
-const LogoImagin = '/sponsors/logo-imagin.svg'
-const LogoIQ = '/sponsors/logo-iqoption.svg'
-const HostingPartner = '/sponsors/hosting-partner.svg'
 ---
 
 <section class='text-sm text-white p-8 bg-gradient-to-tr from-black via-black to-principal border-white border-t-2 border-b-2'>
@@ -23,7 +10,10 @@ const HostingPartner = '/sponsors/hosting-partner.svg'
 					<span class='font-black'>Principal</span> partner
 				</div>
 
-				<img src={LogoPrincipalSponsor} alt='Logo Principal Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+				<a href="https://www.infojobs.net/" target="_blank">
+					<img class="aspect-[120/32]" src='/sponsors/logo-infojobs.svg' alt='Logo Principal Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+				</a>
+
 			</div>
 
 			<div>
@@ -31,7 +21,9 @@ const HostingPartner = '/sponsors/hosting-partner.svg'
 					<span class='font-black'>Stadium</span> partner
 				</div>
 
-				<img src={StadiumPartner} alt='Logo Stadium Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+				<a href="https://www.cupraofficial.es/" target="_blank">
+					<img class="aspect-[77/51]" src='/sponsors/stadium-partner.svg' alt='Logo Stadium Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+				</a>
 			</div>
 
 			<div class='col-span-3'>
@@ -39,16 +31,34 @@ const HostingPartner = '/sponsors/hosting-partner.svg'
 					<span class='font-black'>Main</span> partner
 				</div>
 
-				<div class='grid grid-cols-8 gap-5 items-center'>
-					<img src={LogoGrefusa} alt='Logo Grefusa Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
-					<img src={LogoSpotify} alt='Logo Spotify Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
-					<img src={LogoSmyo} alt='Logo Smyo Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
-					<img src={LogoAdidas} alt='Logo Adidas Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
-					<img src={LogoMahau} alt='Logo Mahau Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
-					<img src={LogoMI} alt='Logo MI Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
-					<img src={LogoShukran} alt='Logo Shukran Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
-					<img src={LogoImagin} alt='Logo Imagin Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
-					<img src={LogoIQ} alt='Logo IQ Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+				<div class='grid grid-cols-3 lg:grid-cols-8 gap-5 items-center'>
+					<a href="https://grefusa.com/" target="_blank">
+						<img class="aspect-[84/46]" src='/sponsors/logo-grefusa.svg' alt='Logo Grefusa Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
+					<a href="https://spotify.com/" target="_blank">
+						<img class="aspect-[92/28]" src='/sponsors/logo-spotify.svg' alt='Logo Spotify Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
+					<a href="https://www.simyo.es/" target="_blank">
+						<img class="aspect-[88/33]" src='/sponsors/logo-simyo.svg' alt='Logo Smyo Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
+					<a href="https://adidas.com/" target="_blank">
+						<img class="aspect-[59/37]" src='/sponsors/logo-adidas.svg' alt='Logo Adidas Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
+					<a href="https://www.mahou.es/" target="_blank">
+						<img class="aspect-[89/37]" src='/sponsors/logo-mahou.svg' alt='Logo Mahau Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
+					<a href="https://mi.com" target="_blank">
+						<img class="aspect-square" src='/sponsors/logo-mi.svg' alt='Logo MI Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
+					<a href="https://shukran.es/" target="_blank">
+						<img class="aspect-[85/56]" src='/sponsors/logo-shukran.svg' alt='Logo Shukran Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
+					<a href="https://www.imagin.com/" target="_blank">
+						<img class="aspect-[63/56]" src='/sponsors/logo-imagin.svg' alt='Logo Imagin Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
+					<a href="https://iqoption.com/" target="_blank">
+						<img class="aspect-[89/33]" src='/sponsors/logo-iqoption.svg' alt='Logo IQ Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+					</a>
 				</div>
 			</div>
 
@@ -56,8 +66,9 @@ const HostingPartner = '/sponsors/hosting-partner.svg'
 				<div class='border-b border-[#F8AF3F] mb-10'>
 					<span class='font-black'>Hosting</span> partner
 				</div>
-
-				<img src={HostingPartner} alt='Logo Stadium Sponsor' loading="lazy" decoding="async" fetchpriority="low" />
+				<a href="https://www.portdebarcelona.cat/es/">
+					<img src='/sponsors/hosting-partner.svg' alt='Logo Stadium Sponsor' loading="lazy" decoding="async" fetchpriority="low"  width="150" height="57" />
+				</a>
 			</div>
 		</div>
 	</Container>

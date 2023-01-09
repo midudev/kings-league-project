@@ -15,7 +15,7 @@ const { small } = Astro.props
 			return (
 				<article class={`overflow-hidden col-span-1 rounded aspect-video ${gradient}`}>
 					<a
-						class='group transition-all hover:scale-110 flex gap-x-4 p-4 h-full items-center justify-center relative'
+						class='group transition-all hover:scale-110 flex gap-x-4 p-4 h-full items-center justify-center relative z-0'
 						href={`/team/${id}`}
 						title={`Ver equipo ${name}`}
 						rel={Astro.url.pathname !== `/team/${id}` && 'preload'}
@@ -24,9 +24,13 @@ const { small } = Astro.props
 							alt={`Logo del equipo ${name}`}
 							class={`${small ? 'w-20 h-20' : 'w-28 h-28'} brightness-[100] object-contain transition-all group-hover:scale-110 group-hover:brightness-200 z-10 [backface-visibility:hidden]`}
 							src={imageWhite}
-							loading="lazy"
+							loading={
+								Astro.url.pathname.includes('/equipos')
+									? 'lazy'
+									: 'eager'
+							}
 							decoding="async"
-							fetchpriority="low"
+							fetchpriority={Astro.url.pathname.includes('/equipos') ? 'high' : 'low'}
 						/>
 						<h3 class={`z-10 font-title text-white ${small ? 'text-base xl:text-lg' : 'text-xl xl:text-2xl'}`}>{name}</h3>
 						<CardBackgroundTeam image={imageWhite} />

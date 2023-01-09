@@ -14,6 +14,7 @@ const gradient = `bg-${id}`
 
 const socialNetworksWithIcon = socialNetworks.map((href) => ({
 	href,
+	style: href.includes('tiktok') ? 'filter: invert(1);' : null,
 	icon: ICON_NETWORK_MAPPING.find((key) => href.includes(key))
 }))
 
@@ -31,24 +32,26 @@ export async function getStaticPaths() {
 ---
 
 <Layout title={name}>
-	<section class='bg-principal py-20'>
+	<section class='bg-principal py-10 sm:py-20 sm:px-2'>
 		<Container>
-			<div class={`relative p-0 md:px-20 md:py-10 shadow-xl rounded -mt-10 z-10 mb-40 ${gradient}`}>
+			<div
+				class={`relative py-10 px-2 md:px-20 md:py-10 shadow-xl sm:rounded -mt-10 z-10 mb-40 ${gradient}`}
+			>
 				<section class='flex flex-col xl:flex-row items-center justify-between pb-10'>
 					<div class='flex flex-col'>
 						<div class='flex flex-col xl:flex-row items-center gap-x-6 mb-2'>
 							<img
-								class='w-56 h-56 object-contain'
+								class='w-56 h-56 object-contain aspect-square'
 								src={imageWhite}
 								alt={`Escudo del equipo ${name}`}
 								decoding='async'
 								fetchpriority='high'
 							/>
 							<div class='flex flex-col text-center gap-y-4'>
-								<h1 class='font-title font-bold text-6xl text-white'>{name}</h1>
+								<h1 class='font-title font-bold text-4xl md:text-6xl text-white'>{name}</h1>
 								<ul class='flex flex-row gap-x-4 justify-center xl:justify-start'>
 									{
-										socialNetworksWithIcon.map(({ href, icon }) => {
+										socialNetworksWithIcon.map(({ href, icon, style }) => {
 											return (
 												<li>
 													<a
@@ -56,10 +59,15 @@ export async function getStaticPaths() {
 														href={href}
 														target='_blank'
 														rel='noopener norefferer'
+														title={`${icon.charAt(0).toUpperCase() + icon.slice(1)}`}
 													>
 														<img
-															class='w-8 h-8 brightness-[1000]'
+															class='w-8 h-8 brightness-[1000] aspect-square'
 															src={`/logos/social/${icon}.svg`}
+															style={style}
+															alt={`${icon.charAt(0).toUpperCase() + icon.slice(1)} del equipo ${name}`}
+															width="32"
+															height="32"
 															decoding='async'
 															fetchpriority='high'
 														/>
@@ -77,18 +85,21 @@ export async function getStaticPaths() {
 
 					<div class='xl:absolute xl:-top-20 xl:right-10 text-center'>
 						<img
-							class='w-[400px] h-auto aspect-[170/239]'
+							class='w-[400px] h-auto aspect-[400/562]'
 							src={president.image}
 							alt={president.name}
 							decoding='async'
 							fetchpriority='high'
 						/>
-						<h3 class='text-white font-title text-3xl pt-2 -mt-6 block'>{president.name}</h3>
-						<h4
-							class='font-body uppercase rounded-full text-orange-500 bg-black/70 py-1 font-semibold'
-						>
-							Presidente
-						</h4>
+
+						<div class='bg-black/70 rounded-xl p-2 -mt-6'>
+							<h3 class='text-white font-title text-3xl'>{president.name}</h3>
+							<h4
+								class='font-body uppercase rounded-full text-orange-500  font-semibold'
+							>
+								Presidente
+							</h4>
+						</div>
 					</div>
 				</section>
 
@@ -96,7 +107,7 @@ export async function getStaticPaths() {
 				<TeamPagePlayers title='Jugador 12' players={playersTwelve} />
 
 				<div
-					class={'-z-10 absolute inset-0 opacity-5 bg-center bg-[size:80%] transition bg-no-repeat'}
+					class={'-z-10 absolute inset-0 opacity-5 bg-center bg-[size:250%] transition bg-inherit'}
 					style={`background-image:url('${imageWhite}')`}
 				>
 				</div>

@@ -1,0 +1,58 @@
+---
+const TABS = [
+	{
+		title: 'Clasificación',
+		href: '/clasificacion'
+	},
+	{
+		title: 'MVP',
+		href: '/mvp'
+	},
+	{
+		title: 'Máximo Goleador',
+		href: '/goles'
+	},
+	{
+		title: 'Asistencias',
+		href: '/asistencias'
+	}
+]
+
+let { pathname } = Astro.url
+// remove last slash if exists
+if (pathname.endsWith('/')) {
+	pathname = pathname.slice(0, -1)
+}
+
+const lastPath = pathname.split('/').at(-1)
+const getNameUrl = `/${lastPath}`
+---
+
+<ul
+	class='flex flex-wrap justify-center font-medium text-center text-gray-500 dark:text-gray-400 mb-10 text-lg'
+>
+	{
+		TABS.map(({ title, href }) => (
+			<li class='mr-2'>
+				{getNameUrl === href || (getNameUrl === '/estadisticas' && href === '/clasificacion')
+? (
+					<a
+						href={`/estadisticas${href}`}
+						class='inline-block p-4 border-b-2 rounded-t-lg border-orange-400 text-orange-400 font-title'
+						aria-current='page'
+					>
+						{title}
+					</a>
+				)
+: (
+					<a
+						href={`/estadisticas${href}`}
+						class='inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 '
+					>
+						{title}
+					</a>
+				)}
+			</li>
+		))
+	}
+</ul>

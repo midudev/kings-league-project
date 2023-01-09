@@ -1,5 +1,6 @@
 ---
 import Container from '@components/Container.astro'
+import FloatingBoxContainer from '@components/FloatingBoxContainer.astro'
 import SectionTitle from '@components/SectionTitle.astro'
 import Layout from '@layouts/Layout.astro'
 
@@ -53,23 +54,23 @@ const REGULATION = [
 			'Armas secretas: cada equipo dispone de una carta, escogida al azar, que le otorga una ventaja una sola vez por partido:',
 		weapons: [
 			{
-				title: '#Arma 1',
+				title: 'Arma 1',
 				description: 'Penalti a favor'
 			},
 			{
-				title: '#Arma 2',
+				title: 'Arma 2',
 				description: 'Exclusión de un rival durante 2’'
 			},
 			{
-				title: '#Arma 3',
+				title: 'Arma 3',
 				description: 'Gol doble durante 2’'
 			},
 			{
-				title: '#Arma 4',
+				title: 'Arma 4',
 				description: 'Comodín'
 			},
 			{
-				title: '#Arma 5',
+				title: 'Arma 5',
 				description: 'Robo de carta'
 			}
 		]
@@ -81,28 +82,30 @@ const REGULATION = [
 	<SectionTitle title='Reglamento' />
 
 	<Container>
-		<div class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 flex justify-center flex-col'>
-			<div class='w-3/4 m-auto'>
-				<p class='pb-20 text-center text-[20px]'>
-					La Kings League InfoJobs la creamos entre todos. Y eso incluye la forma de jugar y el
-					reglamento. Estas son las normas que los aficionados han decidido por votación popular a
-					través de redes sociales:
+		<FloatingBoxContainer>
+			<div class='md:w-3/4 m-auto'>
+				<p class='pb-10 text-center text-lg'>
+					La Kings League InfoJobs la creamos entre todos. Y eso incluye la forma de jugar y el	reglamento. Estas son las normas que los aficionados han decidido por votación popular a través de redes sociales:
 				</p>
-				<ul class='w-3/4'>
+				<ul class='w-full block'>
 					{
 						REGULATION.map((regulation) => (
-							<li class='text-[20px]'>
-								<div class='flex items-center mb-3'>
-									<span class='text-[#f7ab35] text-[32px] font-title mr-3'>
+							<li class='text-lg'>
+								<div class='flex items-center mb-6 gap-x-6 leading-6'>
+									<span class='text-amber-500 text-5xl font-title'>
 										{regulation.number}
 									</span>
-									{regulation.ruler}
+									<span class="max-w-prose text-gray-700">
+										{regulation.ruler}
+									</span>
 								</div>
 								<div class='block'>
 									{regulation.weapons.map((weapon) => (
-										<p class='text-[18px] ml-20'>
-											<span class='text-[#f7ab35] text-[20px] font-title mr-3'>{weapon.title}</span>
-											{weapon.description}
+										<p class='text-xl ml-10'>
+											<span class='text-orange-500 font-title mr-3'>{weapon.title}</span>
+											<span class="text-lg text-gray-600">
+												{weapon.description}
+											</span>
 										</p>
 									))}
 								</div>
@@ -110,16 +113,19 @@ const REGULATION = [
 						))
 					}
 				</ul>
-			</div>
 
-			<a
-				class='uppercase bg-black text-white px-10 py-3 rounded w-58 m-auto mt-10'
-				href='https://kingsleague.pro/pdf/KINGS-League-Reglamento.pdf'
-				target='_blank'
-				rel='noopener noreferrer'
-			>
-				Ver todo el reglamento
-			</a>
-		</div>
+				<div class="block m-auto w-full text-center py-10">
+					<a
+					class='uppercase bg-black text-white px-10 py-3 rounded m-auto mt-10 text-center text-xl hover:bg-amber-600 transition'
+					href='https://kingsleague.pro/pdf/KINGS-League-Reglamento.pdf'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					Ver todo el reglamento
+				</a>
+				</div>
+
+			</div>
+		</FloatingBoxContainer>
 	</Container>
 </Layout>
