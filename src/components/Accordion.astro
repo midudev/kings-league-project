@@ -5,9 +5,7 @@ const { title, position, id} = Astro.props
 <h2 id={`accordion-collapse-heading-${id}`}>
 	<button
 		type='button'
-		class={`flex items-center focus:ring-4 focus:ring-principal-300 justify-between p-5 w-full font-medium text-left border border-principal  text-gray-900 bg-gray-200  hover:bg-gray-300 ${
-			position === 'first' ? 'rounded-t-xl border-b-0' : position === 'last' ? '' : 'border-b-0'
-		}`}
+		class={`bg-principal-900 flex items-center focus:ring-4 focus:ring-principal-300 justify-between p-5 w-full font-medium text-left text-white hover:bg-principal-500 transition-colors rounded`}
 		data-accordion-target={`#accordion-collapse-body-${id}`}
 		aria-expanded={`${position === 'first' ? 'true' : 'false'}`}
 		aria-controls={`accordion-collapse-body-${id}`}
@@ -29,9 +27,7 @@ const { title, position, id} = Astro.props
 </h2>
 <div id={`accordion-collapse-body-${id}`} aria-labelledby={`accordion-collapse-heading-${id}`}>
 	<div
-		class={`p-5 border border-principal ${
-			position === 'last' ? 'rounded-b-xl border-t-0' : 'border-b-0'
-		}`}
+		class='p-5 bg-gray-200'
 	>
 		<p>
 			<slot />
@@ -39,4 +35,3 @@ const { title, position, id} = Astro.props
 	</div>
 </div>
 <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
-

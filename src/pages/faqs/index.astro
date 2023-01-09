@@ -120,18 +120,20 @@ const faqs = [
 		<div
 			id='accordion-collapse'
 			data-accordion='collapse'
-			class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40'
+			class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 space-y-8'
 		>
 			{
 				faqs.map((e, i) => {
 					return (
-						<Accordion
-							id={i}
-							position={`${i === 0 ? 'first' : i === faqs.length - 1 ? 'last' : ''}`}
-							title={e.title}
-						>
-							<Fragment set:html={e.content} />
-						</Accordion>
+						<section>
+							<Accordion
+								id={i}
+								position={`${i === 0 ? 'first' : i === faqs.length - 1 ? 'last' : ''}`}
+								title={e.title}
+							>
+								<Fragment set:html={e.content} />
+							</Accordion>
+						</section>
 					)
 				})
 			}
