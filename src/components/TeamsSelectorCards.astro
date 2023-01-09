@@ -24,7 +24,11 @@ const { small } = Astro.props
 							alt={`Logo del equipo ${name}`}
 							class={`${small ? 'w-20 h-20' : 'w-28 h-28'} brightness-[100] object-contain transition-all group-hover:scale-110 group-hover:brightness-200 z-10 [backface-visibility:hidden]`}
 							src={imageWhite}
-							loading={Astro.url.pathname.includes('/equipos') === false && 'lazy'}
+							loading={
+								Astro.url.pathname.includes('/equipos')
+									? 'lazy'
+									: 'eager'
+							}
 							decoding="async"
 							fetchpriority={Astro.url.pathname.includes('/equipos') ? 'high' : 'low'}
 						/>

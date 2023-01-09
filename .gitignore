@@ -8,3 +8,6 @@ package-lock.json
 
 # Webstorm folder
 /.idea
+
+# Dummy files
+dummy.json

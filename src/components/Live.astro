@@ -1,0 +1,17 @@
+<div
+	class='col-span-6 bg-gradient-to-tr from-purple-400 via-purple-500 to-purple-800 rounded mb-20'
+>
+	<h4 class='text-white font-title font-black text-4xl p-4 flex justify-between items-center'>
+		<span>En directo</span>
+		<span class="rounded-full bg-red-600 animate-pulse w-6 h-6 block"></span>
+	</h4>
+	<div class='aspect-video'>
+		<iframe
+			loading="lazy"
+			class="w-full h-full"
+			src={`https://player.twitch.tv/?channel=kingsleague&parent=${Astro.props.hostname}`}
+			width='320'
+			height='200'
+			allowfullscreen='true'></iframe>
+	</div>
+</div>

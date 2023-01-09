@@ -1,13 +1,13 @@
 import * as cheerio from 'cheerio'
 
-import { getAssists } from './top_assists.js'
+import { writeDBFile } from '../db/index.js'
 import { getLeaderBoard } from './leaderboard.js'
 import { getMvpList } from './mvp.js'
 import { getTopScoresList } from './top_scorers.js'
 import { getPlayersTwelve } from './players_twelve.js'
 import { logError, logInfo, logSuccess } from './log.js'
-import { writeDBFile } from '../db/index.js'
 import { getSchedule } from './schedule.js'
+import { getAssists } from './top_assists.js'
 import { getTopStatistics } from './top_statistics.js'
 
 export const SCRAPINGS = {

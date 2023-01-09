@@ -1,0 +1,57 @@
+---
+import { getTopAssists } from '@services/statistics.js'
+
+const topAssists = await getTopAssists()
+---
+
+<div class='relative overflow-x-auto sm:rounded-lg'>
+	<table class='w-full text-xs text-left text-black'>
+		<thead class='font-black text-white uppercase bg-black'>
+			<tr>
+				<th title='ranking' scope='col' class='w-5 px-6 py-3 text-center'>Ranking</th>
+				<th title='equipo' scope='col' class='px-6 py-3'>Equipo</th>
+				<th title='nombre' scope='col' class='px-4 py-3'>Nombre</th>
+				<th title='pj' scope='col' class='px-4 py-3 text-center'>Partidos Jugados</th>
+				<th title='goles' scope='col' class='px-4 py-3 text-center'>Asistencias</th>
+			</tr>
+		</thead>
+		<tbody>
+			{
+				topAssists.map((info) => {
+					const { rank, playerName, gamesPlayed, assists, team, image } = info
+					const equipo = team
+						.replace(/ó/g, 'o')
+						.replace(/\s|de/g, '-')
+						.replace(/-+/g, '-')
+						.toLowerCase()
+					return (
+						<tr class={'odd:bg-white even:bg-slate-100 border-b text-base hover:bg-slate-200'}>
+							<th scope='row' class='text-center px-6 py-4 font-black text-black whitespace-nowrap'>
+								{rank}
+							</th>
+							<td class='px-6 py-4 font-black'>
+								<a
+									class='flex items-center gap-x-4 transition hover:opacity-75'
+									href={`/team/${equipo}`}
+									rel='preload'
+								>
+									<img
+										src={image}
+										alt={'Logo de ' + team}
+										class='w-6 h-6'
+										decoding='async'
+										fetchpriority='high'
+									/>
+									{team}
+								</a>
+							</td>
+							<td class='px-4 py-4'>{playerName}</td>
+							<td class='px-4 py-4 text-center'>{gamesPlayed}</td>
+							<td class='px-4 py-4 text-center'>{assists}</td>
+						</tr>
+					)
+				})
+			}
+		</tbody>
+	</table>
+</div>
