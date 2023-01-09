@@ -1,15 +1,15 @@
+import coaches from 'db/coaches.json'
+import leaderboard from 'db/leaderboard.json'
+import mvp from 'db/mvp.json'
+import playersTwelve from 'db/players_twelve.json'
+import presidents from 'db/presidents.json'
+import schedule from 'db/schedule.json'
+import teams from 'db/teams.json'
+import topAssists from 'db/top_assists.json'
+import topScorers from 'db/top_scorers.json'
+import topStatistics from 'db/top_statistics.json'
 import { Hono } from 'hono'
 import { serveStatic } from 'hono/serve-static.module'
-import leaderboard from '../db/leaderboard.json'
-import teams from '../db/teams.json'
-import presidents from '../db/presidents.json'
-import topScorers from '../db/top_scorers.json'
-import coaches from '../db/coaches.json'
-import mvp from '../db/mvp.json'
-import topAssists from '../db/top_assists.json'
-import schedule from '../db/schedule.json'
-import playersTwelve from '../db/players_twelve.json'
-import topStatistics from '../db/top_statistics.json'
 
 const app = new Hono()
 
@@ -66,7 +66,7 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/top-statistics',
-			description: 'Returns the top statistics of the Kings League',
+			description: 'Returns the top statistics of the Kings League'
 		},
 		{
 			endpoint: '/top-assists',
@@ -96,7 +96,8 @@ app.get('/', (ctx) =>
 		},
 		{
 			endpoint: '/schedule',
-			description: 'Returns the schedule of all Kings League matches and the final score of each match played'
+			description:
+				'Returns the schedule of all Kings League matches and the final score of each match played'
 		},
 		{
 			endpoint: '/players-12',
