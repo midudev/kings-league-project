@@ -11,13 +11,13 @@ const { players, title } = Astro.props
 					<img
 						class='w-56 h-auto m-auto aspect-[224/315]'
 						src={`/teams/players/${player.image}`}
-						alt={`${player.name}`}
+						alt={`${player.fullName}`}
 						loading='lazy'
 						decoding='async'
 						fetchpriority='low'
 					/>
 					<div class='bg-black/70 rounded-xl p-2'>
-						<h3 class='text-white font-title text-3xl leading-none'>{player.name}</h3>
+						<h3 class='text-white font-title text-3xl leading-none'>{player.dorsalName}</h3>
 						<h4 class='font-body uppercase text-orange-500 font-semibold'>{player.role}</h4>
 					</div>
 				</article>
