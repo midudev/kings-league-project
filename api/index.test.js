@@ -81,6 +81,31 @@ describe('Testing /teams route', () => {
 		{ name: 'coachInfo', type: 'object' }
 	]
 
+	const nestedPlayerProperties = [
+		{ name: 'id', type: 'string' },
+		{ name: 'dorsalName', type: 'string' },
+		{ name: 'fullName', type: 'string' },
+		{ name: 'role', type: 'string' },
+		{ name: 'image', type: 'string' },
+		{ name: 'stats', type: 'object' }
+	]
+
+	const playerStatsProperties = [
+		{ name: 'speed', type: 'number' },
+		{ name: 'physique', type: 'number' },
+		{ name: 'shooting', type: 'number' },
+		{ name: 'passing', type: 'number' },
+		{ name: 'talent', type: 'number' },
+		{ name: 'defense', type: 'number' }
+	]
+
+	const goalkeeperStatsProperties = [
+		{ name: 'reflexes', type: 'number' },
+		{ name: 'saves', type: 'number' },
+		{ name: 'kickoff', type: 'number' },
+		{ name: 'stretch', type: 'number' }
+	]
+
 	it('The teams should have all teams', async () => {
 		const resp = await worker.fetch('/teams')
 		expect(resp).toBeDefined()
@@ -112,6 +137,31 @@ describe('Testing /teams route', () => {
 
 		expect(errorMessage).toEqual({
 			message: 'Team not found'
+		})
+	})
+
+	it('The players should have all its properties', async () => {
+		const resp = await worker.fetch('/teams')
+		const teams = await resp.json()
+		const players = teams.map((team) => team.players).flat()
+		players.forEach((player) => checkProperties(player, nestedPlayerProperties))
+	})
+
+	it('The players should have all its stats depending of its type', async () => {
+		const resp = await worker.fetch('/teams')
+		const teams = await resp.json()
+		const players = teams.map((team) => team.players).flat()
+
+		const regularPlayerRoles = ['defensa', 'delantero', 'medio']
+
+		players.forEach((player) => {
+			const role = player.role.toLowerCase()
+
+			if (regularPlayerRoles.includes(role)) {
+				checkProperties(player.stats, playerStatsProperties)
+			} else if (role === 'portero') {
+				checkProperties(player.stats, goalkeeperStatsProperties)
+			}
 		})
 	})
 })
@@ -213,7 +263,10 @@ describe('Test /schedule route', () => {
 	it('Days should have their date and matches', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
-		const properties = [{ name: 'date', type: 'string' }, { name: 'matches', type: 'object' }]
+		const properties = [
+			{ name: 'date', type: 'string' },
+			{ name: 'matches', type: 'object' }
+		]
 		days.forEach((day) => checkProperties(day, properties))
 	})
 
