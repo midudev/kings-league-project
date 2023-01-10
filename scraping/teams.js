@@ -1,17 +1,29 @@
-import { TEAMS } from '../db/index.js'
-import { logInfo, logSuccess } from './log.js'
-import { cleanText, scrape } from './utils.js'
 import path from 'node:path'
-import { writeFile } from 'node:fs/promises'
 import sharp from 'sharp'
 
+import { TEAMS, writeDBFile } from '../db/index.js'
+import { logInfo, logSuccess } from './log.js'
+import { cleanText, scrape } from './utils.js'
+
 const STATICS_PATH = path.join(process.cwd(), './public/teams/')
-const DB_PATH = path.join(process.cwd(), '../db/')
 const BASE_URL = 'https://kingsleague.pro/team'
 const SELECTORS = {
 	name: '.el-title',
 	role: '.el-content',
 	image: '.el-image'
+}
+
+const MAPPER_STATS_PLAYER = {
+	reflejo: 'reflexes',
+	paradas: 'saves',
+	saque: 'kickoff',
+	estirada: 'stretch',
+	velocidad: 'speed',
+	físico: 'physique',
+	tiro: 'shooting',
+	pase: 'passing',
+	talento: 'talent',
+	defensa: 'defense'
 }
 
 async function getTeams() {
@@ -68,7 +80,7 @@ async function getTeams() {
 			const $el = $(el)
 
 			const nameRawValue = $el.find(SELECTORS.name).text()
-			const name = cleanText(nameRawValue)
+			const dorsalName = cleanText(nameRawValue)
 
 			// .el-content > "" + span
 			// .el-content > p > "" + span
@@ -82,15 +94,37 @@ async function getTeams() {
 
 			if (roleLowerCase !== 'presidente' && roleLowerCase !== 'entrenador') {
 				const url = $el.find(SELECTORS.image).attr('src')
-				const nameKebabCase = convertStringToKebabCase(name)
+				const nameKebabCase = convertStringToKebabCase(dorsalName)
 				const fileName = `${teamId}-${nameKebabCase}`
 				const image = await saveImage({ url, folder: 'players', fileName })
 
+				const dorsal = extractIdFromUrl(url)
+				const playerStatsClass = $el.find('.id-player').text().replace(' ', '-')
+				const $stats = $(`.${playerStatsClass} .data-player, .${playerStatsClass} .data-goalk`)
+				const fullName = cleanText($(`.${playerStatsClass} h1`).text())
+
+				const statsInfo = {}
+				if ($stats.length > 0) {
+					const $statsForPlayer = $stats.find('> div > div')
+
+					$statsForPlayer.each((_, el) => {
+						const $statEl = $(el)
+						const statTitle = cleanText($statEl.find('.el-meta').text()).toLowerCase()
+						const statValue = cleanText($statEl.find('.el-title').text())
+
+						const key = MAPPER_STATS_PLAYER[statTitle]
+						const value = Number(statValue)
+						if (value > 0) statsInfo[key] = value
+					})
+				}
+
 				players.push({
-					id: `${teamId}-${extractIdFromUrl(url)}`,
-					name,
+					id: `${teamId}-${dorsal}`,
+					dorsalName,
+					fullName,
 					role,
-					image
+					image,
+					stats: statsInfo
 				})
 			} else if (roleLowerCase === 'entrenador') {
 				const url = $el.find(SELECTORS.image).attr('src')
@@ -116,4 +150,4 @@ async function getTeams() {
 }
 
 const teams = await getTeams()
-await writeFile(`${DB_PATH}/teams.json`, JSON.stringify(teams, null, 2), 'utf-8')
+await writeDBFile('teams', teams)
