@@ -21,6 +21,11 @@ const socialNetworksWithIcon = socialNetworks.map((href) => ({
 const president = await findPresidentBy({ id: presidentId })
 const playersTwelve = await getPlayersTwelveFor({ teamId: id })
 
+const porteros = players.filter((player) => player.role === 'Portero')
+const defensas = players.filter((player) => player.role === 'Defensa')
+const medio = players.filter((player) => player.role === 'Medio')
+const delantero = players.filter((player) => player.role === 'Delantero')
+
 export async function getStaticPaths() {
 	const teams = await getAllTeams()
 
@@ -65,9 +70,11 @@ export async function getStaticPaths() {
 															class='w-8 h-8 brightness-[1000] aspect-square'
 															src={`/logos/social/${icon}.svg`}
 															style={style}
-															alt={`${icon.charAt(0).toUpperCase() + icon.slice(1)} del equipo ${name}`}
-															width="32"
-															height="32"
+															alt={`${
+																icon.charAt(0).toUpperCase() + icon.slice(1)
+															} del equipo ${name}`}
+															width='32'
+															height='32'
 															decoding='async'
 															fetchpriority='high'
 														/>
@@ -94,16 +101,17 @@ export async function getStaticPaths() {
 
 						<div class='bg-black/70 rounded-xl p-2 -mt-6'>
 							<h3 class='text-white font-title text-3xl'>{president.name}</h3>
-							<h4
-								class='font-body uppercase rounded-full text-orange-500  font-semibold'
-							>
+							<h4 class='font-body uppercase rounded-full text-orange-500 font-semibold'>
 								Presidente
 							</h4>
 						</div>
 					</div>
 				</section>
 
-				<TeamPagePlayers title='Jugadores' players={players} />
+				<TeamPagePlayers title='Porteros' players={porteros} />
+				<TeamPagePlayers title='Defensas' players={defensas} />
+				<TeamPagePlayers title='Medios' players={medio} />
+				<TeamPagePlayers title='Delanteros' players={delantero} />
 				<TeamPagePlayers title='Jugador 12' players={playersTwelve} />
 
 				<div
