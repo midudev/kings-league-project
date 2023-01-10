@@ -213,7 +213,7 @@ describe('Test /schedule route', () => {
 	it('Days should have their date and matches', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
-		const properties = [{ name: 'date', type: 'string' }, { name: 'matches' }]
+		const properties = [{ name: 'date', type: 'string' }, { name: 'matches', type: 'object' }]
 		days.forEach((day) => checkProperties(day, properties))
 	})
 
@@ -459,7 +459,7 @@ describe('Testing /players-12 route', () => {
 			{ name: 'image', type: 'string' },
 			{ name: 'name', type: 'string' },
 			{ name: 'id', type: 'string' },
-			{ name: 'team' }
+			{ name: 'team', type: 'object' }
 		]
 
 		players.forEach((player) => checkProperties(player, playerProperties))
