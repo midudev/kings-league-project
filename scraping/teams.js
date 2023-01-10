@@ -118,13 +118,21 @@ async function getTeams() {
 					})
 				}
 
+				const availableStats = Object.keys(statsInfo).length
+				const statsScore = availableStats
+					? Object.values(statsInfo).reduce((acc, value) => acc + value) / availableStats
+					: null
+
 				players.push({
 					id: `${teamId}-${dorsal}`,
 					dorsalName,
 					fullName,
 					role,
 					image,
-					stats: statsInfo
+					stats: {
+						...statsInfo,
+						...(statsScore && { score: Math.round(statsScore) })
+					}
 				})
 			} else if (roleLowerCase === 'entrenador') {
 				const url = $el.find(SELECTORS.image).attr('src')
