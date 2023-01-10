@@ -6,7 +6,7 @@
 <h2><a href='https://api.kingsleague.dev/'>API</a> | <a href='https://kingsleague.dev'>WEB</a></h2>
 </div>
 
-![Mockup of API Web](assets/static/web-mockup.png)
+![Mockup API Web](ui-mockup-web-api.png)
 
 <details>
   <summary>Sumario</summary>
