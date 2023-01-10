@@ -1,10 +1,10 @@
 ---
-const { title } = Astro.props
+const { title, index } = Astro.props
 ---
 
 <button
 	type='button'
-	class='accordion bg-principal-900 flex items-center focus:ring-4 focus:ring-principal-300 justify-between p-5 w-full font-medium text-white hover:bg-[#b94d00] transition-colors rounded'
+	class='accordion bg-principal-900 flex items-center justify-between p-5 w-full font-medium text-white hover:bg-[#b94d00] transition-colors rounded'
 >
 	<span class='font-semibold'>{title}</span>
 	<svg class="chevron-icon" fill='currentColor' viewBox='0 0 20 20' width="25">
@@ -14,9 +14,9 @@ const { title } = Astro.props
 			clip-rule='evenodd'></path>
 	</svg>
 </button>
-<div class="accordion-content">
+<div class='accordion-content max-h-0 overflow-hidden transition-all'>
 	<div
-		class='p-5 bg-gray-200'
+		class='p-5 bg-gray-100 rounded-b'
 	>
 		<p>
 			<slot />
