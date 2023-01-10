@@ -121,11 +121,12 @@ const faqs = [
 			class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40 space-y-8'
 		>
 			{
-				faqs.map(({title, content}) => {
+				faqs.map(({title, content}, index) => {
 					return (
 						<section class="max-w-5xl mx-auto">
 							<Accordion
 								{title}
+								{index}
 							>
 								<Fragment set:html={content} />
 							</Accordion>
@@ -136,3 +137,27 @@ const faqs = [
 		</div>
 	</Container>
 </Layout>
+
+<script>
+	const accordions = document.querySelectorAll('.accordion')
+	const accordionContents = document.querySelectorAll('.accordion-content')
+	const chevronIcons = document.querySelectorAll('.chevron-icon')
+
+	accordions.forEach((accordion, index) => {
+		accordion.addEventListener('click', () => {
+			accordion.classList.toggle('bg-[#b94d00]')
+			accordion.classList.toggle('rounded-t')
+			accordion.classList.toggle('rounded-b-none')
+
+			chevronIcons[index].classList.toggle('rotate-180')
+
+			if (accordionContents[index].style.maxHeight) {
+				accordionContents[index].style.maxHeight = null
+			} else {
+				accordionContents[index].style.maxHeight = `${accordionContents[index].scrollHeight}px`
+			}
+		})
+	})
+
+	accordions[0].click()
+</script>
