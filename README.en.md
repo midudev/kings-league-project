@@ -6,6 +6,8 @@
 <h2><a href='https://api.kingsleague.dev/'>API</a> | <a href='https://kingsleague.dev'>WEB</a></h2>
 </div>
 
+![Mockup API Web](assets/static/ui-mockup-web-api.png)
+
 <details>
   <summary>Table of contents</summary>
   <ol>
