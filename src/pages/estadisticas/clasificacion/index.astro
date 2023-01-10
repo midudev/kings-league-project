@@ -16,7 +16,11 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 	<Container>
 		<FloatingBoxContainer>
 			<TabsStatistics />
-			<div class={`grid grid-cols-3 gap-y-10 gap-x-5 w-full mb-4 ${mvp ? 'mt-4 lg:mt-24' : 'mt-4'}`}>
+			<div
+				class={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-5 w-full mb-4 ${
+					mvp ? 'mt-4 lg:mt-24' : 'mt-4'
+				}`}
+			>
 				{
 					mvp && (
 						<PlayerPrizeCard
