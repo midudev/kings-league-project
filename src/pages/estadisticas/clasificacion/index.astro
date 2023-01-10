@@ -5,6 +5,10 @@ import Container from '@components/Container.astro'
 import Leaderboard from '@components/Leaderboard.astro'
 import FloatingBoxContainer from '@components/FloatingBoxContainer.astro'
 import TabsStatistics from '@components/TabsStatistics.astro'
+import PlayerPrizeCard from '@components/PlayerPrizeCard.astro'
+import { getFirstPlayersStatistics } from '@services/statistics.js'
+
+const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 ---
 
 <Layout title='Clasificación'>
@@ -12,6 +16,43 @@ import TabsStatistics from '@components/TabsStatistics.astro'
 	<Container>
 		<FloatingBoxContainer>
 			<TabsStatistics />
+			<div class='grid grid-cols-3 gap-y-10 gap-x-5 w-full my-4'>
+				{
+					mvp && (
+						<PlayerPrizeCard
+							teamName={mvp.team}
+							teamId={mvp.teamId}
+							teamImage={mvp.image}
+							playerName={mvp.playerName}
+							playerImage={mvp.playerImage}
+							title='MVP'
+							subtitle='Jornada 1'
+						/>
+					)
+				}
+
+				<PlayerPrizeCard
+					smallerBox
+					teamName={topScorer.team}
+					teamId={topScorer.teamId}
+					teamImage={topScorer.image}
+					playerName={topScorer.playerName}
+					playerImage={topScorer.playerImage}
+					title={topScorer.goals}
+					subtitle='Goleador'
+				/>
+
+				<PlayerPrizeCard
+					smallerBox
+					teamName={topAssister.team}
+					teamImage={topAssister.image}
+					teamId={topAssister.teamId}
+					playerName={topAssister.playerName}
+					playerImage={topAssister.playerImage}
+					title={topAssister.assists}
+					subtitle='Asistencias'
+				/>
+			</div>
 			<Leaderboard />
 		</FloatingBoxContainer>
 	</Container>
