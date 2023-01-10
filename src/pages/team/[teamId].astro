@@ -21,10 +21,10 @@ const socialNetworksWithIcon = socialNetworks.map((href) => ({
 const president = await findPresidentBy({ id: presidentId })
 const playersTwelve = await getPlayersTwelveFor({ teamId: id })
 
-const porteros = players.filter((player) => player.role === 'Portero')
-const defensas = players.filter((player) => player.role === 'Defensa')
-const medio = players.filter((player) => player.role === 'Medio')
-const delantero = players.filter((player) => player.role === 'Delantero')
+const goalkeepers = players.filter((player) => player.role === 'Portero')
+const defenses = players.filter((player) => player.role === 'Defensa')
+const medium = players.filter((player) => player.role === 'Medio')
+const forward = players.filter((player) => player.role === 'Delantero')
 
 export async function getStaticPaths() {
 	const teams = await getAllTeams()
