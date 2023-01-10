@@ -3,7 +3,7 @@ const { players, title } = Astro.props
 ---
 
 <section>
-	<h2 class='font-title text-5xl text-white text-center py-10'>{title}</h2>
+	<h2 class='font-title text-4xl text-white text-center pb-8 pt-20'>{title}</h2>
 	<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2'>
 		{
 			players.map((player) => (
@@ -12,7 +12,7 @@ const { players, title } = Astro.props
 						class='w-56 h-auto m-auto aspect-[224/315]'
 						src={`/teams/players/${player.image}`}
 						alt={`${player.name}`}
-						loading="lazy"
+						loading='lazy'
 						decoding='async'
 						fetchpriority='low'
 					/>

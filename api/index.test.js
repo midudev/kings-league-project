@@ -18,9 +18,12 @@ const teardown = async (worker) => {
 function checkProperties(subject, schema) {
 	schema.forEach((property) => {
 		const { name, type } = property
-
 		expect(subject).toHaveProperty(property.name)
-		if (type) expect(subject[name]).toBeTypeOf(type)
+
+		if (type) {
+			const customMessage = `Expected [${name}] property to be type: [${type}]`
+			expect(subject[name], customMessage).toBeTypeOf(type)
+		}
 	})
 }
 
@@ -41,11 +44,13 @@ describe('Testing / route', () => {
 		if (!res) return
 
 		const apiRoutes = await res.json()
+		const apiRoutesProperties = [
+			{ name: 'endpoint', type: 'string' },
+			{ name: 'description', type: 'string' }
+		]
+
 		// verify the response to have the expected format
-		apiRoutes.forEach((endpoint) => {
-			expect(endpoint).toHaveProperty('endpoint')
-			expect(endpoint).toHaveProperty('description')
-		})
+		apiRoutes.forEach((endpoint) => checkProperties(endpoint, apiRoutesProperties))
 	})
 })
 
@@ -60,6 +65,22 @@ describe('Testing /teams route', () => {
 		await teardown(worker)
 	})
 
+	const teamsProperties = [
+		{ name: 'id', type: 'string' },
+		{ name: 'color', type: 'string' },
+		{ name: 'name', type: 'string' },
+		{ name: 'shortName', type: 'string' },
+		{ name: 'image', type: 'string' },
+		{ name: 'imageWhite', type: 'string' },
+		{ name: 'url', type: 'string' },
+		{ name: 'presidentId', type: 'string' },
+		{ name: 'channel', type: 'string' },
+		{ name: 'socialNetworks', type: 'object' },
+		{ name: 'players', type: 'object' },
+		{ name: 'coach', type: 'string' },
+		{ name: 'coachInfo', type: 'object' }
+	]
+
 	it('The teams should have all teams', async () => {
 		const resp = await worker.fetch('/teams')
 		expect(resp).toBeDefined()
@@ -69,18 +90,7 @@ describe('Testing /teams route', () => {
 		const numberTeams = Object.entries(teams).length
 
 		// verify the team have all props
-		teams.forEach((team) => {
-			expect(team).toHaveProperty('id')
-			expect(team).toHaveProperty('name')
-			expect(team).toHaveProperty('image')
-			expect(team).toHaveProperty('url')
-			expect(team).toHaveProperty('presidentId')
-			expect(team).toHaveProperty('channel')
-			expect(team).toHaveProperty('coach')
-			expect(team).toHaveProperty('socialNetworks')
-			expect(team).toHaveProperty('players')
-		})
-
+		teams.forEach((team) => checkProperties(team, teamsProperties))
 		expect(numberTeams).toBe(12)
 	})
 
@@ -90,16 +100,7 @@ describe('Testing /teams route', () => {
 		if (!resp) return
 
 		const team = await resp.json()
-
-		expect(team).toHaveProperty('id')
-		expect(team).toHaveProperty('name')
-		expect(team).toHaveProperty('image')
-		expect(team).toHaveProperty('url')
-		expect(team).toHaveProperty('presidentId')
-		expect(team).toHaveProperty('channel')
-		expect(team).toHaveProperty('coach')
-		expect(team).toHaveProperty('socialNetworks')
-		expect(team).toHaveProperty('players')
+		checkProperties(team, teamsProperties)
 	})
 
 	it('Get /teams/noexist should return 404 message missing team', async () => {
@@ -126,6 +127,13 @@ describe('Testing /presidents route', () => {
 		await teardown(worker)
 	})
 
+	const presidentsProperties = [
+		{ name: 'id', type: 'string' },
+		{ name: 'name', type: 'string' },
+		{ name: 'image', type: 'string' },
+		{ name: 'teamId', type: 'string' }
+	]
+
 	it('should return presidents', async () => {
 		const resp = await worker.fetch('/presidents')
 		expect(resp).toBeDefined()
@@ -134,14 +142,8 @@ describe('Testing /presidents route', () => {
 		const presidents = await resp.json()
 		const numberPresidents = Object.entries(presidents).length
 
-		// verify the team have all props
-		presidents.forEach((president) => {
-			expect(president).toHaveProperty('id')
-			expect(president).toHaveProperty('name')
-			expect(president).toHaveProperty('image')
-			expect(president).toHaveProperty('teamId')
-		})
-
+		// verify the president have all props
+		presidents.forEach((president) => checkProperties(president, presidentsProperties))
 		expect(numberPresidents).toBe(12)
 	})
 
@@ -158,10 +160,7 @@ describe('Testing /presidents route', () => {
 			teamId: '1k'
 		}
 
-		expect(president).toHaveProperty('id')
-		expect(president).toHaveProperty('name')
-		expect(president).toHaveProperty('image')
-		expect(president).toHaveProperty('teamId')
+		checkProperties(president, presidentsProperties)
 		expect(president).toEqual(iker)
 	})
 
@@ -214,26 +213,22 @@ describe('Test /schedule route', () => {
 	it('Days should have their date and matches', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
-		const properties = ['date', 'matches']
-
-		days.forEach((day) => {
-			properties.forEach((property) => {
-				expect(day).toHaveProperty(property)
-			})
-		})
+		const properties = [{ name: 'date', type: 'string' }, { name: 'matches', type: 'object' }]
+		days.forEach((day) => checkProperties(day, properties))
 	})
 
 	it('Matches should have all their properties', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
 		const matches = days.map((day) => day.matches).flat()
-		const properties = ['timestamp', 'hour', 'teams', 'score']
+		const properties = [
+			{ name: 'timestamp' }, // Can be null
+			{ name: 'hour' }, // Can be null
+			{ name: 'teams', type: 'object' },
+			{ name: 'score', type: 'string' }
+		]
 
-		matches.forEach((match) => {
-			properties.forEach((property) => {
-				expect(match).toHaveProperty(property)
-			})
-		})
+		matches.forEach((match) => checkProperties(match, properties))
 
 		it('Should return a 405 status code for invalid request method', async () => {
 			const resp = await worker.fetch('/schedule', { method: 'POST' })
@@ -278,13 +273,13 @@ describe('Test /schedule route', () => {
 			.map((match) => match.teams)
 			.flat()
 
-		const properties = ['id', 'name', 'shortName']
+		const properties = [
+			{ name: 'id', type: 'string' },
+			{ name: 'name', type: 'string' },
+			{ name: 'shortName', type: 'string' }
+		]
 
-		teams.forEach((team) => {
-			properties.forEach((property) => {
-				expect(team).toHaveProperty(property)
-			})
-		})
+		teams.forEach((team) => checkProperties(team, properties))
 	})
 })
 
@@ -292,30 +287,30 @@ describe('Testing /leaderboard route', () => {
 	let worker
 
 	const entryProperties = [
-		'wins',
-		'losses',
-		'scoredGoals',
-		'concededGoals',
-		'yellowCards',
-		'redCards',
-		'team',
-		'rank'
+		{ name: 'wins', type: 'number' },
+		{ name: 'losses', type: 'number' },
+		{ name: 'scoredGoals', type: 'number' },
+		{ name: 'concededGoals', type: 'number' },
+		{ name: 'yellowCards', type: 'number' },
+		{ name: 'redCards', type: 'number' },
+		{ name: 'team', type: 'object' },
+		{ name: 'rank', type: 'number' }
 	]
 
 	const nestedTeamProperties = [
-		'color',
-		'id',
-		'name',
-		'image',
-		'imageWhite',
-		'url',
-		'channel',
-		'socialNetworks',
-		'players',
-		'coach',
-		'shortName',
-		'coachInfo',
-		'president'
+		{ name: 'color', type: 'string' },
+		{ name: 'id', type: 'string' },
+		{ name: 'name', type: 'string' },
+		{ name: 'image', type: 'string' },
+		{ name: 'imageWhite', type: 'string' },
+		{ name: 'url', type: 'string' },
+		{ name: 'channel', type: 'string' },
+		{ name: 'socialNetworks', type: 'object' },
+		{ name: 'players', type: 'object' },
+		{ name: 'coach', type: 'string' },
+		{ name: 'shortName', type: 'string' },
+		{ name: 'coachInfo', type: 'object' },
+		{ name: 'president', type: 'object' }
 	]
 
 	beforeAll(async () => {
@@ -337,34 +332,25 @@ describe('Testing /leaderboard route', () => {
 	it('Entries should have all their properties', async () => {
 		const resp = await worker.fetch('/leaderboard')
 		const leaderboard = await resp.json()
-
-		leaderboard.forEach((entry) => {
-			entryProperties.forEach((property) => {
-				expect(entry).toHaveProperty(property)
-			})
-		})
+		leaderboard.forEach((entry) => checkProperties(entry, entryProperties))
 	})
 
 	it('Teams should have all their properties', async () => {
 		const resp = await worker.fetch('/leaderboard')
 		const leaderboard = await resp.json()
 		const teams = leaderboard.map((entry) => entry.team)
-
-		teams.forEach((team) => {
-			nestedTeamProperties.forEach((property) => {
-				expect(team).toHaveProperty(property)
-			})
-		})
+		teams.forEach((team) => checkProperties(team, nestedTeamProperties))
 	})
 
 	it('Shoud return a team from its id', async () => {
 		const resp = await worker.fetch('/leaderboard/1k')
 		expect(resp).toBeDefined()
-		const entry = await resp.json()
-		const { team } = entry
 
-		entryProperties.forEach((property) => expect(entry).toHaveProperty(property))
-		nestedTeamProperties.forEach((property) => expect(team).toHaveProperty(property))
+		const entry = await resp.json()
+		checkProperties(entry, entryProperties)
+
+		const { team } = entry
+		checkProperties(team, nestedTeamProperties)
 	})
 
 	it("Should return 404 message when the id doesn't exists", async () => {
@@ -465,13 +451,18 @@ describe('Testing /players-12 route', () => {
 		expect(resp).toBeDefined()
 
 		const players = await resp.json()
-		const playerProperties = ['role', 'firstName', 'lastName', 'image', 'name', 'id', 'team']
 
-		players.forEach((player) =>
-			playerProperties.forEach((property) => {
-				expect(player).toHaveProperty(property)
-			})
-		)
+		const playerProperties = [
+			{ name: 'role', type: 'string' },
+			{ name: 'firstName', type: 'string' },
+			{ name: 'lastName', type: 'string' },
+			{ name: 'image', type: 'string' },
+			{ name: 'name', type: 'string' },
+			{ name: 'id', type: 'string' },
+			{ name: 'team', type: 'object' }
+		]
+
+		players.forEach((player) => checkProperties(player, playerProperties))
 	})
 
 	it('Nested teams should have all their properties', async () => {
@@ -479,6 +470,7 @@ describe('Testing /players-12 route', () => {
 		const players = await resp.json()
 
 		const teams = players.map((player) => player.team)
+
 		const nestedTeamProperties = [
 			{ name: 'id', type: 'string' },
 			{ name: 'name', type: 'string' },
@@ -486,13 +478,7 @@ describe('Testing /players-12 route', () => {
 			{ name: 'imageWhite', type: 'string' }
 		]
 
-		teams.forEach((team) =>
-			nestedTeamProperties.forEach((property) => {
-				const { name, type } = property
-				expect(team).toHaveProperty(name)
-				expect(team[name]).toBeTypeOf(type)
-			})
-		)
+		teams.forEach((team) => checkProperties(team, nestedTeamProperties))
 	})
 })
 

@@ -14,11 +14,17 @@ const gradient = `bg-${id}`
 
 const socialNetworksWithIcon = socialNetworks.map((href) => ({
 	href,
+	style: href.includes('tiktok') ? 'filter: invert(1);' : null,
 	icon: ICON_NETWORK_MAPPING.find((key) => href.includes(key))
 }))
 
 const president = await findPresidentBy({ id: presidentId })
 const playersTwelve = await getPlayersTwelveFor({ teamId: id })
+
+const goalkeepers = players.filter((player) => player.role === 'Portero')
+const defenses = players.filter((player) => player.role === 'Defensa')
+const medium = players.filter((player) => player.role === 'Medio')
+const forward = players.filter((player) => player.role === 'Delantero')
 
 export async function getStaticPaths() {
 	const teams = await getAllTeams()
@@ -31,10 +37,10 @@ export async function getStaticPaths() {
 ---
 
 <Layout title={name}>
-	<section class='bg-principal py-20 px-2'>
+	<section class='bg-principal py-10 sm:py-20 sm:px-2'>
 		<Container>
 			<div
-				class={`relative py-10 px-2 md:px-20 md:py-10 shadow-xl rounded -mt-10 z-10 mb-40 ${gradient}`}
+				class={`relative py-10 px-2 md:px-20 md:py-10 shadow-xl sm:rounded -mt-10 z-10 mb-40 ${gradient}`}
 			>
 				<section class='flex flex-col xl:flex-row items-center justify-between pb-10'>
 					<div class='flex flex-col'>
@@ -50,7 +56,7 @@ export async function getStaticPaths() {
 								<h1 class='font-title font-bold text-4xl md:text-6xl text-white'>{name}</h1>
 								<ul class='flex flex-row gap-x-4 justify-center xl:justify-start'>
 									{
-										socialNetworksWithIcon.map(({ href, icon }) => {
+										socialNetworksWithIcon.map(({ href, icon, style }) => {
 											return (
 												<li>
 													<a
@@ -63,9 +69,12 @@ export async function getStaticPaths() {
 														<img
 															class='w-8 h-8 brightness-[1000] aspect-square'
 															src={`/logos/social/${icon}.svg`}
-															alt={`${icon.charAt(0).toUpperCase() + icon.slice(1)} del equipo ${name}`}
-															width="32"
-															height="32"
+															style={style}
+															alt={`${
+																icon.charAt(0).toUpperCase() + icon.slice(1)
+															} del equipo ${name}`}
+															width='32'
+															height='32'
 															decoding='async'
 															fetchpriority='high'
 														/>
@@ -92,16 +101,17 @@ export async function getStaticPaths() {
 
 						<div class='bg-black/70 rounded-xl p-2 -mt-6'>
 							<h3 class='text-white font-title text-3xl'>{president.name}</h3>
-							<h4
-								class='font-body uppercase rounded-full text-orange-500  font-semibold'
-							>
+							<h4 class='font-body uppercase rounded-full text-orange-500 font-semibold'>
 								Presidente
 							</h4>
 						</div>
 					</div>
 				</section>
 
-				<TeamPagePlayers title='Jugadores' players={players} />
+				<TeamPagePlayers title='Porteros' players={goalkeepers} />
+				<TeamPagePlayers title='Defensas' players={defenses} />
+				<TeamPagePlayers title='Medios' players={medium} />
+				<TeamPagePlayers title='Delanteros' players={forward} />
 				<TeamPagePlayers title='Jugador 12' players={playersTwelve} />
 
 				<div

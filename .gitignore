@@ -10,3 +10,4 @@ package-lock.json
 
 # Dummy files
 dummy.json
+.DS_Store
