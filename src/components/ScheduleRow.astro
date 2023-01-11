@@ -3,7 +3,7 @@ const { local, score, visitant, useSmallNames, hour, timestamp } = Astro.props
 
 const scoreStyles = {
 	shared:
-		'w-20 md:w-32 text-center whitespace-nowrap font-title rounded-md p-2 px-4 md:px-10 text-sm lg:text-xl leading-none text-center',
+		'text-center whitespace-nowrap rounded-md sm:font-title text-xs sm:text-sm lg:text-lg w-full sm:w-2/3 py-2',
 	played: 'text-white bg-gray-700',
 	pending: 'bg-gray-200 transition group-hover:bg-gray-200'
 }
@@ -23,15 +23,17 @@ if (timestamp && timestamp <= Date.now()) {
 	class='odd:bg-white even:bg-slate-100 flex justify-between group border-y border-y-gray-200 [&>td]:py-2 transition-colors hover:bg-gray-200'
 >
 	<td class='lg:px-2 py-4 border-b-1 flex flex-col md:flex-row justify-end items-center w-full'>
-		<a class='flex justify-start items-center  hover:text-gray-500' title={local.name} href={`/team/${local.page}`}>
+		<a
+			class='flex justify-start items-center hover:text-gray-500'
+			title={local.name}
+			href={`/team/${local.page}`}
+		>
 			{
-				useSmallNames
-? (
+				useSmallNames ? (
 					<span class='font-bold font-title' title={local.name}>
 						{local.shortName}
 					</span>
-				)
-: (
+				) : (
 					<>
 						<span class='md:hidden'>{local.shortName}</span>
 						<span class='hidden md:block'>{local.name}</span>
@@ -39,10 +41,10 @@ if (timestamp && timestamp <= Date.now()) {
 				)
 			}
 			<img
-			class='w-6 h-6 lg:w-12 lg:h-12 mx-2'
-			src={`https://kingsleague.dev/teams/logos/${local.id}.svg`}
-			alt={`Escudo del equipo ${local.name}`}
-		/>
+				class='w-6 h-6 lg:w-12 lg:h-12 mx-2'
+				src={`https://kingsleague.dev/teams/logos/${local.id}.svg`}
+				alt={`Escudo del equipo ${local.name}`}
+			/>
 		</a>
 	</td>
 
@@ -57,26 +59,23 @@ if (timestamp && timestamp <= Date.now()) {
 			href={`/team/${visitant.page}`}
 			class='order-2 2xl:order-1'
 		>
-		<img
+			<img
 				class='w-6 h-6 lg:w-12 lg:h-12 mx-2'
 				src={`https://kingsleague.dev/teams/logos/${visitant.id}.svg`}
 				alt={`Escudo del equipo ${visitant.name}`}
 			/>
 			{
-				useSmallNames
-? (
+				useSmallNames ? (
 					<span class='font-bold font-title' title={visitant.name}>
 						{visitant.shortName}
 					</span>
-				)
-: (
+				) : (
 					<>
 						<span class='md:hidden'>{visitant.shortName}</span>
 						<span class='hidden md:block'>{visitant.name}</span>
 					</>
 				)
 			}
-
 		</a>
 	</td>
 </tr>
