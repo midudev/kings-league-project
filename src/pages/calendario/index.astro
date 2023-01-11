@@ -17,13 +17,16 @@ const schedule = await getSchedule()
 		>
 			<div class='max-w-5xl mx-auto my-4'>
 				{
-					schedule.map((day) => {
+					schedule.map((day, index) => {
 						return (
 							<section>
 								<table class='w-full table-fixed mb-16'>
 									<thead class='border-b-2 border-b-black'>
 										<tr>
-											<td class='text-[25px] text-black p-2'>{day.date}</td>
+											<td class='text-white py-2 px-4 bg-black text-center rounded-t-lg'>
+												<p class='text-[25px]'>{day.date}</p>
+												<p class='font-semibold'>Jornada {index + 1}</p>
+											</td>
 										</tr>
 									</thead>
 									<tbody>
