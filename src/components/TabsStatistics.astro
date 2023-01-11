@@ -18,7 +18,14 @@ const TABS = [
 	}
 ]
 
-const getNameUrl = `/${Astro.url.pathname.split('/').at(-1)}`
+let { pathname } = Astro.url
+// remove last slash if exists
+if (pathname.endsWith('/')) {
+	pathname = pathname.slice(0, -1)
+}
+
+const lastPath = pathname.split('/').at(-1)
+const getNameUrl = `/${lastPath}`
 ---
 
 <ul
@@ -27,7 +34,8 @@ const getNameUrl = `/${Astro.url.pathname.split('/').at(-1)}`
 	{
 		TABS.map(({ title, href }) => (
 			<li class='mr-2'>
-				{getNameUrl === href || (getNameUrl === '/estadisticas' && href === '/clasificacion') ? (
+				{getNameUrl === href || (getNameUrl === '/estadisticas' && href === '/clasificacion')
+? (
 					<a
 						href={`/estadisticas${href}`}
 						class='inline-block p-4 border-b-2 rounded-t-lg border-orange-400 text-orange-400 font-title'
@@ -35,7 +43,8 @@ const getNameUrl = `/${Astro.url.pathname.split('/').at(-1)}`
 					>
 						{title}
 					</a>
-				) : (
+				)
+: (
 					<a
 						href={`/estadisticas${href}`}
 						class='inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 '

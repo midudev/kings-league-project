@@ -10,6 +10,10 @@ const menu = [
 		href: '/equipos'
 	},
 	{
+		name: 'Jugador 12',
+		href: '/jugador-12'
+	},
+	{
 		name: 'Calendario',
 		href: '/calendario'
 	},
@@ -31,7 +35,7 @@ const teams = await getAllTeams()
 ---
 
 <header
-	class='flex items-center w-full bg-gradient-to-b from-principal-dark via-principal-dark to-principal py-3 px-8 md:p-8 gap-x-8'
+	class='flex items-center w-full bg-gradient-to-b from-principal-dark via-principal-dark to-principal py-3 px-4 md:px-8 md:py-8 gap-x-8'
 >
 	<div class='flex md:flex-col h-full md:gap-4 w-full justify-between'>
 		<nav class='w-min md:w-auto'>
@@ -40,15 +44,15 @@ const teams = await getAllTeams()
 					class='md:w-[724px] lg:w-[884px] md:rounded-full md:m-auto md:bg-black md:border-[#fab50c] md:border-2 md:p-2 px-0'
 				>
 					<ul
-						class='flex items-center justify-center rounded-x md:gap-x-4 [&>li>a:hover]:scale-150 w-full'
+						class='flex items-center justify-center rounded-x md:gap-x-4 [&>li>a:hover]:scale-125 [&>li>a:hover]:contrast-125 w-full'
 					>
 						{
 							teams.map(({ id, image, name }, index) => (
 								<>
 									{index === 6 && (
-										<div class='w-16 lg:w-20'>
+										<li class='w-16 lg:w-20'>
 											<Logo />
-										</div>
+										</li>
 									)}
 									<li>
 										<a
