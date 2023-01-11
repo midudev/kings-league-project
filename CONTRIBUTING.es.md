@@ -43,15 +43,15 @@ Al escribir mensajes de commit, sigue estas buenas prácticas:
 - Usa el cuerpo del mensaje de commit para proporcionar cualquier contexto o detalles necesarios sobre el commit.
 - Utiliza prefijos en tus mensajes de commit para hacerlos más semánticos. Algunos prefijos comunes incluyen:
 
-- `"feat"` para nuevas funcionalidades.
-- `"fix"` para correcciones de buges.
-- `"perf"` para mejoras de rendimiento.
-- `"build"` para cambios en el sistema de construcción.
-- `"ci"` para cambios en la integración continua.
-- `"docs"` para cambios en la documentación.
-- `"refactor"` para cambios de refactorización.
-- `"style"` para cambios de formato.
-- `"test"` para cambios en las pruebas.
+	- `"feat"` para nuevas funcionalidades.
+	- `"fix"` para correcciones de buges.
+	- `"perf"` para mejoras de rendimiento.
+	- `"build"` para cambios en el sistema de construcción.
+	- `"ci"` para cambios en la integración continua.
+	- `"docs"` para cambios en la documentación.
+	- `"refactor"` para cambios de refactorización.
+	- `"style"` para cambios de formato.
+	- `"test"` para cambios en las pruebas.
 
 Para obtener más información sobre cómo escribir buenos mensajes de commit, puedes consultar este [artículo](https://midu.dev/buenas-practicas-escribir-commits-git/).
 
