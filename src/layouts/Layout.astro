@@ -23,8 +23,19 @@ const teams = await getAllTeams()
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{seoTitle}</title>
+		<link rel="canonical" href={Astro.url.href} />
 		<meta name="description" content={description} />
-		<link href={Astro.url.href} rel="canonical" />
+		<meta property="og:description" content={description} />
+		<meta property="og:determiner" content="the" />
+		<meta property="og:image" content="https://kingsleague.dev/favicon.svg" />
+		<meta property="og:image:alt" content="Logo de la Kings League Infojobs, escudo negro con una silueta de un rey en amarillo" />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:site_name" content={seoTitle} />
+		<meta property="og:title" content={seoTitle} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url.href}  />
+		<meta property="og:video" content="https://youtu.be/HxKsli16dQo" />
+		<meta property="og:video:secure_url" content="https://youtu.be/HxKsli16dQo" />
 		<meta name="generator" content={Astro.generator} />
 		<link href="/fonts/archivo.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
 		<link href="/fonts/archivo-semibold.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
