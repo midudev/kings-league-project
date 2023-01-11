@@ -9,7 +9,7 @@ import { getAllTeams, getPlayersTwelveFor } from '@services/teams.js'
 
 const ICON_NETWORK_MAPPING = ['instagram', 'tiktok', 'twitch', 'twitter', 'youtube']
 
-const { id, name, image, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
+const { id, coachInfo, name, image, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
 const gradient = `bg-${id}`
 
 const logoToShow = ['1k', 'los-troncos-fc'].includes(id) ? imageWhite : image
@@ -21,15 +21,13 @@ const socialNetworksWithIcon = socialNetworks.map((href) => ({
 }))
 
 const president = await findPresidentBy({ id: presidentId })
-const playersTwelve = await getPlayersTwelveFor({ teamId: id })
+// const playersTwelve = await getPlayersTwelveFor({ teamId: id })
 
 const playerEleven = players.filter((player) => player.role === 'jugador 11')
 const goalkeepers = players.filter((player) => player.role === 'Portero')
 const defenses = players.filter((player) => player.role === 'Defensa')
 const medium = players.filter((player) => player.role === 'Medio')
 const forward = players.filter((player) => player.role === 'Delantero')
-
-console.log(playerEleven)
 
 export async function getStaticPaths() {
 	const teams = await getAllTeams()
@@ -47,7 +45,7 @@ export async function getStaticPaths() {
 			<div
 				class={`relative py-10 px-2 md:px-20 md:py-10 shadow-xl sm:rounded -mt-10 z-10 mb-40 ${gradient}`}
 			>
-				<section class='flex flex-col xl:flex-row items-center justify-between pb-10'>
+				<section class='relative flex flex-col xl:flex-row items-center justify-between pb-10'>
 					<div class='flex flex-col'>
 						<div class='flex flex-col xl:flex-row items-center gap-x-6 mb-2 -mt-24'>
 							<img
@@ -95,22 +93,42 @@ export async function getStaticPaths() {
 						<TeamStats teamId={id} />
 					</div>
 
-					<div class='xl:absolute xl:-top-20 xl:right-10 text-center'>
-						<img
-							class='w-[380px] h-auto aspect-[400/562]'
-							src={president.image}
-							alt={president.name}
-							decoding='async'
-							fetchpriority='high'
-						/>
+					<div class="flex items-center">
+						<div class='xl:absolute xl:bottom-10 xl:right-[400px] text-center flex items-center flex-col'>
+							<img
+								class='w-[200px] h-auto aspect-[400/562]'
+								src={`/teams/coaches/${coachInfo.image}`}
+								alt={coachInfo.name}
+								decoding='async'
+								fetchpriority='high'
+							/>
 
-						<div class='bg-black/70 rounded-xl p-2 -mt-6'>
-							<h3 class='text-white font-title text-3xl'>{president.name}</h3>
-							<h4 class='font-body uppercase rounded-full text-orange-500 font-semibold'>
-								Presidente
-							</h4>
+							<div class='bg-gradient-to-tr from-[#202020c9] via-[#36363685] to-[#cd55002a] shadow-xl rounded-xl p-2'>
+								<h3 class='text-white font-title text-xl'>{coachInfo.name}</h3>
+								<h4 class='font-body uppercase rounded-full text-orange-500 font-semibold'>
+									Entrenador
+								</h4>
+							</div>
+						</div>
+
+						<div class='xl:absolute xl:-top-28 xl:right-0 text-center items-center flex-col'>
+							<img
+								class='w-[200px] xl:w-[391px] h-auto aspect-[400/562]'
+								src={president.image}
+								alt={president.name}
+								decoding='async'
+								fetchpriority='high'
+							/>
+
+							<div class='bg-gradient-to-tr from-[#202020c9] via-[#36363685] to-[#cd55002a] shadow-xl rounded-xl p-2 -mt-10'>
+								<h3 class='text-white font-title text-3xl'>{president.name}</h3>
+								<h4 class='font-body uppercase rounded-full text-orange-500 font-semibold'>
+									Presidente
+								</h4>
+							</div>
 						</div>
 					</div>
+
 				</section>
 
 				<TeamPagePlayers players={[...playerEleven, ...goalkeepers, ...defenses, ...medium, ...forward]} />
