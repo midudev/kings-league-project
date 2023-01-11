@@ -34,7 +34,7 @@ const { date, matches } = firstDayWithPendingMatches
 				</div>
 			</div>
 		</header>
-		<div>
+		<footer>
 			<div class="flex items-center justify-between bg-white py-2 px-4">
 				<button class="hover:text-principal-900 flex items-center gap-0.5" type="button">
 					<span>
@@ -49,24 +49,26 @@ const { date, matches } = firstDayWithPendingMatches
 					</span>
 				</button>
 			</div>
-			{
-				schedule.map((day) => (
-					<table class="w-full">
-						<tbody>
-							{day.matches.map((match) => (
-								<ScheduleRow
-									useSmallNames
-									local={match.teams[0]}
-									visitant={match.teams[1]}
-									score={match.score}
-									timestamp={match.timestamp}
-									hour={match.hour}
-								/>
-							))}
-						</tbody>
-					</table>
-				))
-			}
-		</div>
+			<div class="flex overflow-hidden">
+				{
+					schedule.map((day, index) => (
+						<table class="w-full shrink-0">
+							<tbody>
+								{day.matches.map((match) => (
+									<ScheduleRow
+										useSmallNames
+										local={match.teams[0]}
+										visitant={match.teams[1]}
+										score={match.score}
+										timestamp={match.timestamp}
+										hour={match.hour}
+									/>
+								))}
+							</tbody>
+						</table>
+					))
+				}
+			</div>
+		</footer>
 	</section>
 </div>
