@@ -1,0 +1,70 @@
+---
+const { image, fullName, dorsalName, role, stats } = Astro.props
+const { score, ...restOfStats } = stats ?? {}
+
+const STATS_MAPPING = {
+	speed: { name: 'Velocidad', shortName: 'VLC' },
+	physique: { name: 'Físico', shortName: 'FSC' },
+	shooting: { name: 'Disparo', shortName: 'DIS' },
+	passing: { name: 'Pase', shortName: 'PAS' },
+	talent: { name: 'Talento', shortName: 'TAL' },
+	defense: { name: 'Defensa', shortName: 'DEF' },
+	reflexes: { name: 'Reflejos', shortName: 'RFL' },
+	saves: { name: 'Paradas', shortName: 'PAR' },
+	kickoff: { name: 'Salida', shortName: 'SAL' },
+	stretch: { name: 'Estirada', shortName: 'EST' }
+}
+
+const positions = {
+	portero: 'POR',
+	defensa: 'DEF',
+	medio: 'MED',
+	delantero: 'DEL'
+}
+
+let level = 'bronze'
+if (score > 65) level = 'silver'
+if (score > 75) level = 'gold'
+
+const levelColors = {
+	bronze: 'text-[#4d331f]',
+	silver: 'text-[#3b3d41]',
+	gold: 'text-[#4d331f]'
+}
+
+const color = levelColors[level]
+---
+
+<article
+	class={`${color} w-52 text-center relative rounded-sm m-auto bg-contain bg-no-repeat aspect-[489/787] overflow-hidden col-span-1`}
+	style={{ backgroundImage: `url("/bg/${level}.png")` }}
+>
+	<header class='flex pt-9'>
+		<div class='flex flex-col pl-6'>
+			<strong class={'text-4xl font-title font-bold'}>{score}</strong>
+			<span class={'-mt-2 text-xl font-semibold'}>{positions[role.toLowerCase()]}</span>
+		</div>
+		<img
+			class='-ml-12 object-cover object-top h-auto aspect-[224/152]'
+			src={`/teams/players/${image}`}
+			alt={`${fullName}`}
+			loading='lazy'
+			decoding='async'
+			fetchpriority='low'
+		/>
+	</header>
+
+	<footer class='flex flex-col'>
+		<h3 class={'py-2 font-bold text-center text-2xl uppercase after:w-4/5 after:h-[1px] after:bg-current after:m-auto after:block'}>{dorsalName}</h3>
+		<div class='grid grid-cols-2 relative text-base after:m-auto after:bg-current after:block after:w-[1px] after:h-4/5 after:absolute after:top-0 after:bottom-0 after:left-1/2'>
+			{
+				Object.entries(restOfStats).map(([key, value]) => (
+					<div>
+						<strong class='font-bold '>{value}</strong>
+						<span title={STATS_MAPPING[key].name} class="font-light">{STATS_MAPPING[key].shortName}</span>
+					</div>
+				))
+			}
+		</div>
+	</footer>
+</article>
