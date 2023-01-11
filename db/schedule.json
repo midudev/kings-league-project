@@ -221,31 +221,14 @@
         "hour": null,
         "teams": [
           {
-            "id": "el-barrio",
-            "name": "El Barrio",
-            "shortName": "ELB"
+            "id": "jijantes",
+            "name": "Jijantes FC",
+            "shortName": "JFC"
           },
           {
-            "id": "aniquiladores",
-            "name": "Aniquiladores FC",
-            "shortName": "ANI"
-          }
-        ],
-        "score": "0 – 0"
-      },
-      {
-        "timestamp": null,
-        "hour": null,
-        "teams": [
-          {
-            "id": "kunisports",
-            "name": "Kunisports",
-            "shortName": "KNS"
-          },
-          {
-            "id": "porcinos-fc",
-            "name": "Porcinos FC",
-            "shortName": "POR"
+            "id": "1k",
+            "name": "1K FC",
+            "shortName": "1K"
           }
         ],
         "score": "0 – 0"
@@ -289,6 +272,23 @@
         "hour": null,
         "teams": [
           {
+            "id": "kunisports",
+            "name": "Kunisports",
+            "shortName": "KNS"
+          },
+          {
+            "id": "porcinos-fc",
+            "name": "Porcinos FC",
+            "shortName": "POR"
+          }
+        ],
+        "score": "0 – 0"
+      },
+      {
+        "timestamp": null,
+        "hour": null,
+        "teams": [
+          {
             "id": "los-troncos",
             "name": "Los Troncos FC",
             "shortName": "TFC"
@@ -306,14 +306,14 @@
         "hour": null,
         "teams": [
           {
-            "id": "jijantes",
-            "name": "Jijantes FC",
-            "shortName": "JFC"
+            "id": "el-barrio",
+            "name": "El Barrio",
+            "shortName": "ELB"
           },
           {
-            "id": "1k",
-            "name": "1K FC",
-            "shortName": "1K"
+            "id": "aniquiladores",
+            "name": "Aniquiladores FC",
+            "shortName": "ANI"
           }
         ],
         "score": "0 – 0"
