@@ -9,8 +9,10 @@ import { getAllTeams, getPlayersTwelveFor } from '@services/teams.js'
 
 const ICON_NETWORK_MAPPING = ['instagram', 'tiktok', 'twitch', 'twitter', 'youtube']
 
-const { id, name, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
+const { id, name, image, imageWhite, presidentId, socialNetworks, players, color } = Astro.props
 const gradient = `bg-${id}`
+
+const logoToShow = ['1k', 'los-troncos-fc'].includes(id) ? imageWhite : image
 
 const socialNetworksWithIcon = socialNetworks.map((href) => ({
 	href,
@@ -21,10 +23,13 @@ const socialNetworksWithIcon = socialNetworks.map((href) => ({
 const president = await findPresidentBy({ id: presidentId })
 const playersTwelve = await getPlayersTwelveFor({ teamId: id })
 
+const playerEleven = players.filter((player) => player.role === 'jugador 11')
 const goalkeepers = players.filter((player) => player.role === 'Portero')
 const defenses = players.filter((player) => player.role === 'Defensa')
 const medium = players.filter((player) => player.role === 'Medio')
 const forward = players.filter((player) => player.role === 'Delantero')
+
+console.log(playerEleven)
 
 export async function getStaticPaths() {
 	const teams = await getAllTeams()
@@ -37,22 +42,22 @@ export async function getStaticPaths() {
 ---
 
 <Layout title={name}>
-	<section class='bg-principal py-10 sm:py-20 sm:px-2'>
+	<section class='bg-principal py-32 sm:px-2'>
 		<Container>
 			<div
 				class={`relative py-10 px-2 md:px-20 md:py-10 shadow-xl sm:rounded -mt-10 z-10 mb-40 ${gradient}`}
 			>
 				<section class='flex flex-col xl:flex-row items-center justify-between pb-10'>
 					<div class='flex flex-col'>
-						<div class='flex flex-col xl:flex-row items-center gap-x-6 mb-2'>
+						<div class='flex flex-col xl:flex-row items-center gap-x-6 mb-2 -mt-24'>
 							<img
-								class='w-56 h-56 object-contain aspect-square'
-								src={imageWhite}
+								class='w-72 h-72 object-contain aspect-square'
+								src={logoToShow}
 								alt={`Escudo del equipo ${name}`}
 								decoding='async'
 								fetchpriority='high'
 							/>
-							<div class='flex flex-col text-center gap-y-4'>
+							<div class='flex flex-col justify-end text-center gap-y-4'>
 								<h1 class='font-title font-bold text-4xl md:text-6xl text-white'>{name}</h1>
 								<ul class='flex flex-row gap-x-4 justify-center xl:justify-start'>
 									{
@@ -92,7 +97,7 @@ export async function getStaticPaths() {
 
 					<div class='xl:absolute xl:-top-20 xl:right-10 text-center'>
 						<img
-							class='w-[400px] h-auto aspect-[400/562]'
+							class='w-[380px] h-auto aspect-[400/562]'
 							src={president.image}
 							alt={president.name}
 							decoding='async'
@@ -108,11 +113,7 @@ export async function getStaticPaths() {
 					</div>
 				</section>
 
-				<TeamPagePlayers title='Porteros' players={goalkeepers} />
-				<TeamPagePlayers title='Defensas' players={defenses} />
-				<TeamPagePlayers title='Medios' players={medium} />
-				<TeamPagePlayers title='Delanteros' players={forward} />
-				<TeamPagePlayers title='Jugador 12' players={playersTwelve} />
+				<TeamPagePlayers players={[...playerEleven, ...goalkeepers, ...defenses, ...medium, ...forward]} />
 
 				<div
 					class={'-z-10 absolute inset-0 opacity-5 bg-center bg-[size:250%] transition bg-inherit'}
