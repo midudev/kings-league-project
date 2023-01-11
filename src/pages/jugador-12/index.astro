@@ -21,17 +21,17 @@ const playersTwelve = await getAllPlayersTwelve()
 						return (
 							<article class={`relative ${gradient} rounded p-5 pb-0 pr-0`}>
 								<div class='flex items-center mb-3'>
-									<img src={team.image} class='w-14 h-auto mx-2' alt={team.name} />
+									<img src={team.image} class='w-14 aspect-[700/700] mx-2' alt={team.name} />
 									<p class='font-title text-2xl text-white'>{team.name}</p>
 								</div>
 
-								<div class='flex items-start'>
+								<div class='grid grid-cols-2 grid-flow-cols'>
 									<img
-										class='aspect-[224/315] w-56'
-										src={`/public/teams/players/${image}`}
+										class='aspect-[224/315] w-56 row-span-2'
+										src={`/teams/players/${image}`}
 										alt={firstName}
 									/>
-									<div class='mt-5 bg-[#27272794] p-3 rounded-tl-lg rounded-bl-lg w-full'>
+									<div class='mt-5 bg-[#27272794] cols-span-1 p-3 rounded-tl-lg rounded-bl-lg w-full'>
 										<p class='text-white text-lg font-title'>{`${firstName} ${lastName}`}</p>
 										<p class='text-orange-500 text-md font-body'>{role}</p>
 									</div>
