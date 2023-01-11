@@ -75,10 +75,35 @@ describe('Testing /teams route', () => {
 		{ name: 'url', type: 'string' },
 		{ name: 'presidentId', type: 'string' },
 		{ name: 'channel', type: 'string' },
-		{ name: 'socialNetworks' }, // Array
-		{ name: 'players' }, // Array
+		{ name: 'socialNetworks', type: 'object' },
+		{ name: 'players', type: 'object' },
 		{ name: 'coach', type: 'string' },
 		{ name: 'coachInfo', type: 'object' }
+	]
+
+	const nestedPlayerProperties = [
+		{ name: 'id', type: 'string' },
+		{ name: 'dorsalName', type: 'string' },
+		{ name: 'fullName', type: 'string' },
+		{ name: 'role', type: 'string' },
+		{ name: 'image', type: 'string' },
+		{ name: 'stats', type: 'object' }
+	]
+
+	const playerStatsProperties = [
+		{ name: 'speed', type: 'number' },
+		{ name: 'physique', type: 'number' },
+		{ name: 'shooting', type: 'number' },
+		{ name: 'passing', type: 'number' },
+		{ name: 'talent', type: 'number' },
+		{ name: 'defense', type: 'number' }
+	]
+
+	const goalkeeperStatsProperties = [
+		{ name: 'reflexes', type: 'number' },
+		{ name: 'saves', type: 'number' },
+		{ name: 'kickoff', type: 'number' },
+		{ name: 'stretch', type: 'number' }
 	]
 
 	it('The teams should have all teams', async () => {
@@ -112,6 +137,31 @@ describe('Testing /teams route', () => {
 
 		expect(errorMessage).toEqual({
 			message: 'Team not found'
+		})
+	})
+
+	it('The players should have all its properties', async () => {
+		const resp = await worker.fetch('/teams')
+		const teams = await resp.json()
+		const players = teams.map((team) => team.players).flat()
+		players.forEach((player) => checkProperties(player, nestedPlayerProperties))
+	})
+
+	it('The players should have all its stats depending of its type', async () => {
+		const resp = await worker.fetch('/teams')
+		const teams = await resp.json()
+		const players = teams.map((team) => team.players).flat()
+
+		const regularPlayerRoles = ['defensa', 'delantero', 'medio']
+
+		players.forEach((player) => {
+			const role = player.role.toLowerCase()
+
+			if (regularPlayerRoles.includes(role)) {
+				checkProperties(player.stats, playerStatsProperties)
+			} else if (role === 'portero') {
+				checkProperties(player.stats, goalkeeperStatsProperties)
+			}
 		})
 	})
 })
@@ -213,7 +263,10 @@ describe('Test /schedule route', () => {
 	it('Days should have their date and matches', async () => {
 		const resp = await worker.fetch('/schedule')
 		const days = await resp.json()
-		const properties = [{ name: 'date', type: 'string' }, { name: 'matches' }]
+		const properties = [
+			{ name: 'date', type: 'string' },
+			{ name: 'matches', type: 'object' }
+		]
 		days.forEach((day) => checkProperties(day, properties))
 	})
 
@@ -224,7 +277,7 @@ describe('Test /schedule route', () => {
 		const properties = [
 			{ name: 'timestamp' }, // Can be null
 			{ name: 'hour' }, // Can be null
-			{ name: 'teams' }, // Array
+			{ name: 'teams', type: 'object' },
 			{ name: 'score', type: 'string' }
 		]
 
@@ -305,8 +358,8 @@ describe('Testing /leaderboard route', () => {
 		{ name: 'imageWhite', type: 'string' },
 		{ name: 'url', type: 'string' },
 		{ name: 'channel', type: 'string' },
-		{ name: 'socialNetworks' }, // Array
-		{ name: 'players' }, // Array
+		{ name: 'socialNetworks', type: 'object' },
+		{ name: 'players', type: 'object' },
 		{ name: 'coach', type: 'string' },
 		{ name: 'shortName', type: 'string' },
 		{ name: 'coachInfo', type: 'object' },
@@ -459,7 +512,7 @@ describe('Testing /players-12 route', () => {
 			{ name: 'image', type: 'string' },
 			{ name: 'name', type: 'string' },
 			{ name: 'id', type: 'string' },
-			{ name: 'team' }
+			{ name: 'team', type: 'object' }
 		]
 
 		players.forEach((player) => checkProperties(player, playerProperties))

@@ -2,10 +2,13 @@
 import Layout from '@layouts/Layout.astro'
 import SectionTitle from '@components/SectionTitle.astro'
 import Container from '@components/Container.astro'
-import Leaderboard from '@components/Leaderboard.astro'
 import FloatingBoxContainer from '@components/FloatingBoxContainer.astro'
 import TabsStatistics from '@components/TabsStatistics.astro'
 import MVP from '@components/MVP.astro'
+import { getFirstPlayersStatistics } from '@services/statistics.js'
+import PlayerPrizeCard from '@components/PlayerPrizeCard.astro'
+
+const { mvp } = await getFirstPlayersStatistics()
 ---
 
 <Layout title='Clasificación'>
@@ -13,7 +16,23 @@ import MVP from '@components/MVP.astro'
 	<Container>
 		<FloatingBoxContainer>
 			<TabsStatistics />
-			<MVP/>
+			{
+				mvp && (
+					<div class='my-4'>
+						<PlayerPrizeCard
+							teamName={mvp.team}
+							teamId={mvp.teamId}
+							teamImage={mvp.image}
+							playerName={mvp.playerName}
+							playerImage={mvp.playerImage}
+							title='MVP'
+							subtitle='Jornada 1'
+						/>
+					</div>
+				)
+			}
+
+			<MVP />
 		</FloatingBoxContainer>
 	</Container>
 </Layout>

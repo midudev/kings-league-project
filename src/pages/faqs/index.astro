@@ -118,23 +118,45 @@ const faqs = [
 	<SectionTitle title='FAQs' />
 	<Container>
 		<div
-			id='accordion-collapse'
-			data-accordion='collapse'
-			class='bg-white p-20 shadow-xl rounded -mt-10 z-10 mb-40'
+			class='bg-white py-8 px-4 lg:p-20 shadow-xl rounded -mt-10 z-10 mb-40 space-y-8'
 		>
 			{
-				faqs.map((e, i) => {
+				faqs.map(({title, content}) => {
 					return (
-						<Accordion
-							id={i}
-							position={`${i === 0 ? 'first' : i === faqs.length - 1 ? 'last' : ''}`}
-							title={e.title}
-						>
-							<Fragment set:html={e.content} />
-						</Accordion>
+						<section class="max-w-5xl mx-auto">
+							<Accordion
+								{title}
+							>
+								<Fragment set:html={content} />
+							</Accordion>
+						</section>
 					)
 				})
 			}
 		</div>
 	</Container>
 </Layout>
+
+<script>
+	const accordions = document.querySelectorAll('.accordion')
+	const accordionContents = document.querySelectorAll('.accordion-content')
+	const chevronIcons = document.querySelectorAll('.chevron-icon')
+
+	accordions.forEach((accordion, index) => {
+		accordion.addEventListener('click', () => {
+			accordion.classList.toggle('bg-[#b94d00]')
+			accordion.classList.toggle('rounded-t')
+			accordion.classList.toggle('rounded-b-none')
+
+			chevronIcons[index].classList.toggle('rotate-180')
+
+			if (accordionContents[index].style.maxHeight) {
+				accordionContents[index].style.maxHeight = null
+			} else {
+				accordionContents[index].style.maxHeight = `${accordionContents[index].scrollHeight}px`
+			}
+		})
+	})
+
+	accordions[0].click()
+</script>
