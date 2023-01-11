@@ -28,20 +28,6 @@
     }
   },
   {
-    "role": "Medio",
-    "firstName": "Enigma",
-    "lastName": "",
-    "image": "xbuyer-team-69.webp",
-    "name": "Enigma ",
-    "id": "xbuyer-team-69",
-    "team": {
-      "id": "xbuyer-team",
-      "name": "XBUYER TEAM",
-      "image": "https://kingsleague.dev/teams/logos/xbuyer.svg",
-      "imageWhite": "https://kingsleague.dev/teams/logos/xbuyer-inverse.svg"
-    }
-  },
-  {
     "role": "Delantero",
     "firstName": "David",
     "lastName": "Acedo",
@@ -109,6 +95,20 @@
       "name": "Ultimate Móstoles",
       "image": "https://kingsleague.dev/teams/logos/ultimate-mostoles.svg",
       "imageWhite": "https://kingsleague.dev/teams/logos/ultimate-mostoles-inverse.svg"
+    }
+  },
+  {
+    "role": "Medio",
+    "firstName": "Enigma",
+    "lastName": "",
+    "image": "xbuyer-team-69.webp",
+    "name": "Enigma ",
+    "id": "xbuyer-team-69",
+    "team": {
+      "id": "xbuyer-team",
+      "name": "XBUYER TEAM",
+      "image": "https://kingsleague.dev/teams/logos/xbuyer.svg",
+      "imageWhite": "https://kingsleague.dev/teams/logos/xbuyer-inverse.svg"
     }
   },
   {
