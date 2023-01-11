@@ -19,14 +19,17 @@ const positions = {
 	portero: 'POR',
 	defensa: 'DEF',
 	medio: 'MED',
-	delantero: 'DEL'
+	delantero: 'DEL',
+	'jugador 11': 'J11'
 }
 
 let level = 'bronze'
 if (score > 65) level = 'silver'
 if (score > 75) level = 'gold'
+if (role === 'jugador 11') level = 'platinum'
 
 const levelColors = {
+	platinum: 'text-[#F2F2F2]',
 	bronze: 'text-[#4d331f]',
 	silver: 'text-[#3b3d41]',
 	gold: 'text-[#4d331f]'
@@ -41,7 +44,24 @@ const color = levelColors[level]
 >
 	<header class='flex pt-9'>
 		<div class='flex flex-col pl-6'>
-			<strong class={'text-4xl font-title font-bold'}>{score}</strong>
+			{
+				score
+? (
+					<strong class={'text-4xl font-title font-bold'}>{score}</strong>
+				)
+: (
+					<svg class="w-10 block h-auto" height='21' viewBox='0 0 21 21' width='21' xmlns='http://www.w3.org/2000/svg'>
+						<path
+							d='m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z'
+							fill='none'
+							stroke='currentColor'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							transform='translate(3 3)'
+						/>
+					</svg>
+				)
+			}
 			<span class={'-mt-2 text-xl font-semibold'}>{positions[role.toLowerCase()]}</span>
 		</div>
 		<img
@@ -55,13 +75,21 @@ const color = levelColors[level]
 	</header>
 
 	<footer class='flex flex-col'>
-		<h3 class={'py-2 font-bold text-center text-2xl uppercase after:w-4/5 after:h-[1px] after:bg-current after:m-auto after:block'}>{dorsalName}</h3>
-		<div class='grid grid-cols-2 relative text-base after:m-auto after:bg-current after:block after:w-[1px] after:h-4/5 after:absolute after:top-0 after:bottom-0 after:left-1/2'>
+		<h3
+			class={'py-1 font-bold text-center text-2xl uppercase after:w-4/5 after:h-[1px] after:bg-current after:m-auto after:block'}
+		>
+			{dorsalName}
+		</h3>
+		<div
+			class='grid grid-cols-2 relative text-lg after:m-auto after:bg-current after:block after:w-[1px] after:h-4/5 after:absolute after:top-0 after:bottom-0 after:left-1/2'
+		>
 			{
 				Object.entries(restOfStats).map(([key, value]) => (
 					<div>
-						<strong class='font-bold '>{value}</strong>
-						<span title={STATS_MAPPING[key].name} class="font-light">{STATS_MAPPING[key].shortName}</span>
+						<strong class='font-bold'>{value}</strong>
+						<span title={STATS_MAPPING[key].name} class='font-light'>
+							{STATS_MAPPING[key].shortName}
+						</span>
 					</div>
 				))
 			}
