@@ -97,6 +97,4 @@ o únete a la comunidad en [Discord](https://discord.gg/midudev)
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats-melosdev.vercel.app/api?username=midudev&show_icons=true&locale=en&theme=dracula" alt="midudev" /></p>
 
-<p><img align="left" src="https://github-readme-stats-melosdev.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=en&layout=compact&theme=dracula" alt="midudev" /></p>
-
-
+<p><img align="left" src="https://github-readme-stats-melosdev.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=en&layout=compact&theme=dracula&langs_count=8&hide=php,coffeescript" alt="midudev" /></p>
