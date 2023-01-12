@@ -8,7 +8,7 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
-### :zap: Recent Activity
+### :zap: Actividad Reciente
 
 <!--START_SECTION:activity-->
 1. ❗️ Closed issue [#299](https://github.com/midudev/kings-league-project/issues/299) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
