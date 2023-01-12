@@ -31,7 +31,7 @@ Este proyecto tiene como objetivo crear una API y página web de la [Kings Leagu
 
 La API proporciona acceso a datos de equipos, presidentes, entrenadores, goleadores y asistentes de la Kings League, y la página web ofrece información sobre los equipos, resultados y clasificaciones de la liga.
 
-### Tecnologías usadas
+## Tecnologías usadas
 
 Para recuperar los datos de la API, usamos *Web Scraping*, [Node.js](https://nodejs.org/es/), [Hono](https://honojs.dev/) y el servicio de hosting de APIs [Cloudflare Workers](https://workers.cloudflare.com/) para la construcción y el despliegue.
 
