@@ -8,7 +8,7 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
-[![kings league project](https://github-readme-stats-melosdev.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=dracula)](https://github.com/midudev/kings-league-project)
+[![kings league project](https://github-readme-stats-melosdev.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=calm)](https://github.com/midudev/kings-league-project)
 ### :zap: Actividad Reciente
 
 <!--START_SECTION:activity-->
@@ -96,6 +96,6 @@ o únete a la comunidad en [Discord](https://discord.gg/midudev)
 
 ## Estadísticas Acerca del Autor
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats-melosdev.vercel.app/api?username=midudev&show_icons=true&locale=en&theme=dracula" alt="midudev" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats-melosdev.vercel.app/api?username=midudev&show_icons=true&locale=en&theme=calm" alt="midudev" /></p>
 
-<p><img align="left" src="https://github-readme-stats-melosdev.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=en&layout=compact&theme=dracula&langs_count=8&hide=php,coffeescript" alt="midudev" /></p>
+<p><img align="left" src="https://github-readme-stats-melosdev.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=en&layout=compact&theme=calm&langs_count=8&hide=php,coffeescript" alt="midudev" /></p>
