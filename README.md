@@ -95,4 +95,6 @@ o únete a la comunidad en [Discord](https://discord.gg/midudev)
 
 ## Estadísticas Acerca del Autor
 
+<p><img align="left" src="https://github-readme-stats-melosdev.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=en&layout=compact&theme=transparent" alt="midudev" /></p>
+
 
