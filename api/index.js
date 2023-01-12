@@ -10,8 +10,10 @@ import topScorers from 'db/top_scorers.json'
 import topStatistics from 'db/top_statistics.json'
 import { Hono } from 'hono'
 import { serveStatic } from 'hono/serve-static.module'
+import { cors } from 'hono/cors'
 
 const app = new Hono()
+app.use(cors())
 
 app.get('/', (ctx) =>
 	ctx.json([
