@@ -31,6 +31,7 @@
     <li><a href="#api">API</a></li>
     <li><a href="#redes-sociales">Redes sociales</a></li>
 		<li><a href="#lighthouse">Lighthouse</a></li>
+		<li><a href="#estadísticas-acerca-del-autor">Estadísticas Acerca del Autor</a></li>
   </ol>
 </details>
 
@@ -91,3 +92,7 @@ o únete a la comunidad en [Discord](https://discord.gg/midudev)
 [![Lighthouse Accessibility Badge](./test_results/lighthouse_accessibility.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse Best Practices Badge](./test_results/lighthouse_best-practices.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse SEO Badge](./test_results/lighthouse_seo.svg)](https://github.com/midudev/kings-league-project)
+
+## Estadísticas Acerca del Autor
+
+
