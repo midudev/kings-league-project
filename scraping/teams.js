@@ -136,11 +136,11 @@ async function getTeams() {
 				})
 			} else if (roleLowerCase === 'entrenador') {
 				const url = $el.find(SELECTORS.image).attr('src')
-				const fileName = convertStringToKebabCase(name)
+				const fileName = convertStringToKebabCase(dorsalName)
 				const image = await saveImage({ url, folder: 'coaches', fileName })
 
 				team.coachInfo = {
-					name,
+					name: dorsalName,
 					image
 				}
 			}
