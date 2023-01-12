@@ -8,6 +8,8 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
+<!-- START_SECTION:activity -->
+
 <details>
   <summary>Sumario</summary>
   <ol>
@@ -22,6 +24,8 @@
 		<li><a href="#lighthouse">Lighthouse</a></li>
   </ol>
 </details>
+
+
 
 [![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
 
