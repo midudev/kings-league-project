@@ -8,7 +8,7 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
-<!-- START_SECTION:activity -->
+<!--START_SECTION:activity-->
 
 <details>
   <summary>Sumario</summary>
