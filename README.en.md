@@ -8,6 +8,7 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
+[![Readme Card](https://github-readme-stats-melosdev.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=darcula)](https://github.com/midudev/kings-league-project)
 
 <details>
   <summary>Table of contents</summary>
