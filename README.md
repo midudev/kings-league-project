@@ -8,7 +8,6 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
-[![kings league project](https://github-readme-stats-melosdev.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=calm)](https://github.com/midudev/kings-league-project)
 ### :zap: Actividad Reciente
 
 <!--START_SECTION:activity-->
@@ -39,6 +38,9 @@
 
 
 [![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
+
+[![kings league project](https://github-readme-stats-melosdev.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=calm&bg_color=ff7b25&title_color=000000&icon_color=d64161&border_color=d64161&text_color=eeeee4)](https://github.com/midudev/kings-league-project)
+
 
 ## Descripción del proyecto
 
