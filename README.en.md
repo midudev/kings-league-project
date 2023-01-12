@@ -25,6 +25,7 @@
     <li><a href="#api">API</a></li>
     <li><a href="#social-networks">Social networks</a></li>
 		<li><a href="#lighthouse">Lighthouse</a></li>
+		<li><a href="#about-author">About Author</a></li>
   </ol>
 </details>
 
@@ -83,3 +84,5 @@ You can also join our community on [Discord](https://discord.gg/midudev)
 [![Lighthouse Accessibility Badge](./test_results/lighthouse_accessibility.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse Best Practices Badge](./test_results/lighthouse_best-practices.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse SEO Badge](./test_results/lighthouse_seo.svg)](https://github.com/midudev/kings-league-project)
+
+## About Author
