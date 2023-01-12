@@ -1,4 +1,8 @@
+
+
 # Contributing to the Kings League Project 🎮
+
+[![Spanish](https://img.shields.io/badge/language-Spanish-blue.svg)](CONTRIBUTING.es.md)
 
 ## Introduction
 

@@ -8,6 +8,11 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
+### :zap: Recent Activity
+
+<!--START_SECTION:activity-->
+
+
 <details>
   <summary>Table of contents</summary>
   <ol>
