@@ -8,7 +8,6 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
-[![Readme Card](https://github-readme-stats-melosdev.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=calm)](https://github.com/midudev/kings-league-project)
 
 <details>
   <summary>Table of contents</summary>
@@ -28,6 +27,7 @@
 
 [![Spanish](https://img.shields.io/badge/language-Spanish-blue.svg)](README.md)
 
+[![kings league project](https://github-readme-stats-melosdev.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=calm&bg_color=ff7b25&title_color=000000&icon_color=d64161&border_color=d64161&text_color=eeeee4)](https://github.com/midudev/kings-league-project)
 ## Project Description
 
 This project aims to create an API and web page for the [Kings League Infojobs](https://kingsleague.pro) for educational purposes.
