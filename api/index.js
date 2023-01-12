@@ -13,7 +13,7 @@ import { serveStatic } from 'hono/serve-static.module'
 import { cors } from 'hono/cors'
 
 const app = new Hono()
-app.use(cors())
+app.use(cors({ origin: '*' }))
 
 app.get('/', (ctx) =>
 	ctx.json([
