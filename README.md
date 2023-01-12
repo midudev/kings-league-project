@@ -9,6 +9,12 @@
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
 <!--START_SECTION:activity-->
+1. ❗️ Closed issue [#299](https://github.com/midudev/kings-league-project/issues/299) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+2. 🗣 Commented on [#299](https://github.com/midudev/kings-league-project/issues/299) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+3. ❗️ Opened issue [#299](https://github.com/midudev/kings-league-project/issues/299) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+4. 💪 Opened PR [#295](https://github.com/midudev/kings-league-project/pull/295) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+5. 💪 Opened PR [#293](https://github.com/midudev/kings-league-project/pull/293) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+<!--END_SECTION:activity-->
 
 <details>
   <summary>Sumario</summary>
