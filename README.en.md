@@ -88,3 +88,5 @@ You can also join our community on [Discord](https://discord.gg/midudev)
 ## About Author
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats-melosdev.vercel.app/api?username=midudev&show_icons=true&locale=en&theme=dracula" alt="midudev" /></p>
+
+<p><img align="left" src="https://github-readme-stats-melosdev.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=en&layout=compact&theme=dracula" alt="midudev" /></p>
