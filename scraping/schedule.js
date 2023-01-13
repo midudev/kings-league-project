@@ -62,7 +62,7 @@ export async function getSchedule($) {
 		const dateRaw = $day.find(SELECTORS.date).text()
 		const date = cleanText(dateRaw)
 
-		const [dayNumber, textMonth, yearNumber] = date.split(' de ')
+		const [dayNumber, textMonth, yearNumber] = date.split('–')[1].split('/')
 		const monthNumber = MONTHS[textMonth.toUpperCase()]
 		const prefixDate = `${yearNumber}-${monthNumber}-${dayNumber}`
 
