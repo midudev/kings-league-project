@@ -8,10 +8,10 @@ import { cleanText } from './utils.js'
 const PLAYER_FOLDER_PATH = path.join(process.cwd(), './public/teams/players')
 
 const PLAYER_SELECTORS = {
-	firstName: { selector: '.el-title', typeOf: 'string' },
-	lastName: { selector: '.el-meta', typeOf: 'string' },
+	firstName: { selector: '.fs-grid-meta-3', typeOf: 'string' },
+	lastName: { selector: '.fs-grid-text-3', typeOf: 'string' },
 	teamName: { selector: '.uk-text-lead', typeOf: 'string' },
-	role: { selector: '.fs-grid-meta', typeOf: 'string' }
+	role: { selector: '.fs-grid-meta-1', typeOf: 'string' }
 }
 
 let counter = 1000
