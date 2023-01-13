@@ -2,8 +2,8 @@ name: GitHub  Activity - Update README
 
 on:
   schedule:
-    # run at 12:00
-    - cron: '0 12 * * *'
+    # run each 3 hours
+    - cron: '0 */3 * * *'
   workflow_dispatch:
 
 jobs:
