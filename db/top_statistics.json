@@ -207,20 +207,10 @@
       "teamId": "los-troncos-fc"
     },
     {
-      "playerName": "Dani P.",
-      "gamesPlayed": 2,
-      "assists": 2,
-      "rank": 3,
-      "team": "Rayo de Barcelona",
-      "image": "https://kingsleague.dev/teams/logos/rayo-barcelona.svg",
-      "playerImage": "placeholder.png",
-      "teamId": "rayo-barcelona"
-    },
-    {
       "playerName": "A. Bueno",
       "gamesPlayed": 2,
       "assists": 2,
-      "rank": 4,
+      "rank": 3,
       "team": "1K FC",
       "image": "https://kingsleague.dev/teams/logos/1k.svg",
       "playerImage": "placeholder.png",
@@ -230,11 +220,21 @@
       "playerName": "Sergio G.",
       "gamesPlayed": 1,
       "assists": 2,
-      "rank": 5,
+      "rank": 4,
       "team": "Ultimate Móstoles",
       "image": "https://kingsleague.dev/teams/logos/ultimate-mostoles.svg",
       "playerImage": "placeholder.png",
       "teamId": "ultimate-mostoles"
+    },
+    {
+      "playerName": "G. Cichero",
+      "gamesPlayed": 2,
+      "assists": 1,
+      "rank": 5,
+      "team": "Porcinos FC",
+      "image": "https://kingsleague.dev/teams/logos/porcinos-fc.svg",
+      "playerImage": "placeholder.png",
+      "teamId": "porcinos-fc"
     }
   ]
 }
