@@ -2,7 +2,8 @@ name: GitHub  Activity - Update README
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    # run each 3 hours
+    - cron: '0 */3 * * *'
   workflow_dispatch:
 
 jobs:
@@ -12,16 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7.18.2
-          run_install: true
       - uses: jamesgeorge007/github-activity-readme@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-          COMMIT_MSG: '[bot] Recent Activity'
-          MAX_LINES: 10

@@ -31,12 +31,16 @@
     <li><a href="#api">API</a></li>
     <li><a href="#redes-sociales">Redes sociales</a></li>
 		<li><a href="#lighthouse">Lighthouse</a></li>
+		<li><a href="#estadísticas-acerca-del-autor">Estadísticas Acerca del Autor</a></li>
   </ol>
 </details>
 
 
 
 [![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
+
+[![kings league project](https://jordinodejs.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=calm&bg_color=ff7b25&title_color=000000&icon_color=d64161&border_color=d64161&text_color=eeeee4)](https://github.com/midudev/kings-league-project)
+
 
 ## Descripción del proyecto
 
@@ -91,3 +95,9 @@ o únete a la comunidad en [Discord](https://discord.gg/midudev)
 [![Lighthouse Accessibility Badge](./test_results/lighthouse_accessibility.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse Best Practices Badge](./test_results/lighthouse_best-practices.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse SEO Badge](./test_results/lighthouse_seo.svg)](https://github.com/midudev/kings-league-project)
+
+## Estadísticas Acerca del Autor
+
+<p>&nbsp;<img align="center" src="https://jordinodejs.vercel.app/api?username=midudev&show_icons=true&locale=es&theme=calm" alt="midudev" /></p>
+
+<p><img align="left" src="https://jordinodejs.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=es&layout=compact&theme=calm&langs_count=8&hide=php,coffeescript" alt="midudev" /></p>
