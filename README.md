@@ -11,11 +11,11 @@
 ### :zap: Actividad Reciente
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#311](https://github.com/midudev/kings-league-project/pull/311) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-2. 🎉 Merged PR [#317](https://github.com/midudev/kings-league-project/pull/317) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-3. ❌ Closed PR [#270](https://github.com/midudev/kings-league-project/pull/270) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-4. 🎉 Merged PR [#312](https://github.com/midudev/kings-league-project/pull/312) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-5. 🎉 Merged PR [#313](https://github.com/midudev/kings-league-project/pull/313) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+1. 🎉 Merged PR [#307](https://github.com/midudev/kings-league-project/pull/307) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+2. ❗️ Closed issue [#297](https://github.com/midudev/kings-league-project/issues/297) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+3. 🎉 Merged PR [#319](https://github.com/midudev/kings-league-project/pull/319) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+4. 🎉 Merged PR [#320](https://github.com/midudev/kings-league-project/pull/320) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+5. 🎉 Merged PR [#311](https://github.com/midudev/kings-league-project/pull/311) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
 <!--END_SECTION:activity-->
 
 
