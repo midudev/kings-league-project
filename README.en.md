@@ -54,6 +54,7 @@ The available endpoints are:
  - GET `/teams`: Returns all the teams in the Kings League.
  - GET `/teams/:id`: Returns a Kings League team.
  - GET `/teams/:id/player-12`: Returns a player 12 from a Kings League team.
+ - GET `/teams/:id/players/:playerId`: Returns a player from a Kings League team.
  - GET `/presidents`: Returns all Kings League presidents.
  - GET `/presidents/:id`: Returns a president of a Kings League team.
  - GET `/coaches`: Returns all the coaches in the Kings League.
