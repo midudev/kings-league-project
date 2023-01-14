@@ -55,10 +55,10 @@ const getAllDates = schedule.map(({date}) => date)
 					</span>
 				</button>
 			</div>
-			<div class="flex overflow-hidden">
+			<div class="overflow-hidden">
 				{
 					schedule.map((day, index) => (
-						<table class:list={["matches w-full shrink-0", { 'table': matchDay === index + 1, 'hidden': matchDay !== index + 1 }]}>
+						<table class:list={["matches w-full", { 'table': matchDay === index + 1, 'hidden': matchDay !== index + 1 }]}>
 							<tbody>
 								{day.matches.map((match) => (
 									<ScheduleRow
