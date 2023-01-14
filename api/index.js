@@ -10,8 +10,10 @@ import topScorers from 'db/top_scorers.json'
 import topStatistics from 'db/top_statistics.json'
 import { Hono } from 'hono'
 import { serveStatic } from 'hono/serve-static.module'
+import { cors } from 'hono/cors'
 
 const app = new Hono()
+app.use(cors({ origin: '*' }))
 
 app.get('/', (ctx) =>
 	ctx.json([
@@ -39,6 +41,11 @@ app.get('/', (ctx) =>
 					name: 'player-12',
 					endpoint: '/teams/:id/players-12',
 					description: 'Return the Kings League players 12 for the choosed team'
+				},
+				{
+					name: 'playerId',
+					endpoint: '/teams/:id/players/:playerId',
+					description: 'Returns a player from a Kings League team.'
 				}
 			]
 		},
@@ -170,6 +177,17 @@ app.get('/teams/:id', (ctx) => {
 })
 
 app.get('/schedule', (ctx) => ctx.json(schedule))
+
+app.get('/teams/:id/players/:playerId', (ctx) => {
+	const teamId = ctx.req.param('id')
+	const playerId = ctx.req.param('playerId')
+	const foundTeam = teams.find((team) => team.id === teamId)
+	if (!foundTeam) return ctx.json({ message: 'Team not found' }, 404)
+	const foundPlayer = foundTeam.players.find((player) => player.id === `${teamId}-${playerId}`)
+	return foundPlayer
+		? ctx.json(foundPlayer)
+		: ctx.json({ message: `Players for team ${teamId} not found` }, 404)
+})
 
 app.get('/teams/:id/players-12', (ctx) => {
 	const id = ctx.req.param('id')

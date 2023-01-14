@@ -8,6 +8,7 @@
 
 ![Mockup API Web](assets/static/ui-mockup-web-api.png)
 
+
 <details>
   <summary>Table of contents</summary>
   <ol>
@@ -20,11 +21,13 @@
     <li><a href="#api">API</a></li>
     <li><a href="#social-networks">Social networks</a></li>
 		<li><a href="#lighthouse">Lighthouse</a></li>
+		<li><a href="#about-author">About Author</a></li>
   </ol>
 </details>
 
 [![Spanish](https://img.shields.io/badge/language-Spanish-blue.svg)](README.md)
 
+[![kings league project](https://jordinodejs.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=calm&bg_color=ff7b25&title_color=000000&icon_color=d64161&border_color=d64161&text_color=eeeee4)](https://github.com/midudev/kings-league-project)
 ## Project Description
 
 This project aims to create an API and web page for the [Kings League Infojobs](https://kingsleague.pro) for educational purposes.
@@ -51,6 +54,7 @@ The available endpoints are:
  - GET `/teams`: Returns all the teams in the Kings League.
  - GET `/teams/:id`: Returns a Kings League team.
  - GET `/teams/:id/player-12`: Returns a player 12 from a Kings League team.
+ - GET `/teams/:id/players/:playerId`: Returns a player from a Kings League team.
  - GET `/presidents`: Returns all Kings League presidents.
  - GET `/presidents/:id`: Returns a president of a Kings League team.
  - GET `/coaches`: Returns all the coaches in the Kings League.
@@ -78,3 +82,9 @@ You can also join our community on [Discord](https://discord.gg/midudev)
 [![Lighthouse Accessibility Badge](./test_results/lighthouse_accessibility.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse Best Practices Badge](./test_results/lighthouse_best-practices.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse SEO Badge](./test_results/lighthouse_seo.svg)](https://github.com/midudev/kings-league-project)
+
+## About Author
+
+<p>&nbsp;<img align="center" src="https://jordinodejs.vercel.app/api?username=midudev&show_icons=true&locale=en&theme=calm" alt="midudev" /></p>
+
+<p><img align="left" src="https://jordinodejs.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=en&layout=compact&theme=calm&langs_count=8&hide=php,coffeescript" alt="midudev" /></p>
