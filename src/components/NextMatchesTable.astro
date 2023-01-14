@@ -36,23 +36,27 @@ const { date, matches } = firstDayWithPendingMatches
 		</header>
 		<footer>
 			<div class="flex items-center justify-between bg-white py-2 px-4">
-				<button class="hover:text-principal-900 flex items-center gap-0.5" type="button">
+				<button class="prev hover:text-principal-900 flex items-center gap-0.5" type="button">
 					<span>
-						<svg fill="none" viewBox="0 0 24 24" width="14" style="transform: scaleX(-1)"><path class="stroke-current" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18 7-7-7-7"/></svg>
+						<svg fill="none" viewBox="0 0 24 24" width="14" style="transform: scaleX(-1)">
+							<path class="stroke-current" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18 7-7-7-7"/>
+						</svg>
 					</span>
 					<span>Jornada anterior</span>
 				</button>
-				<button class="hover:text-principal-900 flex items-center gap-0.5" type="button">
+				<button class="next hover:text-principal-900 flex items-center gap-0.5" type="button">
 					<span>Próxima jornada</span>
 					<span>
-						<svg fill="none" viewBox="0 0 24 24" width="14"><path class="stroke-current" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18 7-7-7-7"/></svg>
+						<svg fill="none" viewBox="0 0 24 24" width="14">
+							<path class="stroke-current" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18 7-7-7-7"/>
+						</svg>
 					</span>
 				</button>
 			</div>
 			<div class="flex overflow-hidden">
 				{
 					schedule.map((day, index) => (
-						<table class="w-full shrink-0">
+						<table class:list={["matches w-full shrink-0", { 'table': matchDay === index + 1, 'hidden': matchDay !== index + 1 }]} data-tableid={index + 1}>
 							<tbody>
 								{day.matches.map((match) => (
 									<ScheduleRow
@@ -72,3 +76,31 @@ const { date, matches } = firstDayWithPendingMatches
 		</footer>
 	</section>
 </div>
+
+<script define:vars={{matchDay}}>
+	const nextBtn = document.querySelector('.next')
+	const prevBtn = document.querySelector('.prev')
+	const matchesTables = document.querySelectorAll('.matches')
+
+	let currentTable = matchDay
+
+	showTableMatch(currentTable)
+
+	function showTableMatch(n) {
+		if (n > matchesTables.length) {currentTable = 1}
+		if (n < 1) {currentTable = matchesTables.length}
+
+		for (let i = 0; i < matchesTables.length; i++) {
+			matchesTables[i].classList.replace('table', 'hidden')
+		}
+
+		matchesTables[currentTable-1].classList.replace('hidden', 'table')
+	}
+
+	function showTable(n) {
+		showTableMatch(currentTable += n);
+	}
+
+	nextBtn.addEventListener('click', () => showTable(1))
+	prevBtn.addEventListener('click', () => showTable(-1))
+</script>
