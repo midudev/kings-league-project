@@ -11,21 +11,6 @@ const SELECTORS = {
 	scores: '.fs-table-text_8'
 }
 
-const MONTHS = {
-	ENERO: 1,
-	FEBRERO: 2,
-	MARZO: 3,
-	ABRIL: 4,
-	MAYO: 5,
-	JUNIO: 6,
-	JULIO: 7,
-	AGOSTO: 8,
-	SEPTIEMBRE: 9,
-	OCTUBRE: 10,
-	NOVIEMBRE: 11,
-	DICIEMBRE: 12
-}
-
 const MAPS = {
 	'el-bbarrio': 'el-barrio',
 	'jijantes-fc': 'jijantes',
@@ -60,10 +45,9 @@ export async function getSchedule($) {
 		const $day = $(day)
 
 		const dateRaw = $day.find(SELECTORS.date).text()
-		const date = cleanText(dateRaw)
-
-		const [dayNumber, textMonth, yearNumber] = date.split(' de ')
-		const monthNumber = MONTHS[textMonth.toUpperCase()]
+		const dateAndLeagueDay = cleanText(dateRaw)
+		const date = dateAndLeagueDay.split('–')[1].trim() // 01/01/2023
+		const [dayNumber, monthNumber, yearNumber] = date.split('/')
 		const prefixDate = `${yearNumber}-${monthNumber}-${dayNumber}`
 
 		const $locals = $day.find(SELECTORS.locals)
