@@ -36,7 +36,7 @@ const isSmall = format === 'small'
 						<tr class={'odd:bg-white even:bg-slate-100 border-b text-base hover:bg-slate-300'}>
 							<th
 							scope='row'
-							class:list={['text-center px-3 py-4 font-black text-black whitespace-nowrap relative', {'playoffs': index < 8}]}
+							class:list={['text-center px-3 py-4 font-black text-black whitespace-nowrap relative', {'playoffs-teams': index < 8}]}
 						>
 							{rank}
 						</th>
@@ -67,7 +67,7 @@ const isSmall = format === 'small'
 </div>
 
 <style>
-	.playoffs::after {
+	.playoffs-teams::after {
 		content: '';
 		position: absolute;
 		width: 4.5px;
