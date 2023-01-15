@@ -80,7 +80,7 @@ const teams = await getAllTeams()
 			</div>
 		</nav>
 
-		<nav class='flex self-center items-center md:justify-between md:w-full max-w-4xl'>
+		<nav class='flex gap-4 self-center items-center md:justify-between md:w-[724px] lg:w-full max-w-4xl'>
 			<input type='checkbox' id='menu' hidden class='peer' />
 			<label
 				for='menu'
@@ -97,9 +97,9 @@ const teams = await getAllTeams()
 				>
 					{
 						menu.map(({ name, href }) => (
-							<li>
+							<li class='md:w-max'>
 								<a
-									class={`transition ${
+									class={`md:text-sm lg:text-base transition ${
 										Astro.url.pathname === href
 											? 'opacity-100 pointer-events-none'
 											: 'hover:underline-offset-8'
