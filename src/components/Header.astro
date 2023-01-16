@@ -3,6 +3,7 @@ import Logo from './Logo.astro'
 import MenuIcon from './icons/Menu.astro'
 import SocialNetworks from './SocialNetworks.astro'
 import { getAllTeams } from '@services/teams.js'
+import { getLeaderboard } from '@services/leaderboard.js'
 
 const menu = [
 	{
@@ -31,7 +32,12 @@ const menu = [
 	}
 ]
 
-const teams = await getAllTeams()
+const teamsRaw = await getAllTeams()
+const leaderboard = await getLeaderboard()
+leaderboard.sort((a, b) => a.rank - b.rank)
+const teams = leaderboard.map((teamRank) =>
+	teamsRaw.find((team: { id: any }) => team.id === teamRank.team.id)
+)
 ---
 
 <header
@@ -80,7 +86,9 @@ const teams = await getAllTeams()
 			</div>
 		</nav>
 
-		<nav class='flex gap-4 self-center items-center md:justify-between md:w-[724px] lg:w-full max-w-4xl'>
+		<nav
+			class='flex gap-4 self-center items-center md:justify-between md:w-[724px] lg:w-full max-w-4xl'
+		>
 			<input type='checkbox' id='menu' hidden class='peer' />
 			<label
 				for='menu'
