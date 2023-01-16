@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { serveStatic } from 'hono/serve-static.module'
+import { cors } from 'hono/cors'
 
 import { coachesApi } from './routes/coaches.routes'
 import { mvpApi } from './routes/mvp.routes'
@@ -15,6 +16,7 @@ import { topStatisticsApi } from './routes/top-statistics.routes'
 import apiDirectory from '../db/api.json'
 
 const app = new Hono()
+app.use(cors({ origin: '*' }))
 
 app.route('/coaches', coachesApi)
 app.route('/leaderboard', leaderboardApi)

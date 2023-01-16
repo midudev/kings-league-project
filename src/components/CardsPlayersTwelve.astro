@@ -1,0 +1,36 @@
+---
+import { getAllPlayersTwelve } from '@services/teams'
+import CardBackgroundTeam from '@components/CardBackgroundTeam.astro'
+
+const playersTwelve = await getAllPlayersTwelve()
+---
+
+<section class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10'>
+	{
+		playersTwelve.map(({ firstName, team, image, role, lastName }) => {
+			const gradient = `bg-${team.id}`
+			return (
+				<article class={`relative ${gradient} rounded p-5 pb-0 pr-0`}>
+					<div class='flex items-center mb-3'>
+						<img src={team.image} class='w-14 aspect-[700/700] mx-2' alt={team.name} />
+						<p class='font-title text-2xl text-white'>{team.name}</p>
+					</div>
+
+					<div class='grid grid-cols-2 grid-flow-cols'>
+						<img
+							class='aspect-[224/315] w-56 row-span-2'
+							src={`/teams/players/${image}`}
+							alt={firstName}
+						/>
+						<div class='mt-5 bg-[#27272794] cols-span-1 p-3 rounded-tl-lg rounded-bl-lg w-full'>
+							<p class='text-white text-lg font-title'>{`${firstName} ${lastName}`}</p>
+							<p class='text-orange-500 text-md font-body'>{role}</p>
+						</div>
+					</div>
+
+					<CardBackgroundTeam image={team.imageWhite} />
+				</article>
+			)
+		})
+	}
+</section>
