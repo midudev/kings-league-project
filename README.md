@@ -1,6 +1,6 @@
 <div align="center">
 <h1>👑 Kings League Infojobs Project ⚽️</h1>
-<h2>Esta web sólo está creada para fines educativos. Kosmos Holdings es el dueño de todos los logos de la Kigns Leage</h2>
+<h2>Esta web sólo está creada para fines educativos. Kosmos Holdings es el dueño de todos los logos de la Kings League. Este proyecto no tiene ánimo de lucro y no se hace responsable del uso que se pueda hacer del mismo.</h2>
 
 [![Deploy API](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml/badge.svg?branch=main)](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml) [![Scrape Kings League Infojobs Website](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml/badge.svg?branch=main)](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
