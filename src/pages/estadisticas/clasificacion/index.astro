@@ -58,6 +58,18 @@ const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
 				/>
 			</div>
 			<Leaderboard />
+			<section class="flex items-center gap-2.5 mt-4 px-4">
+				<div class="box-playoffs"></div>
+				<p>Equipos que clasifican a <a class="text-principal-900 underline" href="/calendario#playoffs">playoffs</a>.</p>
+			</section>
 		</FloatingBoxContainer>
 	</Container>
 </Layout>
+
+<style>
+	.box-playoffs {
+		width: 16px;
+		height: 16px;
+		@apply bg-green-500;
+	}
+</style>
