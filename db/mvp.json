@@ -1,89 +1,121 @@
 [
   {
-    "playerName": "Lao",
+    "playerName": "F. Hernández",
     "gamesPlayed": 2,
     "mvps": 1,
     "rank": 1,
+    "team": "Aniquiladores FC",
+    "image": "https://kingsleague.dev/teams/logos/aniquiladores.svg"
+  },
+  {
+    "playerName": "Lao",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 2,
     "team": "Porcinos FC",
     "image": "https://kingsleague.dev/teams/logos/porcinos-fc.svg"
   },
   {
     "playerName": "Ubón",
-    "gamesPlayed": 2,
+    "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 2,
+    "rank": 3,
     "team": "El Barrio",
     "image": "https://kingsleague.dev/teams/logos/el-barrio.svg"
   },
   {
-    "playerName": "Feliu",
-    "gamesPlayed": 2,
-    "mvps": 1,
-    "rank": 3,
-    "team": "Saiyans FC",
-    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
-  },
-  {
-    "playerName": "R. Carbó",
-    "gamesPlayed": 2,
+    "playerName": "Briones",
+    "gamesPlayed": 3,
     "mvps": 1,
     "rank": 4,
     "team": "Saiyans FC",
     "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
   },
   {
-    "playerName": "Jacobo",
-    "gamesPlayed": 2,
+    "playerName": "Feliu",
+    "gamesPlayed": 3,
     "mvps": 1,
     "rank": 5,
+    "team": "Saiyans FC",
+    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
+  },
+  {
+    "playerName": "R. Carbó",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 6,
+    "team": "Saiyans FC",
+    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
+  },
+  {
+    "playerName": "Jacobo",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 7,
     "team": "El Barrio",
     "image": "https://kingsleague.dev/teams/logos/el-barrio.svg"
   },
   {
-    "playerName": "J. Verdú «Gingko»",
-    "gamesPlayed": 1,
+    "playerName": "E. Álvaro «Roble»",
+    "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 6,
+    "rank": 8,
+    "team": "Los Troncos FC",
+    "image": "https://kingsleague.dev/teams/logos/los-troncos.svg"
+  },
+  {
+    "playerName": "J. Verdú «Gingko»",
+    "gamesPlayed": 2,
+    "mvps": 1,
+    "rank": 9,
     "team": "Los Troncos FC",
     "image": "https://kingsleague.dev/teams/logos/los-troncos.svg"
   },
   {
     "playerName": "Juanma Glez",
-    "gamesPlayed": 2,
+    "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 7,
+    "rank": 10,
     "team": "Ultimate Móstoles",
     "image": "https://kingsleague.dev/teams/logos/ultimate-mostoles.svg"
   },
   {
     "playerName": "Torrentbó",
-    "gamesPlayed": 2,
+    "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 8,
+    "rank": 11,
     "team": "Kunisports",
     "image": "https://kingsleague.dev/teams/logos/kunisports.svg"
   },
   {
     "playerName": "Víctor",
-    "gamesPlayed": 2,
+    "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 9,
+    "rank": 12,
     "team": "Kunisports",
     "image": "https://kingsleague.dev/teams/logos/kunisports.svg"
   },
   {
     "playerName": "Sorroche",
-    "gamesPlayed": 2,
+    "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 10,
+    "rank": 13,
     "team": "1K FC",
     "image": "https://kingsleague.dev/teams/logos/1k.svg"
   },
   {
     "playerName": "Ricardo",
-    "gamesPlayed": 2,
+    "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 11,
+    "rank": 14,
+    "team": "1K FC",
+    "image": "https://kingsleague.dev/teams/logos/1k.svg"
+  },
+  {
+    "playerName": "A. Bueno",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 15,
     "team": "1K FC",
     "image": "https://kingsleague.dev/teams/logos/1k.svg"
   },
@@ -91,8 +123,24 @@
     "playerName": "Ibai",
     "gamesPlayed": 1,
     "mvps": 1,
-    "rank": 12,
+    "rank": 16,
     "team": "Jijantes FC",
     "image": "https://kingsleague.dev/teams/logos/jijantes.svg"
+  },
+  {
+    "playerName": "Fouad",
+    "gamesPlayed": 1,
+    "mvps": 1,
+    "rank": 17,
+    "team": "XBUYER TEAM",
+    "image": "https://kingsleague.dev/teams/logos/xbuyer.svg"
+  },
+  {
+    "playerName": "Kun Agüero",
+    "gamesPlayed": 1,
+    "mvps": 1,
+    "rank": 18,
+    "team": "Kunisports",
+    "image": "https://kingsleague.dev/teams/logos/kunisports.svg"
   }
 ]
