@@ -1,18 +1,27 @@
-import coaches from 'db/coaches.json'
-import leaderboard from 'db/leaderboard.json'
-import mvp from 'db/mvp.json'
-import playersTwelve from 'db/players_twelve.json'
-import presidents from 'db/presidents.json'
-import schedule from 'db/schedule.json'
-import teams from 'db/teams.json'
-import topAssists from 'db/top_assists.json'
-import topScorers from 'db/top_scorers.json'
-import topStatistics from 'db/top_statistics.json'
+// import coaches from 'db/coaches.json'
+// import leaderboard from 'db/leaderboard.json'
+// import mvp from 'db/mvp.json'
+// import playersTwelve from 'db/players_twelve.json'
+// import presidents from 'db/presidents.json'
+// import schedule from 'db/schedule.json'
+// import teams from 'db/teams.json'
+// import topAssists from 'db/top_assists.json'
+// import topScorers from 'db/top_scorers.json'
+// import topStatistics from 'db/top_statistics.json'
+// import { serveStatic } from 'hono/serve-static.module'
+
 import { Hono } from 'hono'
-import { serveStatic } from 'hono/serve-static.module'
 import { cors } from 'hono/cors'
 
 const app = new Hono()
+app.use(cors({ origin: '*' }))
+app.use('*', (ctx) => {
+	ctx.json({
+		message:
+			'La API ya no está disponible tras un requerimiento de Kosmos Holding de cese y desistimiento.'
+	})
+})
+/*
 app.use(cors({ origin: '*' }))
 
 app.get('/', (ctx) =>
@@ -211,5 +220,6 @@ app.notFound((c) => {
 
 	return c.json({ message: 'Not Found' }, 404)
 })
+*/
 
 export default app
