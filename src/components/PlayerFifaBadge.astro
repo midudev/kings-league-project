@@ -38,10 +38,38 @@ const levelColors = {
 const color = levelColors[level]
 ---
 
+<script>
+	import { toSvg } from 'html-to-image';
+	
+	const handleDownload = (e) => {
+		const card = e.target.parentElement
+		const container = document.createElement('div')
+		const button = e.target
+		button.style.display = 'none';
+		card.parentElement.insertBefore(container, card)
+		container.appendChild(card)
+		const name = card.querySelectorAll('img')[1]?.alt
+		toSvg(container).then((url) => {
+			container.parentElement.insertBefore(card, container)
+			container.remove()
+			button.style.display = 'block';
+			const a = document.createElement('a');
+			a.href  = url
+			a.download = `${name} Card`
+			document.body.appendChild(a);
+			a.click();
+			a.remove()
+		})
+	}
+	const cards = document.querySelectorAll('article.card button')
+	cards.forEach((card) => card.addEventListener('click', handleDownload))
+</script>
+
 <article
-	class={`${color} w-52 text-center relative rounded-sm m-auto bg-contain bg-no-repeat aspect-[489/787] overflow-hidden col-span-1`}
+	class={`card ${color} w-52 text-center relative rounded-sm m-auto bg-contain bg-no-repeat aspect-[489/787] col-span-1 group`}
 	style={{ backgroundImage: `url("/bg/${level}.png")` }}
 >
+	<button class="absolute right-0 top-0 p-2 bg-gray-800/70 rounded-full opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 hover:scale-105"><img class="w-6 h-6 pointer-events-none" src='/icons/download-icon.svg'/></button>
 	<header class='flex pt-9'>
 		<div class='flex flex-col pl-6'>
 			{
