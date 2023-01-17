@@ -12,11 +12,11 @@
 ### :zap: Actividad Reciente
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#335](https://github.com/midudev/kings-league-project/pull/335) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-2. ❗️ Closed issue [#318](https://github.com/midudev/kings-league-project/issues/318) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-3. 🎉 Merged PR [#322](https://github.com/midudev/kings-league-project/pull/322) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-4. ❌ Closed PR [#325](https://github.com/midudev/kings-league-project/pull/325) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-5. 🎉 Merged PR [#331](https://github.com/midudev/kings-league-project/pull/331) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+1. 🎉 Merged PR [#4](https://github.com/midudev/libros-programacion-gratis/pull/4) in [midudev/libros-programacion-gratis](https://github.com/midudev/libros-programacion-gratis)
+2. 🎉 Merged PR [#3](https://github.com/midudev/libros-programacion-gratis/pull/3) in [midudev/libros-programacion-gratis](https://github.com/midudev/libros-programacion-gratis)
+3. 💪 Opened PR [#4929](https://github.com/GoogleChrome/developer.chrome.com/pull/4929) in [GoogleChrome/developer.chrome.com](https://github.com/GoogleChrome/developer.chrome.com)
+4. 🎉 Merged PR [#335](https://github.com/midudev/kings-league-project/pull/335) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+5. ❗️ Closed issue [#318](https://github.com/midudev/kings-league-project/issues/318) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
 <!--END_SECTION:activity-->
 
 
