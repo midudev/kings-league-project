@@ -12,11 +12,11 @@
 ### :zap: Actividad Reciente
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#64](https://github.com/midudev/preguntas-entrevista-react/pull/64) in [midudev/preguntas-entrevista-react](https://github.com/midudev/preguntas-entrevista-react)
-2. 🎉 Merged PR [#67](https://github.com/midudev/preguntas-entrevista-react/pull/67) in [midudev/preguntas-entrevista-react](https://github.com/midudev/preguntas-entrevista-react)
-3. 🎉 Merged PR [#4](https://github.com/midudev/libros-programacion-gratis/pull/4) in [midudev/libros-programacion-gratis](https://github.com/midudev/libros-programacion-gratis)
-4. 🎉 Merged PR [#3](https://github.com/midudev/libros-programacion-gratis/pull/3) in [midudev/libros-programacion-gratis](https://github.com/midudev/libros-programacion-gratis)
-5. 💪 Opened PR [#4929](https://github.com/GoogleChrome/developer.chrome.com/pull/4929) in [GoogleChrome/developer.chrome.com](https://github.com/GoogleChrome/developer.chrome.com)
+1. 🎉 Merged PR [#38](https://github.com/midudev/aprendiendo-react/pull/38) in [midudev/aprendiendo-react](https://github.com/midudev/aprendiendo-react)
+2. 🎉 Merged PR [#37](https://github.com/midudev/aprendiendo-react/pull/37) in [midudev/aprendiendo-react](https://github.com/midudev/aprendiendo-react)
+3. 🎉 Merged PR [#64](https://github.com/midudev/preguntas-entrevista-react/pull/64) in [midudev/preguntas-entrevista-react](https://github.com/midudev/preguntas-entrevista-react)
+4. 🎉 Merged PR [#67](https://github.com/midudev/preguntas-entrevista-react/pull/67) in [midudev/preguntas-entrevista-react](https://github.com/midudev/preguntas-entrevista-react)
+5. 🎉 Merged PR [#4](https://github.com/midudev/libros-programacion-gratis/pull/4) in [midudev/libros-programacion-gratis](https://github.com/midudev/libros-programacion-gratis)
 <!--END_SECTION:activity-->
 
 
