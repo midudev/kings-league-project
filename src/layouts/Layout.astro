@@ -1,35 +1,23 @@
----
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
-
-const {
-	title,
-	description = 'Bienvenido a la Kings League, una nueva forma de entender el fútbol'
-} = Astro.props
-
-const seoTitle = title
-	? `${title} | Kings League Infojobs`
-	: 'Kings League Infojobs | Fútbol real';
----
-
 <!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{seoTitle}</title>
-		<meta name="description" content={description} />
-		<link href={Astro.url.href} rel="canonical" />
+		<title>Adiós al proyecto Kings League</title>
+		<link rel="canonical" href={Astro.url.href} />
+		<meta name="description" content="Web cerrada" />
+		<meta property="og:image" content="https://kingsleague.dev/og/og.jpg" />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:type" content="website" />
 		<meta name="generator" content={Astro.generator} />
 		<link href="/fonts/archivo.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
 		<link href="/fonts/archivo-semibold.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
 		<link href="/fonts/archivo-black.woff2" rel="preload" type="font/woff2" as="font" fetchpriority="high" crossorigin />
 	</head>
 	<body class="min-h-screen overflow-x-hidden">
-		<Header />
 		<slot />
-		<Footer />
 	</body>
 </html>
 

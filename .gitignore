@@ -4,3 +4,10 @@ package-lock.json
 /coverage
 # Ignore build folder of Astro
 /dist
+
+# Webstorm folder
+/.idea
+
+# Dummy files
+dummy.json
+.DS_Store

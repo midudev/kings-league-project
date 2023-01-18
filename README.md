@@ -1,23 +1,59 @@
 <div align="center">
-<h1>👑 Kings League Infojobs Project ⚽️
+<h1>👑 Kings League Infojobs Project ⚽️</h1>
+<h2>Esta web sólo está creada para fines educativos. Kosmos Holdings es el dueño de todos los logos de la Kings League. Este proyecto no tiene ánimo de lucro y no se hace responsable del uso que se pueda hacer del mismo.</h2>
 
-[![Deploy API](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml/badge.svg?branch=main)](https://github.com/maikCyphlock/kings-league-project/actions/workflows/deploy-api.yml) [![Scrape Kings League Infojobs Website](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml/badge.svg?branch=main)](https://github.com/maikCyphlock/kings-league-project/actions/workflows/scrape-kings-league-web.yml)
+[![Deploy API](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml/badge.svg?branch=main)](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml) [![Scrape Kings League Infojobs Website](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml/badge.svg?branch=main)](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <h2><a href='https://api.kingsleague.dev/'>API</a> | <a href='https://kingsleague.dev'>WEB</a></h2>
-</h1>
 </div>
 
-## Descripcion del proyecto
+![Mockup API Web](assets/static/ui-mockup-web-api.png)
+
+### :zap: Actividad Reciente
+
+<!--START_SECTION:activity-->
+1. 🎉 Merged PR [#64](https://github.com/midudev/preguntas-entrevista-react/pull/64) in [midudev/preguntas-entrevista-react](https://github.com/midudev/preguntas-entrevista-react)
+2. 🎉 Merged PR [#67](https://github.com/midudev/preguntas-entrevista-react/pull/67) in [midudev/preguntas-entrevista-react](https://github.com/midudev/preguntas-entrevista-react)
+3. 🎉 Merged PR [#4](https://github.com/midudev/libros-programacion-gratis/pull/4) in [midudev/libros-programacion-gratis](https://github.com/midudev/libros-programacion-gratis)
+4. 🎉 Merged PR [#3](https://github.com/midudev/libros-programacion-gratis/pull/3) in [midudev/libros-programacion-gratis](https://github.com/midudev/libros-programacion-gratis)
+5. 💪 Opened PR [#4929](https://github.com/GoogleChrome/developer.chrome.com/pull/4929) in [GoogleChrome/developer.chrome.com](https://github.com/GoogleChrome/developer.chrome.com)
+<!--END_SECTION:activity-->
+
+
+<details>
+  <summary>Sumario</summary>
+  <ol>
+    <li>
+      <a href="#descripción-del-proyecto">Descripción del proyecto</a>
+    </li>
+    <li>
+      <a href="#tecnologías-usadas">Tecnologías usadas</a>
+    </li>
+    <li><a href="#api">API</a></li>
+    <li><a href="#redes-sociales">Redes sociales</a></li>
+		<li><a href="#lighthouse">Lighthouse</a></li>
+		<li><a href="#estadísticas-acerca-del-autor">Estadísticas Acerca del Autor</a></li>
+  </ol>
+</details>
+
+
+
+[![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
+
+[![kings league project](https://jordinodejs.vercel.app/api/pin/?username=midudev&repo=kings-league-project&theme=calm&bg_color=ff7b25&title_color=000000&icon_color=d64161&border_color=d64161&text_color=eeeee4)](https://github.com/midudev/kings-league-project)
+
+
+## Descripción del proyecto
 
 Este proyecto tiene como objetivo crear una API y página web de la [Kings League Infojobs](https://kingsleague.pro) con fines educativos.
 
 La API proporciona acceso a datos de equipos, presidentes, entrenadores, goleadores y asistentes de la Kings League, y la página web ofrece información sobre los equipos, resultados y clasificaciones de la liga.
 
-### Tecnologías usadas
+## Tecnologías usadas
 
 Para recuperar los datos de la API, usamos *Web Scraping*, [Node.js](https://nodejs.org/es/), [Hono](https://honojs.dev/) y el servicio de hosting de APIs [Cloudflare Workers](https://workers.cloudflare.com/) para la construcción y el despliegue.
 
-La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cherrio](https://github.com/cheeriojs/cheerio) para realizar *Web Scraping* y obtener datos de la **Kings League Infojobs**.
+La página web está desarrollada con el framework [Astro](https://astro.build/) y utilizamos el framework [CSS Tailwind](https://tailwindcss.com/) para estilizar la interfaz de usuario. Además, hemos utilizado la librería [Cheerio](https://github.com/cheeriojs/cheerio) para realizar *Web Scraping* y obtener datos de la **Kings League Infojobs**.
 
 Para probar y validar el funcionamiento de la aplicación, hemos utilizado la librería de pruebas [Vitest](https://vitest.dev/).
 
@@ -33,6 +69,7 @@ Los endpoints disponibles son:
 - GET `/teams`: Devuelve todos los equipos de la Kings League.
 - GET `/teams/:id`: Devuelve un equipo de la Kings League.
 - GET `/teams/:id/player-12`: Devuelve un jugador 12 de un equipo de la Kings League.
+- GET `/teams/:id/players/:playerId`: Devuelve un jugador de un equipo de la Kings League.
 - GET `/presidents`: Devuelve todos los presidentes de la Kings League.
 - GET `/presidents/:id`: Devuelve un presidente de un equipo de la Kings League.
 - GET `/coaches`: Devuelve todos los entrenadores de la Kings League.
@@ -56,8 +93,13 @@ o únete a la comunidad en [Discord](https://discord.gg/midudev)
 
 ## LightHouse
 
+[![Lighthouse Performance Badge](./test_results/lighthouse_performance.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse Accessibility Badge](./test_results/lighthouse_accessibility.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse Best Practices Badge](./test_results/lighthouse_best-practices.svg)](https://github.com/midudev/kings-league-project)
-[![Lighthouse Performance Badge](./test_results/lighthouse_performance.svg)](https://github.com/midudev/kings-league-project)
-[![Lighthouse PWA Badge](./test_results/lighthouse_pwa.svg)](https://github.com/midudev/kings-league-project)
 [![Lighthouse SEO Badge](./test_results/lighthouse_seo.svg)](https://github.com/midudev/kings-league-project)
+
+## Estadísticas Acerca del Autor
+
+<p>&nbsp;<img align="center" src="https://jordinodejs.vercel.app/api?username=midudev&show_icons=true&locale=es&theme=calm" alt="midudev" /></p>
+
+<p><img align="left" src="https://jordinodejs.vercel.app/api/top-langs?username=midudev&show_icons=true&locale=es&layout=compact&theme=calm&langs_count=8&hide=php,coffeescript" alt="midudev" /></p>

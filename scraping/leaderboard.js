@@ -1,4 +1,4 @@
-import { TEAMS, PRESIDENTS } from '../db/index.js'
+import { PRESIDENTS, TEAMS } from '../db/index.js'
 import { cleanText } from './utils.js'
 
 const LEADERBOARD_SELECTORS = {

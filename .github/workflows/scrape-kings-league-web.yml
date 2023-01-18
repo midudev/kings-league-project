@@ -8,7 +8,8 @@ on:
       - webhook
 
   schedule:
-    - cron: "0 */1 * * 0"
+    - cron: '0 */1 * * 0'
+    - cron: '0 12 * * *'
 
 jobs:
   build:
@@ -25,16 +26,5 @@ jobs:
       - run: |
           npm run scrape
           git config user.name kings-league-bot
-          git add -A
-          git commit -m "[bot] Update Kings League Database"
+          git diff --quiet && git diff --staged --quiet || git commit -am "[bot] update Kings League database"
           git push origin main
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
