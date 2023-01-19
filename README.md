@@ -1,5 +1,6 @@
 <div align="center">
 <h1>👑 Kings League Infojobs Project ⚽️</h1>
+<h2>Esta web sólo está creada para fines educativos. Kosmos Holdings es el dueño de todos los logos de la Kings League. Este proyecto no tiene ánimo de lucro y no se hace responsable del uso que se pueda hacer del mismo.</h2>
 
 [![Deploy API](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml/badge.svg?branch=main)](https://github.com/midudev/kings-league-project/actions/workflows/deploy-api.yml) [![Scrape Kings League Infojobs Website](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml/badge.svg?branch=main)](https://github.com/midudev/kings-league-project/actions/workflows/scrape-kings-league-web.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -11,11 +12,11 @@
 ### :zap: Actividad Reciente
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#329](https://github.com/midudev/kings-league-project/pull/329) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-2. 🎉 Merged PR [#328](https://github.com/midudev/kings-league-project/pull/328) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-3. 🎉 Merged PR [#327](https://github.com/midudev/kings-league-project/pull/327) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-4. 🎉 Merged PR [#326](https://github.com/midudev/kings-league-project/pull/326) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
-5. ❗️ Closed issue [#323](https://github.com/midudev/kings-league-project/issues/323) in [midudev/kings-league-project](https://github.com/midudev/kings-league-project)
+1. 🎉 Merged PR [#38](https://github.com/midudev/aprendiendo-react/pull/38) in [midudev/aprendiendo-react](https://github.com/midudev/aprendiendo-react)
+2. 🎉 Merged PR [#37](https://github.com/midudev/aprendiendo-react/pull/37) in [midudev/aprendiendo-react](https://github.com/midudev/aprendiendo-react)
+3. 🎉 Merged PR [#64](https://github.com/midudev/preguntas-entrevista-react/pull/64) in [midudev/preguntas-entrevista-react](https://github.com/midudev/preguntas-entrevista-react)
+4. 🎉 Merged PR [#67](https://github.com/midudev/preguntas-entrevista-react/pull/67) in [midudev/preguntas-entrevista-react](https://github.com/midudev/preguntas-entrevista-react)
+5. 🎉 Merged PR [#4](https://github.com/midudev/libros-programacion-gratis/pull/4) in [midudev/libros-programacion-gratis](https://github.com/midudev/libros-programacion-gratis)
 <!--END_SECTION:activity-->
 
 

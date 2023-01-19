@@ -14,6 +14,14 @@ import { graphqlServer } from '@honojs/graphql-server'
 
 const app = new Hono()
 app.use(cors({ origin: '*' }))
+app.use('*', (ctx) => {
+	ctx.json({
+		message:
+			'La API ya no está disponible tras un requerimiento de Kosmos Holding de cese y desistimiento.'
+	})
+})
+/*
+app.use(cors({ origin: '*' }))
 
 app.use(
 	'/graphql',
@@ -215,5 +223,6 @@ app.notFound((c) => {
 
 	return c.json({ message: 'Not Found' }, 404)
 })
+*/
 
 export default app

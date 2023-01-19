@@ -1,86 +1,30 @@
 ---
-import Leaderboard from '@components/Leaderboard.astro'
-import Layout from '@layouts/Layout.astro'
-import Container from '@components/Container.astro'
-import Sponsors from '@components/Sponsors.astro'
-import TeamsSelectorCards from '@components/TeamsSelectorCards.astro'
-import JoinQueensLeague from '@components/JoinQueensLeague.astro'
-import PlayerPrizeCard from '@components/PlayerPrizeCard.astro'
-import { getFirstPlayersStatistics } from '@services/statistics.js'
-import NextMatchesTable from '@components/NextMatchesTable.astro'
-import Live from '@components/Live.astro'
-import { checkIsLive } from '@services/twitch.js'
+import Layout from '@layouts/Layout.astro';
 
-const { mvp, topScorer, topAssister } = await getFirstPlayersStatistics()
-
-const { hostname } = new URL(Astro.request.url)
-const isLive = await checkIsLive()
 ---
 
-<Layout title='Kings League Infojobs'>
-	<main>
-		<section class='bg-principal py-5 sm:py-20'>
-			<Container>
-				<div class='grid grid-cols-4 lg:grid-cols-8 gap-10 w-full px-4 md:px-8'>
-					<div class='col-span-4  xl:col-span-3 flex flex-col gap-y-10'>
-						<NextMatchesTable />
-						<Leaderboard format='small' />
-					</div>
-					<div class='col-span-4 lg:col-span-4 xl:col-span-5 mt-[20px] lg:mt-0'>
-						<div class='grid grid-cols-6 gap-y-10 gap-x-5 w-full'>
+<Layout>
+<main class="max-w-prose [&>p]:pb-4 mx-auto pt-10 text-gray-800">
+	<p>
+		Kosmos Holding, titular de los derechos de propiedad de la Kings League, nos ha mandado un
+		requerimiento de <strong>cese y desistimiento</strong> por el uso y explotación de sus marcas e información.
 
-							{ isLive && <Live hostname={hostname} /> }
+		<p>
+			<strong>He retirado el contenido de la web</strong> y también hemos desactivado la API, que también nos han pedido dejar de mantenerla ya que ellos tienen una propia.
+		</p>
 
-							{
-								mvp && (
-									<div class='col-span-6'>
-										<PlayerPrizeCard
-											teamName={mvp.team}
-											teamId={mvp.teamId}
-											teamImage={mvp.image}
-											playerName={mvp.playerName}
-											playerImage={mvp.playerImage}
-											title='MVP'
-											subtitle='Jornada 1'
-										/>
-									</div>
-								)
-							}
+		<p>
+			Aunque el proyecto fue creado con fines didácticos, <strong>entiendo completamente la decisión de la
+			empresa y lo acato sin problemas ni acritud. 🙂</strong>
+		</p>
 
-							<div class='col-span-6 xl:col-span-3'>
-								<PlayerPrizeCard
-									smallerBox
-									teamName={topScorer.team}
-									teamId={topScorer.teamId}
-									teamImage={topScorer.image}
-									playerName={topScorer.playerName}
-									playerImage={topScorer.playerImage}
-									title={topScorer.goals}
-									subtitle='Goles'
-								/>
-							</div>
-
-							<div class='col-span-6 xl:col-span-3'>
-								<PlayerPrizeCard
-									smallerBox
-									teamName={topAssister.team}
-									teamImage={topAssister.image}
-									teamId={topAssister.teamId}
-									playerName={topAssister.playerName}
-									playerImage={topAssister.playerImage}
-									title={topAssister.assists}
-									subtitle='Asistencias'
-								/>
-							</div>
-						</div>
-						<div class='my-10'>
-							<TeamsSelectorCards small />
-						</div>
-					</div>
-				</div>
-			</Container>
-			<JoinQueensLeague />
-		</section>
-	</main>
-	<Sponsors />
+		<em>midudev</em>
+	</p>
+</main>
 </Layout>
+<style>
+	main {
+		display: grid;
+		place-content: center;
+	}
+</style>
