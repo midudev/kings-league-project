@@ -198,6 +198,20 @@ app.get('/teams/:id/players/:playerId', (ctx) => {
 		: ctx.json({ message: `Players for team ${teamId} not found` }, 404)
 })
 
+app.get('/schedule/:month', (ctx) => {
+	const month = ctx.req.param('month')
+	const schedulePerMonth = schedule.filter((day) => {
+		const infoDate = day.date.split(' ').filter((info) => info !== 'de')
+		const actualYear = new Date().getFullYear()
+		const monthInSpanish = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(
+			new Date(actualYear, month, 1)
+		)
+
+		return infoDate[1].toLocaleLowerCase() === monthInSpanish
+	})
+	return ctx.json(schedulePerMonth)
+})
+
 app.get('/teams/:id/players-12', (ctx) => {
 	const id = ctx.req.param('id')
 	const foundPlayerTwelve = playersTwelve.filter((player) => player.team.id === id)
