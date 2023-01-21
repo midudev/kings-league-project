@@ -1,113 +1,17 @@
 [
   {
-    "playerName": "F. Hernández",
-    "gamesPlayed": 2,
+    "playerName": "Ricardo",
+    "gamesPlayed": 3,
     "mvps": 1,
     "rank": 1,
-    "team": "Aniquiladores FC",
-    "image": "https://kingsleague.dev/teams/logos/aniquiladores.svg"
-  },
-  {
-    "playerName": "Lao",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 2,
-    "team": "Porcinos FC",
-    "image": "https://kingsleague.dev/teams/logos/porcinos-fc.svg"
-  },
-  {
-    "playerName": "Ubón",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 3,
-    "team": "El Barrio",
-    "image": "https://kingsleague.dev/teams/logos/el-barrio.svg"
-  },
-  {
-    "playerName": "Briones",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 4,
-    "team": "Saiyans FC",
-    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
-  },
-  {
-    "playerName": "Feliu",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 5,
-    "team": "Saiyans FC",
-    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
-  },
-  {
-    "playerName": "R. Carbó",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 6,
-    "team": "Saiyans FC",
-    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
-  },
-  {
-    "playerName": "Jacobo",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 7,
-    "team": "El Barrio",
-    "image": "https://kingsleague.dev/teams/logos/el-barrio.svg"
-  },
-  {
-    "playerName": "E. Álvaro «Roble»",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 8,
-    "team": "Los Troncos FC",
-    "image": "https://kingsleague.dev/teams/logos/los-troncos.svg"
-  },
-  {
-    "playerName": "J. Verdú «Gingko»",
-    "gamesPlayed": 2,
-    "mvps": 1,
-    "rank": 9,
-    "team": "Los Troncos FC",
-    "image": "https://kingsleague.dev/teams/logos/los-troncos.svg"
-  },
-  {
-    "playerName": "Juanma Glez",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 10,
-    "team": "Ultimate Móstoles",
-    "image": "https://kingsleague.dev/teams/logos/ultimate-mostoles.svg"
-  },
-  {
-    "playerName": "Torrentbó",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 11,
-    "team": "Kunisports",
-    "image": "https://kingsleague.dev/teams/logos/kunisports.svg"
-  },
-  {
-    "playerName": "Víctor",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 12,
-    "team": "Kunisports",
-    "image": "https://kingsleague.dev/teams/logos/kunisports.svg"
+    "team": "1K FC",
+    "image": "https://kingsleague.dev/teams/logos/1k.svg"
   },
   {
     "playerName": "Sorroche",
     "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 13,
-    "team": "1K FC",
-    "image": "https://kingsleague.dev/teams/logos/1k.svg"
-  },
-  {
-    "playerName": "Ricardo",
-    "gamesPlayed": 3,
-    "mvps": 1,
-    "rank": 14,
+    "rank": 2,
     "team": "1K FC",
     "image": "https://kingsleague.dev/teams/logos/1k.svg"
   },
@@ -115,32 +19,128 @@
     "playerName": "A. Bueno",
     "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 15,
+    "rank": 3,
     "team": "1K FC",
     "image": "https://kingsleague.dev/teams/logos/1k.svg"
+  },
+  {
+    "playerName": "F. Hernández",
+    "gamesPlayed": 2,
+    "mvps": 1,
+    "rank": 4,
+    "team": "Aniquiladores FC",
+    "image": "https://kingsleague.dev/teams/logos/aniquiladores.svg"
+  },
+  {
+    "playerName": "Ubón",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 5,
+    "team": "El Barrio",
+    "image": "https://kingsleague.dev/teams/logos/el-barrio.svg"
+  },
+  {
+    "playerName": "Jacobo",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 6,
+    "team": "El Barrio",
+    "image": "https://kingsleague.dev/teams/logos/el-barrio.svg"
   },
   {
     "playerName": "Ibai",
     "gamesPlayed": 1,
     "mvps": 1,
-    "rank": 16,
+    "rank": 7,
     "team": "Jijantes FC",
     "image": "https://kingsleague.dev/teams/logos/jijantes.svg"
   },
   {
-    "playerName": "Fouad",
-    "gamesPlayed": 1,
+    "playerName": "Víctor",
+    "gamesPlayed": 3,
     "mvps": 1,
-    "rank": 17,
-    "team": "XBUYER TEAM",
-    "image": "https://kingsleague.dev/teams/logos/xbuyer.svg"
+    "rank": 8,
+    "team": "Kunisports",
+    "image": "https://kingsleague.dev/teams/logos/kunisports.svg"
+  },
+  {
+    "playerName": "Torrentbó",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 9,
+    "team": "Kunisports",
+    "image": "https://kingsleague.dev/teams/logos/kunisports.svg"
   },
   {
     "playerName": "Kun Agüero",
     "gamesPlayed": 1,
     "mvps": 1,
-    "rank": 18,
+    "rank": 10,
     "team": "Kunisports",
     "image": "https://kingsleague.dev/teams/logos/kunisports.svg"
+  },
+  {
+    "playerName": "E. Álvaro «Roble»",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 11,
+    "team": "Los Troncos FC",
+    "image": "https://kingsleague.dev/teams/logos/los-troncos.svg"
+  },
+  {
+    "playerName": "J. Verdú «Gingko»",
+    "gamesPlayed": 2,
+    "mvps": 1,
+    "rank": 12,
+    "team": "Los Troncos FC",
+    "image": "https://kingsleague.dev/teams/logos/los-troncos.svg"
+  },
+  {
+    "playerName": "Lao",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 13,
+    "team": "Porcinos FC",
+    "image": "https://kingsleague.dev/teams/logos/porcinos-fc.svg"
+  },
+  {
+    "playerName": "Briones",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 14,
+    "team": "Saiyans FC",
+    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
+  },
+  {
+    "playerName": "Feliu",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 15,
+    "team": "Saiyans FC",
+    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
+  },
+  {
+    "playerName": "R. Carbó",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 16,
+    "team": "Saiyans FC",
+    "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg"
+  },
+  {
+    "playerName": "Juanma Glez",
+    "gamesPlayed": 3,
+    "mvps": 1,
+    "rank": 17,
+    "team": "Ultimate Móstoles",
+    "image": "https://kingsleague.dev/teams/logos/ultimate-mostoles.svg"
+  },
+  {
+    "playerName": "Fouad",
+    "gamesPlayed": 1,
+    "mvps": 1,
+    "rank": 18,
+    "team": "XBUYER TEAM",
+    "image": "https://kingsleague.dev/teams/logos/xbuyer.svg"
   }
 ]
