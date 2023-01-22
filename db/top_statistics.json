@@ -83,54 +83,54 @@
   ],
   "mvp": [
     {
+      "playerName": "Ricardo",
+      "gamesPlayed": 3,
+      "mvps": 1,
+      "rank": 1,
+      "team": "1K FC",
+      "image": "https://kingsleague.dev/teams/logos/1k.svg",
+      "playerImage": "placeholder.png",
+      "teamId": "1k"
+    },
+    {
+      "playerName": "Sorroche",
+      "gamesPlayed": 3,
+      "mvps": 1,
+      "rank": 2,
+      "team": "1K FC",
+      "image": "https://kingsleague.dev/teams/logos/1k.svg",
+      "playerImage": "placeholder.png",
+      "teamId": "1k"
+    },
+    {
+      "playerName": "A. Bueno",
+      "gamesPlayed": 3,
+      "mvps": 1,
+      "rank": 3,
+      "team": "1K FC",
+      "image": "https://kingsleague.dev/teams/logos/1k.svg",
+      "playerImage": "placeholder.png",
+      "teamId": "1k"
+    },
+    {
       "playerName": "F. Hernández",
       "gamesPlayed": 2,
       "mvps": 1,
-      "rank": 1,
+      "rank": 4,
       "team": "Aniquiladores FC",
       "image": "https://kingsleague.dev/teams/logos/aniquiladores.svg",
       "playerImage": "placeholder.png",
       "teamId": "aniquiladores-fc"
     },
     {
-      "playerName": "Lao",
-      "gamesPlayed": 3,
-      "mvps": 1,
-      "rank": 2,
-      "team": "Porcinos FC",
-      "image": "https://kingsleague.dev/teams/logos/porcinos-fc.svg",
-      "playerImage": "placeholder.png",
-      "teamId": "porcinos-fc"
-    },
-    {
       "playerName": "Ubón",
       "gamesPlayed": 3,
       "mvps": 1,
-      "rank": 3,
+      "rank": 5,
       "team": "El Barrio",
       "image": "https://kingsleague.dev/teams/logos/el-barrio.svg",
       "playerImage": "placeholder.png",
       "teamId": "el-barrio"
-    },
-    {
-      "playerName": "Briones",
-      "gamesPlayed": 3,
-      "mvps": 1,
-      "rank": 4,
-      "team": "Saiyans FC",
-      "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg",
-      "playerImage": "placeholder.png",
-      "teamId": "saiyans-fc"
-    },
-    {
-      "playerName": "Feliu",
-      "gamesPlayed": 3,
-      "mvps": 1,
-      "rank": 5,
-      "team": "Saiyans FC",
-      "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg",
-      "playerImage": "placeholder.png",
-      "teamId": "saiyans-fc"
     }
   ],
   "topScorers": [
@@ -166,6 +166,16 @@
     },
     {
       "rank": 4,
+      "playerName": "Guillem ZZ",
+      "gamesPlayed": 3,
+      "goals": 3,
+      "team": "Rayo de Barcelona",
+      "image": "https://kingsleague.dev/teams/logos/rayo-barcelona.svg",
+      "playerImage": "placeholder.png",
+      "teamId": "rayo-barcelona"
+    },
+    {
+      "rank": 5,
       "playerName": "Ubón",
       "gamesPlayed": 3,
       "goals": 3,
@@ -173,31 +183,21 @@
       "image": "https://kingsleague.dev/teams/logos/el-barrio.svg",
       "playerImage": "placeholder.png",
       "teamId": "el-barrio"
-    },
-    {
-      "rank": 5,
-      "playerName": "R. Carbó",
-      "gamesPlayed": 3,
-      "goals": 3,
-      "team": "Saiyans FC",
-      "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg",
-      "playerImage": "placeholder.png",
-      "teamId": "saiyans-fc"
     }
   ],
   "topAssists": [
     {
-      "playerName": "Soriano",
+      "playerName": "Franky P.",
       "gamesPlayed": 3,
       "assists": 2,
       "rank": 1,
-      "team": "Jijantes FC",
-      "image": "https://kingsleague.dev/teams/logos/jijantes.svg",
+      "team": "Rayo de Barcelona",
+      "image": "https://kingsleague.dev/teams/logos/rayo-barcelona.svg",
       "playerImage": "placeholder.png",
-      "teamId": "jijantes-fc"
+      "teamId": "rayo-barcelona"
     },
     {
-      "playerName": "Franky P.",
+      "playerName": "Dani P.",
       "gamesPlayed": 3,
       "assists": 2,
       "rank": 2,
@@ -207,27 +207,27 @@
       "teamId": "rayo-barcelona"
     },
     {
-      "playerName": "Gio Ferinu",
+      "playerName": "Lautaro",
       "gamesPlayed": 3,
       "assists": 2,
       "rank": 3,
-      "team": "Saiyans FC",
-      "image": "https://kingsleague.dev/teams/logos/saiyans-fc.svg",
+      "team": "1K FC",
+      "image": "https://kingsleague.dev/teams/logos/1k.svg",
       "playerImage": "placeholder.png",
-      "teamId": "saiyans-fc"
+      "teamId": "1k"
     },
     {
-      "playerName": "Ros",
+      "playerName": "A. Bueno",
       "gamesPlayed": 3,
       "assists": 2,
       "rank": 4,
-      "team": "El Barrio",
-      "image": "https://kingsleague.dev/teams/logos/el-barrio.svg",
+      "team": "1K FC",
+      "image": "https://kingsleague.dev/teams/logos/1k.svg",
       "playerImage": "placeholder.png",
-      "teamId": "el-barrio"
+      "teamId": "1k"
     },
     {
-      "playerName": "Pau ZZ",
+      "playerName": "Ros",
       "gamesPlayed": 3,
       "assists": 2,
       "rank": 5,
